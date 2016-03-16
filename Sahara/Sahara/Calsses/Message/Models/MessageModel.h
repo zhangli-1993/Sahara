@@ -10,4 +10,18 @@
 
 @interface MessageModel : NSObject
 
+@property(nonatomic, copy) NSString *image;
+@property(nonatomic, copy) NSString *pubDate;
+@property(nonatomic, copy) NSString *title;
+@property(nonatomic, copy) NSString *ups;
+@property(nonatomic, copy) NSString *url;
+
+- (instancetype)initWithDictionary:(NSDictionary *)dict;
+
+//segment
+@property(nonatomic, copy) NSString *itemTitle;
+@property(nonatomic, copy) NSString *itemID;
+
+- (instancetype)initWithArray:(NSArray *)array;
+
 @end

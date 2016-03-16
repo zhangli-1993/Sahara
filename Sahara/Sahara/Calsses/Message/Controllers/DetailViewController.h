@@ -1,5 +1,5 @@
 //
-//  MessageViewController.h
+//  DetailViewController.h
 //  Sahara
 //
 //  Created by scjy on 16/3/16.
@@ -8,7 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MessageViewController : UIViewController
-
+@interface DetailViewController : UIViewController
 
 @end
