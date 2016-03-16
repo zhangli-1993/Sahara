@@ -7,8 +7,9 @@
 //
 
 #import "FindCarViewController.h"
-
-@interface FindCarViewController ()
+#import "PullingRefreshTableView.h"
+@interface FindCarViewController ()<PullingRefreshTableViewDelegate, UITableViewDataSource, UITableViewDelegate>
+@property (nonatomic, strong) PullingRefreshTableView *tableView;
 
 @end
 
@@ -16,9 +17,35 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.title = @"找车";
+    [self.view addSubview:self.tableView];
     // Do any additional setup after loading the view.
 }
-
+#pragma mark---UITableViewDataSource, UITableViewDelegate
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return 20;
+}
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    static NSString *str = @"carName";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:str];
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:str];
+    }
+    return cell;
+}
+#pragma mark---PullingRefreshTableViewDelegate
+- (void)pullingTableViewDidStartRefreshing:(PullingRefreshTableView *)tableView{
+    
+}
+#pragma mark---懒加载
+- (PullingRefreshTableView *)tableView{
+    if (_tableView == nil) {
+        self.tableView = [[PullingRefreshTableView alloc] initWithFrame:self.view.frame pullingDelegate:self];
+        self.tableView.delegate = self;
+        self.tableView.dataSource = self;
+    }
+    return _tableView;
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
