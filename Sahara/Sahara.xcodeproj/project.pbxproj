@@ -72,6 +72,7 @@
 		7AB362761C98F89800C03E74 /* MessageTwoTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageTwoTableViewCell.h; sourceTree = "<group>"; };
 		7AB362771C98F89800C03E74 /* MessageTwoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageTwoTableViewCell.m; sourceTree = "<group>"; };
 		7AB362781C98F89800C03E74 /* MessageTwoTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MessageTwoTableViewCell.xib; sourceTree = "<group>"; };
+		7AB362841C99002400C03E74 /* PortDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PortDefine.h; path = VOSegmentedControl/PortDefine.h; sourceTree = "<group>"; };
 		A31DF689C6CF0A0F3FD738CB /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -328,6 +329,7 @@
 			isa = PBXGroup;
 			children = (
 				7AB3625C1C98E4AF00C03E74 /* Sahara.pch */,
+				7AB362841C99002400C03E74 /* PortDefine.h */,
 				7A84D1A31C98FF38006EE2F1 /* PullingRefreshTableView */,
 				7AB362611C98F2B500C03E74 /* VOSegmentedControl */,
 			);

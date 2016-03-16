@@ -16,6 +16,11 @@
 #define kHeight [UIScreen mainScreen].bounds.size.height
 
 
+#define kMainColor [UIColor colorWithRed:29/255.0 green:146/255.0 blue:246/255.0 alpha:1.0]
 
+
+
+
+#import "PortDefine.h"
 
 #endif /* Sahara_pch */

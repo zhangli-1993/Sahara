@@ -73,7 +73,7 @@
 
 	// 色彩
     self.textColor               = [UIColor blackColor];
-    self.selectedTextColor       = [UIColor colorWithRed:0 green:185/255.0f blue:189/255.0f alpha:1.0];
+    self.selectedTextColor       = kMainColor;
     self.backgroundColor         = [UIColor whiteColor];
     self.selectedBackgroundColor = [UIColor whiteColor];
 
@@ -81,7 +81,7 @@
     self.indicatorThickness      = 0;
     self.indicatorCornerRadius   = 0;
     self.indicatorColor          = [UIColor clearColor];
-    self.selectedIndicatorColor  = [UIColor colorWithRed:0 green:185/255.0f blue:189/255.0f alpha:1.0];
+    self.selectedIndicatorColor  = kMainColor;
 
 	// 分段
     self.textFont                = [UIFont systemFontOfSize:14];

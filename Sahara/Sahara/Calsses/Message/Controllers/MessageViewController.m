@@ -22,10 +22,27 @@
     // Do any additional setup after loading the view.
     self.navigationItem.title = @"撒哈拉汽车网";
     [self.view addSubview:self.VOsegment];
-    self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:29/255.0 green:146/255.0 blue:246/255.0 alpha:1.0];
-    
+    self.navigationController.navigationBar.barTintColor = kMainColor;
+    [self segementTextRequest];
 }
 
+#pragma mark -------------- Custom Method
+- (void)segementTextRequest{
+    AFHTTPSessionManager *httpManager = [AFHTTPSessionManager manager];
+    httpManager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"text/html", @"application/json", nil];
+    [httpManager GET:kSegementort parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
+        
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        NSLog(@"%@", responseObject);
+        
+        
+        
+        
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        NSLog(@"%@", error);
+    }];
+    
+}
 
 #pragma mark -------------- LazyLoading
 - (VOSegmentedControl *)VOsegment{
