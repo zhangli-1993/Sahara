@@ -7,8 +7,14 @@
 //
 
 #import "AppDelegate.h"
-
+#import "PrimeViewController.h"
+#import "ForumViewController.h"
+#import "FindCarViewController.h"
+#import "MainViewController.h"
+#import "MessageViewController.h"
 @interface AppDelegate ()
+
+@property(nonatomic, strong) UITabBarController *tabBarVC;
 
 @end
 
@@ -18,6 +24,53 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
+    self.tabBarVC = [[UITabBarController alloc] init];
+    //资讯
+    MessageViewController *messageVC = [[MessageViewController alloc] init];
+    UINavigationController *messageNav = [[UINavigationController alloc] initWithRootViewController:messageVC];
+    messageNav.tabBarItem.image = [UIImage imageNamed:@""];
+    UIImage *messageImage = [UIImage imageNamed:@""];
+    messageNav.tabBarItem.selectedImage = [messageImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    messageNav.title = @"资讯";
+    //论坛
+    ForumViewController *porumVC = [[ForumViewController alloc] init];
+    UINavigationController *forumNav = [[UINavigationController alloc] initWithRootViewController:porumVC];
+    forumNav.tabBarItem.image = [UIImage imageNamed:@""];
+    UIImage *forumImage = [UIImage imageNamed:@""];
+    forumNav.tabBarItem.selectedImage = [forumImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    forumNav.title = @"论坛";
+    
+    //找车
+    FindCarViewController *findVC = [[FindCarViewController alloc] init];
+    UINavigationController *findNav = [[UINavigationController alloc] initWithRootViewController:findVC];
+    findNav.tabBarItem.image = [UIImage imageNamed:@""];
+    UIImage *findImage = [UIImage imageNamed:@""];
+    findNav.tabBarItem.selectedImage = [findImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    findNav.title = @"找车";
+    //优惠
+    PrimeViewController *primeVC = [[PrimeViewController alloc] init];
+    UINavigationController *primeNav = [[UINavigationController alloc] initWithRootViewController:primeVC];
+    primeNav.tabBarItem.image = [UIImage imageNamed:@""];
+    UIImage *primeImage = [UIImage imageNamed:@""];
+    primeNav.tabBarItem.selectedImage = [primeImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    primeNav.title = @"优惠";
+    //我的
+    MainViewController *mainVC = [[MainViewController alloc] init];
+    UINavigationController *mainNav = [[UINavigationController alloc] initWithRootViewController:mainVC];
+    mainNav.tabBarItem.image = [UIImage imageNamed:@""];
+    UIImage *mainImage = [UIImage imageNamed:@""];
+    mainNav.tabBarItem.selectedImage = [mainImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    mainNav.title = @"我的";
+    //设置字体
+    [[UITabBar appearance] setTintColor:[UIColor blueColor]];
+
+    
+    
+    
+    self.tabBarVC.viewControllers = @[messageNav, forumNav, findNav, primeNav, mainNav];
+    self.window.rootViewController = self.tabBarVC;
+    
+    
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     return YES;
