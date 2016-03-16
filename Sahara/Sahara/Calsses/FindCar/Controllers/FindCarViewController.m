@@ -8,6 +8,7 @@
 
 #import "FindCarViewController.h"
 #import "PullingRefreshTableView.h"
+#import "VOSegmentedControl.h"
 @interface FindCarViewController ()<PullingRefreshTableViewDelegate, UITableViewDataSource, UITableViewDelegate>
 @property (nonatomic, strong) PullingRefreshTableView *tableView;
 
@@ -18,7 +19,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"找车";
+    self.navigationController.navigationBar.barTintColor = kMainColor;
     [self.view addSubview:self.tableView];
+    [self setHeadView];
+    [self requestModel];
     // Do any additional setup after loading the view.
 }
 #pragma mark---UITableViewDataSource, UITableViewDelegate
@@ -37,6 +41,26 @@
 - (void)pullingTableViewDidStartRefreshing:(PullingRefreshTableView *)tableView{
     
 }
+#pragma mark---自定义
+- (void)requestModel{
+    
+}
+- (void)setHeadView{
+    UIView *headview = [[UIView alloc] initWithFrame:CGRectMake(0, 0, kWidth, kHeight)];
+    self.tableView.tableHeaderView = headview;
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+    button.frame = CGRectMake(0, 0, kWidth, kWidth * 2 / 3);
+    button.titleLabel.text = @"热门排行";
+    button.titleLabel.textColor = [UIColor grayColor];
+    [headview addSubview:button];
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, kWidth * 2 / 3, kWidth, 40)];
+    label.text = @"热门品牌";
+    label.textColor = [UIColor grayColor];
+    [headview addSubview:label];
+    
+    
+}
+
 #pragma mark---懒加载
 - (PullingRefreshTableView *)tableView{
     if (_tableView == nil) {
