@@ -12,7 +12,8 @@
 #import "PullingRefreshTableView.h"
 #import "MessageModel.h"
 #import "MessageOneTableViewCell.h"
-@interface MessageViewController ()<PullingRefreshTableViewDelegate, UITableViewDataSource, UITableViewDelegate>
+#import "DetailViewController.h"
+@interface MessageViewController ()<PullingRefreshTableViewDelegate, UITableViewDataSource, UITableViewDelegate, UIWebViewDelegate>
 {
     NSMutableArray *segementArray;
     NSInteger _pageCount;
@@ -49,7 +50,6 @@
     AFHTTPSessionManager *httpManager = [AFHTTPSessionManager manager];
     httpManager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"text/html", @"application/json", nil];
     [httpManager GET:kSegementPort parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
-        
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         NSDictionary *segementDic = responseObject;
         NSArray *array = segementDic[@"news"];
@@ -107,10 +107,13 @@
 
 #pragma mark -------------------- UITableViewDelegate
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    MessageModel *model = self.allTitleArray[indexPath.row];
+   
     
     
     
 }
+
 
 #pragma Mark --------- PullingTableViewDelegate
 - (void)pullingTableViewDidStartLoading:(PullingRefreshTableView *)tableView{
@@ -137,8 +140,8 @@
 - (VOSegmentedControl *)VOsegment{
 
     if (!_VOsegment) {
-//      self.VOsegment = [[VOSegmentedControl alloc] initWithSegments:@[@{VOSegmentText:@"首页"}]];
-        self.VOsegment = [[VOSegmentedControl alloc] initWithSegments:segementArray];
+      self.VOsegment = [[VOSegmentedControl alloc] initWithSegments:@[@{VOSegmentText:@"首页"}]];
+//        self.VOsegment = [[VOSegmentedControl alloc] initWithSegments:segementArray];
         NSLog(@"1234456%@", segementArray);
         self.VOsegment.contentStyle = VOContentStyleTextAlone;
         self.VOsegment.indicatorStyle = VOSegCtrlIndicatorStyleBottomLine;
@@ -163,12 +166,6 @@
     }
     return _allTitleArray;
 }
-//- (NSMutableArray *)segementArray{
-//    if (!_segementArray) {
-//        self.segementArray = [NSMutableArray new];
-//    }
-//    return _segementArray;
-//}
 
 - (PullingRefreshTableView *)tableView{
     if (!_tableView) {

@@ -28,7 +28,7 @@
     [self.headImage sd_setImageWithURL:[NSURL URLWithString:messageModel.image] placeholderImage:nil];
     self.titleLabel.text = messageModel.title;
     self.timeLabel.text = [NSString stringWithFormat:@"%@", messageModel.pubDate];
-    self.appriseLabel.text = [NSString stringWithFormat:@"%@", messageModel.ups];
+    self.appriseLabel.text = [NSString stringWithFormat:@"%@评论", messageModel.ups];
     
 }
 

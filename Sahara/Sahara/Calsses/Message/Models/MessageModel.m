@@ -16,6 +16,7 @@
         self.title = dict[@"title"];
         self.ups = dict[@"ups"];
         self.pubDate = dict[@"pubDate"];
+        self.url = dict[@"url"];
     }
     return self;
 }
