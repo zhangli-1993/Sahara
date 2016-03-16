@@ -18,4 +18,10 @@
 
 - (instancetype)initWithDictionary:(NSDictionary *)dict;
 
+//segment
+@property(nonatomic, copy) NSString *itemTitle;
+@property(nonatomic, copy) NSString *itemID;
+
+- (instancetype)initWithArray:(NSArray *)array;
+
 @end

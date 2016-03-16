@@ -15,15 +15,15 @@
 #import "DetailViewController.h"
 @interface MessageViewController ()<PullingRefreshTableViewDelegate, UITableViewDataSource, UITableViewDelegate, UIWebViewDelegate>
 {
-    NSMutableArray *segementArray;
     NSInteger _pageCount;
+    NSString *cellID;
 }
 
 @property(nonatomic, strong) VOSegmentedControl *VOsegment;
-//@property(nonatomic, strong) NSMutableArray *segementArray;
 @property(nonatomic, strong) NSMutableArray *allTitleArray;
 @property(nonatomic, strong) PullingRefreshTableView *tableView;
 @property(nonatomic, assign) BOOL refresh;
+@property(nonatomic, strong) NSMutableArray *allCellArray;
 
 @end
 
@@ -35,14 +35,15 @@
     self.navigationItem.title = @"撒哈拉汽车网";
     self.navigationController.navigationBar.barTintColor = kMainColor;
     _pageCount = 1;
+    cellID = @"16";
     [self.tableView launchRefreshing];
     //注册cell
     [self.tableView registerNib:[UINib nibWithNibName:@"MessageOneTableViewCell" bundle:nil] forCellReuseIdentifier:@"cell"];
-    
-    [self.view addSubview:self.VOsegment];
-    [self.view addSubview:self.tableView];
     [self homePagePortRequest];
     [self segementTextRequest];
+    [self.view addSubview:self.VOsegment];
+    [self.view addSubview:self.tableView];
+    
 }
 
 #pragma mark -------------- Custom Method
@@ -53,11 +54,12 @@
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         NSDictionary *segementDic = responseObject;
         NSArray *array = segementDic[@"news"];
-        for (int i = 0; i < array.count; i++) {
-           
-            [segementArray addObject:array[i][1]];
+        for (NSArray *arr in array) {
+            MessageModel *model = [[MessageModel alloc] initWithArray:arr];
+            [self.allCellArray addObject:model.itemID];
         }
         
+       
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         NSLog(@"%@", error);
     }];
@@ -68,7 +70,7 @@
 - (void)homePagePortRequest{
     AFHTTPSessionManager *httpManager = [AFHTTPSessionManager manager];
     httpManager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"text/html", nil];
-    [httpManager GET:[NSString stringWithFormat:@"%@&pageNo=%lu", kHomePagePort, _pageCount] parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
+    [httpManager GET:[NSString stringWithFormat:@"%@%@?pageSize=20&v=4.0.0&pageNo=%lu", kHomePagePort, cellID,_pageCount] parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         NSDictionary *successDic = responseObject;
@@ -105,11 +107,10 @@
     return self.allTitleArray.count;
 }
 
+
+
 #pragma mark -------------------- UITableViewDelegate
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    MessageModel *model = self.allTitleArray[indexPath.row];
-   
-    
     
     
 }
@@ -138,18 +139,15 @@
 }
 #pragma mark -------------- LazyLoading
 - (VOSegmentedControl *)VOsegment{
-
     if (!_VOsegment) {
-      self.VOsegment = [[VOSegmentedControl alloc] initWithSegments:@[@{VOSegmentText:@"首页"}]];
-//        self.VOsegment = [[VOSegmentedControl alloc] initWithSegments:segementArray];
-        NSLog(@"1234456%@", segementArray);
+        self.VOsegment = [[VOSegmentedControl alloc] initWithSegments:@[@{VOSegmentText:@"首页"}, @{VOSegmentText:@"新车"}, @{VOSegmentText:@"评测"}, @{VOSegmentText:@"视频"}, @{VOSegmentText:@"自媒体"}, @{VOSegmentText:@"导购"}, @{VOSegmentText:@"用车"}, @{VOSegmentText:@"技术"}, @{VOSegmentText:@"游记"}, @{VOSegmentText:@"文化"}, @{VOSegmentText:@"行业"}, @{VOSegmentText:@"赛事"}, @{VOSegmentText:@"直播"}]];
         self.VOsegment.contentStyle = VOContentStyleTextAlone;
         self.VOsegment.indicatorStyle = VOSegCtrlIndicatorStyleBottomLine;
         self.VOsegment.backgroundColor = [UIColor groupTableViewBackgroundColor];
         self.VOsegment.selectedBackgroundColor = self.VOsegment.backgroundColor;
         self.VOsegment.allowNoSelection = NO;
         self.VOsegment.frame = CGRectMake(0, 60, kWidth, 40);
-        self.VOsegment.indicatorThickness = segementArray.count;
+        self.VOsegment.indicatorThickness = 4;
         [self.view addSubview:self.VOsegment];
         //返回点击的是哪个按钮
         [self.VOsegment setIndexChangeBlock:^(NSInteger index) {
@@ -167,6 +165,13 @@
     return _allTitleArray;
 }
 
+- (NSMutableArray *)allCellArray{
+    if (!_allCellArray) {
+        self.allCellArray = [NSMutableArray new];
+    }
+    return _allCellArray;
+}
+
 - (PullingRefreshTableView *)tableView{
     if (!_tableView) {
         self.tableView = [[PullingRefreshTableView alloc] initWithFrame:CGRectMake(0, 100, kWidth, kHeight - 140) pullingDelegate:self];
@@ -178,9 +183,12 @@
 }
 
 - (void)segmentCtrlValuechange:(UISegmentedControl *)segement{
-    
-    
-    
+    NSInteger index = segement.selectedSegmentIndex;
+    if (index == 6) {
+        [self.allCellArray removeObjectAtIndex:6];
+    }
+    cellID = self.allCellArray[index];
+    [self homePagePortRequest];
     
 }
 
