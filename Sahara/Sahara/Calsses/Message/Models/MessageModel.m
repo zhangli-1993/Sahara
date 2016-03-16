@@ -9,5 +9,14 @@
 #import "MessageModel.h"
 
 @implementation MessageModel
-
+- (instancetype)initWithDictionary:(NSDictionary *)dict{
+    self = [super init];
+    if (self) {
+        self.image = dict[@"image"];
+        self.title = dict[@"title"];
+        self.ups = dict[@"ups"];
+        self.pubDate = dict[@"pubDate"];
+    }
+    return self;
+}
 @end
