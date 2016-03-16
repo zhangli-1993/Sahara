@@ -17,6 +17,15 @@
 		7AB362551C98E43A00C03E74 /* ForumViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AB362541C98E43A00C03E74 /* ForumViewController.m */; };
 		7AB362581C98E44500C03E74 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AB362571C98E44500C03E74 /* MainViewController.m */; };
 		7AB3625B1C98E45600C03E74 /* MessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AB3625A1C98E45600C03E74 /* MessageViewController.m */; };
+		7AB3626A1C98F2B500C03E74 /* VOContentLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AB362631C98F2B500C03E74 /* VOContentLayer.m */; };
+		7AB3626B1C98F2B500C03E74 /* VOIndicatorAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AB362651C98F2B500C03E74 /* VOIndicatorAnimation.m */; };
+		7AB3626C1C98F2B500C03E74 /* VOSegment.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AB362671C98F2B500C03E74 /* VOSegment.m */; };
+		7AB3626D1C98F2B500C03E74 /* VOSegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AB362691C98F2B500C03E74 /* VOSegmentedControl.m */; };
+		7AB362701C98F7A200C03E74 /* MessageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AB3626F1C98F7A200C03E74 /* MessageModel.m */; };
+		7AB362741C98F85500C03E74 /* MessageOneTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AB362721C98F85500C03E74 /* MessageOneTableViewCell.m */; };
+		7AB362751C98F85500C03E74 /* MessageOneTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7AB362731C98F85500C03E74 /* MessageOneTableViewCell.xib */; };
+		7AB362791C98F89800C03E74 /* MessageTwoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AB362771C98F89800C03E74 /* MessageTwoTableViewCell.m */; };
+		7AB3627A1C98F89800C03E74 /* MessageTwoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7AB362781C98F89800C03E74 /* MessageTwoTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +49,22 @@
 		7AB362591C98E45600C03E74 /* MessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageViewController.h; sourceTree = "<group>"; };
 		7AB3625A1C98E45600C03E74 /* MessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageViewController.m; sourceTree = "<group>"; };
 		7AB3625C1C98E4AF00C03E74 /* Sahara.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Sahara.pch; sourceTree = "<group>"; };
+		7AB362621C98F2B500C03E74 /* VOContentLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VOContentLayer.h; sourceTree = "<group>"; };
+		7AB362631C98F2B500C03E74 /* VOContentLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VOContentLayer.m; sourceTree = "<group>"; };
+		7AB362641C98F2B500C03E74 /* VOIndicatorAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VOIndicatorAnimation.h; sourceTree = "<group>"; };
+		7AB362651C98F2B500C03E74 /* VOIndicatorAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VOIndicatorAnimation.m; sourceTree = "<group>"; };
+		7AB362661C98F2B500C03E74 /* VOSegment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VOSegment.h; sourceTree = "<group>"; };
+		7AB362671C98F2B500C03E74 /* VOSegment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VOSegment.m; sourceTree = "<group>"; };
+		7AB362681C98F2B500C03E74 /* VOSegmentedControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VOSegmentedControl.h; sourceTree = "<group>"; };
+		7AB362691C98F2B500C03E74 /* VOSegmentedControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VOSegmentedControl.m; sourceTree = "<group>"; };
+		7AB3626E1C98F7A200C03E74 /* MessageModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageModel.h; sourceTree = "<group>"; };
+		7AB3626F1C98F7A200C03E74 /* MessageModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageModel.m; sourceTree = "<group>"; };
+		7AB362711C98F85500C03E74 /* MessageOneTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageOneTableViewCell.h; sourceTree = "<group>"; };
+		7AB362721C98F85500C03E74 /* MessageOneTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageOneTableViewCell.m; sourceTree = "<group>"; };
+		7AB362731C98F85500C03E74 /* MessageOneTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MessageOneTableViewCell.xib; sourceTree = "<group>"; };
+		7AB362761C98F89800C03E74 /* MessageTwoTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageTwoTableViewCell.h; sourceTree = "<group>"; };
+		7AB362771C98F89800C03E74 /* MessageTwoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageTwoTableViewCell.m; sourceTree = "<group>"; };
+		7AB362781C98F89800C03E74 /* MessageTwoTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MessageTwoTableViewCell.xib; sourceTree = "<group>"; };
 		A31DF689C6CF0A0F3FD738CB /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -262,6 +287,8 @@
 		7AB3624A1C98E3F200C03E74 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				7AB3626E1C98F7A200C03E74 /* MessageModel.h */,
+				7AB3626F1C98F7A200C03E74 /* MessageModel.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -269,6 +296,12 @@
 		7AB3624B1C98E3F200C03E74 /* VIews */ = {
 			isa = PBXGroup;
 			children = (
+				7AB362711C98F85500C03E74 /* MessageOneTableViewCell.h */,
+				7AB362721C98F85500C03E74 /* MessageOneTableViewCell.m */,
+				7AB362731C98F85500C03E74 /* MessageOneTableViewCell.xib */,
+				7AB362761C98F89800C03E74 /* MessageTwoTableViewCell.h */,
+				7AB362771C98F89800C03E74 /* MessageTwoTableViewCell.m */,
+				7AB362781C98F89800C03E74 /* MessageTwoTableViewCell.xib */,
 			);
 			path = VIews;
 			sourceTree = "<group>";
@@ -277,8 +310,24 @@
 			isa = PBXGroup;
 			children = (
 				7AB3625C1C98E4AF00C03E74 /* Sahara.pch */,
+				7AB362611C98F2B500C03E74 /* VOSegmentedControl */,
 			);
 			path = Librarys;
+			sourceTree = "<group>";
+		};
+		7AB362611C98F2B500C03E74 /* VOSegmentedControl */ = {
+			isa = PBXGroup;
+			children = (
+				7AB362621C98F2B500C03E74 /* VOContentLayer.h */,
+				7AB362631C98F2B500C03E74 /* VOContentLayer.m */,
+				7AB362641C98F2B500C03E74 /* VOIndicatorAnimation.h */,
+				7AB362651C98F2B500C03E74 /* VOIndicatorAnimation.m */,
+				7AB362661C98F2B500C03E74 /* VOSegment.h */,
+				7AB362671C98F2B500C03E74 /* VOSegment.m */,
+				7AB362681C98F2B500C03E74 /* VOSegmentedControl.h */,
+				7AB362691C98F2B500C03E74 /* VOSegmentedControl.m */,
+			);
+			path = VOSegmentedControl;
 			sourceTree = "<group>";
 		};
 		9CEF5E36737CE835774D009D /* Pods */ = {
@@ -360,6 +409,8 @@
 			files = (
 				7A2E7AEB1C984DDA0045F332 /* Assets.xcassets in Resources */,
 				7A2E7AEE1C984DDA0045F332 /* LaunchScreen.storyboard in Resources */,
+				7AB3627A1C98F89800C03E74 /* MessageTwoTableViewCell.xib in Resources */,
+				7AB362751C98F85500C03E74 /* MessageOneTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -418,13 +469,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7AB3626C1C98F2B500C03E74 /* VOSegment.m in Sources */,
+				7AB3626A1C98F2B500C03E74 /* VOContentLayer.m in Sources */,
 				7AB362521C98E42B00C03E74 /* FindCarViewController.m in Sources */,
 				7AB362581C98E44500C03E74 /* MainViewController.m in Sources */,
 				7A2E7AE91C984DDA0045F332 /* AppDelegate.m in Sources */,
+				7AB3626D1C98F2B500C03E74 /* VOSegmentedControl.m in Sources */,
+				7AB362741C98F85500C03E74 /* MessageOneTableViewCell.m in Sources */,
 				7AB3624F1C98E41800C03E74 /* PrimeViewController.m in Sources */,
+				7AB3626B1C98F2B500C03E74 /* VOIndicatorAnimation.m in Sources */,
 				7AB362551C98E43A00C03E74 /* ForumViewController.m in Sources */,
+				7AB362791C98F89800C03E74 /* MessageTwoTableViewCell.m in Sources */,
 				7A2E7AE61C984DDA0045F332 /* main.m in Sources */,
 				7AB3625B1C98E45600C03E74 /* MessageViewController.m in Sources */,
+				7AB362701C98F7A200C03E74 /* MessageModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

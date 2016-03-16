@@ -64,9 +64,6 @@
     //设置字体
     [[UITabBar appearance] setTintColor:[UIColor blueColor]];
 
-    
-    
-    
     self.tabBarVC.viewControllers = @[messageNav, forumNav, findNav, primeNav, mainNav];
     self.window.rootViewController = self.tabBarVC;
     
