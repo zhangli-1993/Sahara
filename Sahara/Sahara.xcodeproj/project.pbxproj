@@ -15,8 +15,6 @@
 		7A84D1A81C98FF38006EE2F1 /* blueArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A84D1A41C98FF38006EE2F1 /* blueArrow.png */; };
 		7A84D1A91C98FF38006EE2F1 /* blueArrowDown.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A84D1A51C98FF38006EE2F1 /* blueArrowDown.png */; };
 		7A84D1AA1C98FF38006EE2F1 /* PullingRefreshTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A84D1A71C98FF38006EE2F1 /* PullingRefreshTableView.m */; };
-		7A84D1AD1C990BED006EE2F1 /* BrandViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A84D1AC1C990BED006EE2F1 /* BrandViewController.m */; };
-		7A84D1B01C990C16006EE2F1 /* ConditionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A84D1AF1C990C16006EE2F1 /* ConditionViewController.m */; };
 		7AB3624F1C98E41800C03E74 /* PrimeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AB3624E1C98E41800C03E74 /* PrimeViewController.m */; };
 		7AB362521C98E42B00C03E74 /* FindCarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AB362511C98E42B00C03E74 /* FindCarViewController.m */; };
 		7AB362551C98E43A00C03E74 /* ForumViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AB362541C98E43A00C03E74 /* ForumViewController.m */; };
@@ -31,6 +29,10 @@
 		7AB362751C98F85500C03E74 /* MessageOneTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7AB362731C98F85500C03E74 /* MessageOneTableViewCell.xib */; };
 		7AB362791C98F89800C03E74 /* MessageTwoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AB362771C98F89800C03E74 /* MessageTwoTableViewCell.m */; };
 		7AB3627A1C98F89800C03E74 /* MessageTwoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7AB362781C98F89800C03E74 /* MessageTwoTableViewCell.xib */; };
+		7AD7F7E71C9934CE00BF2460 /* hot in Resources */ = {isa = PBXBuildFile; fileRef = 7AD7F7E61C9934CE00BF2460 /* hot */; };
+		7AD7F7E91C9943A700BF2460 /* allBrands in Resources */ = {isa = PBXBuildFile; fileRef = 7AD7F7E81C9943A700BF2460 /* allBrands */; };
+		7AD7F7F11C9945E800BF2460 /* AllBrandsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AD7F7F01C9945E800BF2460 /* AllBrandsModel.m */; };
+		7AD7F7F41C9946E500BF2460 /* AllTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AD7F7F31C9946E500BF2460 /* AllTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,10 +49,6 @@
 		7A84D1A51C98FF38006EE2F1 /* blueArrowDown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blueArrowDown.png; sourceTree = "<group>"; };
 		7A84D1A61C98FF38006EE2F1 /* PullingRefreshTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PullingRefreshTableView.h; sourceTree = "<group>"; };
 		7A84D1A71C98FF38006EE2F1 /* PullingRefreshTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PullingRefreshTableView.m; sourceTree = "<group>"; };
-		7A84D1AB1C990BED006EE2F1 /* BrandViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BrandViewController.h; sourceTree = "<group>"; };
-		7A84D1AC1C990BED006EE2F1 /* BrandViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BrandViewController.m; sourceTree = "<group>"; };
-		7A84D1AE1C990C16006EE2F1 /* ConditionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConditionViewController.h; sourceTree = "<group>"; };
-		7A84D1AF1C990C16006EE2F1 /* ConditionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConditionViewController.m; sourceTree = "<group>"; };
 		7AB3624D1C98E41800C03E74 /* PrimeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrimeViewController.h; sourceTree = "<group>"; };
 		7AB3624E1C98E41800C03E74 /* PrimeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PrimeViewController.m; sourceTree = "<group>"; };
 		7AB362501C98E42B00C03E74 /* FindCarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FindCarViewController.h; sourceTree = "<group>"; };
@@ -79,6 +77,12 @@
 		7AB362771C98F89800C03E74 /* MessageTwoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageTwoTableViewCell.m; sourceTree = "<group>"; };
 		7AB362781C98F89800C03E74 /* MessageTwoTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MessageTwoTableViewCell.xib; sourceTree = "<group>"; };
 		7AB362841C99002400C03E74 /* PortDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PortDefine.h; path = VOSegmentedControl/PortDefine.h; sourceTree = "<group>"; };
+		7AD7F7E61C9934CE00BF2460 /* hot */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = hot; sourceTree = "<group>"; };
+		7AD7F7E81C9943A700BF2460 /* allBrands */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = allBrands; sourceTree = "<group>"; };
+		7AD7F7EF1C9945E800BF2460 /* AllBrandsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AllBrandsModel.h; sourceTree = "<group>"; };
+		7AD7F7F01C9945E800BF2460 /* AllBrandsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AllBrandsModel.m; sourceTree = "<group>"; };
+		7AD7F7F21C9946E500BF2460 /* AllTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AllTableViewCell.h; sourceTree = "<group>"; };
+		7AD7F7F31C9946E500BF2460 /* AllTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AllTableViewCell.m; sourceTree = "<group>"; };
 		A31DF689C6CF0A0F3FD738CB /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -194,9 +198,9 @@
 		7AB3623C1C98E3F200C03E74 /* FindCar */ = {
 			isa = PBXGroup;
 			children = (
+				7AD7F7EE1C9945C800BF2460 /* View */,
+				7AD7F7ED1C9945BF00BF2460 /* Models */,
 				7AB3623D1C98E3F200C03E74 /* Controllers */,
-				7AB3623E1C98E3F200C03E74 /* Models */,
-				7AB3623F1C98E3F200C03E74 /* VIews */,
 			);
 			path = FindCar;
 			sourceTree = "<group>";
@@ -206,26 +210,10 @@
 			children = (
 				7AB362501C98E42B00C03E74 /* FindCarViewController.h */,
 				7AB362511C98E42B00C03E74 /* FindCarViewController.m */,
-				7A84D1AB1C990BED006EE2F1 /* BrandViewController.h */,
-				7A84D1AC1C990BED006EE2F1 /* BrandViewController.m */,
-				7A84D1AE1C990C16006EE2F1 /* ConditionViewController.h */,
-				7A84D1AF1C990C16006EE2F1 /* ConditionViewController.m */,
+				7AD7F7E61C9934CE00BF2460 /* hot */,
+				7AD7F7E81C9943A700BF2460 /* allBrands */,
 			);
 			path = Controllers;
-			sourceTree = "<group>";
-		};
-		7AB3623E1C98E3F200C03E74 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		7AB3623F1C98E3F200C03E74 /* VIews */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = VIews;
 			sourceTree = "<group>";
 		};
 		7AB362401C98E3F200C03E74 /* Forum */ = {
@@ -361,6 +349,24 @@
 			path = VOSegmentedControl;
 			sourceTree = "<group>";
 		};
+		7AD7F7ED1C9945BF00BF2460 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				7AD7F7EF1C9945E800BF2460 /* AllBrandsModel.h */,
+				7AD7F7F01C9945E800BF2460 /* AllBrandsModel.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		7AD7F7EE1C9945C800BF2460 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7AD7F7F21C9946E500BF2460 /* AllTableViewCell.h */,
+				7AD7F7F31C9946E500BF2460 /* AllTableViewCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		9CEF5E36737CE835774D009D /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -442,7 +448,9 @@
 				7A84D1A91C98FF38006EE2F1 /* blueArrowDown.png in Resources */,
 				7A2E7AEE1C984DDA0045F332 /* LaunchScreen.storyboard in Resources */,
 				7A84D1A81C98FF38006EE2F1 /* blueArrow.png in Resources */,
+				7AD7F7E91C9943A700BF2460 /* allBrands in Resources */,
 				7AB3627A1C98F89800C03E74 /* MessageTwoTableViewCell.xib in Resources */,
+				7AD7F7E71C9934CE00BF2460 /* hot in Resources */,
 				7AB362751C98F85500C03E74 /* MessageOneTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -503,14 +511,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				7AB3626C1C98F2B500C03E74 /* VOSegment.m in Sources */,
+				7AD7F7F11C9945E800BF2460 /* AllBrandsModel.m in Sources */,
 				7AB3626A1C98F2B500C03E74 /* VOContentLayer.m in Sources */,
 				7AB362521C98E42B00C03E74 /* FindCarViewController.m in Sources */,
 				7AB362581C98E44500C03E74 /* MainViewController.m in Sources */,
 				7A2E7AE91C984DDA0045F332 /* AppDelegate.m in Sources */,
 				7AB3626D1C98F2B500C03E74 /* VOSegmentedControl.m in Sources */,
-				7A84D1AD1C990BED006EE2F1 /* BrandViewController.m in Sources */,
+				7AD7F7F41C9946E500BF2460 /* AllTableViewCell.m in Sources */,
 				7AB362741C98F85500C03E74 /* MessageOneTableViewCell.m in Sources */,
-				7A84D1B01C990C16006EE2F1 /* ConditionViewController.m in Sources */,
 				7AB3624F1C98E41800C03E74 /* PrimeViewController.m in Sources */,
 				7AB3626B1C98F2B500C03E74 /* VOIndicatorAnimation.m in Sources */,
 				7AB362551C98E43A00C03E74 /* ForumViewController.m in Sources */,

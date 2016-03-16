@@ -9,8 +9,16 @@
 #import "FindCarViewController.h"
 #import "PullingRefreshTableView.h"
 #import "VOSegmentedControl.h"
-@interface FindCarViewController ()<PullingRefreshTableViewDelegate, UITableViewDataSource, UITableViewDelegate>
+#import <AFNetworking/AFHTTPSessionManager.h>
+#import "AllBrandsModel.h"
+#import "AllTableViewCell.h"
+@interface FindCarViewController ()<PullingRefreshTableViewDelegate, UITableViewDataSource, UITableViewDelegate, UICollectionViewDelegate, UICollectionViewDataSource,UICollectionViewDelegateFlowLayout>
 @property (nonatomic, strong) PullingRefreshTableView *tableView;
+@property (nonatomic, strong) UICollectionView *collectView;
+@property (nonatomic, strong) NSMutableArray *hotArray;
+@property (nonatomic, strong) NSMutableArray *hotIDArray;
+@property (nonatomic, strong) NSMutableArray *titleArray;
+@property (nonatomic, strong) NSMutableArray *numArray;
 
 @end
 
@@ -20,45 +28,131 @@
     [super viewDidLoad];
     self.title = @"找车";
     self.navigationController.navigationBar.barTintColor = kMainColor;
-    [self.view addSubview:self.tableView];
     [self setHeadView];
     [self requestModel];
-    // Do any additional setup after loading the view.
+    [self requestAllModel];
+    [self.tableView launchRefreshing];
+    [self.view addSubview:self.tableView];
+
 }
 #pragma mark---UITableViewDataSource, UITableViewDelegate
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 20;
+    NSArray *arr = self.numArray[section];
+    return arr.count;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    static NSString *str = @"carName";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:str];
+      static NSString *str = @"carName";
+    AllTableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:str];
     if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:str];
+        cell = [[AllTableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:str];
     }
+    cell.model = self.numArray[indexPath.section][indexPath.row];
     return cell;
+}
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+    return self.numArray.count;
+}
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
+    return self.titleArray[section];
 }
 #pragma mark---PullingRefreshTableViewDelegate
 - (void)pullingTableViewDidStartRefreshing:(PullingRefreshTableView *)tableView{
-    
 }
+
+#pragma mark---UICollectionViewDelegate, UICollectionViewDataSource
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
+    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"hot" forIndexPath:indexPath];
+    cell.backgroundColor = [UIColor whiteColor];
+    UILabel *label = [[UILabel alloc] initWithFrame:cell.frame];
+    label.text = self.hotArray[indexPath.row];
+    label.textAlignment = NSTextAlignmentCenter;
+    [self.collectView addSubview:label];
+    return cell;
+}
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
+    return self.hotArray.count;
+}
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath{
+    return CGSizeMake((kWidth - 60 ) / 4 , 40);
+}
+
 #pragma mark---自定义
 - (void)requestModel{
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    manager.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"application/json"];
+    [manager GET:kHotBrand parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
+        
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        NSDictionary *dic = responseObject;
+        NSArray *brands = dic[@"brands"];
+        for (NSDictionary *dict in brands) {
+            [self.hotIDArray addObject:dict[@"id"]];
+            [self.hotArray addObject:dict[@"name"]];
+        }
+        [self.collectView reloadData];
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        NSLog(@"%@", error);
+    }];
     
 }
+- (void)requestAllModel{
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    manager.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"application/json"];
+    [manager GET:kFindCar parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
+        
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        NSDictionary *dic = responseObject;
+        NSMutableArray *array = [NSMutableArray new];
+        array = dic[@"sections"];
+        for (NSDictionary *dict1 in array) {
+        NSMutableArray *allArray = [NSMutableArray new];
+        if (allArray.count > 0) {
+            [allArray removeAllObjects];
+        }
+         [self.titleArray addObject:dict1[@"index"]];
+         NSArray *array1 = dict1[@"brands"];
+         for (NSDictionary *dict2 in array1) {
+                AllBrandsModel *model = [[AllBrandsModel alloc] initWithDictionary:dict2];
+                [allArray addObject:model];
+            }
+            [self.numArray addObject:allArray];
+        }
+        [self.tableView reloadData];
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        NSLog(@"%@", error);
+    }];
+}
 - (void)setHeadView{
-    UIView *headview = [[UIView alloc] initWithFrame:CGRectMake(0, 0, kWidth, kHeight)];
-    self.tableView.tableHeaderView = headview;
+    UIView *headview = [[UIView alloc] initWithFrame:CGRectMake(0, 0, kWidth, kWidth / 8 + 130)];
     UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
-    button.frame = CGRectMake(0, 0, kWidth, kWidth * 2 / 3);
-    button.titleLabel.text = @"热门排行";
-    button.titleLabel.textColor = [UIColor grayColor];
+    button.frame = CGRectMake(0, 5, kWidth, kWidth / 8);
+    button.backgroundColor = [UIColor whiteColor];
+    [button setTitle:@"热门排行" forState:UIControlStateNormal];
+    [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     [headview addSubview:button];
-    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, kWidth * 2 / 3, kWidth, 40)];
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, kWidth / 8, kWidth, 40)];
     label.text = @"热门品牌";
     label.textColor = [UIColor grayColor];
     [headview addSubview:label];
-    
-    
+    UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
+    //设置布局方向为垂直（默认垂直方向）
+    layout.scrollDirection = UICollectionViewScrollDirectionVertical;
+    //设置item的间距
+    layout.minimumInteritemSpacing = 5;
+    //设置每一行的间距
+    layout.minimumLineSpacing = 5;
+    //section的边距
+    layout.sectionInset = UIEdgeInsetsMake(0, 5, 5, 5);
+    //通过一个layout布局来创建一个collectView
+    self.collectView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, kWidth / 8 + 40, kWidth, 85) collectionViewLayout:layout];
+    //设置代理
+    self.collectView.dataSource = self;
+    self.collectView.delegate = self;
+    [self.collectView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"hot"];
+    self.collectView.backgroundColor = [UIColor clearColor];
+    [headview addSubview:self.collectView];
+    self.tableView.tableHeaderView = headview;
+
 }
 
 #pragma mark---懒加载
@@ -67,9 +161,36 @@
         self.tableView = [[PullingRefreshTableView alloc] initWithFrame:self.view.frame pullingDelegate:self];
         self.tableView.delegate = self;
         self.tableView.dataSource = self;
+        self.tableView.backgroundColor = [UIColor colorWithRed:0.7 green:0.7 blue:0.7 alpha:0.3];
+        self.tableView.rowHeight = 70;
     }
     return _tableView;
 }
+- (NSMutableArray *)hotArray{
+    if (_hotArray == nil) {
+        self.hotArray = [NSMutableArray new];
+    }
+    return _hotArray;
+}
+- (NSMutableArray *)hotIDArray{
+    if (_hotIDArray == nil) {
+        self.hotIDArray = [NSMutableArray new];
+    }
+    return _hotIDArray;
+}
+- (NSMutableArray *)titleArray{
+    if (_titleArray == nil) {
+        self.titleArray = [NSMutableArray new];
+    }
+    return _titleArray;
+}
+- (NSMutableArray *)numArray{
+    if (_numArray == nil) {
+        self.numArray = [NSMutableArray new];
+    }
+    return _numArray;
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

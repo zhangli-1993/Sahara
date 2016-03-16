@@ -1,0 +1,53 @@
+{
+brands =     (
+{
+id = 2;
+letter = D;
+logo = "http://www1.pcauto.com.cn/piclib/2.png";
+name = "\U5927\U4f17";
+},
+{
+id = 10;
+letter = F;
+logo = "http://www1.pcauto.com.cn/piclib/10.png";
+name = "\U4e30\U7530";
+},
+{
+id = 3;
+letter = B;
+logo = "http://www1.pcauto.com.cn/piclib/3.png";
+name = "\U672c\U7530";
+},
+{
+id = 21;
+letter = F;
+logo = "http://www1.pcauto.com.cn/piclib/21.png";
+name = "\U798f\U7279";
+},
+{
+id = 7;
+letter = B;
+logo = "http://www1.pcauto.com.cn/piclib/7.png";
+name = "\U522b\U514b";
+},
+{
+id = 1;
+letter = A;
+logo = "http://www1.pcauto.com.cn/piclib/1.png";
+name = "\U5965\U8fea";
+},
+{
+id = 20;
+letter = B;
+logo = "http://img0.pcauto.com.cn/pcauto/1310/09/3189270_20.png";
+name = "\U5b9d\U9a6c";
+},
+{
+id = 4;
+letter = B;
+logo = "http://www1.pcauto.com.cn/piclib/4.png";
+name = "\U5954\U9a70";
+}
+);
+}
+
