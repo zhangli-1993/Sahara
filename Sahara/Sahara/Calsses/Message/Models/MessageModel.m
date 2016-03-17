@@ -26,7 +26,7 @@
             self.ups = dict[@"count"];
             self.pubDate = dict[@"zbTime"];
             self.url = dict[@"zbUrl"];
-            self.messageID = dict[@"zbid"];
+            self.tomLiveID = dict[@"zbId"];
 
         }
     }

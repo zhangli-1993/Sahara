@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		525A52B034E3688F1D9B5A41 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A31DF689C6CF0A0F3FD738CB /* libPods.a */; };
+		7A1225751C9A90C000E16422 /* TomLiveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A1225741C9A90C000E16422 /* TomLiveViewController.m */; };
+		7A1225781C9A9C9500E16422 /* LiveOtherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A1225771C9A9C9500E16422 /* LiveOtherViewController.m */; };
 		7A2E7AE61C984DDA0045F332 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A2E7AE51C984DDA0045F332 /* main.m */; };
 		7A2E7AE91C984DDA0045F332 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A2E7AE81C984DDA0045F332 /* AppDelegate.m */; };
 		7A2E7AEB1C984DDA0045F332 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A2E7AEA1C984DDA0045F332 /* Assets.xcassets */; };
@@ -16,6 +18,7 @@
 		7A84D1A81C98FF38006EE2F1 /* blueArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A84D1A41C98FF38006EE2F1 /* blueArrow.png */; };
 		7A84D1A91C98FF38006EE2F1 /* blueArrowDown.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A84D1A51C98FF38006EE2F1 /* blueArrowDown.png */; };
 		7A84D1AA1C98FF38006EE2F1 /* PullingRefreshTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A84D1A71C98FF38006EE2F1 /* PullingRefreshTableView.m */; };
+		7AAB55AE1C9AA55C0096B1C1 /* UIViewController+BackPront.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AAB55AD1C9AA55C0096B1C1 /* UIViewController+BackPront.m */; };
 		7AB3624F1C98E41800C03E74 /* PrimeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AB3624E1C98E41800C03E74 /* PrimeViewController.m */; };
 		7AB362521C98E42B00C03E74 /* FindCarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AB362511C98E42B00C03E74 /* FindCarViewController.m */; };
 		7AB362551C98E43A00C03E74 /* ForumViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AB362541C98E43A00C03E74 /* ForumViewController.m */; };
@@ -39,6 +42,10 @@
 /* Begin PBXFileReference section */
 		3E5768CE4E443399640C3666 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		4483BA8AABB15E4CA5CAE736 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		7A1225731C9A90C000E16422 /* TomLiveViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TomLiveViewController.h; sourceTree = "<group>"; };
+		7A1225741C9A90C000E16422 /* TomLiveViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TomLiveViewController.m; sourceTree = "<group>"; };
+		7A1225761C9A9C9500E16422 /* LiveOtherViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LiveOtherViewController.h; sourceTree = "<group>"; };
+		7A1225771C9A9C9500E16422 /* LiveOtherViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LiveOtherViewController.m; sourceTree = "<group>"; };
 		7A2E7AE11C984DDA0045F332 /* Sahara.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sahara.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A2E7AE51C984DDA0045F332 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7A2E7AE71C984DDA0045F332 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -52,6 +59,8 @@
 		7A84D1A51C98FF38006EE2F1 /* blueArrowDown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blueArrowDown.png; sourceTree = "<group>"; };
 		7A84D1A61C98FF38006EE2F1 /* PullingRefreshTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PullingRefreshTableView.h; sourceTree = "<group>"; };
 		7A84D1A71C98FF38006EE2F1 /* PullingRefreshTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PullingRefreshTableView.m; sourceTree = "<group>"; };
+		7AAB55AC1C9AA55C0096B1C1 /* UIViewController+BackPront.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+BackPront.h"; sourceTree = "<group>"; };
+		7AAB55AD1C9AA55C0096B1C1 /* UIViewController+BackPront.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+BackPront.m"; sourceTree = "<group>"; };
 		7AB3624D1C98E41800C03E74 /* PrimeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrimeViewController.h; sourceTree = "<group>"; };
 		7AB3624E1C98E41800C03E74 /* PrimeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PrimeViewController.m; sourceTree = "<group>"; };
 		7AB362501C98E42B00C03E74 /* FindCarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FindCarViewController.h; sourceTree = "<group>"; };
@@ -302,6 +311,10 @@
 				7AB3625A1C98E45600C03E74 /* MessageViewController.m */,
 				7A6C0BD51C995E7C00205D61 /* DetailViewController.h */,
 				7A6C0BD61C995E7C00205D61 /* DetailViewController.m */,
+				7A1225731C9A90C000E16422 /* TomLiveViewController.h */,
+				7A1225741C9A90C000E16422 /* TomLiveViewController.m */,
+				7A1225761C9A9C9500E16422 /* LiveOtherViewController.h */,
+				7A1225771C9A9C9500E16422 /* LiveOtherViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -333,6 +346,8 @@
 			children = (
 				7AB3625C1C98E4AF00C03E74 /* Sahara.pch */,
 				7AB362841C99002400C03E74 /* PortDefine.h */,
+				7AAB55AC1C9AA55C0096B1C1 /* UIViewController+BackPront.h */,
+				7AAB55AD1C9AA55C0096B1C1 /* UIViewController+BackPront.m */,
 				7A84D1A31C98FF38006EE2F1 /* PullingRefreshTableView */,
 				7AB362611C98F2B500C03E74 /* VOSegmentedControl */,
 			);
@@ -528,10 +543,13 @@
 				7AB3624F1C98E41800C03E74 /* PrimeViewController.m in Sources */,
 				7AB3626B1C98F2B500C03E74 /* VOIndicatorAnimation.m in Sources */,
 				7AB362551C98E43A00C03E74 /* ForumViewController.m in Sources */,
+				7AAB55AE1C9AA55C0096B1C1 /* UIViewController+BackPront.m in Sources */,
+				7A1225781C9A9C9500E16422 /* LiveOtherViewController.m in Sources */,
 				7AB362791C98F89800C03E74 /* MessageTwoTableViewCell.m in Sources */,
 				7A2E7AE61C984DDA0045F332 /* main.m in Sources */,
 				7AB3625B1C98E45600C03E74 /* MessageViewController.m in Sources */,
 				7A84D1AA1C98FF38006EE2F1 /* PullingRefreshTableView.m in Sources */,
+				7A1225751C9A90C000E16422 /* TomLiveViewController.m in Sources */,
 				7AB362701C98F7A200C03E74 /* MessageModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -14,6 +14,8 @@
 #import "MessageOneTableViewCell.h"
 #import "DetailViewController.h"
 #import "MessageTwoTableViewCell.h"
+#import "TomLiveViewController.h"
+#import "LiveOtherViewController.h"
 @interface MessageViewController ()<PullingRefreshTableViewDelegate, UITableViewDataSource, UITableViewDelegate, UIWebViewDelegate>
 {
     NSInteger _pageCount;
@@ -26,7 +28,6 @@
 @property(nonatomic, strong) PullingRefreshTableView *tableView;
 @property(nonatomic, assign) BOOL refresh;
 @property(nonatomic, strong) NSMutableArray *allCellArray;
-//@property(nonatomic, strong) NSMutableArray *allZBarray;
 
 @end
 
@@ -135,11 +136,26 @@
 
 #pragma mark -------------------- UITableViewDelegate
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    TomLiveViewController *tomliveVC = [[TomLiveViewController alloc] init];
+    LiveOtherViewController *liveVC = [[LiveOtherViewController alloc] init];
+    MessageModel *model = self.allTitleArray[indexPath.row];
+    
+    if (index == 12) {
+        if (model.tomLiveID.length > 5) {
+            liveVC.loveOtherID = model.tomLiveID;
+            [self.navigationController pushViewController:liveVC animated:YES];
+        }else{
+            tomliveVC.tomLiveID = model.tomLiveID;
+            [self.navigationController pushViewController:tomliveVC animated:YES];
+        }
+        
+    }else{
+    
     DetailViewController *detailVC = [[DetailViewController alloc] init];
     MessageModel *model = self.allTitleArray[indexPath.row];
     detailVC.detailID = model.messageID;
     [self.navigationController pushViewController:detailVC animated:YES];
-    
+    }
 }
 
 
@@ -211,7 +227,7 @@
 - (void)segmentCtrlValuechange:(UISegmentedControl *)segement{
     index = segement.selectedSegmentIndex;
     cellID = self.allCellArray[index];
-    NSLog(@"cellid = %@", self.allCellArray[index]);
+//    NSLog(@"cellid = %@", self.allCellArray[index]);
     [self homePagePortRequest];
     
 }

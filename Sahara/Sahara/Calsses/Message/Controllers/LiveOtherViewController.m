@@ -1,40 +1,38 @@
 //
-//  DetailViewController.m
+//  LiveOtherViewController.m
 //  Sahara
 //
-//  Created by scjy on 16/3/16.
+//  Created by scjy on 16/3/17.
 //  Copyright © 2016年 scjy. All rights reserved.
 //
 
-#import "DetailViewController.h"
+#import "LiveOtherViewController.h"
 
-@interface DetailViewController ()<UIWebViewDelegate>
+@interface LiveOtherViewController ()<UIWebViewDelegate>
 
 @property(nonatomic, strong) UIWebView *webView;
 
 @end
 
-@implementation DetailViewController
+@implementation LiveOtherViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.navigationItem.title = @"详情";
     [self.view addSubview:self.webView];
+    self.navigationItem.title = @"评论";
     [self backToPreviousPageWithImage];
-    
-    
+    self.view.backgroundColor = [UIColor whiteColor];
 }
 
-#pragma mark ----------- LazyLoading
+#pragma mark ---------------- LazyLoading
 - (UIWebView *)webView{
     if (!_webView) {
         self.webView = [[UIWebView alloc] initWithFrame:self.view.frame];
         self.webView.delegate = self;
-        NSString *urlStr = [NSString stringWithFormat:@"%@%@?%@", kDetailFront, self.detailID, kDetailPort];
-        NSURL *url = [[NSURL alloc] initWithString:urlStr];
         self.webView.scalesPageToFit = YES;
-        [self.webView loadRequest:[NSURLRequest requestWithURL:url]];
+        NSString *url = [NSString stringWithFormat:@"%@%@?%@", kLiveOther, self.loveOtherID, kOtherPort];
+        [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:url]]];
     }
     return _webView;
 }
