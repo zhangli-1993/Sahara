@@ -15,7 +15,7 @@
 //找车接口
 #define kFindCar @"http://mrobot.pcauto.com.cn/v2/price/brands?v=4.0.0"
 #define kHotBrand @"http://mrobot.pcauto.com.cn/configs/pcauto_hot_brands"
-#define kCarPrice @"http://mrobot.pcauto.com.cn/v3/price/modelLibraryHomePage?bid=1&type=1"
+#define kCarPrice @"http://mrobot.pcauto.com.cn/v3/price/modelLibraryHomePage?"
 
 #define kSegementPort @"http://mrobot.pcauto.com.cn/configs/pcauto_v4_cms_android_channel_tree"
 
@@ -29,5 +29,7 @@
 //直播另一种详情
 #define kLiveOther @"http://mrobot.pcauto.com.cn/v2/bbs/topics/"
 #define kOtherPort @"pageNo=1&pageSize=19&authorId=0&topicTemplate=4.5.0&app=pcautobrowser&picRule=2&size=18"
+//直播评论
+#define kApprisePort @"http://mrobot.pcauto.com.cn/xsp/s/auto/info/xueChe/newTopics.xsp?topicId=13319076&reverse=0&pageSize=20"
 
 #endif /* PortDefine_h */
