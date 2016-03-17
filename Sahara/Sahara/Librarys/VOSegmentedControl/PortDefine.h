@@ -22,8 +22,8 @@
 //首页cell
 #define kHomePagePort @"http://mrobot.pcauto.com.cn/v2/cms/channels/"
 //首页详情
-#define kDetailPort @"http://mrobot.pcauto.com.cn/v2/bbs/topics/10014423?pageSize=19&authorId=0&topicTemplate=4.5.0&app=pcautobrowser&picRule=2&size=18"
-
+#define kDetailFront @"http://mrobot.pcauto.com.cn/v3/cms/articles/"
+#define kDetailPort @"articleTemplate=4.8.0&app=pcautobrowser&channelId=9&serialId=0&size=18&picRule=2"
 
 
 
