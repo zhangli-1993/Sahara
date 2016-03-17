@@ -7,9 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "MessageModel.h"
 @interface TomLiveViewController : UIViewController
 
-@property(nonatomic, strong) NSString *tomLiveID;
+@property(nonatomic, strong) MessageModel *liveModel;
 
 @end

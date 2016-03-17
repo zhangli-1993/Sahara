@@ -19,6 +19,8 @@
 		7A84D1A91C98FF38006EE2F1 /* blueArrowDown.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A84D1A51C98FF38006EE2F1 /* blueArrowDown.png */; };
 		7A84D1AA1C98FF38006EE2F1 /* PullingRefreshTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A84D1A71C98FF38006EE2F1 /* PullingRefreshTableView.m */; };
 		7AAB55AE1C9AA55C0096B1C1 /* UIViewController+BackPront.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AAB55AD1C9AA55C0096B1C1 /* UIViewController+BackPront.m */; };
+		7AAB55B11C9AB7580096B1C1 /* AppriseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AAB55B01C9AB7580096B1C1 /* AppriseViewController.m */; };
+		7AAB55B41C9AC5E70096B1C1 /* AppriseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AAB55B31C9AC5E70096B1C1 /* AppriseTableViewCell.m */; };
 		7AB3624F1C98E41800C03E74 /* PrimeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AB3624E1C98E41800C03E74 /* PrimeViewController.m */; };
 		7AB362521C98E42B00C03E74 /* FindCarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AB362511C98E42B00C03E74 /* FindCarViewController.m */; };
 		7AB362551C98E43A00C03E74 /* ForumViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AB362541C98E43A00C03E74 /* ForumViewController.m */; };
@@ -61,6 +63,10 @@
 		7A84D1A71C98FF38006EE2F1 /* PullingRefreshTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PullingRefreshTableView.m; sourceTree = "<group>"; };
 		7AAB55AC1C9AA55C0096B1C1 /* UIViewController+BackPront.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+BackPront.h"; sourceTree = "<group>"; };
 		7AAB55AD1C9AA55C0096B1C1 /* UIViewController+BackPront.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+BackPront.m"; sourceTree = "<group>"; };
+		7AAB55AF1C9AB7580096B1C1 /* AppriseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppriseViewController.h; sourceTree = "<group>"; };
+		7AAB55B01C9AB7580096B1C1 /* AppriseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppriseViewController.m; sourceTree = "<group>"; };
+		7AAB55B21C9AC5E70096B1C1 /* AppriseTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppriseTableViewCell.h; sourceTree = "<group>"; };
+		7AAB55B31C9AC5E70096B1C1 /* AppriseTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppriseTableViewCell.m; sourceTree = "<group>"; };
 		7AB3624D1C98E41800C03E74 /* PrimeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrimeViewController.h; sourceTree = "<group>"; };
 		7AB3624E1C98E41800C03E74 /* PrimeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PrimeViewController.m; sourceTree = "<group>"; };
 		7AB362501C98E42B00C03E74 /* FindCarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FindCarViewController.h; sourceTree = "<group>"; };
@@ -315,6 +321,8 @@
 				7A1225741C9A90C000E16422 /* TomLiveViewController.m */,
 				7A1225761C9A9C9500E16422 /* LiveOtherViewController.h */,
 				7A1225771C9A9C9500E16422 /* LiveOtherViewController.m */,
+				7AAB55AF1C9AB7580096B1C1 /* AppriseViewController.h */,
+				7AAB55B01C9AB7580096B1C1 /* AppriseViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -337,6 +345,8 @@
 				7AB362761C98F89800C03E74 /* MessageTwoTableViewCell.h */,
 				7AB362771C98F89800C03E74 /* MessageTwoTableViewCell.m */,
 				7AB362781C98F89800C03E74 /* MessageTwoTableViewCell.xib */,
+				7AAB55B21C9AC5E70096B1C1 /* AppriseTableViewCell.h */,
+				7AAB55B31C9AC5E70096B1C1 /* AppriseTableViewCell.m */,
 			);
 			path = VIews;
 			sourceTree = "<group>";
@@ -533,6 +543,7 @@
 				7AB3626C1C98F2B500C03E74 /* VOSegment.m in Sources */,
 				7AD7F7F11C9945E800BF2460 /* AllBrandsModel.m in Sources */,
 				7AB3626A1C98F2B500C03E74 /* VOContentLayer.m in Sources */,
+				7AAB55B41C9AC5E70096B1C1 /* AppriseTableViewCell.m in Sources */,
 				7AB362521C98E42B00C03E74 /* FindCarViewController.m in Sources */,
 				7A6C0BD71C995E7C00205D61 /* DetailViewController.m in Sources */,
 				7AB362581C98E44500C03E74 /* MainViewController.m in Sources */,
@@ -541,6 +552,7 @@
 				7AD7F7F41C9946E500BF2460 /* AllTableViewCell.m in Sources */,
 				7AB362741C98F85500C03E74 /* MessageOneTableViewCell.m in Sources */,
 				7AB3624F1C98E41800C03E74 /* PrimeViewController.m in Sources */,
+				7AAB55B11C9AB7580096B1C1 /* AppriseViewController.m in Sources */,
 				7AB3626B1C98F2B500C03E74 /* VOIndicatorAnimation.m in Sources */,
 				7AB362551C98E43A00C03E74 /* ForumViewController.m in Sources */,
 				7AAB55AE1C9AA55C0096B1C1 /* UIViewController+BackPront.m in Sources */,
