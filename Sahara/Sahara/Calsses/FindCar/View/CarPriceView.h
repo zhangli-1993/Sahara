@@ -7,13 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "CarPriceModel.h"
 @interface CarPriceView : UIView
 {
     CGPoint openPointCenter;
     CGPoint closePointCenter;
 }
--(instancetype)initWithView:(UIView*)contentview parentView:(UIView*) parentview;
-@property (nonatomic, strong) UIView *parentView; //抽屉视图的父视图
-@property (nonatomic, strong) UIView *contenView; //抽屉显示内容的视图
+@property (nonatomic, strong) CarPriceModel *model;
+@property (nonatomic, strong) NSString *idStr;
+@property (nonatomic, strong) UITableView *tableView;
+@property (nonatomic, strong) NSMutableArray *allArray;
+@property (nonatomic, strong) NSMutableArray *onArray;
+- (void)requestModel;
 @end

@@ -12,5 +12,10 @@
 @property (nonatomic, strong) NSString *name;
 @property (nonatomic, strong) NSString *price;
 @property (nonatomic, strong) NSString *type;
+@property (nonatomic, strong) NSString *image;
+@property (nonatomic, strong) NSString *idStr;
+@property (nonatomic, strong) NSString *cellStatus;
+
+
 - (instancetype)initWithDictionary:(NSDictionary *)dic;
 @end

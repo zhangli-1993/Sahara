@@ -12,7 +12,12 @@
 - (instancetype)initWithDictionary:(NSDictionary *)dic{
     self = [super init];
     if (self) {
-        
+        self.name = dic[@"name"];
+        self.price = [NSString stringWithFormat:@"￥%@", dic[@"priceRange"]];
+        self.type = dic[@"kind"];
+        self.image = dic[@"photo"];
+        self.idStr = dic[@"id"];
+        self.cellStatus = dic[@"sellStatus"];
     }
     return self;
 }

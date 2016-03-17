@@ -1,0 +1,721 @@
+{
+manufacturers =     (
+{
+brandIntroduction = "http://baike.pcauto.com.cn/204.html";
+brandName = "\U5965\U8fea";
+name = "\U4e00\U6c7d\U5965\U8fea";
+serials =             (
+{
+carField = 4;
+carVersion = 1;
+count = 58;
+id = 3524;
+isNew = 0;
+kind = "\U4e2d\U578b\U8f66";
+name = "\U5965\U8feaA4L";
+photo = "http://img.pcauto.com.cn/images/upload/upc/tx/auto5/1601/04/c28/17185298_17185298_1451874243609_180x135.jpg";
+priceRange = "27.28~57.81 \U4e07";
+sellStatus = 3;
+},
+{
+carField = 4;
+carVersion = 1;
+count = 81;
+id = 4313;
+isNew = 0;
+kind = "\U4e2d\U5927\U578b\U8f66";
+name = "\U5965\U8feaA6L";
+photo = "http://img.pcauto.com.cn/images/upload/upc/tx/auto5/1601/20/c47/17751216_17751216_1453285167504_180x135.jpg";
+priceRange = "38.3~75.76 \U4e07";
+sellStatus = 3;
+},
+{
+carField = 4;
+carVersion = 1;
+count = 33;
+id = 4457;
+isNew = 0;
+kind = "\U4e2d\U578bSUV";
+name = "\U5965\U8feaQ5";
+photo = "http://img.pcauto.com.cn/images/upload/upc/tx/auto5/1511/12/c19/15168861_15168861_1447312584828_180x135.jpg";
+priceRange = "35.85~57.17 \U4e07";
+sellStatus = 3;
+},
+{
+carField = 4;
+carVersion = 1;
+count = 26;
+id = 8670;
+isNew = 0;
+kind = "\U7d27\U51d1\U578bSUV";
+name = "\U5965\U8feaQ3";
+photo = "http://img.pconline.com.cn/images/upload/upc/tx/auto5/1410/14/c4/39635392_39635392_1413256391078_180x135.jpg";
+priceRange = "24.98~42.88 \U4e07";
+sellStatus = 3;
+},
+{
+carField = 4;
+carVersion = 1;
+count = 20;
+id = 9550;
+isNew = 0;
+kind = "\U7d27\U51d1\U578b\U8f66";
+name = "\U5965\U8feaA3";
+photo = "http://img.pcauto.com.cn/images/upload/upc/tx/auto5/1504/02/c17/4776916_4776916_1427947858144_180x135.jpg";
+priceRange = "18.49~29.67 \U4e07";
+sellStatus = 3;
+}
+);
+},
+{
+brandIntroduction = "http://baike.pcauto.com.cn/204.html";
+brandName = "\U5965\U8fea";
+name = "\U5965\U8fea(\U8fdb\U53e3)";
+serials =             (
+{
+carField = 2;
+carVersion = 1;
+count = 59;
+id = 1933;
+isNew = 0;
+kind = "\U4e2d\U5927\U578bSUV";
+name = "\U5965\U8feaQ7";
+photo = "http://img.pcauto.com.cn/images/upload/upc/tx/auto5/1511/30/c8/15900167_15900167_1448857411013_180x135.jpg";
+priceRange = "75.38~123.98 \U4e07";
+sellStatus = 3;
+},
+{
+carField = 2;
+carVersion = 1;
+count = 72;
+id = 7;
+isNew = 0;
+kind = "\U5927\U578b\U8f66";
+name = "\U5965\U8feaA8L";
+photo = "http://img.pconline.com.cn/images/upload/upc/tx/auto5/1410/19/c1/39863908_39863908_1413725957579_180x135.jpg";
+priceRange = "87.98~271.5 \U4e07";
+sellStatus = 3;
+},
+{
+carField = 2;
+carVersion = 1;
+count = 17;
+id = 3776;
+isNew = 0;
+kind = "\U4e2d\U5927\U578b\U8f66";
+name = "\U5965\U8feaA7";
+photo = "http://img.pcauto.com.cn/images/upload/upc/tx/auto5/1509/14/c27/12615891_12615891_1442216516691_180x135.jpg";
+priceRange = "59.8~93.8 \U4e07";
+sellStatus = 3;
+},
+{
+carField = 2;
+carVersion = 1;
+count = 63;
+id = 4438;
+isNew = 0;
+kind = "\U4e2d\U578b\U8f66";
+name = "\U5965\U8feaA5";
+photo = "http://img.pcauto.com.cn/images/upload/upc/tx/auto5/1512/09/c29/16271314_16271314_1449648032283_180x135.jpg";
+priceRange = "42.98~62.8 \U4e07";
+sellStatus = 3;
+},
+{
+carField = 2;
+carVersion = 1;
+count = 4;
+id = 5;
+isNew = 0;
+kind = "\U4e2d\U578b\U8f66";
+name = "\U5965\U8feaA4";
+photo = "http://img.pcauto.com.cn/images/upload/upc/tx/auto5/1506/29/c25/9052817_9052817_1435565276307_180x135.jpg";
+priceRange = "41.8 \U4e07";
+sellStatus = 3;
+},
+{
+carField = 0;
+carVersion = 2;
+count = 0;
+id = 7532;
+isNew = 0;
+kind = "\U5927\U578b\U8f66";
+name = "\U5965\U8feaA9";
+photo = "http://img.pconline.com.cn/images/upload/upc/tx/auto5/1109/16/c13/8982785_8982785_1316168489375_180x135.jpg";
+priceRange = "\U672a\U91cf\U4ea7\U53d1\U552e";
+sellStatus = 0;
+},
+{
+carField = 2;
+carVersion = 1;
+count = 9;
+id = 3148;
+isNew = 0;
+kind = "\U8dd1\U8f66";
+name = "\U5965\U8feaR8";
+photo = "http://img.pcauto.com.cn/images/upload/upc/tx/auto5/1504/24/c60/5894577_1429872862639_180x135.jpg";
+priceRange = "182.3~252.3 \U4e07";
+sellStatus = 3;
+},
+{
+carField = 2;
+carVersion = 1;
+count = 2;
+id = 6;
+isNew = 0;
+kind = "\U4e2d\U5927\U578b\U8f66";
+name = "\U5965\U8feaA6";
+photo = "http://img.pcauto.com.cn/images/upload/upc/tx/auto5/1509/17/c34/12783346_12783346_1442476442221_180x135.jpg";
+priceRange = "59.98 \U4e07";
+sellStatus = 3;
+},
+{
+carField = 2;
+carVersion = 1;
+count = 18;
+id = 3746;
+isNew = 0;
+kind = "\U5c0f\U578b\U8f66";
+name = "\U5965\U8feaA1";
+photo = "http://img.pcauto.com.cn/images/upload/upc/tx/auto5/1601/18/c31/17677083_17677083_1453102708421_180x135.jpg";
+priceRange = "19.98~29.98 \U4e07";
+sellStatus = 3;
+},
+{
+carField = 2;
+carVersion = 1;
+count = 27;
+id = 8;
+isNew = 0;
+kind = "\U8dd1\U8f66";
+name = "\U5965\U8feaTT";
+photo = "http://img.pcauto.com.cn/images/upload/upc/tx/auto5/1509/17/c19/12770315_12770315_1442469412900_180x135.jpg";
+priceRange = "54.28~62.18 \U4e07";
+sellStatus = 3;
+},
+{
+carField = 2;
+carVersion = 1;
+count = 0;
+id = 8524;
+isNew = 0;
+kind = "\U5c0f\U578bSUV";
+name = "\U5965\U8feaQ2";
+photo = "http://img.pcauto.com.cn/images/upload/upc/tx/auto5/1603/03/c24/18825704_18825704_1456989577223_180x135.jpg";
+priceRange = "\U6682\U65e0\U62a5\U4ef7";
+sellStatus = 2;
+},
+{
+carField = 2;
+carVersion = 1;
+count = 3;
+id = 7609;
+isNew = 0;
+kind = "\U5927\U578b\U8f66";
+name = "\U5965\U8feaS8";
+photo = "http://img.pcauto.com.cn/images/upload/upc/tx/auto5/1508/06/c3/10742376_10742376_1438826296721_180x135.jpg";
+priceRange = "198.8 \U4e07";
+sellStatus = 3;
+},
+{
+carField = 2;
+carVersion = 1;
+count = 1;
+id = 8279;
+isNew = 0;
+kind = "\U7d27\U51d1\U578b\U8f66";
+name = "\U5965\U8feaS3";
+photo = "http://img.pcauto.com.cn/images/upload/upc/tx/auto5/1411/26/c7/41338947_41338947_1416993008350_180x135.jpg";
+priceRange = "39.98 \U4e07";
+sellStatus = 3;
+},
+{
+carField = 2;
+carVersion = 1;
+count = 7;
+id = 3605;
+isNew = 0;
+kind = "\U4e2d\U578bSUV";
+name = "\U5965\U8feaQ5(\U8fdb\U53e3)";
+photo = "http://img.pconline.com.cn/images/upload/upc/tx/auto5/1307/15/c0/23339337_1373853011765_180x135.jpg";
+priceRange = "58.8~61.8 \U4e07";
+sellStatus = 3;
+},
+{
+carField = 2;
+carVersion = 1;
+count = 23;
+id = 253;
+isNew = 0;
+kind = "\U7d27\U51d1\U578b\U8f66";
+name = "\U5965\U8feaA3(\U8fdb\U53e3)";
+photo = "http://img.pcauto.com.cn/images/upload/upc/tx/auto5/1505/08/c3/6472897_6472897_1431048062250_180x135.jpg";
+priceRange = "29.98~40.78 \U4e07";
+sellStatus = 3;
+},
+{
+carField = 2;
+carVersion = 1;
+count = 2;
+id = 8289;
+isNew = 0;
+kind = "\U4e2d\U5927\U578b\U8f66";
+name = "\U5965\U8feaS6";
+photo = "http://img.pcauto.com.cn/images/upload/upc/tx/auto5/1504/27/c32/6019825_1430124238345_180x135.jpg";
+priceRange = "99.98~105.8 \U4e07";
+sellStatus = 3;
+},
+{
+carField = 2;
+carVersion = 1;
+count = 10;
+id = 7610;
+isNew = 0;
+kind = "\U4e2d\U578b\U8f66";
+name = "\U5965\U8feaS5";
+photo = "http://img.pcauto.com.cn/images/upload/upc/tx/auto5/1411/28/c8/41409631_1417154111138_180x135.jpg";
+priceRange = "69.9~85.8 \U4e07";
+sellStatus = 3;
+},
+{
+carField = 2;
+carVersion = 1;
+count = 1;
+id = 8320;
+isNew = 0;
+kind = "\U4e2d\U578bSUV";
+name = "\U5965\U8feaSQ5";
+photo = "http://img.pconline.com.cn/images/upload/upc/tx/auto5/1403/12/c11/32009751_1394595976370_180x135.jpg";
+priceRange = "66.8 \U4e07";
+sellStatus = 3;
+},
+{
+carField = 2;
+carVersion = 1;
+count = 4;
+id = 3975;
+isNew = 0;
+kind = "\U7d27\U51d1\U578bSUV";
+name = "\U5965\U8feaQ3(\U8fdb\U53e3)";
+photo = "http://img.pcauto.com.cn/images/upload/upc/tx/auto5/1507/27/c22/10272519_10272519_1437980516980_180x135.jpg";
+priceRange = "37.7~45.5 \U4e07";
+sellStatus = 3;
+},
+{
+carField = 2;
+carVersion = 1;
+count = 0;
+id = 13978;
+isNew = 0;
+kind = "\U4e2d\U5927\U578bSUV";
+name = "\U5965\U8feaSQ7";
+photo = "http://img.pcauto.com.cn/images/upload/upc/tx/auto5/1603/04/c10/18850462_18850462_1457058957908_180x135.jpg";
+priceRange = "\U6682\U65e0\U62a5\U4ef7";
+sellStatus = 2;
+},
+{
+carField = 2;
+carVersion = 1;
+count = 2;
+id = 8119;
+isNew = 0;
+kind = "\U4e2d\U5927\U578b\U8f66";
+name = "\U5965\U8feaS7";
+photo = "http://img.pcauto.com.cn/images/upload/upc/tx/auto5/1504/27/c45/6024818_1430128046865_180x135.jpg";
+priceRange = "134.8~135.8 \U4e07";
+sellStatus = 3;
+},
+{
+carField = 2;
+carVersion = 1;
+count = 6;
+id = 9091;
+isNew = 0;
+kind = "\U8dd1\U8f66";
+name = "\U5965\U8feaTTS";
+photo = "http://img.pcauto.com.cn/images/upload/upc/tx/auto5/1504/28/c17/6057243_1430190347516_180x135.jpg";
+priceRange = "66.2~70.8 \U4e07";
+sellStatus = 3;
+},
+{
+carField = 1;
+carVersion = 1;
+count = 0;
+id = 7271;
+isNew = 0;
+kind = "\U4e2d\U578bSUV";
+name = "\U5965\U8feaQ6";
+photo = "http://img.pconline.com.cn/images/upload/upc/tx/auto5/1104/13/c0/7301686_7301686_1302674685888_180x135.jpg";
+priceRange = "\U56fd\U5185\U672a\U53d1\U552e";
+sellStatus = 2;
+},
+{
+carField = 0;
+carVersion = 2;
+count = 0;
+id = 9561;
+isNew = 0;
+kind = "\U5927\U578bSUV";
+name = "\U5965\U8feaQ9";
+photo = "http://img.pcauto.com.cn/images/upload/upc/tx/auto5/1601/18/c21/17670840_17670840_1453091435144_180x135.jpg";
+priceRange = "\U672a\U91cf\U4ea7\U53d1\U552e";
+sellStatus = 0;
+},
+{
+carField = 1;
+carVersion = 1;
+count = 1;
+id = 5000;
+isNew = 0;
+kind = "\U5927\U578b\U8f66";
+name = "\U5965\U8feaA8";
+photo = "http://img.pconline.com.cn/images/upload/upc/tx/auto5/1407/08/c7/36097440_36097440_1404810685360_180x135.jpg";
+priceRange = "\U56fd\U5185\U672a\U53d1\U552e";
+sellStatus = 3;
+},
+{
+carField = 0;
+carVersion = 2;
+count = 0;
+id = 9817;
+isNew = 0;
+kind = "\U4e2d\U578bSUV";
+name = "\U5965\U8feaQ4";
+photo = "http://img.pcauto.com.cn/images/upload/upc/tx/auto5/1601/18/c21/17671214_17671214_1453093750044_180x135.jpg";
+priceRange = "\U672a\U91cf\U4ea7\U53d1\U552e";
+sellStatus = 0;
+},
+{
+carField = 0;
+carVersion = 2;
+count = 0;
+id = 9777;
+isNew = 0;
+kind = "\U5927\U578bSUV";
+name = "\U5965\U8feaQ8";
+photo = "http://www1.pcauto.com.cn/2010/price/img/slt/180x135.jpg";
+priceRange = "\U672a\U91cf\U4ea7\U53d1\U552e";
+sellStatus = 0;
+},
+{
+carField = 0;
+carVersion = 2;
+count = 0;
+id = 9413;
+isNew = 0;
+kind = "\U5c0f\U578bSUV";
+name = "\U5965\U8feaQ1";
+photo = "http://img.pconline.com.cn/images/upload/upc/tx/auto5/1306/18/c9/22241168_1371542361265_180x135.jpg";
+priceRange = "\U672a\U91cf\U4ea7\U53d1\U552e";
+sellStatus = 0;
+},
+{
+carField = 1;
+carVersion = 1;
+count = 0;
+id = 10671;
+isNew = 0;
+kind = "\U8dd1\U8f66";
+name = "\U5965\U8feaR18";
+photo = "http://img.pcauto.com.cn/images/upload/upc/tx/auto5/1503/31/c7/4680202_4680202_1427767894071_180x135.jpg";
+priceRange = "\U56fd\U5185\U672a\U53d1\U552e";
+sellStatus = 2;
+},
+{
+carField = 0;
+carVersion = 2;
+count = 0;
+id = 3;
+isNew = 0;
+kind = MPV;
+name = "\U5965\U8feaA2";
+photo = "http://img.pconline.com.cn/images/upload/upc/tx/auto5/1109/16/c4/8977498_8977498_1316143758703_180x135.jpg";
+priceRange = "\U672a\U91cf\U4ea7\U53d1\U552e";
+sellStatus = 0;
+},
+{
+carField = 2;
+carVersion = 2;
+count = 0;
+id = 13705;
+isNew = 0;
+kind = "\U4e2d\U578bSUV";
+name = "\U5965\U8feah-tron Quattro";
+photo = "http://img.pcauto.com.cn/images/upload/upc/tx/auto5/1601/13/c24/17531615_17531615_1452693427913_180x135.jpg";
+priceRange = "\U672a\U91cf\U4ea7\U53d1\U552e";
+sellStatus = 2;
+},
+{
+carField = 0;
+carVersion = 2;
+count = 0;
+id = 8800;
+isNew = 0;
+kind = "\U8dd1\U8f66";
+name = "\U5965\U8feaR10";
+photo = "http://www1.pcauto.com.cn/2010/price/img/slt/180x135.jpg";
+priceRange = "\U672a\U91cf\U4ea7\U53d1\U552e";
+sellStatus = 0;
+},
+{
+carField = 1;
+carVersion = 1;
+count = 1;
+id = 9001;
+isNew = 0;
+kind = "\U4e2d\U578b\U8f66";
+name = "\U5965\U8feaS4";
+photo = "http://img.pcauto.com.cn/images/upload/upc/tx/auto5/1509/18/c37/12846073_12846073_1442567005478_180x135.jpg";
+priceRange = "\U56fd\U5185\U672a\U53d1\U552e";
+sellStatus = 3;
+},
+{
+carField = 0;
+carVersion = 2;
+count = 0;
+id = 11847;
+isNew = 0;
+kind = "\U5927\U578b\U8f66";
+name = "\U5965\U8feaprologue";
+photo = "http://img.pcauto.com.cn/images/upload/upc/tx/auto5/1504/17/c39/5572822_5572822_1429280092898_180x135.jpg";
+priceRange = "\U672a\U91cf\U4ea7\U53d1\U552e";
+sellStatus = 0;
+},
+{
+carField = 0;
+carVersion = 2;
+count = 0;
+id = 7249;
+isNew = 0;
+kind = "\U8dd1\U8f66";
+name = "\U5965\U8feaQuattro";
+photo = "http://img.pconline.com.cn/images/upload/upc/tx/auto5/1104/07/c2/7237392_7237392_1302160758531_180x135.jpg";
+priceRange = "\U672a\U91cf\U4ea7\U53d1\U552e";
+sellStatus = 1;
+},
+{
+carField = 1;
+carVersion = 2;
+count = 0;
+id = 13449;
+isNew = 0;
+kind = "\U8dd1\U8f66";
+name = "\U5965\U8feaUnion type-D";
+photo = "http://img.pcauto.com.cn/images/upload/upc/tx/auto5/1511/24/c45/15636814_1448346762371_180x135.jpg";
+priceRange = "\U56fd\U5185\U672a\U53d1\U552e";
+sellStatus = 2;
+},
+{
+carField = 0;
+carVersion = 2;
+count = 0;
+id = 13028;
+isNew = 0;
+kind = "\U4e2d\U578bSUV";
+name = "\U5965\U8feae-tron Quattro";
+photo = "http://img.pcauto.com.cn/images/upload/upc/tx/auto5/1601/07/c15/17309559_17309559_1452136434147_180x135.JPG";
+priceRange = "\U672a\U91cf\U4ea7\U53d1\U552e";
+sellStatus = 0;
+},
+{
+carField = 0;
+carVersion = 2;
+count = 0;
+id = 10931;
+isNew = 0;
+kind = "\U7d27\U51d1\U578bSUV";
+name = "\U5965\U8feaTT offroad";
+photo = "http://img.pconline.com.cn/images/upload/upc/tx/auto5/1404/30/c1/33718944_1398825058721_180x135.jpg";
+priceRange = "\U672a\U91cf\U4ea7\U53d1\U552e";
+sellStatus = 0;
+},
+{
+carField = 1;
+carVersion = 1;
+count = 1;
+id = 8791;
+isNew = 0;
+kind = "\U5c0f\U578b\U8f66";
+name = "\U5965\U8feaS1";
+photo = "http://img.pconline.com.cn/images/upload/upc/tx/auto5/1402/13/c14/31223263_1392279376687_180x135.jpg";
+priceRange = "\U56fd\U5185\U672a\U53d1\U552e";
+sellStatus = 3;
+},
+{
+carField = 0;
+carVersion = 2;
+count = 0;
+id = 8893;
+isNew = 0;
+kind = "\U5c0f\U578bSUV";
+name = "\U5965\U8feaCrosslane Coupe";
+photo = "http://img.pconline.com.cn/images/upload/upc/tx/auto5/1301/18/c14/17517845_1358499524310_180x135.jpg";
+priceRange = "\U672a\U91cf\U4ea7\U53d1\U552e";
+sellStatus = 0;
+},
+{
+carField = 0;
+carVersion = 2;
+count = 0;
+id = 4166;
+isNew = 0;
+kind = "\U5fae\U578b\U8f66";
+name = "\U5965\U8feaE1";
+photo = "http://img.pcauto.com.cn/images/pcautogallery/201010/13/12869617056975110_bthumb_180x135.jpg";
+priceRange = "\U672a\U91cf\U4ea7\U53d1\U552e";
+sellStatus = 0;
+},
+{
+carField = 0;
+carVersion = 2;
+count = 0;
+id = 4364;
+isNew = 0;
+kind = "\U8dd1\U8f66";
+name = "\U5965\U8feaE-tron";
+photo = "http://img.pconline.com.cn/images/upload/upc/tx/auto5/1102/18/c0/6769539_6769539_1297992790288_180x135.jpg";
+priceRange = "\U672a\U91cf\U4ea7\U53d1\U552e";
+sellStatus = 0;
+},
+{
+carField = 0;
+carVersion = 2;
+count = 0;
+id = 10350;
+isNew = 0;
+kind = "\U5c0f\U578bSUV";
+name = "\U5965\U8feaallroad";
+photo = "http://img.pconline.com.cn/images/upload/upc/tx/auto5/1402/19/c1/31374956_1392783150125_180x135.jpg";
+priceRange = "\U672a\U91cf\U4ea7\U53d1\U552e";
+sellStatus = 0;
+},
+{
+carField = 0;
+carVersion = 2;
+count = 0;
+id = 7550;
+isNew = 0;
+kind = "\U8dd1\U8f66";
+name = "\U5965\U8feaUrban";
+photo = "http://img.pconline.com.cn/images/upload/upc/tx/auto5/1109/09/c2/8914580_8914580_1315542562265_180x135.jpg";
+priceRange = "\U672a\U91cf\U4ea7\U53d1\U552e";
+sellStatus = 0;
+}
+);
+},
+{
+brandIntroduction = "http://baike.pcauto.com.cn/204.html";
+brandName = "\U5965\U8fea";
+name = "\U5965\U8feaRS";
+serials =             (
+{
+carField = 2;
+carVersion = 1;
+count = 2;
+id = 8872;
+isNew = 0;
+kind = "\U4e2d\U5927\U578b\U8f66";
+name = "\U5965\U8feaRS 7";
+photo = "http://img.pcauto.com.cn/images/upload/upc/tx/auto5/1601/27/c18/17941568_17941568_1453868389167_180x135.jpg";
+priceRange = "169.88~178.8 \U4e07";
+sellStatus = 3;
+},
+{
+carField = 2;
+carVersion = 1;
+count = 3;
+id = 4542;
+isNew = 0;
+kind = "\U4e2d\U578b\U8f66";
+name = "\U5965\U8feaRS 5";
+photo = "http://img.pcauto.com.cn/images/upload/upc/tx/auto5/1412/01/c0/41493034_41493034_1417399445331_180x135.jpg";
+priceRange = "109.8~128.8 \U4e07";
+sellStatus = 3;
+},
+{
+carField = 2;
+carVersion = 1;
+count = 0;
+id = 4396;
+isNew = 0;
+kind = "\U4e2d\U5927\U578b\U8f66";
+name = "\U5965\U8feaRS 6";
+photo = "http://img.pcauto.com.cn/images/upload/upc/tx/auto5/1503/05/c17/3517704_3517704_1425541719835_180x135.jpg";
+priceRange = "\U6682\U65e0\U62a5\U4ef7";
+sellStatus = 4;
+},
+{
+carField = 1;
+carVersion = 1;
+count = 0;
+id = 9326;
+isNew = 0;
+kind = "\U4e2d\U578bSUV";
+name = "\U5965\U8feaRS Q5";
+photo = "http://img.pcauto.com.cn/images/upload/upc/tx/auto5/1601/18/c24/17677082_17677082_1453099029732_180x135.jpg";
+priceRange = "\U56fd\U5185\U672a\U53d1\U552e";
+sellStatus = 3;
+},
+{
+carField = 1;
+carVersion = 1;
+count = 1;
+id = 8219;
+isNew = 0;
+kind = "\U7d27\U51d1\U578b\U8f66";
+name = "\U5965\U8feaRS 3";
+photo = "http://img.pcauto.com.cn/images/upload/upc/tx/auto5/1412/15/c2/680767_680767_1418635279419_180x135.jpg";
+priceRange = "\U56fd\U5185\U672a\U53d1\U552e";
+sellStatus = 3;
+},
+{
+carField = 1;
+carVersion = 1;
+count = 1;
+id = 8220;
+isNew = 1;
+kind = "\U8dd1\U8f66";
+name = "\U5965\U8feaTT RS";
+photo = "http://img.pconline.com.cn/images/upload/upc/tx/auto5/1307/29/c9/23885678_1375072094531_180x135.jpg";
+priceRange = "\U56fd\U5185\U672a\U53d1\U552e";
+sellStatus = 3;
+},
+{
+carField = 1;
+carVersion = 1;
+count = 0;
+id = 8139;
+isNew = 0;
+kind = "\U7d27\U51d1\U578bSUV";
+name = "\U5965\U8feaRS Q3";
+photo = "http://img.pconline.com.cn/images/upload/upc/tx/auto5/1303/12/c7/18842154_1363067933718_180x135.jpg";
+priceRange = "\U56fd\U5185\U672a\U53d1\U552e";
+sellStatus = 3;
+},
+{
+carField = 1;
+carVersion = 1;
+count = 1;
+id = 7899;
+isNew = 1;
+kind = "\U4e2d\U578b\U8f66";
+name = "\U5965\U8feaRS 4";
+photo = "http://img.pconline.com.cn/images/upload/upc/tx/auto5/1207/05/c2/12229560_12229560_1341458084765_180x135.jpg";
+priceRange = "\U56fd\U5185\U672a\U53d1\U552e";
+sellStatus = 3;
+},
+{
+carField = 0;
+carVersion = 2;
+count = 1;
+id = 8560;
+isNew = 0;
+kind = "\U5c0f\U578b\U8f66";
+name = "\U5965\U8feaRS 1";
+photo = "http://img.pconline.com.cn/images/upload/upc/tx/auto5/1210/23/c5/14597615_14597615_1350990634054_180x135.jpg";
+priceRange = "\U672a\U91cf\U4ea7\U53d1\U552e";
+sellStatus = 0;
+}
+);
+}
+);
+}

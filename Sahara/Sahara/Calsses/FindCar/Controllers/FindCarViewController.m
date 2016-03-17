@@ -12,6 +12,7 @@
 #import <AFNetworking/AFHTTPSessionManager.h>
 #import "AllBrandsModel.h"
 #import "AllTableViewCell.h"
+#import "CarPriceView.h"
 @interface FindCarViewController ()<PullingRefreshTableViewDelegate, UITableViewDataSource, UITableViewDelegate, UICollectionViewDelegate, UICollectionViewDataSource,UICollectionViewDelegateFlowLayout>
 @property (nonatomic, strong) PullingRefreshTableView *tableView;
 @property (nonatomic, strong) UICollectionView *collectView;
@@ -19,7 +20,7 @@
 @property (nonatomic, strong) NSMutableArray *hotIDArray;
 @property (nonatomic, strong) NSMutableArray *titleArray;
 @property (nonatomic, strong) NSMutableArray *numArray;
-
+@property (nonatomic, strong) CarPriceView *priceView;
 @end
 
 @implementation FindCarViewController
@@ -33,7 +34,9 @@
     [self requestAllModel];
     [self.tableView launchRefreshing];
     [self.view addSubview:self.tableView];
-
+    //self.priceView = [[CarPriceView alloc] initWithFrame:CGRectMake(kWidth, 64, kWidth, kHeight - 104)];
+    //self.priceView.backgroundColor = [UIColor colorWithRed:25 / 225.0f green:25 / 225.0f blue:25 / 225.0f alpha:0.3];
+//    [self.view addSubview:self.priceView];
 }
 #pragma mark---UITableViewDataSource, UITableViewDelegate
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
@@ -55,6 +58,28 @@
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
     return self.titleArray[section];
 }
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    AllBrandsModel *model = self.numArray[indexPath.section][indexPath.row];
+    NSLog(@"%@", self.priceView.idStr);
+  
+//    if (self.priceView.onArray.count > 0) {
+//        [self.priceView.onArray removeAllObjects];
+//    }
+//    if (self.priceView.allArray.count > 0) {
+//        [self.priceView.allArray removeAllObjects];
+//    }
+    
+    self.priceView = [[CarPriceView alloc] initWithFrame:CGRectMake(0, 64, kWidth, kHeight - 104)];
+    self.priceView.backgroundColor = [UIColor colorWithRed:25 / 225.0f green:25 / 225.0f blue:25 / 225.0f alpha:0.3];
+    self.priceView.idStr = model.idStr;
+    [self.priceView requestModel];
+    [self.view addSubview:self.priceView];
+
+
+//    self.priceView.frame = CGRectMake(0, 64, kWidth, kHeight - 104);
+
+
+}
 #pragma mark---PullingRefreshTableViewDelegate
 - (void)pullingTableViewDidStartRefreshing:(PullingRefreshTableView *)tableView{
 }
@@ -74,6 +99,17 @@
 }
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath{
     return CGSizeMake((kWidth - 60 ) / 4 , 40);
+}
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+    NSLog(@"***%@", self.priceView.idStr);
+  
+    self.priceView = [[CarPriceView alloc] initWithFrame:CGRectMake(0, 64, kWidth, kHeight - 104)];
+    self.priceView.backgroundColor = [UIColor colorWithRed:25 / 225.0f green:25 / 225.0f blue:25 / 225.0f alpha:0.3];
+    self.priceView.idStr = self.hotIDArray[indexPath.row];
+    [self.priceView requestModel];
+    
+    [self.view addSubview:self.priceView];
+
 }
 
 #pragma mark---自定义
@@ -122,6 +158,7 @@
         NSLog(@"%@", error);
     }];
 }
+
 - (void)setHeadView{
     UIView *headview = [[UIView alloc] initWithFrame:CGRectMake(0, 0, kWidth, kWidth / 8 + 130)];
     UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
