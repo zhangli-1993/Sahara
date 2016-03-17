@@ -13,10 +13,14 @@
 #import "MessageModel.h"
 #import "MessageOneTableViewCell.h"
 #import "DetailViewController.h"
+#import "MessageTwoTableViewCell.h"
+#import "TomLiveViewController.h"
+#import "LiveOtherViewController.h"
 @interface MessageViewController ()<PullingRefreshTableViewDelegate, UITableViewDataSource, UITableViewDelegate, UIWebViewDelegate>
 {
     NSInteger _pageCount;
     NSString *cellID;
+    NSInteger index;
 }
 
 @property(nonatomic, strong) VOSegmentedControl *VOsegment;
@@ -39,6 +43,7 @@
     [self.tableView launchRefreshing];
     //注册cell
     [self.tableView registerNib:[UINib nibWithNibName:@"MessageOneTableViewCell" bundle:nil] forCellReuseIdentifier:@"cell"];
+    [self.tableView registerNib:[UINib nibWithNibName:@"MessageTwoTableViewCell" bundle:nil] forCellReuseIdentifier:@"zbCell"];
     [self homePagePortRequest];
     [self segementTextRequest];
     [self.view addSubview:self.VOsegment];
@@ -56,10 +61,14 @@
         NSArray *array = segementDic[@"news"];
         for (NSArray *arr in array) {
             MessageModel *model = [[MessageModel alloc] initWithArray:arr];
+            
             [self.allCellArray addObject:model.itemID];
+            if ([model.itemID isEqualToString:@"55555"]) {
+                [self.allCellArray removeObjectAtIndex:6];
+            }
         }
         
-       
+        
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         NSLog(@"%@", error);
     }];
@@ -95,24 +104,58 @@
 
 #pragma mark ------------------ UITableViewDataSource
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    MessageOneTableViewCell *messageCell = [self.tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
-    
-    MessageModel *model = self.allTitleArray[indexPath.row];
-    messageCell.messageModel = model;
-    
-    return messageCell;
+    if (index == 12) {
+        MessageTwoTableViewCell *twoCell = [self.tableView dequeueReusableCellWithIdentifier:@"zbCell" forIndexPath:indexPath];
+        if (indexPath.row < self.allTitleArray.count) {
+            MessageModel *model = self.allTitleArray[indexPath.row];
+            twoCell.model = model;
+        }
+        return twoCell;
+        
+    }
+    else{
+        MessageOneTableViewCell *messageCell = [self.tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
+        if (indexPath.row < self.allTitleArray.count) {
+            MessageModel *model = self.allTitleArray[indexPath.row];
+            messageCell.messageModel = model;
+        }
+        return messageCell;
+    }
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return self.allTitleArray.count;
 }
 
-
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    if (index == 12) {
+        return 240;
+    }
+    return 110;
+}
 
 #pragma mark -------------------- UITableViewDelegate
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    TomLiveViewController *tomliveVC = [[TomLiveViewController alloc] init];
+    LiveOtherViewController *liveVC = [[LiveOtherViewController alloc] init];
+    MessageModel *model = self.allTitleArray[indexPath.row];
     
+    if (index == 12) {
+        if (model.tomLiveID.length > 5) {
+            liveVC.loveOtherID = model.tomLiveID;
+            [self.navigationController pushViewController:liveVC animated:YES];
+        }else{
+            tomliveVC.tomLiveID = model.tomLiveID;
+            [self.navigationController pushViewController:tomliveVC animated:YES];
+        }
+        
+    }else{
     
+    DetailViewController *detailVC = [[DetailViewController alloc] init];
+    MessageModel *model = self.allTitleArray[indexPath.row];
+    detailVC.detailID = model.messageID;
+    [self.navigationController pushViewController:detailVC animated:YES];
+    }
 }
 
 
@@ -151,7 +194,6 @@
         [self.view addSubview:self.VOsegment];
         //返回点击的是哪个按钮
         [self.VOsegment setIndexChangeBlock:^(NSInteger index) {
-            NSLog(@"1: block --> %@", @(index));
         }];
         [self.VOsegment addTarget:self action:@selector(segmentCtrlValuechange:) forControlEvents:UIControlEventValueChanged];
         
@@ -183,11 +225,9 @@
 }
 
 - (void)segmentCtrlValuechange:(UISegmentedControl *)segement{
-    NSInteger index = segement.selectedSegmentIndex;
-    if (index == 6) {
-        [self.allCellArray removeObjectAtIndex:6];
-    }
+    index = segement.selectedSegmentIndex;
     cellID = self.allCellArray[index];
+//    NSLog(@"cellid = %@", self.allCellArray[index]);
     [self homePagePortRequest];
     
 }

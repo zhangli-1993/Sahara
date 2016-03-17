@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "MessageModel.h"
 @interface MessageTwoTableViewCell : UITableViewCell
+
+@property(nonatomic, strong) MessageModel *model;
 
 @end

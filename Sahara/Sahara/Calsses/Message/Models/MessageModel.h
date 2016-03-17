@@ -15,6 +15,9 @@
 @property(nonatomic, copy) NSString *title;
 @property(nonatomic, copy) NSString *ups;
 @property(nonatomic, copy) NSString *url;
+@property(nonatomic, copy) NSString *ariticieType;
+@property(nonatomic, copy) NSString *messageID;
+@property(nonatomic, copy) NSString *tomLiveID;
 
 - (instancetype)initWithDictionary:(NSDictionary *)dict;
 

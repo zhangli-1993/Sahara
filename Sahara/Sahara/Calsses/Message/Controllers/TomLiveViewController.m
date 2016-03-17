@@ -1,43 +1,43 @@
 //
-//  DetailViewController.m
+//  TomLiveViewController.m
 //  Sahara
 //
-//  Created by scjy on 16/3/16.
+//  Created by scjy on 16/3/17.
 //  Copyright © 2016年 scjy. All rights reserved.
 //
 
-#import "DetailViewController.h"
+#import "TomLiveViewController.h"
 
-@interface DetailViewController ()<UIWebViewDelegate>
+@interface TomLiveViewController ()<UIWebViewDelegate>
 
 @property(nonatomic, strong) UIWebView *webView;
 
 @end
 
-@implementation DetailViewController
+@implementation TomLiveViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.navigationItem.title = @"详情";
     [self.view addSubview:self.webView];
     [self backToPreviousPageWithImage];
-    
+    self.view.backgroundColor = [UIColor whiteColor];
     
 }
 
-#pragma mark ----------- LazyLoading
 - (UIWebView *)webView{
     if (!_webView) {
-        self.webView = [[UIWebView alloc] initWithFrame:self.view.frame];
-        self.webView.delegate = self;
-        NSString *urlStr = [NSString stringWithFormat:@"%@%@?%@", kDetailFront, self.detailID, kDetailPort];
-        NSURL *url = [[NSURL alloc] initWithString:urlStr];
+        self.webView = [[UIWebView alloc] initWithFrame:CGRectMake(0, kWidth/2, kWidth, kHeight - kWidth/2)];
         self.webView.scalesPageToFit = YES;
+        self.webView.delegate = self;
+        NSString *tomStr = [NSString stringWithFormat:@"%@&broadcastId=%@", kTomLive, self.tomLiveID];
+        NSURL *url = [[NSURL alloc] initWithString:tomStr];
         [self.webView loadRequest:[NSURLRequest requestWithURL:url]];
+        
     }
     return _webView;
 }
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
