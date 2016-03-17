@@ -8,6 +8,15 @@
 
 #import "MessageTwoTableViewCell.h"
 
+@interface MessageTwoTableViewCell ()
+@property (weak, nonatomic) IBOutlet UIImageView *headImage;
+@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+@property (weak, nonatomic) IBOutlet UILabel *endLabel;
+@property (weak, nonatomic) IBOutlet UILabel *timeLabel;
+@property (weak, nonatomic) IBOutlet UILabel *appriseLabel;
+
+@end
+
 @implementation MessageTwoTableViewCell
 
 - (void)awakeFromNib {
