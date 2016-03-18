@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "AppriseModel.h"
 @interface AppriseTableViewCell : UITableViewCell
 
+@property(nonatomic, strong) AppriseModel *appModel;
+
+
++ (CGFloat)getCellHeight:(AppriseModel *)appriseModel;
++ (CGFloat)getTextHeight:(NSString *)content;
 @end

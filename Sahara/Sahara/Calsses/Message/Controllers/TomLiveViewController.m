@@ -8,9 +8,11 @@
 
 #import "TomLiveViewController.h"
 #import "AppriseViewController.h"
+#import <AFHTTPSessionManager.h>
 @interface TomLiveViewController ()<UIWebViewDelegate>
 
 @property(nonatomic, strong) UIWebView *webView;
+@property(nonatomic, copy) NSString *typeID;
 
 @end
 
@@ -21,6 +23,7 @@
     // Do any additional setup after loading the view.
     [self.view addSubview:self.webView];
     [self backToPreviousPageWithImage];
+    [self appriseRequestTopy];
     self.view.backgroundColor = [UIColor whiteColor];
     self.tabBarController.tabBar.hidden = YES;
     
@@ -59,9 +62,26 @@
     
 }
 
+- (void)appriseRequestTopy{
+    AFHTTPSessionManager *manger = [AFHTTPSessionManager manager];
+    manger.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"text/html", nil];
+    [manger GET:[NSString stringWithFormat:@"%@broadcastId=%@&partId=1458048177000", kTypeIDPort, self.liveModel.tomLiveID] parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
+        
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        NSDictionary *dict = responseObject;
+        NSDictionary *infoDic = dict[@"response_info"];
+        self.typeID = infoDic[@"topicId"];
+        
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        NSLog(@"%@", error);
+    }];
+    
+    
+}
+
 - (void)checkAllApprise{
     AppriseViewController *appriseVC = [[AppriseViewController alloc] init];
-    appriseVC.appriseID = self.liveModel.tomLiveID;
+    appriseVC.appriseID = self.typeID;
     [self.navigationController pushViewController:appriseVC animated:YES];
 }
 
