@@ -145,7 +145,7 @@
             liveVC.loveOtherID = model.tomLiveID;
             [self.navigationController pushViewController:liveVC animated:YES];
         }else{
-            tomliveVC.tomLiveID = model.tomLiveID;
+            tomliveVC.liveModel = model;
             [self.navigationController pushViewController:tomliveVC animated:YES];
         }
         

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		525A52B034E3688F1D9B5A41 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A31DF689C6CF0A0F3FD738CB /* libPods.a */; };
+
 		7A089AC91C9BD71900EF030E /* sum in Resources */ = {isa = PBXBuildFile; fileRef = 7A089AC81C9BD71900EF030E /* sum */; };
 		7A089ACF1C9BD83E00EF030E /* CarSumView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A089ACE1C9BD83E00EF030E /* CarSumView.m */; };
 		7A089ADD1C9BE21F00EF030E /* libWeiboSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A089AD11C9BE21F00EF030E /* libWeiboSDK.a */; };
@@ -30,6 +31,7 @@
 		7A089B031C9C19CD00EF030E /* CarSumModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A089B021C9C19CD00EF030E /* CarSumModel.m */; };
 		7A089B061C9C265200EF030E /* ConfigurationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A089B051C9C265200EF030E /* ConfigurationView.m */; };
 		7A089B081C9C277100EF030E /* Config in Resources */ = {isa = PBXBuildFile; fileRef = 7A089B071C9C277100EF030E /* Config */; };
+
 		7A08A8BB1C9A33A100D036E7 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A08A8BA1C9A33A100D036E7 /* QuartzCore.framework */; };
 		7A08A8BD1C9A493200D036E7 /* CarPrice in Resources */ = {isa = PBXBuildFile; fileRef = 7A08A8BC1C9A493200D036E7 /* CarPrice */; };
 		7A08A8C01C9AD73700D036E7 /* CarDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A08A8BF1C9AD73700D036E7 /* CarDetailViewController.m */; };
@@ -50,9 +52,11 @@
 		7A84D1A91C98FF38006EE2F1 /* blueArrowDown.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A84D1A51C98FF38006EE2F1 /* blueArrowDown.png */; };
 		7A84D1AA1C98FF38006EE2F1 /* PullingRefreshTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A84D1A71C98FF38006EE2F1 /* PullingRefreshTableView.m */; };
 		7AAB55AE1C9AA55C0096B1C1 /* UIViewController+BackPront.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AAB55AD1C9AA55C0096B1C1 /* UIViewController+BackPront.m */; };
+		7AAB55B11C9AB7580096B1C1 /* AppriseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AAB55B01C9AB7580096B1C1 /* AppriseViewController.m */; };
+		7AAB55B41C9AC5E70096B1C1 /* AppriseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AAB55B31C9AC5E70096B1C1 /* AppriseTableViewCell.m */; };
+		7AAB55B91C9ADBEE0096B1C1 /* AppriseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AAB55B81C9ADBEE0096B1C1 /* AppriseModel.m */; };
 		7AB3624F1C98E41800C03E74 /* PrimeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AB3624E1C98E41800C03E74 /* PrimeViewController.m */; };
 		7AB362521C98E42B00C03E74 /* FindCarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AB362511C98E42B00C03E74 /* FindCarViewController.m */; };
-		7AB362551C98E43A00C03E74 /* ForumViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AB362541C98E43A00C03E74 /* ForumViewController.m */; };
 		7AB362581C98E44500C03E74 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AB362571C98E44500C03E74 /* MainViewController.m */; };
 		7AB3625B1C98E45600C03E74 /* MessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AB3625A1C98E45600C03E74 /* MessageViewController.m */; };
 		7AB3626A1C98F2B500C03E74 /* VOContentLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AB362631C98F2B500C03E74 /* VOContentLayer.m */; };
@@ -68,11 +72,16 @@
 		7AD7F7E91C9943A700BF2460 /* allBrands in Resources */ = {isa = PBXBuildFile; fileRef = 7AD7F7E81C9943A700BF2460 /* allBrands */; };
 		7AD7F7F11C9945E800BF2460 /* AllBrandsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AD7F7F01C9945E800BF2460 /* AllBrandsModel.m */; };
 		7AD7F7F41C9946E500BF2460 /* AllTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AD7F7F31C9946E500BF2460 /* AllTableViewCell.m */; };
+		7AF9C5BB1C9AB03A00074B54 /* ForumViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AF9C5B31C9AB03A00074B54 /* ForumViewController.m */; };
+		7AF9C5BC1C9AB03A00074B54 /* ForumModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AF9C5B61C9AB03A00074B54 /* ForumModel.m */; };
+		7AF9C5BD1C9AB03A00074B54 /* ForumOneTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AF9C5B91C9AB03A00074B54 /* ForumOneTableViewCell.m */; };
+		7AF9C5BE1C9AB03A00074B54 /* ForumOneTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7AF9C5BA1C9AB03A00074B54 /* ForumOneTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3E5768CE4E443399640C3666 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		4483BA8AABB15E4CA5CAE736 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+
 		7A089AC81C9BD71900EF030E /* sum */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = sum; sourceTree = "<group>"; };
 		7A089ACD1C9BD83E00EF030E /* CarSumView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarSumView.h; sourceTree = "<group>"; };
 		7A089ACE1C9BD83E00EF030E /* CarSumView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CarSumView.m; sourceTree = "<group>"; };
@@ -111,6 +120,7 @@
 		7A089B041C9C265200EF030E /* ConfigurationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfigurationView.h; sourceTree = "<group>"; };
 		7A089B051C9C265200EF030E /* ConfigurationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfigurationView.m; sourceTree = "<group>"; };
 		7A089B071C9C277100EF030E /* Config */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Config; sourceTree = "<group>"; };
+
 		7A08A8BA1C9A33A100D036E7 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		7A08A8BC1C9A493200D036E7 /* CarPrice */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CarPrice; sourceTree = "<group>"; };
 		7A08A8BE1C9AD73700D036E7 /* CarDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarDetailViewController.h; sourceTree = "<group>"; };
@@ -145,12 +155,16 @@
 		7A84D1A71C98FF38006EE2F1 /* PullingRefreshTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PullingRefreshTableView.m; sourceTree = "<group>"; };
 		7AAB55AC1C9AA55C0096B1C1 /* UIViewController+BackPront.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+BackPront.h"; sourceTree = "<group>"; };
 		7AAB55AD1C9AA55C0096B1C1 /* UIViewController+BackPront.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+BackPront.m"; sourceTree = "<group>"; };
+		7AAB55AF1C9AB7580096B1C1 /* AppriseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppriseViewController.h; sourceTree = "<group>"; };
+		7AAB55B01C9AB7580096B1C1 /* AppriseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppriseViewController.m; sourceTree = "<group>"; };
+		7AAB55B21C9AC5E70096B1C1 /* AppriseTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppriseTableViewCell.h; sourceTree = "<group>"; };
+		7AAB55B31C9AC5E70096B1C1 /* AppriseTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppriseTableViewCell.m; sourceTree = "<group>"; };
+		7AAB55B71C9ADBEE0096B1C1 /* AppriseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppriseModel.h; sourceTree = "<group>"; };
+		7AAB55B81C9ADBEE0096B1C1 /* AppriseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppriseModel.m; sourceTree = "<group>"; };
 		7AB3624D1C98E41800C03E74 /* PrimeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrimeViewController.h; sourceTree = "<group>"; };
 		7AB3624E1C98E41800C03E74 /* PrimeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PrimeViewController.m; sourceTree = "<group>"; };
 		7AB362501C98E42B00C03E74 /* FindCarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FindCarViewController.h; sourceTree = "<group>"; };
 		7AB362511C98E42B00C03E74 /* FindCarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FindCarViewController.m; sourceTree = "<group>"; };
-		7AB362531C98E43A00C03E74 /* ForumViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForumViewController.h; sourceTree = "<group>"; };
-		7AB362541C98E43A00C03E74 /* ForumViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForumViewController.m; sourceTree = "<group>"; };
 		7AB362561C98E44500C03E74 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		7AB362571C98E44500C03E74 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		7AB362591C98E45600C03E74 /* MessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageViewController.h; sourceTree = "<group>"; };
@@ -179,6 +193,13 @@
 		7AD7F7F01C9945E800BF2460 /* AllBrandsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AllBrandsModel.m; sourceTree = "<group>"; };
 		7AD7F7F21C9946E500BF2460 /* AllTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AllTableViewCell.h; sourceTree = "<group>"; };
 		7AD7F7F31C9946E500BF2460 /* AllTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AllTableViewCell.m; sourceTree = "<group>"; };
+		7AF9C5B21C9AB03A00074B54 /* ForumViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForumViewController.h; sourceTree = "<group>"; };
+		7AF9C5B31C9AB03A00074B54 /* ForumViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForumViewController.m; sourceTree = "<group>"; };
+		7AF9C5B51C9AB03A00074B54 /* ForumModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForumModel.h; sourceTree = "<group>"; };
+		7AF9C5B61C9AB03A00074B54 /* ForumModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForumModel.m; sourceTree = "<group>"; };
+		7AF9C5B81C9AB03A00074B54 /* ForumOneTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForumOneTableViewCell.h; sourceTree = "<group>"; };
+		7AF9C5B91C9AB03A00074B54 /* ForumOneTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForumOneTableViewCell.m; sourceTree = "<group>"; };
+		7AF9C5BA1C9AB03A00074B54 /* ForumOneTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ForumOneTableViewCell.xib; sourceTree = "<group>"; };
 		A31DF689C6CF0A0F3FD738CB /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -368,34 +389,11 @@
 		7AB362401C98E3F200C03E74 /* Forum */ = {
 			isa = PBXGroup;
 			children = (
-				7AB362411C98E3F200C03E74 /* Controllers */,
-				7AB362421C98E3F200C03E74 /* Models */,
-				7AB362431C98E3F200C03E74 /* VIews */,
+				7AF9C5B11C9AB03A00074B54 /* Controllers */,
+				7AF9C5B41C9AB03A00074B54 /* Model */,
+				7AF9C5B71C9AB03A00074B54 /* View */,
 			);
 			path = Forum;
-			sourceTree = "<group>";
-		};
-		7AB362411C98E3F200C03E74 /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				7AB362531C98E43A00C03E74 /* ForumViewController.h */,
-				7AB362541C98E43A00C03E74 /* ForumViewController.m */,
-			);
-			path = Controllers;
-			sourceTree = "<group>";
-		};
-		7AB362421C98E3F200C03E74 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		7AB362431C98E3F200C03E74 /* VIews */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = VIews;
 			sourceTree = "<group>";
 		};
 		7AB362441C98E3F200C03E74 /* Main */ = {
@@ -452,6 +450,8 @@
 				7A1225741C9A90C000E16422 /* TomLiveViewController.m */,
 				7A1225761C9A9C9500E16422 /* LiveOtherViewController.h */,
 				7A1225771C9A9C9500E16422 /* LiveOtherViewController.m */,
+				7AAB55AF1C9AB7580096B1C1 /* AppriseViewController.h */,
+				7AAB55B01C9AB7580096B1C1 /* AppriseViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -461,6 +461,8 @@
 			children = (
 				7AB3626E1C98F7A200C03E74 /* MessageModel.h */,
 				7AB3626F1C98F7A200C03E74 /* MessageModel.m */,
+				7AAB55B71C9ADBEE0096B1C1 /* AppriseModel.h */,
+				7AAB55B81C9ADBEE0096B1C1 /* AppriseModel.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -474,6 +476,8 @@
 				7AB362761C98F89800C03E74 /* MessageTwoTableViewCell.h */,
 				7AB362771C98F89800C03E74 /* MessageTwoTableViewCell.m */,
 				7AB362781C98F89800C03E74 /* MessageTwoTableViewCell.xib */,
+				7AAB55B21C9AC5E70096B1C1 /* AppriseTableViewCell.h */,
+				7AAB55B31C9AC5E70096B1C1 /* AppriseTableViewCell.m */,
 			);
 			path = VIews;
 			sourceTree = "<group>";
@@ -538,6 +542,34 @@
 				7A089B051C9C265200EF030E /* ConfigurationView.m */,
 				7A089AF31C9BE67E00EF030E /* ShareView.h */,
 				7A089AF41C9BE67E00EF030E /* ShareView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		7AF9C5B11C9AB03A00074B54 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				7AF9C5B21C9AB03A00074B54 /* ForumViewController.h */,
+				7AF9C5B31C9AB03A00074B54 /* ForumViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		7AF9C5B41C9AB03A00074B54 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7AF9C5B51C9AB03A00074B54 /* ForumModel.h */,
+				7AF9C5B61C9AB03A00074B54 /* ForumModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		7AF9C5B71C9AB03A00074B54 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7AF9C5B81C9AB03A00074B54 /* ForumOneTableViewCell.h */,
+				7AF9C5B91C9AB03A00074B54 /* ForumOneTableViewCell.m */,
+				7AF9C5BA1C9AB03A00074B54 /* ForumOneTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -637,6 +669,7 @@
 				7A08A8BD1C9A493200D036E7 /* CarPrice in Resources */,
 				7A84D1A91C98FF38006EE2F1 /* blueArrowDown.png in Resources */,
 				7A2E7AEE1C984DDA0045F332 /* LaunchScreen.storyboard in Resources */,
+				7AF9C5BE1C9AB03A00074B54 /* ForumOneTableViewCell.xib in Resources */,
 				7A84D1A81C98FF38006EE2F1 /* blueArrow.png in Resources */,
 				7A08A8C51C9ADF8100D036E7 /* hotCar in Resources */,
 				7AD7F7E91C9943A700BF2460 /* allBrands in Resources */,
@@ -704,13 +737,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7AAB55B91C9ADBEE0096B1C1 /* AppriseModel.m in Sources */,
 				7AB3626C1C98F2B500C03E74 /* VOSegment.m in Sources */,
+
+				7AF9C5BB1C9AB03A00074B54 /* ForumViewController.m in Sources */,
+
 				7A0A919F1C999F6C0007192D /* CarPriceView.m in Sources */,
 				7A08A8C31C9AD98B00D036E7 /* HotViewController.m in Sources */,
 				7A0A919C1C999D020007192D /* CarPriceModel.m in Sources */,
 				7AD7F7F11C9945E800BF2460 /* AllBrandsModel.m in Sources */,
 				7A08A8C01C9AD73700D036E7 /* CarDetailViewController.m in Sources */,
 				7AB3626A1C98F2B500C03E74 /* VOContentLayer.m in Sources */,
+				7AAB55B41C9AC5E70096B1C1 /* AppriseTableViewCell.m in Sources */,
 				7AB362521C98E42B00C03E74 /* FindCarViewController.m in Sources */,
 				7A6C0BD71C995E7C00205D61 /* DetailViewController.m in Sources */,
 				7AB362581C98E44500C03E74 /* MainViewController.m in Sources */,
@@ -719,12 +757,19 @@
 				7AB3626D1C98F2B500C03E74 /* VOSegmentedControl.m in Sources */,
 				7AD7F7F41C9946E500BF2460 /* AllTableViewCell.m in Sources */,
 				7AB362741C98F85500C03E74 /* MessageOneTableViewCell.m in Sources */,
+
 				7A08A8CB1C9AE4B900D036E7 /* HotTableViewCell.m in Sources */,
+
+				7AF9C5BC1C9AB03A00074B54 /* ForumModel.m in Sources */,
 				7AB3624F1C98E41800C03E74 /* PrimeViewController.m in Sources */,
+				7AAB55B11C9AB7580096B1C1 /* AppriseViewController.m in Sources */,
 				7AB3626B1C98F2B500C03E74 /* VOIndicatorAnimation.m in Sources */,
+
 				7A089B061C9C265200EF030E /* ConfigurationView.m in Sources */,
 				7AB362551C98E43A00C03E74 /* ForumViewController.m in Sources */,
+
 				7AAB55AE1C9AA55C0096B1C1 /* UIViewController+BackPront.m in Sources */,
+				7AF9C5BD1C9AB03A00074B54 /* ForumOneTableViewCell.m in Sources */,
 				7A1225781C9A9C9500E16422 /* LiveOtherViewController.m in Sources */,
 				7AB362791C98F89800C03E74 /* MessageTwoTableViewCell.m in Sources */,
 				7A089ACF1C9BD83E00EF030E /* CarSumView.m in Sources */,
@@ -837,7 +882,7 @@
 			baseConfigurationReference = 3E5768CE4E443399640C3666 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				GCC_PREFIX_HEADER = /Users/scjy/Desktop/Sahara/Sahara/Sahara/Librarys/Sahara.pch;
+				GCC_PREFIX_HEADER = /Users/1a/Desktop/Sahara/Sahara/Sahara/Librarys/Sahara.pch;
 				INFOPLIST_FILE = Sahara/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
@@ -855,7 +900,7 @@
 			baseConfigurationReference = 4483BA8AABB15E4CA5CAE736 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				GCC_PREFIX_HEADER = /Users/scjy/Desktop/Sahara/Sahara/Sahara/Librarys/Sahara.pch;
+				GCC_PREFIX_HEADER = /Users/1a/Desktop/Sahara/Sahara/Sahara/Librarys/Sahara.pch;
 				INFOPLIST_FILE = Sahara/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
