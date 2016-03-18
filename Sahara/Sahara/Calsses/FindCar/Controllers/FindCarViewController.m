@@ -13,6 +13,8 @@
 #import "AllBrandsModel.h"
 #import "AllTableViewCell.h"
 #import "CarPriceView.h"
+#import "HotViewController.h"
+#import "CarDetailViewController.h"
 @interface FindCarViewController ()<PullingRefreshTableViewDelegate, UITableViewDataSource, UITableViewDelegate, UICollectionViewDelegate, UICollectionViewDataSource,UICollectionViewDelegateFlowLayout>
 @property (nonatomic, strong) PullingRefreshTableView *tableView;
 @property (nonatomic, strong) UICollectionView *collectView;
@@ -34,9 +36,11 @@
     [self requestAllModel];
     [self.tableView launchRefreshing];
     [self.view addSubview:self.tableView];
-    //self.priceView = [[CarPriceView alloc] initWithFrame:CGRectMake(kWidth, 64, kWidth, kHeight - 104)];
-    //self.priceView.backgroundColor = [UIColor colorWithRed:25 / 225.0f green:25 / 225.0f blue:25 / 225.0f alpha:0.3];
-//    [self.view addSubview:self.priceView];
+    
+}
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    self.tabBarController.tabBar.hidden = NO;
 }
 #pragma mark---UITableViewDataSource, UITableViewDelegate
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
@@ -59,27 +63,37 @@
     return self.titleArray[section];
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    AllBrandsModel *model = self.numArray[indexPath.section][indexPath.row];
-    NSLog(@"%@", self.priceView.idStr);
-  
-//    if (self.priceView.onArray.count > 0) {
-//        [self.priceView.onArray removeAllObjects];
-//    }
-//    if (self.priceView.allArray.count > 0) {
-//        [self.priceView.allArray removeAllObjects];
-//    }
+    if (tableView == self.tableView) {
+        AllBrandsModel *model = self.numArray[indexPath.section][indexPath.row];
+        self.priceView = [[CarPriceView alloc] initWithFrame:CGRectMake(0, 64, kWidth, kHeight - 104)];
+        self.priceView.backgroundColor = [UIColor colorWithRed:25 / 225.0f green:25 / 225.0f blue:25 / 225.0f alpha:0.3];
+        self.priceView.idStr = model.idStr;
+        self.priceView.tableView.delegate = self;
+        [self.priceView requestModel];
+        [self.view addSubview:self.priceView];
+        
+
+    } else if (tableView == self.priceView.tableView){
+          CarDetailViewController *cVC = [[CarDetailViewController alloc] init];
+        if (self.priceView.segment.selectedSegmentIndex == 0) {
+            CarPriceModel *model = self.priceView.onArray[indexPath.section][indexPath.row];
+            cVC.title = model.name;
+        } else {
+            CarPriceModel *model = self.priceView.allArray[indexPath.section][indexPath.row];
+            cVC.title = model.name;
+        }
+      
+            [self.navigationController pushViewController:cVC animated:YES];
+    }
     
-    self.priceView = [[CarPriceView alloc] initWithFrame:CGRectMake(0, 64, kWidth, kHeight - 104)];
-    self.priceView.backgroundColor = [UIColor colorWithRed:25 / 225.0f green:25 / 225.0f blue:25 / 225.0f alpha:0.3];
-    self.priceView.idStr = model.idStr;
-    [self.priceView requestModel];
-    [self.view addSubview:self.priceView];
 
-
-//    self.priceView.frame = CGRectMake(0, 64, kWidth, kHeight - 104);
 
 
 }
+//- (void)pushToController{
+//    CarDetailViewController *cVC = [[CarDetailViewController alloc] init];
+//    [self.navigationController pushViewController:cVC animated:YES];
+//}
 #pragma mark---PullingRefreshTableViewDelegate
 - (void)pullingTableViewDidStartRefreshing:(PullingRefreshTableView *)tableView{
 }
@@ -101,10 +115,10 @@
     return CGSizeMake((kWidth - 60 ) / 4 , 40);
 }
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
-    NSLog(@"***%@", self.priceView.idStr);
   
     self.priceView = [[CarPriceView alloc] initWithFrame:CGRectMake(0, 64, kWidth, kHeight - 104)];
     self.priceView.backgroundColor = [UIColor colorWithRed:25 / 225.0f green:25 / 225.0f blue:25 / 225.0f alpha:0.3];
+    self.priceView.tableView.delegate = self;
     self.priceView.idStr = self.hotIDArray[indexPath.row];
     [self.priceView requestModel];
     
@@ -153,6 +167,8 @@
             }
             [self.numArray addObject:allArray];
         }
+        [self.titleArray removeObjectAtIndex:0];
+        [self.numArray removeObjectAtIndex:0];
         [self.tableView reloadData];
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         NSLog(@"%@", error);
@@ -166,6 +182,7 @@
     button.backgroundColor = [UIColor whiteColor];
     [button setTitle:@"热门排行" forState:UIControlStateNormal];
     [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [button addTarget:self action:@selector(hotCar) forControlEvents:UIControlEventTouchUpInside];
     [headview addSubview:button];
     UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, kWidth / 8, kWidth, 40)];
     label.text = @"热门品牌";
@@ -191,7 +208,10 @@
     self.tableView.tableHeaderView = headview;
 
 }
-
+- (void)hotCar{
+    HotViewController *hVC = [[HotViewController alloc] init];
+    [self.navigationController pushViewController:hVC animated:YES];
+}
 #pragma mark---懒加载
 - (PullingRefreshTableView *)tableView{
     if (_tableView == nil) {
