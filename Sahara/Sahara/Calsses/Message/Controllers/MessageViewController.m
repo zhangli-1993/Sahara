@@ -154,6 +154,7 @@
     DetailViewController *detailVC = [[DetailViewController alloc] init];
     MessageModel *model = self.allTitleArray[indexPath.row];
     detailVC.detailID = model.messageID;
+        detailVC.detailURL = model.url;
     [self.navigationController pushViewController:detailVC animated:YES];
     }
 }

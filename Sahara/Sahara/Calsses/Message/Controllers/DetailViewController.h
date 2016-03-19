@@ -11,5 +11,6 @@
 @interface DetailViewController : UIViewController
 
 @property(nonatomic, strong) NSString *detailID;
+@property(nonatomic, strong) NSString *detailURL;
 
 @end

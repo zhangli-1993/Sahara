@@ -30,8 +30,10 @@
 #define kLiveOther @"http://mrobot.pcauto.com.cn/v2/bbs/topics/"
 #define kOtherPort @"pageNo=1&pageSize=19&authorId=0&topicTemplate=4.5.0&app=pcautobrowser&picRule=2&size=18"
 //直播评论
-//#define kApprisePort @"http://mrobot.pcauto.com.cn/xsp/s/auto/info/xueChe/newTopics.xsp?topicId=13319076&reverse=0&pageSize=20"
+#define kCommentPort @"http://mrobot.pcauto.com.cn/v3/cmt/get_newest_floor?"
 #define kApprisePort @"http://mrobot.pcauto.com.cn/xsp/s/auto/info/xueChe/newTopics.xsp?support=1&reverse=0"
 #define kTypeIDPort @"http://cmt.pcauto.com.cn/templates/pcauto/getPartList.jsp?url=http://live.pcauto.com.cn/broadRecord.jsp?"
+//点赞
+#define kGiveZan @""
 
 #endif /* PortDefine_h */

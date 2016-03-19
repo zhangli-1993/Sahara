@@ -7,7 +7,7 @@
 //
 
 #import "AppriseTableViewCell.h"
-
+#import <BmobSDK/Bmob.h>
 @interface AppriseTableViewCell ()
 
 @property(nonatomic, strong) UILabel *nameLabel;
@@ -64,12 +64,25 @@
     
 }
 
+//点赞和评论
 - (void)appriseAction:(UIButton *)btn{
+    if (self.delegate && [self.delegate respondsToSelector:@selector(buttonTarget:)]) {
+        self.tag = btn.tag;
+        [self.delegate buttonTarget:btn];
+    }
+    
+        
+    
+    
+    
+    
     
     
 }
 
 - (void)setAppModel:(AppriseModel *)appModel{
+    
+    
     self.nameLabel.text = appModel.name;
     self.floorLabel.text = [NSString stringWithFormat:@"%@楼", appModel.floor];
     
@@ -100,8 +113,8 @@
 }
 
 + (CGFloat)getTextHeight:(NSString *)content{
-    CGRect textRect = [content boundingRectWithSize:CGSizeMake(kWidth-30, 1000) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSForegroundColorAttributeName :[UIFont systemFontOfSize:17.0]} context:nil];
-    return textRect.size.height;
+    CGRect textRect = [content boundingRectWithSize:CGSizeMake(kWidth/2-10, 1000) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSForegroundColorAttributeName :[UIFont systemFontOfSize:15.0]} context:nil];
+    return textRect.size.height + 10;
 }
 
 
