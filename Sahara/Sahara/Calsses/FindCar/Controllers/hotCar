@@ -1,0 +1,86 @@
+{
+list =     (
+{
+isNew = 0;
+photo = "http://img0.pcauto.com.cn/pcauto/price/000075962/000075965/1411/31860316_1394172520359_350x260.jpg";
+price = "9.98-16.28\U4e07";
+sellStatus = 3;
+serialGroupId = 4580;
+serialGroupName = "\U54c8\U5f17H6";
+},
+{
+isNew = 0;
+photo = "http://img0.pcauto.com.cn/pcauto/price/000075962/000075965/1411/38275972_38275972_1409883412924_350x260.jpg";
+price = "19.98-31.58\U4e07";
+sellStatus = 3;
+serialGroupId = 3895;
+serialGroupName = "\U9014\U89c2";
+},
+{
+isNew = 0;
+photo = "http://img0.pcauto.com.cn/pcauto/price/000075962/000075965/1502/37121341_37121341_1407307667472_270x202.jpg";
+price = "10.88-14.38\U4e07";
+sellStatus = 3;
+serialGroupId = 9759;
+serialGroupName = "\U957f\U5b89CS75";
+},
+{
+isNew = 0;
+photo = "http://img0.pcauto.com.cn/pcauto/price/000075962/000075965/1505/40404789_40404789_1414750174280_270x202.jpg";
+price = "21.99-34.99\U4e07";
+sellStatus = 3;
+serialGroupId = 11081;
+serialGroupName = "\U6602\U79d1\U5a01";
+},
+{
+isNew = 0;
+photo = "http://img0.pcauto.com.cn/pcauto/price/000075962/000075965/1502/30427040_1389252439596_270x202.jpg";
+price = "7.89-9.69\U4e07";
+sellStatus = 3;
+serialGroupId = 8022;
+serialGroupName = "\U957f\U5b89CS35";
+},
+{
+isNew = 0;
+photo = "http://img0.pcauto.com.cn/pcauto/price/000075962/000075965/1504/32976688_1397100928636_270x202.jpg";
+price = "18.18-26.78\U4e07";
+sellStatus = 3;
+serialGroupId = 3384;
+serialGroupName = "\U5947\U9a8f";
+},
+{
+isNew = 0;
+photo = "http://img0.pcauto.com.cn/pcauto/price/000075962/000075965/1412/40031125_40031125_1414044627206_350x260.jpg";
+price = "6.58-8.48\U4e07";
+sellStatus = 3;
+serialGroupId = 9202;
+serialGroupName = "\U745e\U98ceS3";
+},
+{
+isNew = 0;
+photo = "http://img0.pcauto.com.cn/pcauto/price/000075962/000075965/1506/40748874_40748874_1415585641072_270x202.jpg";
+price = "6.18-7.38\U4e07";
+sellStatus = 3;
+serialGroupId = 10510;
+serialGroupName = "\U5317\U6c7d\U5e7b\U901fS3";
+},
+{
+isNew = 0;
+photo = "http://img0.pcauto.com.cn/pcauto/price/000075962/000075965/1505/5218901_5218901_1428659826024_270x202.jpg";
+price = "17.98-26.28\U4e07";
+sellStatus = 3;
+serialGroupId = 631;
+serialGroupName = "\U672c\U7530CR-V";
+},
+{
+isNew = 0;
+photo = "http://img0.pcauto.com.cn/pcauto/price/000075962/000075965/1502/36609793_36609793_1406087080953_270x202.jpg";
+price = "9.88-12.08\U4e07";
+sellStatus = 3;
+serialGroupId = 9291;
+serialGroupName = "\U54c8\U5f17H2";
+}
+);
+pageNo = 1;
+pageSize = 50;
+}

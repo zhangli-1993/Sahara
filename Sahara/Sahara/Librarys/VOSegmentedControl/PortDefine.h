@@ -8,7 +8,9 @@
 
 #ifndef PortDefine_h
 #define PortDefine_h
-
+#define kWBAppKey @"2015788699"
+#define kRedirectURL @"http://api.weibo.com/oauth2/default.html"
+#define kWXAppKey @"wx2beb0c528b7fe7d0"
 //首页segement
 
 #define kSegementort @"http://mrobot.pcauto.com.cn/configs/pcauto_v4_cms_android_channel_tree"
@@ -16,6 +18,9 @@
 #define kFindCar @"http://mrobot.pcauto.com.cn/v2/price/brands?v=4.0.0"
 #define kHotBrand @"http://mrobot.pcauto.com.cn/configs/pcauto_hot_brands"
 #define kCarPrice @"http://mrobot.pcauto.com.cn/v3/price/modelLibraryHomePage?"
+#define kHotCar @"http://mrobot.pcauto.com.cn/buy/price/hotSellSerials/"
+#define kCarSummarize @"http://mrobot.pcauto.com.cn/xsp/s/auto/info/v4.7/serials.xsp?serialId=11382&regionId=268&hasDealers=1&fmt=json"
+#define kConfig @"http://mrobot.pcauto.com.cn/v3/price/detailComparev45?serialId=11382&fmt=json"
 
 #define kSegementPort @"http://mrobot.pcauto.com.cn/configs/pcauto_v4_cms_android_channel_tree"
 
