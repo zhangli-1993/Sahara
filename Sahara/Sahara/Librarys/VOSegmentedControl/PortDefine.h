@@ -38,7 +38,8 @@
 #define kCommentPort @"http://mrobot.pcauto.com.cn/v3/cmt/get_newest_floor?"
 #define kApprisePort @"http://mrobot.pcauto.com.cn/xsp/s/auto/info/xueChe/newTopics.xsp?support=1&reverse=0"
 #define kTypeIDPort @"http://cmt.pcauto.com.cn/templates/pcauto/getPartList.jsp?url=http://live.pcauto.com.cn/broadRecord.jsp?"
-//点赞
-#define kGiveZan @""
+//违章查询
+#define kCheckPort @"http://www.zonghengche.com/ad/pcautoweizhang/app/weizhang.html"
+
 
 #endif /* PortDefine_h */

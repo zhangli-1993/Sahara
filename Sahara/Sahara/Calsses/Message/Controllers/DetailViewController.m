@@ -9,7 +9,6 @@
 #import "DetailViewController.h"
 #import <AFHTTPSessionManager.h>
 #import "AppriseViewController.h"
-#import <BmobSDK/Bmob.h>
 @interface DetailViewController ()<UIWebViewDelegate>
 {
     NSInteger _dianzanCount;

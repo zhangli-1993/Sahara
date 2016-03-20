@@ -60,7 +60,7 @@
 - (void)requestModel{
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     manager.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"text/html"];
-    [manager GET:[NSString stringWithFormat:@"%@%ld?pageSize=50&pageNo=1",kHotCar, index] parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
+    [manager GET:[NSString stringWithFormat:@"%@%ld?pageSize=50&pageNo=1",kHotCar, (long)index] parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         NSDictionary *dic = responseObject;

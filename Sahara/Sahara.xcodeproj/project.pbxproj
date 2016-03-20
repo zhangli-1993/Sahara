@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		525A52B034E3688F1D9B5A41 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A31DF689C6CF0A0F3FD738CB /* libPods.a */; };
-
 		7A089AC91C9BD71900EF030E /* sum in Resources */ = {isa = PBXBuildFile; fileRef = 7A089AC81C9BD71900EF030E /* sum */; };
 		7A089ACF1C9BD83E00EF030E /* CarSumView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A089ACE1C9BD83E00EF030E /* CarSumView.m */; };
 		7A089ADD1C9BE21F00EF030E /* libWeiboSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A089AD11C9BE21F00EF030E /* libWeiboSDK.a */; };
@@ -31,7 +30,6 @@
 		7A089B031C9C19CD00EF030E /* CarSumModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A089B021C9C19CD00EF030E /* CarSumModel.m */; };
 		7A089B061C9C265200EF030E /* ConfigurationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A089B051C9C265200EF030E /* ConfigurationView.m */; };
 		7A089B081C9C277100EF030E /* Config in Resources */ = {isa = PBXBuildFile; fileRef = 7A089B071C9C277100EF030E /* Config */; };
-
 		7A08A8BB1C9A33A100D036E7 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A08A8BA1C9A33A100D036E7 /* QuartzCore.framework */; };
 		7A08A8BD1C9A493200D036E7 /* CarPrice in Resources */ = {isa = PBXBuildFile; fileRef = 7A08A8BC1C9A493200D036E7 /* CarPrice */; };
 		7A08A8C01C9AD73700D036E7 /* CarDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A08A8BF1C9AD73700D036E7 /* CarDetailViewController.m */; };
@@ -68,6 +66,16 @@
 		7AB362751C98F85500C03E74 /* MessageOneTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7AB362731C98F85500C03E74 /* MessageOneTableViewCell.xib */; };
 		7AB362791C98F89800C03E74 /* MessageTwoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AB362771C98F89800C03E74 /* MessageTwoTableViewCell.m */; };
 		7AB3627A1C98F89800C03E74 /* MessageTwoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7AB362781C98F89800C03E74 /* MessageTwoTableViewCell.xib */; };
+		7ABB84671C9E438200621CC4 /* yue.png in Resources */ = {isa = PBXBuildFile; fileRef = 7ABB84661C9E438200621CC4 /* yue.png */; };
+		7ABB84691C9E443400621CC4 /* sun.png in Resources */ = {isa = PBXBuildFile; fileRef = 7ABB84681C9E443400621CC4 /* sun.png */; };
+		7ABB846C1C9E45CE00621CC4 /* CheckViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ABB846B1C9E45CE00621CC4 /* CheckViewController.m */; };
+		7ABB846F1C9E4B5800621CC4 /* HelpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ABB846E1C9E4B5800621CC4 /* HelpViewController.m */; };
+		7ABB84721C9E4D9C00621CC4 /* QuestionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ABB84711C9E4D9C00621CC4 /* QuestionViewController.m */; };
+		7ABB84751C9E860A00621CC4 /* SetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ABB84741C9E860A00621CC4 /* SetViewController.m */; };
+		7ABB84781C9E986300621CC4 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ABB84771C9E986300621CC4 /* LoginViewController.m */; };
+		7ABB847B1C9E988B00621CC4 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ABB847A1C9E988B00621CC4 /* RegisterViewController.m */; };
+		7ABB847E1C9E98B500621CC4 /* ForgotPassViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ABB847D1C9E98B500621CC4 /* ForgotPassViewController.m */; };
+		7ABB84821C9E98F300621CC4 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7ABB84811C9E98F300621CC4 /* Login.storyboard */; };
 		7AD7F7E71C9934CE00BF2460 /* hot in Resources */ = {isa = PBXBuildFile; fileRef = 7AD7F7E61C9934CE00BF2460 /* hot */; };
 		7AD7F7E91C9943A700BF2460 /* allBrands in Resources */ = {isa = PBXBuildFile; fileRef = 7AD7F7E81C9943A700BF2460 /* allBrands */; };
 		7AD7F7F11C9945E800BF2460 /* AllBrandsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AD7F7F01C9945E800BF2460 /* AllBrandsModel.m */; };
@@ -81,7 +89,6 @@
 /* Begin PBXFileReference section */
 		3E5768CE4E443399640C3666 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		4483BA8AABB15E4CA5CAE736 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
-
 		7A089AC81C9BD71900EF030E /* sum */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = sum; sourceTree = "<group>"; };
 		7A089ACD1C9BD83E00EF030E /* CarSumView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarSumView.h; sourceTree = "<group>"; };
 		7A089ACE1C9BD83E00EF030E /* CarSumView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CarSumView.m; sourceTree = "<group>"; };
@@ -120,7 +127,6 @@
 		7A089B041C9C265200EF030E /* ConfigurationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfigurationView.h; sourceTree = "<group>"; };
 		7A089B051C9C265200EF030E /* ConfigurationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfigurationView.m; sourceTree = "<group>"; };
 		7A089B071C9C277100EF030E /* Config */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Config; sourceTree = "<group>"; };
-
 		7A08A8BA1C9A33A100D036E7 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		7A08A8BC1C9A493200D036E7 /* CarPrice */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CarPrice; sourceTree = "<group>"; };
 		7A08A8BE1C9AD73700D036E7 /* CarDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarDetailViewController.h; sourceTree = "<group>"; };
@@ -187,6 +193,23 @@
 		7AB362771C98F89800C03E74 /* MessageTwoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageTwoTableViewCell.m; sourceTree = "<group>"; };
 		7AB362781C98F89800C03E74 /* MessageTwoTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MessageTwoTableViewCell.xib; sourceTree = "<group>"; };
 		7AB362841C99002400C03E74 /* PortDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PortDefine.h; path = VOSegmentedControl/PortDefine.h; sourceTree = "<group>"; };
+		7ABB84661C9E438200621CC4 /* yue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = yue.png; sourceTree = "<group>"; };
+		7ABB84681C9E443400621CC4 /* sun.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sun.png; sourceTree = "<group>"; };
+		7ABB846A1C9E45CE00621CC4 /* CheckViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CheckViewController.h; sourceTree = "<group>"; };
+		7ABB846B1C9E45CE00621CC4 /* CheckViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckViewController.m; sourceTree = "<group>"; };
+		7ABB846D1C9E4B5800621CC4 /* HelpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelpViewController.h; sourceTree = "<group>"; };
+		7ABB846E1C9E4B5800621CC4 /* HelpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HelpViewController.m; sourceTree = "<group>"; };
+		7ABB84701C9E4D9C00621CC4 /* QuestionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestionViewController.h; sourceTree = "<group>"; };
+		7ABB84711C9E4D9C00621CC4 /* QuestionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionViewController.m; sourceTree = "<group>"; };
+		7ABB84731C9E860A00621CC4 /* SetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetViewController.h; sourceTree = "<group>"; };
+		7ABB84741C9E860A00621CC4 /* SetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetViewController.m; sourceTree = "<group>"; };
+		7ABB84761C9E986300621CC4 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		7ABB84771C9E986300621CC4 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		7ABB84791C9E988B00621CC4 /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
+		7ABB847A1C9E988B00621CC4 /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
+		7ABB847C1C9E98B500621CC4 /* ForgotPassViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForgotPassViewController.h; sourceTree = "<group>"; };
+		7ABB847D1C9E98B500621CC4 /* ForgotPassViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForgotPassViewController.m; sourceTree = "<group>"; };
+		7ABB84811C9E98F300621CC4 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Login.storyboard; path = Sahara/Calsses/Message/VIews/Login.storyboard; sourceTree = SOURCE_ROOT; };
 		7AD7F7E61C9934CE00BF2460 /* hot */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = hot; sourceTree = "<group>"; };
 		7AD7F7E81C9943A700BF2460 /* allBrands */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = allBrands; sourceTree = "<group>"; };
 		7AD7F7EF1C9945E800BF2460 /* AllBrandsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AllBrandsModel.h; sourceTree = "<group>"; };
@@ -411,6 +434,22 @@
 			children = (
 				7AB362561C98E44500C03E74 /* MainViewController.h */,
 				7AB362571C98E44500C03E74 /* MainViewController.m */,
+				7ABB846A1C9E45CE00621CC4 /* CheckViewController.h */,
+				7ABB846B1C9E45CE00621CC4 /* CheckViewController.m */,
+				7ABB846D1C9E4B5800621CC4 /* HelpViewController.h */,
+				7ABB846E1C9E4B5800621CC4 /* HelpViewController.m */,
+				7ABB84701C9E4D9C00621CC4 /* QuestionViewController.h */,
+				7ABB84711C9E4D9C00621CC4 /* QuestionViewController.m */,
+				7ABB84731C9E860A00621CC4 /* SetViewController.h */,
+				7ABB84741C9E860A00621CC4 /* SetViewController.m */,
+				7ABB84761C9E986300621CC4 /* LoginViewController.h */,
+				7ABB84771C9E986300621CC4 /* LoginViewController.m */,
+				7ABB84791C9E988B00621CC4 /* RegisterViewController.h */,
+				7ABB847A1C9E988B00621CC4 /* RegisterViewController.m */,
+				7ABB847C1C9E98B500621CC4 /* ForgotPassViewController.h */,
+				7ABB847D1C9E98B500621CC4 /* ForgotPassViewController.m */,
+				7ABB84661C9E438200621CC4 /* yue.png */,
+				7ABB84681C9E443400621CC4 /* sun.png */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -425,6 +464,7 @@
 		7AB362471C98E3F200C03E74 /* VIews */ = {
 			isa = PBXGroup;
 			children = (
+				7ABB84811C9E98F300621CC4 /* Login.storyboard */,
 			);
 			path = VIews;
 			sourceTree = "<group>";
@@ -667,9 +707,12 @@
 				7A089B001C9C08AB00EF030E /* Filefff in Resources */,
 				7A2E7AEB1C984DDA0045F332 /* Assets.xcassets in Resources */,
 				7A08A8BD1C9A493200D036E7 /* CarPrice in Resources */,
+				7ABB84691C9E443400621CC4 /* sun.png in Resources */,
 				7A84D1A91C98FF38006EE2F1 /* blueArrowDown.png in Resources */,
 				7A2E7AEE1C984DDA0045F332 /* LaunchScreen.storyboard in Resources */,
+				7ABB84671C9E438200621CC4 /* yue.png in Resources */,
 				7AF9C5BE1C9AB03A00074B54 /* ForumOneTableViewCell.xib in Resources */,
+				7ABB84821C9E98F300621CC4 /* Login.storyboard in Resources */,
 				7A84D1A81C98FF38006EE2F1 /* blueArrow.png in Resources */,
 				7A08A8C51C9ADF8100D036E7 /* hotCar in Resources */,
 				7AD7F7E91C9943A700BF2460 /* allBrands in Resources */,
@@ -745,8 +788,10 @@
 				7A0A919C1C999D020007192D /* CarPriceModel.m in Sources */,
 				7AD7F7F11C9945E800BF2460 /* AllBrandsModel.m in Sources */,
 				7A08A8C01C9AD73700D036E7 /* CarDetailViewController.m in Sources */,
+				7ABB847E1C9E98B500621CC4 /* ForgotPassViewController.m in Sources */,
 				7AB3626A1C98F2B500C03E74 /* VOContentLayer.m in Sources */,
 				7AAB55B41C9AC5E70096B1C1 /* AppriseTableViewCell.m in Sources */,
+				7ABB846C1C9E45CE00621CC4 /* CheckViewController.m in Sources */,
 				7AB362521C98E42B00C03E74 /* FindCarViewController.m in Sources */,
 				7A6C0BD71C995E7C00205D61 /* DetailViewController.m in Sources */,
 				7AB362581C98E44500C03E74 /* MainViewController.m in Sources */,
@@ -755,17 +800,15 @@
 				7AB3626D1C98F2B500C03E74 /* VOSegmentedControl.m in Sources */,
 				7AD7F7F41C9946E500BF2460 /* AllTableViewCell.m in Sources */,
 				7AB362741C98F85500C03E74 /* MessageOneTableViewCell.m in Sources */,
-
+				7ABB84781C9E986300621CC4 /* LoginViewController.m in Sources */,
 				7A08A8CB1C9AE4B900D036E7 /* HotTableViewCell.m in Sources */,
-
 				7AF9C5BC1C9AB03A00074B54 /* ForumModel.m in Sources */,
 				7AB3624F1C98E41800C03E74 /* PrimeViewController.m in Sources */,
 				7AAB55B11C9AB7580096B1C1 /* AppriseViewController.m in Sources */,
 				7AB3626B1C98F2B500C03E74 /* VOIndicatorAnimation.m in Sources */,
-
+				7ABB847B1C9E988B00621CC4 /* RegisterViewController.m in Sources */,
 				7A089B061C9C265200EF030E /* ConfigurationView.m in Sources */,
-				7AB362551C98E43A00C03E74 /* ForumViewController.m in Sources */,
-
+				7ABB846F1C9E4B5800621CC4 /* HelpViewController.m in Sources */,
 				7AAB55AE1C9AA55C0096B1C1 /* UIViewController+BackPront.m in Sources */,
 				7AF9C5BD1C9AB03A00074B54 /* ForumOneTableViewCell.m in Sources */,
 				7A1225781C9A9C9500E16422 /* LiveOtherViewController.m in Sources */,
@@ -773,11 +816,13 @@
 				7A089ACF1C9BD83E00EF030E /* CarSumView.m in Sources */,
 				7A2E7AE61C984DDA0045F332 /* main.m in Sources */,
 				7A08A8C81C9AE37900D036E7 /* HotModel.m in Sources */,
+				7ABB84751C9E860A00621CC4 /* SetViewController.m in Sources */,
 				7AB3625B1C98E45600C03E74 /* MessageViewController.m in Sources */,
 				7A84D1AA1C98FF38006EE2F1 /* PullingRefreshTableView.m in Sources */,
 				7A1225751C9A90C000E16422 /* TomLiveViewController.m in Sources */,
 				7A089AF51C9BE67E00EF030E /* ShareView.m in Sources */,
 				7AB362701C98F7A200C03E74 /* MessageModel.m in Sources */,
+				7ABB84721C9E4D9C00621CC4 /* QuestionViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -10,7 +10,6 @@
 #import "PullingRefreshTableView.h"
 #import "AppriseTableViewCell.h"
 #import <AFNetworking/AFHTTPSessionManager.h>
-#import <BmobSDK/Bmob.h>
 @interface AppriseViewController ()<UITableViewDataSource, UITableViewDelegate, PullingRefreshTableViewDelegate, dianzanWithCommentDelegate>
 {
     NSInteger _pageCount;
@@ -148,7 +147,7 @@
     }
     if (indexPath.row < self.allAppriseArray.count) {
     AppriseModel *model = self.allAppriseArray[indexPath.row];
-    self.zanCount = model.client;
+    self.zanCount = [model.client integerValue];
     appriseCell.appModel = model;
     }
     
