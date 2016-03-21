@@ -11,6 +11,7 @@
 #define kWBAppKey @"2015788699"
 #define kRedirectURL @"http://api.weibo.com/oauth2/default.html"
 #define kWXAppKey @"wx2beb0c528b7fe7d0"
+#define kMapKey @"ab84ece8092b73db9355fb53da0603c5"
 //首页segement
 
 #define kSegementort @"http://mrobot.pcauto.com.cn/configs/pcauto_v4_cms_android_channel_tree"
@@ -29,7 +30,7 @@
 #define kComment @"http://mrobot.pcauto.com.cn/v3/price/serialCommentList/"
 #define kCarForum @"http://mrobot.pcauto.com.cn/v3/bbs/newForumsv45/"
 #define kCarImage @"http://mrobot.pcauto.com.cn/v2/price/nav_picturesv47?serialGroupId="
-
+#define kStore @"http://mrobot.pcauto.com.cn/v3/price/dealersSerialv45?serialId=11382&areaId=268"
 
 
 //首页cell

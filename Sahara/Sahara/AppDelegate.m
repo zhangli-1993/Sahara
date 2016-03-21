@@ -15,8 +15,13 @@
 #import "WeiboSDK.h"
 #import "WXApi.h"
 #import <BmobSDK/Bmob.h>
+#import <CoreLocation/CoreLocation.h>
 
-@interface AppDelegate ()<WeiboSDKDelegate, WXApiDelegate>
+@interface AppDelegate ()<WeiboSDKDelegate, WXApiDelegate, CLLocationManagerDelegate>
+{
+    CLLocationManager *_locationManager;
+    CLGeocoder *_geocoder;
+}
 
 @property(nonatomic, strong) UITabBarController *tabBarVC;
 
@@ -32,6 +37,21 @@
     [WeiboSDK registerApp:kWBAppKey];
     [WXApi registerApp:kWXAppKey];
     [Bmob registerWithAppKey:kBmobKey];
+    _locationManager = [[CLLocationManager alloc] init];
+    _geocoder = [[CLGeocoder alloc] init];
+    if (![CLLocationManager locationServicesEnabled]) {
+        NSLog(@"定位服务当前可能尚未打开，请设置打开");
+    }
+    if ([CLLocationManager authorizationStatus] == kCLAuthorizationStatusNotDetermined) {
+        [_locationManager requestWhenInUseAuthorization];
+    } else if ([CLLocationManager authorizationStatus] == kCLAuthorizationStatusAuthorizedWhenInUse){
+        _locationManager.delegate = self;
+        _locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters;
+        CLLocationDistance distance = 10.0;
+        _locationManager.distanceFilter = distance;
+        [_locationManager startUpdatingLocation];
+    }
+    NSLog(@"233333333");
     self.tabBarVC = [[UITabBarController alloc] init];
     //资讯
     MessageViewController *messageVC = [[MessageViewController alloc] init];
@@ -80,6 +100,28 @@
     [self.window makeKeyAndVisible];
     return YES;
 }
+- (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray<CLLocation *> *)locations{
+    CLLocation *location = [locations firstObject];
+    CLLocationCoordinate2D coordinate = location.coordinate;
+    NSLog(@"///%f, ///%f, %f, %f, %f", coordinate.longitude, coordinate.latitude, location.altitude, location.course, location.speed);
+    //
+    NSUserDefaults *userDef = [NSUserDefaults standardUserDefaults];
+    [userDef setValue:[NSNumber numberWithDouble:coordinate.latitude] forKey:@"lat"];
+    [userDef setValue:[NSNumber numberWithDouble:coordinate.longitude] forKey:@"lng"];
+    
+    [_geocoder reverseGeocodeLocation:location completionHandler:^(NSArray<CLPlacemark *> * _Nullable placemarks, NSError * _Nullable error) {
+        CLPlacemark *placeMark = [placemarks firstObject];
+        [[NSUserDefaults standardUserDefaults] setValue:placeMark.addressDictionary[@"City"] forKey:@"city"];
+        [userDef synchronize];
+        NSLog(@"++++error%@", error);
+        NSLog(@"++++%@", placeMark.addressDictionary);
+    }];
+    [_locationManager stopUpdatingLocation];
+    
+    
+}
+
+
 - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation{
     return [WeiboSDK handleOpenURL:url delegate:self];
     return [WXApi handleOpenURL:url delegate:self];

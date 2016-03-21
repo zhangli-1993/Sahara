@@ -7,8 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PullingRefreshTableView.h"
 
 @interface CarForum : UIView
 @property (nonatomic, strong) NSString *idStr;
+@property (nonatomic, strong) PullingRefreshTableView *tableView;
+@property (nonatomic, strong) NSMutableArray *allArray;
+
 - (void)requestModel;
 @end

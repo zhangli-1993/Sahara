@@ -35,14 +35,14 @@
 - (void)webViewDidFinishLoad:(UIWebView *)webView{
     NSArray *arr = [webView subviews];
     UIScrollView *scrollView1 = [arr objectAtIndex:0];
-    self.webView.frame = CGRectMake(0, 0, kWidth, [scrollView1 contentSize].height + 100);
+    self.webView.frame = CGRectMake(0, 0, kWidth, [scrollView1 contentSize].height);
 }
 - (UIWebView *)webView{
     if (_webView == nil) {
-        self.webView = [[UIWebView alloc] initWithFrame:self.frame];
+        self.webView = [[UIWebView alloc] initWithFrame:CGRectMake(0, 50, kWidth, kHeight - 50)];
         self.webView.delegate = self;
         self.webView.scalesPageToFit = YES;
-        self.webView.opaque = NO;
+//        self.webView.opaque = NO;
     }
     return _webView;
 }

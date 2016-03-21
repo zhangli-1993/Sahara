@@ -15,5 +15,7 @@
 @property (nonatomic, strong) NSArray *imageArray;
 @property (nonatomic, strong) NSString *time;
 @property (nonatomic, strong) NSString *read;
+@property (nonatomic, strong) NSString *html;
+
 - (instancetype)initWithDictionary:(NSDictionary *)dic;
 @end

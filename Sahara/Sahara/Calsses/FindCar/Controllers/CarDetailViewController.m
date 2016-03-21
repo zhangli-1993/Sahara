@@ -19,6 +19,9 @@
 #import "CommentView.h"
 #import "CarForum.h"
 #import "CarImageView.h"
+#import "CarForumModel.h"
+#import "CarForumViewController.h"
+#import "StoreView.h"
 @interface CarDetailViewController ()<WBHttpRequestDelegate, UITableViewDelegate>
 @property (nonatomic, strong) ShareView *shareView;
 @property (nonatomic, strong) VOSegmentedControl *segment;
@@ -27,6 +30,7 @@
 @property (nonatomic, strong) CommentView *comment;
 @property (nonatomic, strong) CarForum *carForum;
 @property (nonatomic, strong) CarImageView *carImage;
+@property (nonatomic, strong) StoreView *storeView;
 @end
 
 @implementation CarDetailViewController
@@ -118,10 +122,10 @@
             [self.act removeFromSuperview];
             [self.comment removeFromSuperview];
             [self.carImage removeFromSuperview];
-
-            self.carForum = [[CarForum alloc]initWithFrame:CGRectMake(0, 50, kWidth, kHeight - 50)];
+            self.carForum = [[CarForum alloc]initWithFrame:CGRectMake(0, 55, kWidth, kHeight - 55)];
             self.carForum.idStr = self.artID;
             [self.carForum requestModel];
+            self.carForum.tableView.delegate = self;
             [self.view addSubview:self.carForum];
         }
             break;
@@ -131,7 +135,6 @@
             [self.comment removeFromSuperview];
             [self.carForum removeFromSuperview];
             [self.carImage removeFromSuperview];
-
             self.act = [[ActicleView alloc] initWithFrame:CGRectMake(0, 52, kWidth, kHeight - 52)];
             self.act.idStr = self.artID;
             self.act.tableView.delegate = self;
@@ -139,7 +142,23 @@
             [self.view addSubview:self.act];
         }
             break;
+        case 7:
+        {
+            [self.carView removeFromSuperview];
+            [self.comment removeFromSuperview];
+            [self.carForum removeFromSuperview];
+            [self.carImage removeFromSuperview];
+            [self.act removeFromSuperview];
+            self.storeView = [[StoreView alloc] initWithFrame:CGRectMake(0, 52, kWidth, kHeight - 52)];
+//            self.act.idStr = self.artID;
+//            self.act.tableView.delegate = self;
+//            [self.act requestModel];
+            [self.view addSubview:self.storeView];
+
             
+        }
+            break;
+
         default:
             break;
     }
@@ -151,6 +170,12 @@
         ArticleModel *model = self.act.allArray[indexPath.row];
         aVC.htmlStr = model.url;
         [self.navigationController pushViewController:aVC animated:YES];
+    }
+    if (tableView == self.carForum.tableView) {
+        CarForumViewController *cVC = [[CarForumViewController alloc] init];
+        CarForumModel *model = self.carForum.allArray[indexPath.row];
+        cVC.htmlStr = model.html;
+        [self.navigationController pushViewController:cVC animated:YES];
     }
 }
 #pragma mark---WBHttpRequestDelegate

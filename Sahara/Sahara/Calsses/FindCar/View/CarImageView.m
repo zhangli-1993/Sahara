@@ -49,7 +49,7 @@
 }
 - (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath{
     UICollectionReusableView *view1 = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"HeaderView" forIndexPath:indexPath];
-    UILabel *label = [[UILabel alloc] initWithFrame:view1.frame];
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(20, 0, kWidth - 40, 30)];
     label.text = self.titleArray[indexPath.section];
     [view1 addSubview:label];
     return view1;
@@ -57,6 +57,10 @@
 #pragma mark---UICollectionViewDelegateFlowLayout
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath{
     return CGSizeMake((kWidth - 60 ) / 3 , (kWidth - 60) / (3 * 1.4));
+}
+-(CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout referenceSizeForHeaderInSection:(NSInteger)section{
+    CGSize size={kWidth,30};
+    return size;
 }
 -(BOOL)collectionView:(UICollectionView *)collectionView shouldSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -100,13 +104,13 @@
         //section的边距
         layout.sectionInset = UIEdgeInsetsMake(10, 20, 5, 20);
         //通过一个layout布局来创建一个collectView
-        self.collectView = [[UICollectionView alloc] initWithFrame:self.frame collectionViewLayout:layout];
+        self.collectView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 55, kWidth, kHeight - 110) collectionViewLayout:layout];
         //设置代理
         self.collectView.dataSource = self;
         self.collectView.delegate = self;
         [self.collectView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"image"];
         [self.collectView registerClass:[UICollectionReusableView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"HeaderView"];
-       self.collectView.backgroundColor = [UIColor colorWithRed:0.7 green:0.7 blue:0.7 alpha:0.3];
+        self.collectView.backgroundColor = [UIColor whiteColor];
         
     }
     return _collectView;

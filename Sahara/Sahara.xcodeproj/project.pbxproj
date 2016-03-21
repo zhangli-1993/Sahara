@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		525A52B034E3688F1D9B5A41 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A31DF689C6CF0A0F3FD738CB /* libPods.a */; };
-
-
 		7A07E69F1C9F82DD003D0843 /* ProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 7A07E69C1C9F82DD003D0843 /* ProgressHUD.bundle */; };
 		7A07E6A01C9F82DD003D0843 /* ProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A07E69E1C9F82DD003D0843 /* ProgressHUD.m */; };
 		7A089AC91C9BD71900EF030E /* sum in Resources */ = {isa = PBXBuildFile; fileRef = 7A089AC81C9BD71900EF030E /* sum */; };
@@ -32,7 +30,6 @@
 		7A089AFE1C9BF51100EF030E /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A089AFD1C9BF51100EF030E /* libc++.tbd */; };
 		7A089B001C9C08AB00EF030E /* Filefff in Resources */ = {isa = PBXBuildFile; fileRef = 7A089AFF1C9C08AB00EF030E /* Filefff */; };
 		7A089B031C9C19CD00EF030E /* CarSumModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A089B021C9C19CD00EF030E /* CarSumModel.m */; };
-		7A089B061C9C265200EF030E /* ConfigurationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A089B051C9C265200EF030E /* ConfigurationView.m */; };
 		7A089B081C9C277100EF030E /* Config in Resources */ = {isa = PBXBuildFile; fileRef = 7A089B071C9C277100EF030E /* Config */; };
 		7A08A8BB1C9A33A100D036E7 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A08A8BA1C9A33A100D036E7 /* QuartzCore.framework */; };
 		7A08A8BD1C9A493200D036E7 /* CarPrice in Resources */ = {isa = PBXBuildFile; fileRef = 7A08A8BC1C9A493200D036E7 /* CarPrice */; };
@@ -46,6 +43,14 @@
 		7A0ACAD81C9F7F9A00355E67 /* CarImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A0ACAD71C9F7F9A00355E67 /* CarImageView.m */; };
 		7A0ACADB1C9F82BA00355E67 /* CarImageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A0ACADA1C9F82BA00355E67 /* CarImageModel.m */; };
 		7A0ACAF01C9FA47900355E67 /* carForum in Resources */ = {isa = PBXBuildFile; fileRef = 7A0ACAEF1C9FA47900355E67 /* carForum */; };
+		7A0ACAF31C9FD4E700355E67 /* Tools.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A0ACAF21C9FD4E700355E67 /* Tools.m */; };
+		7A0ACAF61C9FF28C00355E67 /* CarForumViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A0ACAF51C9FF28C00355E67 /* CarForumViewController.m */; };
+		7A0ACAF81CA023AA00355E67 /* MAMapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A0ACAF71CA023AA00355E67 /* MAMapKit.framework */; };
+		7A0ACAFA1CA0244B00355E67 /* AMap.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 7A0ACAF91CA0244B00355E67 /* AMap.bundle */; };
+		7A0ACAFC1CA024A000355E67 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A0ACAFB1CA024A000355E67 /* CoreLocation.framework */; };
+		7A0ACAFE1CA024C900355E67 /* libstdc++.6.0.9.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A0ACAFD1CA024C900355E67 /* libstdc++.6.0.9.tbd */; };
+		7A0ACB011CA026C800355E67 /* StoreView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A0ACB001CA026C800355E67 /* StoreView.m */; };
+		7A0ACB031CA0314500355E67 /* store in Resources */ = {isa = PBXBuildFile; fileRef = 7A0ACB021CA0314500355E67 /* store */; };
 		7A0C78A01C9E2C8A0048C4F3 /* Article in Resources */ = {isa = PBXBuildFile; fileRef = 7A0C789F1C9E2C8A0048C4F3 /* Article */; };
 		7A0C78A31C9E2CE50048C4F3 /* ArticleModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A0C78A21C9E2CE50048C4F3 /* ArticleModel.m */; };
 		7A0C78A61C9E2E1D0048C4F3 /* ActicleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A0C78A51C9E2E1D0048C4F3 /* ActicleView.m */; };
@@ -105,8 +110,6 @@
 /* Begin PBXFileReference section */
 		3E5768CE4E443399640C3666 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		4483BA8AABB15E4CA5CAE736 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
-
-
 		7A07E69B1C9F82DD003D0843 /* JokeDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JokeDefine.h; sourceTree = "<group>"; };
 		7A07E69C1C9F82DD003D0843 /* ProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ProgressHUD.bundle; sourceTree = "<group>"; };
 		7A07E69D1C9F82DD003D0843 /* ProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgressHUD.h; sourceTree = "<group>"; };
@@ -146,8 +149,6 @@
 		7A089AFF1C9C08AB00EF030E /* Filefff */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Filefff; sourceTree = "<group>"; };
 		7A089B011C9C19CD00EF030E /* CarSumModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarSumModel.h; sourceTree = "<group>"; };
 		7A089B021C9C19CD00EF030E /* CarSumModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CarSumModel.m; sourceTree = "<group>"; };
-		7A089B041C9C265200EF030E /* ConfigurationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfigurationView.h; sourceTree = "<group>"; };
-		7A089B051C9C265200EF030E /* ConfigurationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfigurationView.m; sourceTree = "<group>"; };
 		7A089B071C9C277100EF030E /* Config */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Config; sourceTree = "<group>"; };
 		7A08A8BA1C9A33A100D036E7 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		7A08A8BC1C9A493200D036E7 /* CarPrice */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CarPrice; sourceTree = "<group>"; };
@@ -169,6 +170,17 @@
 		7A0ACAD91C9F82BA00355E67 /* CarImageModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarImageModel.h; sourceTree = "<group>"; };
 		7A0ACADA1C9F82BA00355E67 /* CarImageModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CarImageModel.m; sourceTree = "<group>"; };
 		7A0ACAEF1C9FA47900355E67 /* carForum */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = carForum; sourceTree = "<group>"; };
+		7A0ACAF11C9FD4E700355E67 /* Tools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tools.h; sourceTree = "<group>"; };
+		7A0ACAF21C9FD4E700355E67 /* Tools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tools.m; sourceTree = "<group>"; };
+		7A0ACAF41C9FF28C00355E67 /* CarForumViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarForumViewController.h; sourceTree = "<group>"; };
+		7A0ACAF51C9FF28C00355E67 /* CarForumViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CarForumViewController.m; sourceTree = "<group>"; };
+		7A0ACAF71CA023AA00355E67 /* MAMapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MAMapKit.framework; sourceTree = "<group>"; };
+		7A0ACAF91CA0244B00355E67 /* AMap.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = AMap.bundle; path = MAMapKit.framework/AMap.bundle; sourceTree = "<group>"; };
+		7A0ACAFB1CA024A000355E67 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		7A0ACAFD1CA024C900355E67 /* libstdc++.6.0.9.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.0.9.tbd"; path = "usr/lib/libstdc++.6.0.9.tbd"; sourceTree = SDKROOT; };
+		7A0ACAFF1CA026C800355E67 /* StoreView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoreView.h; sourceTree = "<group>"; };
+		7A0ACB001CA026C800355E67 /* StoreView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoreView.m; sourceTree = "<group>"; };
+		7A0ACB021CA0314500355E67 /* store */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = store; sourceTree = "<group>"; };
 		7A0C789F1C9E2C8A0048C4F3 /* Article */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Article; sourceTree = "<group>"; };
 		7A0C78A11C9E2CE50048C4F3 /* ArticleModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArticleModel.h; sourceTree = "<group>"; };
 		7A0C78A21C9E2CE50048C4F3 /* ArticleModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArticleModel.m; sourceTree = "<group>"; };
@@ -274,6 +286,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A0ACAFE1CA024C900355E67 /* libstdc++.6.0.9.tbd in Frameworks */,
+				7A0ACAFC1CA024A000355E67 /* CoreLocation.framework in Frameworks */,
+				7A0ACAF81CA023AA00355E67 /* MAMapKit.framework in Frameworks */,
 				7A089AFE1C9BF51100EF030E /* libc++.tbd in Frameworks */,
 				7A089AFC1C9BF50300EF030E /* libsqlite3.0.tbd in Frameworks */,
 				7A089AFA1C9BF37900EF030E /* libWeChatSDK.a in Frameworks */,
@@ -339,6 +354,7 @@
 		7A2E7AD81C984DDA0045F332 = {
 			isa = PBXGroup;
 			children = (
+				7A0ACAF91CA0244B00355E67 /* AMap.bundle */,
 				7A2E7AE31C984DDA0045F332 /* Sahara */,
 				7A2E7AE21C984DDA0045F332 /* Products */,
 				9CEF5E36737CE835774D009D /* Pods */,
@@ -454,6 +470,8 @@
 				7A08A8C21C9AD98B00D036E7 /* HotViewController.m */,
 				7A0C78AA1C9E37600048C4F3 /* ActicleDetailViewController.h */,
 				7A0C78AB1C9E37600048C4F3 /* ActicleDetailViewController.m */,
+				7A0ACAF41C9FF28C00355E67 /* CarForumViewController.h */,
+				7A0ACAF51C9FF28C00355E67 /* CarForumViewController.m */,
 				7A089AFF1C9C08AB00EF030E /* Filefff */,
 				7AD7F7E61C9934CE00BF2460 /* hot */,
 				7AD7F7E81C9943A700BF2460 /* allBrands */,
@@ -464,6 +482,7 @@
 				7A0C789F1C9E2C8A0048C4F3 /* Article */,
 				7A0C78B01C9E4DC30048C4F3 /* comment */,
 				7A0ACAEF1C9FA47900355E67 /* carForum */,
+				7A0ACB021CA0314500355E67 /* store */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -588,6 +607,8 @@
 				7A089AD01C9BE21F00EF030E /* libWeiboSDK */,
 				7AB3625C1C98E4AF00C03E74 /* Sahara.pch */,
 				7AB362841C99002400C03E74 /* PortDefine.h */,
+				7A0ACAF11C9FD4E700355E67 /* Tools.h */,
+				7A0ACAF21C9FD4E700355E67 /* Tools.m */,
 				7AAB55AC1C9AA55C0096B1C1 /* UIViewController+BackPront.h */,
 				7AAB55AD1C9AA55C0096B1C1 /* UIViewController+BackPront.m */,
 				7A07E69A1C9F82DD003D0843 /* ProgressHUD */,
@@ -646,8 +667,6 @@
 				7A08A8CA1C9AE4B900D036E7 /* HotTableViewCell.m */,
 				7A089ACD1C9BD83E00EF030E /* CarSumView.h */,
 				7A089ACE1C9BD83E00EF030E /* CarSumView.m */,
-				7A089B041C9C265200EF030E /* ConfigurationView.h */,
-				7A089B051C9C265200EF030E /* ConfigurationView.m */,
 				7A089AF31C9BE67E00EF030E /* ShareView.h */,
 				7A089AF41C9BE67E00EF030E /* ShareView.m */,
 				7A0C78A41C9E2E1D0048C4F3 /* ActicleView.h */,
@@ -658,6 +677,8 @@
 				7A0C78B31C9E929A0048C4F3 /* CarForum.m */,
 				7A0ACAD61C9F7F9A00355E67 /* CarImageView.h */,
 				7A0ACAD71C9F7F9A00355E67 /* CarImageView.m */,
+				7A0ACAFF1CA026C800355E67 /* StoreView.h */,
+				7A0ACB001CA026C800355E67 /* StoreView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -702,6 +723,9 @@
 		FA7FD3E0088FFB46FCCE72F1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7A0ACAFD1CA024C900355E67 /* libstdc++.6.0.9.tbd */,
+				7A0ACAFB1CA024A000355E67 /* CoreLocation.framework */,
+				7A0ACAF71CA023AA00355E67 /* MAMapKit.framework */,
 				7A089AFD1C9BF51100EF030E /* libc++.tbd */,
 				7A089AFB1C9BF50300EF030E /* libsqlite3.0.tbd */,
 				7A089AF11C9BE35B00EF030E /* libsqlite3.tbd */,
@@ -791,12 +815,14 @@
 				7ABB84821C9E98F300621CC4 /* Login.storyboard in Resources */,
 				7A84D1A81C98FF38006EE2F1 /* blueArrow.png in Resources */,
 				7A08A8C51C9ADF8100D036E7 /* hotCar in Resources */,
+				7A0ACAFA1CA0244B00355E67 /* AMap.bundle in Resources */,
 				7AD7F7E91C9943A700BF2460 /* allBrands in Resources */,
 				7A089AC91C9BD71900EF030E /* sum in Resources */,
 				7AB3627A1C98F89800C03E74 /* MessageTwoTableViewCell.xib in Resources */,
 				7A0C78A01C9E2C8A0048C4F3 /* Article in Resources */,
 				7A0C78B11C9E4DC30048C4F3 /* comment in Resources */,
 				7AD7F7E71C9934CE00BF2460 /* hot in Resources */,
+				7A0ACB031CA0314500355E67 /* store in Resources */,
 				7A07E69F1C9F82DD003D0843 /* ProgressHUD.bundle in Resources */,
 				7AB362751C98F85500C03E74 /* MessageOneTableViewCell.xib in Resources */,
 				7A0ACAF01C9FA47900355E67 /* carForum in Resources */,
@@ -862,6 +888,7 @@
 			files = (
 				7AAB55B91C9ADBEE0096B1C1 /* AppriseModel.m in Sources */,
 				7AB3626C1C98F2B500C03E74 /* VOSegment.m in Sources */,
+				7A0ACB011CA026C800355E67 /* StoreView.m in Sources */,
 				7AF9C5BB1C9AB03A00074B54 /* ForumViewController.m in Sources */,
 				7A0A919F1C999F6C0007192D /* CarPriceView.m in Sources */,
 				7A08A8C31C9AD98B00D036E7 /* HotViewController.m in Sources */,
@@ -869,6 +896,7 @@
 				7A07E6A01C9F82DD003D0843 /* ProgressHUD.m in Sources */,
 				7AD7F7F11C9945E800BF2460 /* AllBrandsModel.m in Sources */,
 				7A0C78A61C9E2E1D0048C4F3 /* ActicleView.m in Sources */,
+				7A0ACAF61C9FF28C00355E67 /* CarForumViewController.m in Sources */,
 				7A08A8C01C9AD73700D036E7 /* CarDetailViewController.m in Sources */,
 				7ABB847E1C9E98B500621CC4 /* ForgotPassViewController.m in Sources */,
 				7AB3626A1C98F2B500C03E74 /* VOContentLayer.m in Sources */,
@@ -886,25 +914,20 @@
 				7A0C78B41C9E929A0048C4F3 /* CarForum.m in Sources */,
 				7A0ACADB1C9F82BA00355E67 /* CarImageModel.m in Sources */,
 				7AB362741C98F85500C03E74 /* MessageOneTableViewCell.m in Sources */,
-
-
 				7ABB84781C9E986300621CC4 /* LoginViewController.m in Sources */,
 				7A08A8CB1C9AE4B900D036E7 /* HotTableViewCell.m in Sources */,
 				7AF9C5BC1C9AB03A00074B54 /* ForumModel.m in Sources */,
 				7AB3624F1C98E41800C03E74 /* PrimeViewController.m in Sources */,
 				7AAB55B11C9AB7580096B1C1 /* AppriseViewController.m in Sources */,
 				7AB3626B1C98F2B500C03E74 /* VOIndicatorAnimation.m in Sources */,
-
 				7A0C78AF1C9E475A0048C4F3 /* CommentView.m in Sources */,
-				7A089B061C9C265200EF030E /* ConfigurationView.m in Sources */,
-
 				7ABB847B1C9E988B00621CC4 /* RegisterViewController.m in Sources */,
-				7A089B061C9C265200EF030E /* ConfigurationView.m in Sources */,
 				7ABB846F1C9E4B5800621CC4 /* HelpViewController.m in Sources */,
 				7AAB55AE1C9AA55C0096B1C1 /* UIViewController+BackPront.m in Sources */,
 				7AF9C5BD1C9AB03A00074B54 /* ForumOneTableViewCell.m in Sources */,
 				7A0C78AC1C9E37600048C4F3 /* ActicleDetailViewController.m in Sources */,
 				7A1225781C9A9C9500E16422 /* LiveOtherViewController.m in Sources */,
+				7A0ACAF31C9FD4E700355E67 /* Tools.m in Sources */,
 				7AB362791C98F89800C03E74 /* MessageTwoTableViewCell.m in Sources */,
 				7A089ACF1C9BD83E00EF030E /* CarSumView.m in Sources */,
 				7A2E7AE61C984DDA0045F332 /* main.m in Sources */,
@@ -1020,9 +1043,10 @@
 			baseConfigurationReference = 3E5768CE4E443399640C3666 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-
-				GCC_PREFIX_HEADER = "$(SRCROOT)/Sahara/Librarys/Sahara.pch";
-
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PREFIX_HEADER = /Users/scjy/Desktop/Sahara/Sahara/Sahara/Librarys/Sahara.pch;
 				INFOPLIST_FILE = Sahara/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
@@ -1031,6 +1055,38 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Sahara/Librarys/libWeiboSDK",
 					"$(PROJECT_DIR)/Sahara/Librarys/SDKExport",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"AFNetworking\"",
+					"-l\"SDCycleScrollView\"",
+					"-l\"SDWebImage\"",
+					"-l\"icucore\"",
+					"-l\"sqlite3\"",
+					"-l\"z.1.2.5\"",
+					"-framework",
+					"\"AVFoundation\"",
+					"-framework",
+					"\"BmobSDK\"",
+					"-framework",
+					"\"CFNetwork\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"CoreLocation\"",
+					"-framework",
+					"\"CoreTelephony\"",
+					"-framework",
+					"\"ImageIO\"",
+					"-framework",
+					"\"MediaPlayer\"",
+					"-framework",
+					"\"MobileCoreServices\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"SystemConfiguration\"",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = zhangli.Sahara;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1042,9 +1098,10 @@
 			baseConfigurationReference = 4483BA8AABB15E4CA5CAE736 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-
-				GCC_PREFIX_HEADER = "$(SRCROOT)/Sahara/Librarys/Sahara.pch";
-
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PREFIX_HEADER = /Users/scjy/Desktop/Sahara/Sahara/Sahara/Librarys/Sahara.pch;
 				INFOPLIST_FILE = Sahara/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
@@ -1053,6 +1110,38 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Sahara/Librarys/libWeiboSDK",
 					"$(PROJECT_DIR)/Sahara/Librarys/SDKExport",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"AFNetworking\"",
+					"-l\"SDCycleScrollView\"",
+					"-l\"SDWebImage\"",
+					"-l\"icucore\"",
+					"-l\"sqlite3\"",
+					"-l\"z.1.2.5\"",
+					"-framework",
+					"\"AVFoundation\"",
+					"-framework",
+					"\"BmobSDK\"",
+					"-framework",
+					"\"CFNetwork\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"CoreLocation\"",
+					"-framework",
+					"\"CoreTelephony\"",
+					"-framework",
+					"\"ImageIO\"",
+					"-framework",
+					"\"MediaPlayer\"",
+					"-framework",
+					"\"MobileCoreServices\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"SystemConfiguration\"",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = zhangli.Sahara;
 				PRODUCT_NAME = "$(TARGET_NAME)";

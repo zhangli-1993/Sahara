@@ -18,6 +18,7 @@
         self.time = dic[@"createAt"];
         self.read = [NSString stringWithFormat:@"%@阅/%@回", dic[@"view"], dic[@"replyCount"]];
         self.imageArray = dic[@"images"];
+        self.html = dic[@"uri"];
     }
     return self;
 }
