@@ -43,7 +43,7 @@
 - (void)appriseRequestModel{
     AFHTTPSessionManager *manger = [AFHTTPSessionManager manager];
     manger.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", nil];
-    [manger GET:[NSString stringWithFormat:@"%@&pageNo=%lu&topicId=%@", kApprisePort, _pageCount, self.appriseID] parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
+    [manger GET:[NSString stringWithFormat:@"%@&pageNo=%lu&topicId=%@", kApprisePort, (long)_pageCount, self.appriseID] parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         NSDictionary *appriseDic = responseObject;
@@ -116,7 +116,7 @@
         [self getButtonRequest];
         [self.tableView reloadData];
 
-        [btn setTitle:[NSString stringWithFormat:@"%lu", self.zanCount] forState:UIControlStateNormal];
+        [btn setTitle:[NSString stringWithFormat:@"%lu", (long)self.zanCount] forState:UIControlStateNormal];
         
         
     

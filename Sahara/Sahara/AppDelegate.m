@@ -14,6 +14,7 @@
 #import "MessageViewController.h"
 #import "WeiboSDK.h"
 #import "WXApi.h"
+#import <BmobSDK/Bmob.h>
 
 @interface AppDelegate ()<WeiboSDKDelegate, WXApiDelegate>
 
@@ -30,6 +31,7 @@
     [WeiboSDK enableDebugMode:YES];
     [WeiboSDK registerApp:kWBAppKey];
     [WXApi registerApp:kWXAppKey];
+    [Bmob registerWithAppKey:kBmobKey];
     self.tabBarVC = [[UITabBarController alloc] init];
     //资讯
     MessageViewController *messageVC = [[MessageViewController alloc] init];

@@ -40,6 +40,7 @@
 #define kTypeIDPort @"http://cmt.pcauto.com.cn/templates/pcauto/getPartList.jsp?url=http://live.pcauto.com.cn/broadRecord.jsp?"
 //违章查询
 #define kCheckPort @"http://www.zonghengche.com/ad/pcautoweizhang/app/weizhang.html"
-
+//bmob
+#define kBmobKey @"94f1100bc7e5eebe98292eea9b012494"
 
 #endif /* PortDefine_h */

@@ -60,7 +60,7 @@
     if (_dianzanCount %2 == 0) {
         _dianzanCount -=1;
     }
-    [self.zanBtn setTitle:[NSString stringWithFormat:@"%lu", _dianzanCount] forState:UIControlStateNormal];
+    [self.zanBtn setTitle:[NSString stringWithFormat:@"%lu", (long)_dianzanCount] forState:UIControlStateNormal];
     
     
     

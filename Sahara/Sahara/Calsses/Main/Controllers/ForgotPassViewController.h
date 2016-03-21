@@ -10,4 +10,5 @@
 
 @interface ForgotPassViewController : UIViewController
 
+@property(nonatomic, copy) NSString *oldPassword;
 @end
