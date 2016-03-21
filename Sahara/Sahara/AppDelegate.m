@@ -14,6 +14,7 @@
 #import "MessageViewController.h"
 #import "WeiboSDK.h"
 #import "WXApi.h"
+#import <BmobSDK/Bmob.h>
 
 @interface AppDelegate ()<WeiboSDKDelegate, WXApiDelegate>
 
@@ -30,41 +31,42 @@
     [WeiboSDK enableDebugMode:YES];
     [WeiboSDK registerApp:kWBAppKey];
     [WXApi registerApp:kWXAppKey];
+    [Bmob registerWithAppKey:kBmobKey];
     self.tabBarVC = [[UITabBarController alloc] init];
     //资讯
     MessageViewController *messageVC = [[MessageViewController alloc] init];
     UINavigationController *messageNav = [[UINavigationController alloc] initWithRootViewController:messageVC];
-    messageNav.tabBarItem.image = [UIImage imageNamed:@""];
-    UIImage *messageImage = [UIImage imageNamed:@""];
+    messageNav.tabBarItem.image = [UIImage imageNamed:@"choosen1"];
+    UIImage *messageImage = [UIImage imageNamed:@"choosen1_night"];
     messageNav.tabBarItem.selectedImage = [messageImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     messageNav.title = @"资讯";
     //论坛
     ForumViewController *porumVC = [[ForumViewController alloc] init];
     UINavigationController *forumNav = [[UINavigationController alloc] initWithRootViewController:porumVC];
-    forumNav.tabBarItem.image = [UIImage imageNamed:@""];
-    UIImage *forumImage = [UIImage imageNamed:@""];
+    forumNav.tabBarItem.image = [UIImage imageNamed:@"choosen2"];
+    UIImage *forumImage = [UIImage imageNamed:@"choosen2_night"];
     forumNav.tabBarItem.selectedImage = [forumImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     forumNav.title = @"论坛";
     
     //找车
     FindCarViewController *findVC = [[FindCarViewController alloc] init];
     UINavigationController *findNav = [[UINavigationController alloc] initWithRootViewController:findVC];
-    findNav.tabBarItem.image = [UIImage imageNamed:@""];
-    UIImage *findImage = [UIImage imageNamed:@""];
+    findNav.tabBarItem.image = [UIImage imageNamed:@"choosen3"];
+    UIImage *findImage = [UIImage imageNamed:@"choosen3_night"];
     findNav.tabBarItem.selectedImage = [findImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     findNav.title = @"找车";
     //优惠
     PrimeViewController *primeVC = [[PrimeViewController alloc] init];
     UINavigationController *primeNav = [[UINavigationController alloc] initWithRootViewController:primeVC];
-    primeNav.tabBarItem.image = [UIImage imageNamed:@""];
-    UIImage *primeImage = [UIImage imageNamed:@""];
+    primeNav.tabBarItem.image = [UIImage imageNamed:@"choosen4"];
+    UIImage *primeImage = [UIImage imageNamed:@"choosen4_night"];
     primeNav.tabBarItem.selectedImage = [primeImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     primeNav.title = @"优惠";
     //我的
     MainViewController *mainVC = [[MainViewController alloc] init];
     UINavigationController *mainNav = [[UINavigationController alloc] initWithRootViewController:mainVC];
-    mainNav.tabBarItem.image = [UIImage imageNamed:@""];
-    UIImage *mainImage = [UIImage imageNamed:@""];
+    mainNav.tabBarItem.image = [UIImage imageNamed:@"choosen5"];
+    UIImage *mainImage = [UIImage imageNamed:@"choosen5_night"];
     mainNav.tabBarItem.selectedImage = [mainImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     mainNav.title = @"我的";
     //设置字体

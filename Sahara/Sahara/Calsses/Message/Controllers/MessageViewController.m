@@ -79,7 +79,7 @@
 - (void)homePagePortRequest{
     AFHTTPSessionManager *httpManager = [AFHTTPSessionManager manager];
     httpManager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"text/html", nil];
-    [httpManager GET:[NSString stringWithFormat:@"%@%@?pageSize=20&v=4.0.0&pageNo=%lu", kHomePagePort, cellID,_pageCount] parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
+    [httpManager GET:[NSString stringWithFormat:@"%@%@?pageSize=20&v=4.0.0&pageNo=%lu", kHomePagePort, cellID,(long)_pageCount] parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         NSDictionary *successDic = responseObject;
@@ -154,6 +154,7 @@
     DetailViewController *detailVC = [[DetailViewController alloc] init];
     MessageModel *model = self.allTitleArray[indexPath.row];
     detailVC.detailID = model.messageID;
+        detailVC.detailURL = model.url;
     [self.navigationController pushViewController:detailVC animated:YES];
     }
 }

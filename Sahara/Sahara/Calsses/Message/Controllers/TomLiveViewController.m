@@ -64,7 +64,7 @@
 
 - (void)appriseRequestTopy{
     AFHTTPSessionManager *manger = [AFHTTPSessionManager manager];
-    manger.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"text/html", nil];
+    manger.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"text/html",@"text/plain", nil];
     [manger GET:[NSString stringWithFormat:@"%@broadcastId=%@&partId=1458048177000", kTypeIDPort, self.liveModel.tomLiveID] parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
