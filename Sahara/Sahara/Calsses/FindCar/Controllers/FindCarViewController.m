@@ -78,9 +78,11 @@
         if (self.priceView.segment.selectedSegmentIndex == 0) {
             CarPriceModel *model = self.priceView.onArray[indexPath.section][indexPath.row];
             cVC.title = model.name;
+            cVC.artID = model.idStr;
         } else {
             CarPriceModel *model = self.priceView.allArray[indexPath.section][indexPath.row];
             cVC.title = model.name;
+            cVC.artID = model.idStr;
         }
       
             [self.navigationController pushViewController:cVC animated:YES];

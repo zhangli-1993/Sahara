@@ -9,7 +9,15 @@
 #import "CarSumModel.h"
 
 @implementation CarSumModel
-- (void)setValue:(id)value forUndefinedKey:(NSString *)key{
-    
+- (instancetype)initWithDictionary:(NSDictionary *)dic{
+    self = [super init];
+    if (self) {
+        self.title = dic[@"title"];
+        self.price = [NSString stringWithFormat:@"￥%@万起", dic[@"minPrice"]];
+        self.config = dic[@"config"];
+        self.idStr = dic[@"id"];
+    }
+    return self;
 }
+
 @end

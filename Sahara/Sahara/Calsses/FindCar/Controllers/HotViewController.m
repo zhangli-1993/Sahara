@@ -48,7 +48,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     CarDetailViewController *cVC = [[CarDetailViewController alloc] init];
     HotModel *model = self.listArray[indexPath.row];
-    cVC.idStr = model.idStr;
+    cVC.artID = model.idStr;
     cVC.title = model.name;
     [self.navigationController pushViewController:cVC animated:YES];
 }

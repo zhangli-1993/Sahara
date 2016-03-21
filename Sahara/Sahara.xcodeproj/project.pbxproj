@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		525A52B034E3688F1D9B5A41 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A31DF689C6CF0A0F3FD738CB /* libPods.a */; };
-
 		7A089AC91C9BD71900EF030E /* sum in Resources */ = {isa = PBXBuildFile; fileRef = 7A089AC81C9BD71900EF030E /* sum */; };
 		7A089ACF1C9BD83E00EF030E /* CarSumView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A089ACE1C9BD83E00EF030E /* CarSumView.m */; };
 		7A089ADD1C9BE21F00EF030E /* libWeiboSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A089AD11C9BE21F00EF030E /* libWeiboSDK.a */; };
@@ -31,7 +30,6 @@
 		7A089B031C9C19CD00EF030E /* CarSumModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A089B021C9C19CD00EF030E /* CarSumModel.m */; };
 		7A089B061C9C265200EF030E /* ConfigurationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A089B051C9C265200EF030E /* ConfigurationView.m */; };
 		7A089B081C9C277100EF030E /* Config in Resources */ = {isa = PBXBuildFile; fileRef = 7A089B071C9C277100EF030E /* Config */; };
-
 		7A08A8BB1C9A33A100D036E7 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A08A8BA1C9A33A100D036E7 /* QuartzCore.framework */; };
 		7A08A8BD1C9A493200D036E7 /* CarPrice in Resources */ = {isa = PBXBuildFile; fileRef = 7A08A8BC1C9A493200D036E7 /* CarPrice */; };
 		7A08A8C01C9AD73700D036E7 /* CarDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A08A8BF1C9AD73700D036E7 /* CarDetailViewController.m */; };
@@ -41,12 +39,24 @@
 		7A08A8CB1C9AE4B900D036E7 /* HotTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A08A8CA1C9AE4B900D036E7 /* HotTableViewCell.m */; };
 		7A0A919C1C999D020007192D /* CarPriceModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A0A919B1C999D020007192D /* CarPriceModel.m */; };
 		7A0A919F1C999F6C0007192D /* CarPriceView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A0A919E1C999F6C0007192D /* CarPriceView.m */; };
+		7A0ACAD81C9F7F9A00355E67 /* CarImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A0ACAD71C9F7F9A00355E67 /* CarImageView.m */; };
+		7A0ACADB1C9F82BA00355E67 /* CarImageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A0ACADA1C9F82BA00355E67 /* CarImageModel.m */; };
+		7A0ACAF01C9FA47900355E67 /* carForum in Resources */ = {isa = PBXBuildFile; fileRef = 7A0ACAEF1C9FA47900355E67 /* carForum */; };
+		7A0C78A01C9E2C8A0048C4F3 /* Article in Resources */ = {isa = PBXBuildFile; fileRef = 7A0C789F1C9E2C8A0048C4F3 /* Article */; };
+		7A0C78A31C9E2CE50048C4F3 /* ArticleModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A0C78A21C9E2CE50048C4F3 /* ArticleModel.m */; };
+		7A0C78A61C9E2E1D0048C4F3 /* ActicleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A0C78A51C9E2E1D0048C4F3 /* ActicleView.m */; };
+		7A0C78AC1C9E37600048C4F3 /* ActicleDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A0C78AB1C9E37600048C4F3 /* ActicleDetailViewController.m */; };
+		7A0C78AF1C9E475A0048C4F3 /* CommentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A0C78AE1C9E475A0048C4F3 /* CommentView.m */; };
+		7A0C78B11C9E4DC30048C4F3 /* comment in Resources */ = {isa = PBXBuildFile; fileRef = 7A0C78B01C9E4DC30048C4F3 /* comment */; };
+		7A0C78B41C9E929A0048C4F3 /* CarForum.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A0C78B31C9E929A0048C4F3 /* CarForum.m */; };
+		7A0C78B71C9E9AF30048C4F3 /* CarForumModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A0C78B61C9E9AF30048C4F3 /* CarForumModel.m */; };
 		7A1225751C9A90C000E16422 /* TomLiveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A1225741C9A90C000E16422 /* TomLiveViewController.m */; };
 		7A1225781C9A9C9500E16422 /* LiveOtherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A1225771C9A9C9500E16422 /* LiveOtherViewController.m */; };
 		7A2E7AE61C984DDA0045F332 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A2E7AE51C984DDA0045F332 /* main.m */; };
 		7A2E7AE91C984DDA0045F332 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A2E7AE81C984DDA0045F332 /* AppDelegate.m */; };
 		7A2E7AEB1C984DDA0045F332 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A2E7AEA1C984DDA0045F332 /* Assets.xcassets */; };
 		7A2E7AEE1C984DDA0045F332 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A2E7AEC1C984DDA0045F332 /* LaunchScreen.storyboard */; };
+		7A6591331C9D329C00EA47BE /* CompeteModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A6591321C9D329C00EA47BE /* CompeteModel.m */; };
 		7A6C0BD71C995E7C00205D61 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A6C0BD61C995E7C00205D61 /* DetailViewController.m */; };
 		7A84D1A81C98FF38006EE2F1 /* blueArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A84D1A41C98FF38006EE2F1 /* blueArrow.png */; };
 		7A84D1A91C98FF38006EE2F1 /* blueArrowDown.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A84D1A51C98FF38006EE2F1 /* blueArrowDown.png */; };
@@ -81,7 +91,6 @@
 /* Begin PBXFileReference section */
 		3E5768CE4E443399640C3666 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		4483BA8AABB15E4CA5CAE736 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
-
 		7A089AC81C9BD71900EF030E /* sum */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = sum; sourceTree = "<group>"; };
 		7A089ACD1C9BD83E00EF030E /* CarSumView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarSumView.h; sourceTree = "<group>"; };
 		7A089ACE1C9BD83E00EF030E /* CarSumView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CarSumView.m; sourceTree = "<group>"; };
@@ -120,7 +129,6 @@
 		7A089B041C9C265200EF030E /* ConfigurationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfigurationView.h; sourceTree = "<group>"; };
 		7A089B051C9C265200EF030E /* ConfigurationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfigurationView.m; sourceTree = "<group>"; };
 		7A089B071C9C277100EF030E /* Config */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Config; sourceTree = "<group>"; };
-
 		7A08A8BA1C9A33A100D036E7 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		7A08A8BC1C9A493200D036E7 /* CarPrice */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CarPrice; sourceTree = "<group>"; };
 		7A08A8BE1C9AD73700D036E7 /* CarDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarDetailViewController.h; sourceTree = "<group>"; };
@@ -136,6 +144,25 @@
 		7A0A919B1C999D020007192D /* CarPriceModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CarPriceModel.m; sourceTree = "<group>"; };
 		7A0A919D1C999F6C0007192D /* CarPriceView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarPriceView.h; sourceTree = "<group>"; };
 		7A0A919E1C999F6C0007192D /* CarPriceView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CarPriceView.m; sourceTree = "<group>"; };
+		7A0ACAD61C9F7F9A00355E67 /* CarImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarImageView.h; sourceTree = "<group>"; };
+		7A0ACAD71C9F7F9A00355E67 /* CarImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CarImageView.m; sourceTree = "<group>"; };
+		7A0ACAD91C9F82BA00355E67 /* CarImageModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarImageModel.h; sourceTree = "<group>"; };
+		7A0ACADA1C9F82BA00355E67 /* CarImageModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CarImageModel.m; sourceTree = "<group>"; };
+		7A0ACAEF1C9FA47900355E67 /* carForum */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = carForum; sourceTree = "<group>"; };
+		7A0C789F1C9E2C8A0048C4F3 /* Article */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Article; sourceTree = "<group>"; };
+		7A0C78A11C9E2CE50048C4F3 /* ArticleModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArticleModel.h; sourceTree = "<group>"; };
+		7A0C78A21C9E2CE50048C4F3 /* ArticleModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArticleModel.m; sourceTree = "<group>"; };
+		7A0C78A41C9E2E1D0048C4F3 /* ActicleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActicleView.h; sourceTree = "<group>"; };
+		7A0C78A51C9E2E1D0048C4F3 /* ActicleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActicleView.m; sourceTree = "<group>"; };
+		7A0C78AA1C9E37600048C4F3 /* ActicleDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActicleDetailViewController.h; sourceTree = "<group>"; };
+		7A0C78AB1C9E37600048C4F3 /* ActicleDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActicleDetailViewController.m; sourceTree = "<group>"; };
+		7A0C78AD1C9E475A0048C4F3 /* CommentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommentView.h; sourceTree = "<group>"; };
+		7A0C78AE1C9E475A0048C4F3 /* CommentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommentView.m; sourceTree = "<group>"; };
+		7A0C78B01C9E4DC30048C4F3 /* comment */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = comment; sourceTree = "<group>"; };
+		7A0C78B21C9E929A0048C4F3 /* CarForum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarForum.h; sourceTree = "<group>"; };
+		7A0C78B31C9E929A0048C4F3 /* CarForum.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CarForum.m; sourceTree = "<group>"; };
+		7A0C78B51C9E9AF30048C4F3 /* CarForumModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarForumModel.h; sourceTree = "<group>"; };
+		7A0C78B61C9E9AF30048C4F3 /* CarForumModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CarForumModel.m; sourceTree = "<group>"; };
 		7A1225731C9A90C000E16422 /* TomLiveViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TomLiveViewController.h; sourceTree = "<group>"; };
 		7A1225741C9A90C000E16422 /* TomLiveViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TomLiveViewController.m; sourceTree = "<group>"; };
 		7A1225761C9A9C9500E16422 /* LiveOtherViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LiveOtherViewController.h; sourceTree = "<group>"; };
@@ -147,6 +174,8 @@
 		7A2E7AEA1C984DDA0045F332 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7A2E7AED1C984DDA0045F332 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7A2E7AEF1C984DDA0045F332 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7A6591311C9D329C00EA47BE /* CompeteModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CompeteModel.h; sourceTree = "<group>"; };
+		7A6591321C9D329C00EA47BE /* CompeteModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CompeteModel.m; sourceTree = "<group>"; };
 		7A6C0BD51C995E7C00205D61 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		7A6C0BD61C995E7C00205D61 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		7A84D1A41C98FF38006EE2F1 /* blueArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blueArrow.png; sourceTree = "<group>"; };
@@ -375,6 +404,8 @@
 				7A08A8BF1C9AD73700D036E7 /* CarDetailViewController.m */,
 				7A08A8C11C9AD98B00D036E7 /* HotViewController.h */,
 				7A08A8C21C9AD98B00D036E7 /* HotViewController.m */,
+				7A0C78AA1C9E37600048C4F3 /* ActicleDetailViewController.h */,
+				7A0C78AB1C9E37600048C4F3 /* ActicleDetailViewController.m */,
 				7A089AFF1C9C08AB00EF030E /* Filefff */,
 				7AD7F7E61C9934CE00BF2460 /* hot */,
 				7AD7F7E81C9943A700BF2460 /* allBrands */,
@@ -382,6 +413,9 @@
 				7A08A8C41C9ADF8100D036E7 /* hotCar */,
 				7A089AC81C9BD71900EF030E /* sum */,
 				7A089B071C9C277100EF030E /* Config */,
+				7A0C789F1C9E2C8A0048C4F3 /* Article */,
+				7A0C78B01C9E4DC30048C4F3 /* comment */,
+				7A0ACAEF1C9FA47900355E67 /* carForum */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -523,6 +557,14 @@
 				7A08A8C71C9AE37900D036E7 /* HotModel.m */,
 				7A089B011C9C19CD00EF030E /* CarSumModel.h */,
 				7A089B021C9C19CD00EF030E /* CarSumModel.m */,
+				7A6591311C9D329C00EA47BE /* CompeteModel.h */,
+				7A6591321C9D329C00EA47BE /* CompeteModel.m */,
+				7A0C78A11C9E2CE50048C4F3 /* ArticleModel.h */,
+				7A0C78A21C9E2CE50048C4F3 /* ArticleModel.m */,
+				7A0C78B51C9E9AF30048C4F3 /* CarForumModel.h */,
+				7A0C78B61C9E9AF30048C4F3 /* CarForumModel.m */,
+				7A0ACAD91C9F82BA00355E67 /* CarImageModel.h */,
+				7A0ACADA1C9F82BA00355E67 /* CarImageModel.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -542,6 +584,14 @@
 				7A089B051C9C265200EF030E /* ConfigurationView.m */,
 				7A089AF31C9BE67E00EF030E /* ShareView.h */,
 				7A089AF41C9BE67E00EF030E /* ShareView.m */,
+				7A0C78A41C9E2E1D0048C4F3 /* ActicleView.h */,
+				7A0C78A51C9E2E1D0048C4F3 /* ActicleView.m */,
+				7A0C78AD1C9E475A0048C4F3 /* CommentView.h */,
+				7A0C78AE1C9E475A0048C4F3 /* CommentView.m */,
+				7A0C78B21C9E929A0048C4F3 /* CarForum.h */,
+				7A0C78B31C9E929A0048C4F3 /* CarForum.m */,
+				7A0ACAD61C9F7F9A00355E67 /* CarImageView.h */,
+				7A0ACAD71C9F7F9A00355E67 /* CarImageView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -675,8 +725,11 @@
 				7AD7F7E91C9943A700BF2460 /* allBrands in Resources */,
 				7A089AC91C9BD71900EF030E /* sum in Resources */,
 				7AB3627A1C98F89800C03E74 /* MessageTwoTableViewCell.xib in Resources */,
+				7A0C78A01C9E2C8A0048C4F3 /* Article in Resources */,
+				7A0C78B11C9E4DC30048C4F3 /* comment in Resources */,
 				7AD7F7E71C9934CE00BF2460 /* hot in Resources */,
 				7AB362751C98F85500C03E74 /* MessageOneTableViewCell.xib in Resources */,
+				7A0ACAF01C9FA47900355E67 /* carForum in Resources */,
 				7A089B081C9C277100EF030E /* Config in Resources */,
 				7A089ADE1C9BE21F00EF030E /* WeiboSDK.bundle in Resources */,
 			);
@@ -739,43 +792,45 @@
 			files = (
 				7AAB55B91C9ADBEE0096B1C1 /* AppriseModel.m in Sources */,
 				7AB3626C1C98F2B500C03E74 /* VOSegment.m in Sources */,
-
 				7AF9C5BB1C9AB03A00074B54 /* ForumViewController.m in Sources */,
-
 				7A0A919F1C999F6C0007192D /* CarPriceView.m in Sources */,
 				7A08A8C31C9AD98B00D036E7 /* HotViewController.m in Sources */,
 				7A0A919C1C999D020007192D /* CarPriceModel.m in Sources */,
 				7AD7F7F11C9945E800BF2460 /* AllBrandsModel.m in Sources */,
+				7A0C78A61C9E2E1D0048C4F3 /* ActicleView.m in Sources */,
 				7A08A8C01C9AD73700D036E7 /* CarDetailViewController.m in Sources */,
 				7AB3626A1C98F2B500C03E74 /* VOContentLayer.m in Sources */,
 				7AAB55B41C9AC5E70096B1C1 /* AppriseTableViewCell.m in Sources */,
 				7AB362521C98E42B00C03E74 /* FindCarViewController.m in Sources */,
 				7A6C0BD71C995E7C00205D61 /* DetailViewController.m in Sources */,
+				7A0ACAD81C9F7F9A00355E67 /* CarImageView.m in Sources */,
 				7AB362581C98E44500C03E74 /* MainViewController.m in Sources */,
+				7A0C78B71C9E9AF30048C4F3 /* CarForumModel.m in Sources */,
 				7A089B031C9C19CD00EF030E /* CarSumModel.m in Sources */,
 				7A2E7AE91C984DDA0045F332 /* AppDelegate.m in Sources */,
 				7AB3626D1C98F2B500C03E74 /* VOSegmentedControl.m in Sources */,
 				7AD7F7F41C9946E500BF2460 /* AllTableViewCell.m in Sources */,
+				7A0C78B41C9E929A0048C4F3 /* CarForum.m in Sources */,
+				7A0ACADB1C9F82BA00355E67 /* CarImageModel.m in Sources */,
 				7AB362741C98F85500C03E74 /* MessageOneTableViewCell.m in Sources */,
-
 				7A08A8CB1C9AE4B900D036E7 /* HotTableViewCell.m in Sources */,
-
 				7AF9C5BC1C9AB03A00074B54 /* ForumModel.m in Sources */,
 				7AB3624F1C98E41800C03E74 /* PrimeViewController.m in Sources */,
 				7AAB55B11C9AB7580096B1C1 /* AppriseViewController.m in Sources */,
 				7AB3626B1C98F2B500C03E74 /* VOIndicatorAnimation.m in Sources */,
-
+				7A0C78AF1C9E475A0048C4F3 /* CommentView.m in Sources */,
 				7A089B061C9C265200EF030E /* ConfigurationView.m in Sources */,
-				7AB362551C98E43A00C03E74 /* ForumViewController.m in Sources */,
-
 				7AAB55AE1C9AA55C0096B1C1 /* UIViewController+BackPront.m in Sources */,
 				7AF9C5BD1C9AB03A00074B54 /* ForumOneTableViewCell.m in Sources */,
+				7A0C78AC1C9E37600048C4F3 /* ActicleDetailViewController.m in Sources */,
 				7A1225781C9A9C9500E16422 /* LiveOtherViewController.m in Sources */,
 				7AB362791C98F89800C03E74 /* MessageTwoTableViewCell.m in Sources */,
 				7A089ACF1C9BD83E00EF030E /* CarSumView.m in Sources */,
 				7A2E7AE61C984DDA0045F332 /* main.m in Sources */,
+				7A0C78A31C9E2CE50048C4F3 /* ArticleModel.m in Sources */,
 				7A08A8C81C9AE37900D036E7 /* HotModel.m in Sources */,
 				7AB3625B1C98E45600C03E74 /* MessageViewController.m in Sources */,
+				7A6591331C9D329C00EA47BE /* CompeteModel.m in Sources */,
 				7A84D1AA1C98FF38006EE2F1 /* PullingRefreshTableView.m in Sources */,
 				7A1225751C9A90C000E16422 /* TomLiveViewController.m in Sources */,
 				7A089AF51C9BE67E00EF030E /* ShareView.m in Sources */,
@@ -882,7 +937,7 @@
 			baseConfigurationReference = 3E5768CE4E443399640C3666 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				GCC_PREFIX_HEADER = /Users/1a/Desktop/Sahara/Sahara/Sahara/Librarys/Sahara.pch;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/Sahara/Librarys/Sahara.pch";
 				INFOPLIST_FILE = Sahara/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
@@ -900,7 +955,7 @@
 			baseConfigurationReference = 4483BA8AABB15E4CA5CAE736 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				GCC_PREFIX_HEADER = /Users/1a/Desktop/Sahara/Sahara/Sahara/Librarys/Sahara.pch;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/Sahara/Librarys/Sahara.pch";
 				INFOPLIST_FILE = Sahara/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
