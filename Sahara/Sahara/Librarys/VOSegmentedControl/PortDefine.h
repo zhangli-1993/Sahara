@@ -9,7 +9,7 @@
 #ifndef PortDefine_h
 #define PortDefine_h
 #define kWBAppKey @"2015788699"
-#define kRedirectURL @"http://api.weibo.com/oauth2/default.html"
+#define kRedirectURL @"https://api.weibo.com/oauth2/default.html"
 #define kWXAppKey @"wx2beb0c528b7fe7d0"
 #define kMapKey @"ab84ece8092b73db9355fb53da0603c5"
 //首页segement

@@ -16,6 +16,7 @@
 #import "WXApi.h"
 #import <BmobSDK/Bmob.h>
 #import <CoreLocation/CoreLocation.h>
+#import <AFHTTPSessionManager.h>
 
 @interface AppDelegate ()<WeiboSDKDelegate, WXApiDelegate, CLLocationManagerDelegate>
 {
@@ -24,6 +25,7 @@
 }
 
 @property(nonatomic, strong) UITabBarController *tabBarVC;
+@property(nonatomic, strong) UINavigationController *mainNav;
 
 @end
 
@@ -84,15 +86,15 @@
     primeNav.title = @"优惠";
     //我的
     MainViewController *mainVC = [[MainViewController alloc] init];
-    UINavigationController *mainNav = [[UINavigationController alloc] initWithRootViewController:mainVC];
-    mainNav.tabBarItem.image = [UIImage imageNamed:@"choosen5"];
+    self.mainNav = [[UINavigationController alloc] initWithRootViewController:mainVC];
+    _mainNav.tabBarItem.image = [UIImage imageNamed:@"choosen5"];
     UIImage *mainImage = [UIImage imageNamed:@"choosen5_night"];
-    mainNav.tabBarItem.selectedImage = [mainImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    mainNav.title = @"我的";
+    _mainNav.tabBarItem.selectedImage = [mainImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    _mainNav.title = @"我的";
     //设置字体
     [[UITabBar appearance] setTintColor:[UIColor blueColor]];
 
-    self.tabBarVC.viewControllers = @[messageNav, forumNav, findNav, primeNav, mainNav];
+    self.tabBarVC.viewControllers = @[messageNav, forumNav, findNav, primeNav, _mainNav];
     self.window.rootViewController = self.tabBarVC;
     
     
@@ -139,9 +141,48 @@
 
 - (void)didReceiveWeiboRequest:(WBBaseRequest *)request{
     
+    
 }
 
 - (void)didReceiveWeiboResponse:(WBBaseResponse *)response{
+        WBAuthorizeResponse *authorize = (WBAuthorizeResponse *)response;
+        NSString *token = authorize.accessToken;
+        NSString *uid = authorize.userID;
+        NSDate *date = authorize.expirationDate;
+            NSLog(@"%@", token);
+            NSLog(@"%@", uid);
+            NSLog(@"%@", date);
+        NSDictionary *dict = @{@"access_token":token, @"uid":uid, @"expirationDate":date};
+        AFHTTPSessionManager *httpManger = [AFHTTPSessionManager manager];
+        httpManger.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", nil];
+        
+        [httpManger GET:@"https://api.weibo.com/2/users/show.json"parameters:@{@"access_token":token, @"uid":uid} progress:^(NSProgress * _Nonnull downloadProgress) {
+            //            NSLog(@"%@", downloadProgress);
+        } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+            //            NSLog(@"responseObject = %@", responseObject);
+            NSDictionary *resDic = responseObject;
+            NSString *title = resDic[@"name"];
+            NSString *headImage = resDic[@"avatar_hd"];
+            
+            [BmobUser loginInBackgroundWithAuthorDictionary:dict platform:BmobSNSPlatformSinaWeibo block:^(BmobUser *user, NSError *error) {
+                if (error) {
+                    NSLog(@"err = %@", error);
+                }else{
+                    MainViewController *setVC = [[MainViewController alloc] init];
+                    setVC.name = title;
+                    setVC.headImage = headImage;
+                    setVC.userName = user.username;
+                    NSLog(@"user = %@", user.username);
+                    [self.mainNav pushViewController:setVC animated:YES];
+                    
+                }
+            }];
+            
+        } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+            NSLog(@"error = %@", error);
+        }];
+        
+
     
 }
 - (void)applicationWillResignActive:(UIApplication *)application {

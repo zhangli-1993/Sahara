@@ -36,6 +36,9 @@
 }
 //验证码
 - (IBAction)verifyBtn:(id)sender {
+    if (![self checkPhone]) {
+        return;
+    }
     [BmobSMS requestSMSCodeInBackgroundWithPhoneNumber:self.phoneText.text andTemplate:@"验证码" resultBlock:^(int number, NSError *error) {
         if (self.phoneText.text.length <= 0 && [self.phoneText.text stringByReplacingOccurrencesOfString:@" " withString:@""]) {
             UIAlertController *alertC = [UIAlertController alertControllerWithTitle:@"提示" message:@"手机号不能为空" preferredStyle:UIAlertControllerStyleAlert];
@@ -81,35 +84,6 @@
 }
 
 - (BOOL)checkPhoneWithPassword{
-    //判断手机号
-    if (self.phoneText.text.length <= 0 && [self.phoneText.text stringByReplacingOccurrencesOfString:@" " withString:@""]) {
-        UIAlertController *alertC = [UIAlertController alertControllerWithTitle:@"提示" message:@"手机号不能为空" preferredStyle:UIAlertControllerStyleAlert];
-        [alertC addAction:self.alertCancel];
-        [alertC addAction:self.alertSure];
-        [self presentViewController:alertC animated:YES completion:nil];
-        return NO;
-    }
-    //手机号格式
-    //移动
-    NSString *mobile = @"^1(3[0-9]|5[0-35-9]|8[025-9])\\d{8}$";
-    NSPredicate *regextestMobile = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", mobile];
-    //联通
-    NSString *CM = @"^1(34[0-8]|(3[5-9]|5[017-9]|8[278])\\d)\\d{7}$";
-    NSPredicate *regextestCM = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", CM];
-    //电信
-    NSString *CU = @"^1(3[0-2]|5[256]|8[56])\\d{8}$";
-    NSPredicate *regextestCU = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", CU];
-    //小灵通
-    NSString *CT = @"^1((33|53|8[09])[09]|349)\\d@{7}$";
-    NSPredicate *regextestCT = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", CT];
-    if (!([regextestMobile evaluateWithObject:self.phoneText.text] == YES || [regextestCU evaluateWithObject:self.phoneText.text] == YES || [regextestCT evaluateWithObject:self.phoneText.text] == YES || [regextestCM evaluateWithObject:self.phoneText.text] == YES)) {
-        UIAlertController *alertC = [UIAlertController alertControllerWithTitle:@"提示" message:@"手机号码格式不正确" preferredStyle:UIAlertControllerStyleAlert];
-        [alertC addAction:self.alertCancel];
-        [alertC addAction:self.alertSure];
-        [self presentViewController:alertC animated:YES completion:nil];
-        return NO;
-    }
-    
     //判断密码
     if (self.passwordText.text.length <= 0 && [self.passwordText.text stringByReplacingOccurrencesOfString:@" " withString:@""]) {
         UIAlertController *alertC = [UIAlertController alertControllerWithTitle:@"提示" message:@"密码不能为空" preferredStyle:UIAlertControllerStyleAlert];
@@ -140,6 +114,30 @@
     
     return YES;
 }
+
+//手机号
+- (BOOL)checkPhone{
+    //判断手机号
+    if (self.phoneText.text.length <= 0 && [self.phoneText.text stringByReplacingOccurrencesOfString:@" " withString:@""]) {
+        UIAlertController *alertC = [UIAlertController alertControllerWithTitle:@"提示" message:@"手机号不能为空" preferredStyle:UIAlertControllerStyleAlert];
+        [alertC addAction:self.alertCancel];
+        [alertC addAction:self.alertSure];
+        [self presentViewController:alertC animated:YES completion:nil];
+        return NO;
+    }
+    
+    //手机号格式
+    if (![[NSPredicate predicateWithFormat:@"SELF MATCHES %@",@"^1[34578]\\d{9}$"] evaluateWithObject:self.phoneText.text]) {
+        UIAlertController *alertC = [UIAlertController alertControllerWithTitle:@"提示" message:@"手机号码格式不正确" preferredStyle:UIAlertControllerStyleAlert];
+        [alertC addAction:self.alertCancel];
+        [alertC addAction:self.alertSure];
+        [self presentViewController:alertC animated:YES completion:nil];
+        return NO;
+    }
+    
+    return YES;
+}
+
 
 #pragma mark -------------- LazyLoading
 - (UIAlertAction *)alertCancel{

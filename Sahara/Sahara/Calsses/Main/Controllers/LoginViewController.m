@@ -10,6 +10,7 @@
 #import "RegisterViewController.h"
 #import "ProgressHUD.h"
 #import <BmobSDK/Bmob.h>
+#import "WeiboSDK.h"
 @interface LoginViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *userNameText;
 @property (weak, nonatomic) IBOutlet UITextField *passwordText;
@@ -64,6 +65,11 @@
 
 #pragma mark -------------- 第三方登陆
 - (IBAction)weiboLogin:(id)sender {
+    WBAuthorizeRequest *request = [WBAuthorizeRequest request];
+    request.redirectURI = kRedirectURL;
+    request.scope = @"all";
+    [WeiboSDK sendRequest:request];
+    
 }
 - (IBAction)QQlogin:(id)sender {
 }
