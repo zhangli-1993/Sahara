@@ -61,6 +61,12 @@
 		7A0C78B71C9E9AF30048C4F3 /* CarForumModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A0C78B61C9E9AF30048C4F3 /* CarForumModel.m */; };
 		7A1225751C9A90C000E16422 /* TomLiveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A1225741C9A90C000E16422 /* TomLiveViewController.m */; };
 		7A1225781C9A9C9500E16422 /* LiveOtherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A1225771C9A9C9500E16422 /* LiveOtherViewController.m */; };
+		7A1368101CA0D08300C401D7 /* privilegeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A13680E1CA0D08300C401D7 /* privilegeTableViewCell.m */; };
+		7A1368111CA0D08300C401D7 /* privilegeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7A13680F1CA0D08300C401D7 /* privilegeTableViewCell.xib */; };
+		7A1368641CA0E61E00C401D7 /* PrivilegeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A1368631CA0E61E00C401D7 /* PrivilegeModel.m */; };
+		7A1368661CA0E96200C401D7 /* privilege in Resources */ = {isa = PBXBuildFile; fileRef = 7A1368651CA0E96200C401D7 /* privilege */; };
+		7A1368691CA0EE9B00C401D7 /* CarPrivilegeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A1368681CA0EE9B00C401D7 /* CarPrivilegeView.m */; };
+		7A13686E1CA16AA000C401D7 /* CarConfigView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A13686D1CA16AA000C401D7 /* CarConfigView.m */; };
 		7A2E7AE61C984DDA0045F332 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A2E7AE51C984DDA0045F332 /* main.m */; };
 		7A2E7AE91C984DDA0045F332 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A2E7AE81C984DDA0045F332 /* AppDelegate.m */; };
 		7A2E7AEB1C984DDA0045F332 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A2E7AEA1C984DDA0045F332 /* Assets.xcassets */; };
@@ -199,6 +205,16 @@
 		7A1225741C9A90C000E16422 /* TomLiveViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TomLiveViewController.m; sourceTree = "<group>"; };
 		7A1225761C9A9C9500E16422 /* LiveOtherViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LiveOtherViewController.h; sourceTree = "<group>"; };
 		7A1225771C9A9C9500E16422 /* LiveOtherViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LiveOtherViewController.m; sourceTree = "<group>"; };
+		7A13680D1CA0D08300C401D7 /* privilegeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = privilegeTableViewCell.h; sourceTree = "<group>"; };
+		7A13680E1CA0D08300C401D7 /* privilegeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = privilegeTableViewCell.m; sourceTree = "<group>"; };
+		7A13680F1CA0D08300C401D7 /* privilegeTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = privilegeTableViewCell.xib; sourceTree = "<group>"; };
+		7A1368621CA0E61E00C401D7 /* PrivilegeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrivilegeModel.h; sourceTree = "<group>"; };
+		7A1368631CA0E61E00C401D7 /* PrivilegeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PrivilegeModel.m; sourceTree = "<group>"; };
+		7A1368651CA0E96200C401D7 /* privilege */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = privilege; sourceTree = "<group>"; };
+		7A1368671CA0EE9B00C401D7 /* CarPrivilegeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarPrivilegeView.h; sourceTree = "<group>"; };
+		7A1368681CA0EE9B00C401D7 /* CarPrivilegeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CarPrivilegeView.m; sourceTree = "<group>"; };
+		7A13686C1CA16AA000C401D7 /* CarConfigView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarConfigView.h; sourceTree = "<group>"; };
+		7A13686D1CA16AA000C401D7 /* CarConfigView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CarConfigView.m; sourceTree = "<group>"; };
 		7A2E7AE11C984DDA0045F332 /* Sahara.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sahara.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A2E7AE51C984DDA0045F332 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7A2E7AE71C984DDA0045F332 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -483,6 +499,7 @@
 				7A0C78B01C9E4DC30048C4F3 /* comment */,
 				7A0ACAEF1C9FA47900355E67 /* carForum */,
 				7A0ACB021CA0314500355E67 /* store */,
+				7A1368651CA0E96200C401D7 /* privilege */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -652,6 +669,8 @@
 				7A0C78B61C9E9AF30048C4F3 /* CarForumModel.m */,
 				7A0ACAD91C9F82BA00355E67 /* CarImageModel.h */,
 				7A0ACADA1C9F82BA00355E67 /* CarImageModel.m */,
+				7A1368621CA0E61E00C401D7 /* PrivilegeModel.h */,
+				7A1368631CA0E61E00C401D7 /* PrivilegeModel.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -679,6 +698,13 @@
 				7A0ACAD71C9F7F9A00355E67 /* CarImageView.m */,
 				7A0ACAFF1CA026C800355E67 /* StoreView.h */,
 				7A0ACB001CA026C800355E67 /* StoreView.m */,
+				7A13686C1CA16AA000C401D7 /* CarConfigView.h */,
+				7A13686D1CA16AA000C401D7 /* CarConfigView.m */,
+				7A1368671CA0EE9B00C401D7 /* CarPrivilegeView.h */,
+				7A1368681CA0EE9B00C401D7 /* CarPrivilegeView.m */,
+				7A13680D1CA0D08300C401D7 /* privilegeTableViewCell.h */,
+				7A13680E1CA0D08300C401D7 /* privilegeTableViewCell.m */,
+				7A13680F1CA0D08300C401D7 /* privilegeTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -806,6 +832,8 @@
 			files = (
 				7A089B001C9C08AB00EF030E /* Filefff in Resources */,
 				7A2E7AEB1C984DDA0045F332 /* Assets.xcassets in Resources */,
+				7A1368661CA0E96200C401D7 /* privilege in Resources */,
+				7A1368111CA0D08300C401D7 /* privilegeTableViewCell.xib in Resources */,
 				7A08A8BD1C9A493200D036E7 /* CarPrice in Resources */,
 				7ABB84691C9E443400621CC4 /* sun.png in Resources */,
 				7A84D1A91C98FF38006EE2F1 /* blueArrowDown.png in Resources */,
@@ -905,6 +933,7 @@
 				7AB362521C98E42B00C03E74 /* FindCarViewController.m in Sources */,
 				7A6C0BD71C995E7C00205D61 /* DetailViewController.m in Sources */,
 				7A0ACAD81C9F7F9A00355E67 /* CarImageView.m in Sources */,
+				7A1368641CA0E61E00C401D7 /* PrivilegeModel.m in Sources */,
 				7AB362581C98E44500C03E74 /* MainViewController.m in Sources */,
 				7A0C78B71C9E9AF30048C4F3 /* CarForumModel.m in Sources */,
 				7A089B031C9C19CD00EF030E /* CarSumModel.m in Sources */,
@@ -932,13 +961,16 @@
 				7A089ACF1C9BD83E00EF030E /* CarSumView.m in Sources */,
 				7A2E7AE61C984DDA0045F332 /* main.m in Sources */,
 				7A0C78A31C9E2CE50048C4F3 /* ArticleModel.m in Sources */,
+				7A1368691CA0EE9B00C401D7 /* CarPrivilegeView.m in Sources */,
 				7A08A8C81C9AE37900D036E7 /* HotModel.m in Sources */,
 				7ABB84751C9E860A00621CC4 /* SetViewController.m in Sources */,
 				7AB3625B1C98E45600C03E74 /* MessageViewController.m in Sources */,
 				7A6591331C9D329C00EA47BE /* CompeteModel.m in Sources */,
 				7A84D1AA1C98FF38006EE2F1 /* PullingRefreshTableView.m in Sources */,
 				7A1225751C9A90C000E16422 /* TomLiveViewController.m in Sources */,
+				7A13686E1CA16AA000C401D7 /* CarConfigView.m in Sources */,
 				7A089AF51C9BE67E00EF030E /* ShareView.m in Sources */,
+				7A1368101CA0D08300C401D7 /* privilegeTableViewCell.m in Sources */,
 				7AB362701C98F7A200C03E74 /* MessageModel.m in Sources */,
 				7ABB84721C9E4D9C00621CC4 /* QuestionViewController.m in Sources */,
 			);

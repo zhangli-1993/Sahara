@@ -179,12 +179,15 @@
 
 - (void)setHeadView{
     UIView *headview = [[UIView alloc] initWithFrame:CGRectMake(0, 0, kWidth, kWidth / 8 + 130)];
+    UILabel *labell = [[UILabel alloc] initWithFrame:CGRectMake(105, 5, kWidth - 110, kWidth / 8)];
+    labell.backgroundColor = [UIColor whiteColor];
     UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
-    button.frame = CGRectMake(0, 5, kWidth, kWidth / 8);
+    button.frame = CGRectMake(5, 5, 100, kWidth / 8);
     button.backgroundColor = [UIColor whiteColor];
     [button setTitle:@"热门排行" forState:UIControlStateNormal];
     [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     [button addTarget:self action:@selector(hotCar) forControlEvents:UIControlEventTouchUpInside];
+    [headview addSubview:labell];
     [headview addSubview:button];
     UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, kWidth / 8, kWidth, 40)];
     label.text = @"热门品牌";

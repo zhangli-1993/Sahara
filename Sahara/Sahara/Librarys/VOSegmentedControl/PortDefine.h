@@ -20,8 +20,8 @@
 #define kHotBrand @"http://mrobot.pcauto.com.cn/configs/pcauto_hot_brands"
 #define kCarPrice @"http://mrobot.pcauto.com.cn/v3/price/modelLibraryHomePage?"
 #define kHotCar @"http://mrobot.pcauto.com.cn/buy/price/hotSellSerials/"
-#define kCarSummarize @"http://mrobot.pcauto.com.cn/xsp/s/auto/info/v4.7/serials.xsp?serialId=11382&regionId=268&hasDealers=1&fmt=json"
-#define kConfig @"http://mrobot.pcauto.com.cn/v3/price/detailComparev45?serialId=11382&fmt=json"
+#define kCarSummarize @"http://mrobot.pcauto.com.cn/xsp/s/auto/info/v4.7/serials.xsp?serialId="
+#define kConfig @"http://mrobot.pcauto.com.cn/v3/price/detailComparev45?serialId="
 
 #define kSegementPort @"http://mrobot.pcauto.com.cn/configs/pcauto_v4_cms_android_channel_tree"
 #define kArticle @"http://mrobot.pcauto.com.cn/v3/price/getNewestInfoListBySerialId/"
@@ -30,8 +30,8 @@
 #define kComment @"http://mrobot.pcauto.com.cn/v3/price/serialCommentList/"
 #define kCarForum @"http://mrobot.pcauto.com.cn/v3/bbs/newForumsv45/"
 #define kCarImage @"http://mrobot.pcauto.com.cn/v2/price/nav_picturesv47?serialGroupId="
-#define kStore @"http://mrobot.pcauto.com.cn/v3/price/dealersSerialv45?serialId=11382&areaId=268"
-
+#define kStore @"http://mrobot.pcauto.com.cn/v3/price/dealersSerialv45?serialId="
+#define kPrivilege @"http://mrobot.pcauto.com.cn/v3/price/promotionList?areaId=268&pageNo=1&pageSize=20&orderBy=discountRange&serialId="
 
 //首页cell
 #define kHomePagePort @"http://mrobot.pcauto.com.cn/v2/cms/channels/"
