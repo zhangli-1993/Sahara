@@ -10,4 +10,9 @@
 
 @interface MainViewController : UIViewController
 
+@property(nonatomic, copy) NSString *name;
+@property(nonatomic, copy) NSString *headImage;
+@property(nonatomic, copy) NSString *userName;
+
+
 @end

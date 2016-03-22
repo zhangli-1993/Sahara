@@ -217,7 +217,15 @@
         self.hitLoginBtn.frame = CGRectMake(20, 10, kWidth/4, kWidth/4);
         self.hitLoginBtn.clipsToBounds = YES;
         self.hitLoginBtn.layer.cornerRadius = kWidth/8;
-        [self.hitLoginBtn setBackgroundImage:[UIImage imageNamed:@"un_signin"] forState:UIControlStateNormal];
+        if (self.userName != nil) {
+            [self.hitLoginBtn setImage:[UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:self.headImage]]] forState:UIControlStateNormal];
+            self.titleLabel.text = self.name;
+        }else{
+            [self.hitLoginBtn setBackgroundImage:[UIImage imageNamed:@"un_signin"] forState:UIControlStateNormal];
+            self.titleLabel.text = @"点击登录/注册";
+            
+        }
+
         [self.hitLoginBtn addTarget:self action:@selector(LoginWithLiginAction) forControlEvents:UIControlEventTouchUpInside];
     }
     return _hitLoginBtn;
@@ -226,12 +234,16 @@
 - (UILabel *)titleLabel{
     if (!_titleLabel) {
         self.titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(kWidth/3+10, kWidth/8, kWidth/2, 30)];
-        self.titleLabel.text = @"点击登录/注册";
         self.titleLabel.textColor = [UIColor whiteColor];
         
     }
     return _titleLabel;
 }
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    [self.navigationItem setHidesBackButton:YES];
+}
+
 //登录
 - (void)LoginWithLiginAction{
     UIStoryboard *loginStory = [UIStoryboard storyboardWithName:@"Login" bundle:nil];
