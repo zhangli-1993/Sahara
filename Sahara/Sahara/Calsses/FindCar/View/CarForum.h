@@ -13,6 +13,7 @@
 @property (nonatomic, strong) NSString *idStr;
 @property (nonatomic, strong) PullingRefreshTableView *tableView;
 @property (nonatomic, strong) NSMutableArray *allArray;
-
+@property (nonatomic, strong) NSArray *imageArray;
+@property (nonatomic, assign) CGFloat titleH;
 - (void)requestModel;
 @end

@@ -7,12 +7,8 @@
 //
 
 #import "StoreView.h"
-#import <MAMapKit/MAMapKit.h>
 #import <AFNetworking/AFHTTPSessionManager.h>
-@interface StoreView ()<MAMapViewDelegate,UIWebViewDelegate>
-{
-    MAMapView *_mapView;
-}
+@interface StoreView ()<UIWebViewDelegate>
 @property (nonatomic, strong) UIWebView *webView;
 @end
 @implementation StoreView
@@ -26,47 +22,25 @@
 - (void)comfigView{
     self.backgroundColor = [UIColor colorWithRed:0.7 green:0.7 blue:0.7 alpha:0.3];
     [self setButton];
-//    [self requestModel];
-//    [self addSubview:self.webView];
-//    [MAMapServices sharedServices].apiKey = kMapKey;
-//    _mapView = [[MAMapView alloc] initWithFrame:self.frame];
-//    _mapView.delegate = self;
-////    _mapView.mapType = MAMapTypeSatellite;
-//    _mapView.showsUserLocation = YES;
-//    [_mapView setUserTrackingMode:MAUserTrackingModeNone animated:YES];
-//    [self addSubview:_mapView];
 }
-//-(void)mapView:(MAMapView *)mapView didUpdateUserLocation:(MAUserLocation *)userLocation
-//updatingLocation:(BOOL)updatingLocation
-//{
-//    if(updatingLocation)
-//    {
-//        //取出当前位置的坐标
-//        NSLog(@"latitude : %f,longitude: %f",userLocation.coordinate.latitude,userLocation.coordinate.longitude);
-//    }
-//}
 
 - (void)requestModel{
-    
     [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@&areaId=268", kStore, self.idStr]]]];
      [self addSubview:self.webView];
 }
 - (void)setButton{
-    UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
-    btn.frame = CGRectMake(kWidth - 100, 0, 100, 40);
-    [btn setTitle:@"地图模式" forState:UIControlStateNormal];
-    [btn setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
-    [btn addTarget:self action:@selector(map) forControlEvents:UIControlEventTouchUpInside];
-    [self addSubview:btn];
-}
-- (void)map{
-    
+    self.btn = [UIButton buttonWithType:UIButtonTypeCustom];
+    self.btn.frame = CGRectMake(kWidth - 100, 0, 100, 40);
+    [self.btn setTitle:@"地图模式" forState:UIControlStateNormal];
+    [self.btn setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
+
+    [self addSubview:self.btn];
 }
 #pragma mark---UIWebViewDelegate
 - (void)webViewDidFinishLoad:(UIWebView *)webView{
     NSArray *arr = [webView subviews];
     UIScrollView *scrollView1 = [arr objectAtIndex:0];
-    self.webView.frame = CGRectMake(0, 40, kWidth, [scrollView1 contentSize].height - 150);
+    self.webView.frame = CGRectMake(0, 40, kWidth, [scrollView1 contentSize].height - 100);
 }
 - (UIWebView *)webView{
     if (_webView == nil) {
@@ -77,7 +51,10 @@
     }
     return _webView;
 }
-
+- (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType{
+    
+    return YES;
+}
 
 
 

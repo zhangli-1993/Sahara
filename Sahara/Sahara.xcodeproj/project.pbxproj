@@ -71,6 +71,7 @@
 		7A2E7AE91C984DDA0045F332 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A2E7AE81C984DDA0045F332 /* AppDelegate.m */; };
 		7A2E7AEB1C984DDA0045F332 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A2E7AEA1C984DDA0045F332 /* Assets.xcassets */; };
 		7A2E7AEE1C984DDA0045F332 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A2E7AEC1C984DDA0045F332 /* LaunchScreen.storyboard */; };
+		7A5C17341CA299B0003C15D8 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A5C17331CA299B0003C15D8 /* MapViewController.m */; };
 		7A6591331C9D329C00EA47BE /* CompeteModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A6591321C9D329C00EA47BE /* CompeteModel.m */; };
 		7A6C0BD71C995E7C00205D61 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A6C0BD61C995E7C00205D61 /* DetailViewController.m */; };
 		7A84D1A81C98FF38006EE2F1 /* blueArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A84D1A41C98FF38006EE2F1 /* blueArrow.png */; };
@@ -222,6 +223,8 @@
 		7A2E7AEA1C984DDA0045F332 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7A2E7AED1C984DDA0045F332 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7A2E7AEF1C984DDA0045F332 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7A5C17321CA299B0003C15D8 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		7A5C17331CA299B0003C15D8 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 		7A6591311C9D329C00EA47BE /* CompeteModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CompeteModel.h; sourceTree = "<group>"; };
 		7A6591321C9D329C00EA47BE /* CompeteModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CompeteModel.m; sourceTree = "<group>"; };
 		7A6C0BD51C995E7C00205D61 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
@@ -488,6 +491,8 @@
 				7A0C78AB1C9E37600048C4F3 /* ActicleDetailViewController.m */,
 				7A0ACAF41C9FF28C00355E67 /* CarForumViewController.h */,
 				7A0ACAF51C9FF28C00355E67 /* CarForumViewController.m */,
+				7A5C17321CA299B0003C15D8 /* MapViewController.h */,
+				7A5C17331CA299B0003C15D8 /* MapViewController.m */,
 				7A089AFF1C9C08AB00EF030E /* Filefff */,
 				7AD7F7E61C9934CE00BF2460 /* hot */,
 				7AD7F7E81C9943A700BF2460 /* allBrands */,
@@ -804,6 +809,11 @@
 				TargetAttributes = {
 					7A2E7AE01C984DDA0045F332 = {
 						CreatedOnToolsVersion = 7.2.1;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -941,6 +951,7 @@
 				7AB3626D1C98F2B500C03E74 /* VOSegmentedControl.m in Sources */,
 				7AD7F7F41C9946E500BF2460 /* AllTableViewCell.m in Sources */,
 				7A0C78B41C9E929A0048C4F3 /* CarForum.m in Sources */,
+				7A5C17341CA299B0003C15D8 /* MapViewController.m in Sources */,
 				7A0ACADB1C9F82BA00355E67 /* CarImageModel.m in Sources */,
 				7AB362741C98F85500C03E74 /* MessageOneTableViewCell.m in Sources */,
 				7ABB84781C9E986300621CC4 /* LoginViewController.m in Sources */,

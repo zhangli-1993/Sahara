@@ -103,32 +103,32 @@
     }
     return cell;
 }
-- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
-    UIView *headview = [[UIView alloc] initWithFrame:CGRectMake(0, 0, kWidth, 40)];
-    headview.backgroundColor = [UIColor whiteColor];
-    if (section == 0) {
-        self.segment = [[UISegmentedControl alloc] initWithFrame:CGRectMake(10, 0, kWidth * 3 / 8, 20)];
-        self.segment.tintColor = kMainColor;
-        [self.segment insertSegmentWithTitle:@"在售" atIndex:0 animated:NO];
-        if (self.stopArray.count > 0) {
-            [self.segment insertSegmentWithTitle:@"停售" atIndex:1 animated:NO];
-        }
-        self.segment.selectedSegmentIndex = 0;
-        [self.segment addTarget:self action:@selector(segmentValueChange:) forControlEvents:UIControlEventValueChanged];
-        [headview addSubview:self.segment];
-    } else {
-        UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(10, 0, kWidth * 3 / 8, 20)];
-        label.text = @"竞争车系";
-        label.font = [UIFont systemFontOfSize:14.0];
-        label.backgroundColor = kMainColor;
-        label.textColor = [UIColor whiteColor];
-        label.layer.cornerRadius = 5;
-        label.clipsToBounds = YES;
-        label.textAlignment = NSTextAlignmentCenter;
-        [headview addSubview:label];
-    }
-    return headview;
-}
+//- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
+//    UIView *headview = [[UIView alloc] initWithFrame:CGRectMake(0, 0, kWidth, 40)];
+//    headview.backgroundColor = [UIColor whiteColor];
+//    if (section == 0) {
+//        self.segment = [[UISegmentedControl alloc] initWithFrame:CGRectMake(10, 0, kWidth * 3 / 8, 20)];
+//        self.segment.tintColor = kMainColor;
+//        [self.segment insertSegmentWithTitle:@"在售" atIndex:0 animated:NO];
+//        if (self.stopArray.count > 0) {
+//            [self.segment insertSegmentWithTitle:@"停售" atIndex:1 animated:NO];
+//        }
+//        self.segment.selectedSegmentIndex = 0;
+//        [self.segment addTarget:self action:@selector(segmentValueChange:) forControlEvents:UIControlEventValueChanged];
+//        [headview addSubview:self.segment];
+//    } else {
+//        UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(10, 0, kWidth * 3 / 8, 20)];
+//        label.text = @"竞争车系";
+//        label.font = [UIFont systemFontOfSize:14.0];
+//        label.backgroundColor = kMainColor;
+//        label.textColor = [UIColor whiteColor];
+//        label.layer.cornerRadius = 5;
+//        label.clipsToBounds = YES;
+//        label.textAlignment = NSTextAlignmentCenter;
+//        [headview addSubview:label];
+//    }
+//    return headview;
+//}
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
 }
@@ -142,9 +142,9 @@
     }
     return self.competeArray.count;
 }
-- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
-    return 30.0;
-}
+//- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
+//    return 30.0;
+//}
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
     return 2;
 }
@@ -193,23 +193,23 @@
         NSLog(@"%@", error);
     }];
 }
-- (void)segmentValueChange:(VOSegmentedControl *)seg{
-    switch (seg.selectedSegmentIndex) {
-        case 0:
-        {
-            [self.tableView reloadData];
-        }
-            break;
-        case 1:
-        {
-            [self.tableView reloadData];
-        }
-            break;
-
-        default:
-            break;
-    }
-}
+//- (void)segmentValueChange:(VOSegmentedControl *)seg{
+//    switch (seg.selectedSegmentIndex) {
+//        case 0:
+//        {
+//            [self.tableView reloadData];
+//        }
+//            break;
+//        case 1:
+//        {
+//            [self.tableView reloadData];
+//        }
+//            break;
+//
+//        default:
+//            break;
+//    }
+//}
 
 - (UITableView *)tableView{
     if (_tableView == nil) {

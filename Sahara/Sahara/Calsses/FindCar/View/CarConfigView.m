@@ -116,6 +116,7 @@
         //设置代理
         self.collectView.dataSource = self;
         self.collectView.delegate = self;
+        
         [self.collectView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"config"];
         [self.collectView registerClass:[UICollectionReusableView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"HeaderView"];
         self.collectView.backgroundColor = [UIColor whiteColor];

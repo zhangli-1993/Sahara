@@ -10,5 +10,6 @@
 
 @interface StoreView : UIView
 @property (nonatomic, strong) NSString *idStr;
+@property (nonatomic, strong) UIButton *btn;
 - (void)requestModel;
 @end
