@@ -26,6 +26,7 @@
 
 @property(nonatomic, strong) UITabBarController *tabBarVC;
 @property(nonatomic, strong) UINavigationController *mainNav;
+@property(nonatomic, assign) BOOL isLogin;
 
 @end
 
@@ -145,6 +146,8 @@
     
 }
 
+
+
 - (void)didReceiveWeiboResponse:(WBBaseResponse *)response{
         WBAuthorizeResponse *authorize = (WBAuthorizeResponse *)response;
         NSString *token = authorize.accessToken;
@@ -169,6 +172,7 @@
                 if (error) {
                     NSLog(@"err = %@", error);
                 }else{
+                    self.isLogin = YES;
                     MainViewController *setVC = [[MainViewController alloc] init];
                     setVC.name = title;
                     setVC.headImage = headImage;

@@ -7,7 +7,7 @@
 //
 
 #import "SetViewController.h"
-
+#import <SDWebImage/SDImageCache.h>
 @interface SetViewController ()<UITableViewDataSource, UITableViewDelegate>
 @property(nonatomic, strong) UITableView *tableView;
 @property(nonatomic, strong) NSMutableArray *allSetArray;
@@ -23,14 +23,35 @@
     self.tabBarController.tabBar.hidden = YES;
     [self backToPreviousPageWithImage];
     [self.view addSubview:self.tableView];
-    self.allSetArray = [NSMutableArray arrayWithObjects:@"绑定其他平台", @"字号设置", @"推送设置", @"手势设置", @"清理缓存", @"地区设置", @"浏览记录", @"非Wi-Fi下显示", @"新版检测", @"关于我们",nil];
+    self.allSetArray = [NSMutableArray arrayWithObjects:  @"清理缓存", @"推送设置", @"非Wi-Fi下显示", @"新版检测", @"关于我们",nil];
     
+}
+
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    //计算图片缓存
+    SDImageCache *cacheImage = [SDImageCache sharedImageCache];
+    NSInteger cacheSize = [cacheImage getSize];
+    NSString *cacheStr = [NSString stringWithFormat:@"清除缓存(%.02fM)", (float)cacheSize/1024/1024];
+    [self.allSetArray replaceObjectAtIndex:0 withObject:cacheStr];
+    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
+    [self.tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
 }
 
 
 #pragma mark ---------------- UITableViewDelegate
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    
+    switch (indexPath.row) {
+        case 0:
+            [self clearImage];
+            break;
+            case 1:
+            [self pushMessage];
+            break;
+            
+        default:
+            break;
+    }
     
 }
 
@@ -50,16 +71,34 @@
     
 }
 
-- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
-    if (section == 0) {
-        return 0;
-    }
-    return 20;
-}
 
 - (void)viewWillDisappear:(BOOL)animated{
     [super viewWillDisappear:animated];
     self.tabBarController.tabBar.hidden = NO;
+}
+
+#pragma mark ---------- Custom Method
+- (void)clearImage{
+    UIAlertController *alertC = [UIAlertController alertControllerWithTitle:@"提示" message:@"是否清理缓存?" preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *cencel = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+        
+    }];
+    UIAlertAction *sure = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        SDImageCache *imageCache = [SDImageCache sharedImageCache];
+        [imageCache clearDisk];
+        [self.allSetArray replaceObjectAtIndex:0 withObject:@"清理缓存"];
+        NSIndexPath *path = [NSIndexPath indexPathForRow:0 inSection:0];
+        [self.tableView reloadRowsAtIndexPaths:@[path] withRowAnimation:UITableViewRowAnimationAutomatic];
+
+        
+    }];
+    [alertC addAction:cencel];
+    [alertC addAction:sure];
+    [self presentViewController:alertC animated:YES completion:nil];
+    }
+- (void)pushMessage{
+    
+    
 }
 
 #pragma mark -------------- LazyLoading

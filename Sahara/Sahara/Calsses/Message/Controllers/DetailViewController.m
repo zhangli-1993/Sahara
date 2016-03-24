@@ -11,6 +11,8 @@
 #import "AppriseViewController.h"
 #import "SqlitDataBase.h"
 #import "ProgressHUD.h"
+#import "LoginViewController.h"
+#import <BmobSDK/Bmob.h>
 @interface DetailViewController ()<UIWebViewDelegate>
 {
     NSInteger _dianzanCount;
@@ -57,11 +59,6 @@
     
 }
 
-- (void)viewWillDisappear:(BOOL)animated{
-    [super viewWillDisappear:animated];
-    self.tabBarController.tabBar.hidden = NO;
-}
-
 #pragma mark ---------------- 导航栏点击事件
 - (void)checkComment{
     AppriseViewController *appVC = [[AppriseViewController alloc] init];
@@ -85,11 +82,34 @@
 }
 
 - (void)collectEassy{
+    BmobUser *user = [BmobUser getCurrentUser];
+    if (user.objectId == nil) {
+        UIAlertController *alertC = [UIAlertController alertControllerWithTitle:@"提示" message:@"😊，你还没有登陆哦!" preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertAction *cencel = [UIAlertAction actionWithTitle:@"不了/(ㄒoㄒ)/~~" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+            
+        }];
+        UIAlertAction *sure = [UIAlertAction actionWithTitle:@"我要登陆:-D" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            UIStoryboard *story = [UIStoryboard storyboardWithName:@"Login" bundle:nil];
+            LoginViewController *loginVC = [story instantiateViewControllerWithIdentifier:@"LoginVC"];
+            [self.navigationController pushViewController:loginVC animated:YES];
+            
+        }];
+        [alertC addAction:cencel];
+        [alertC addAction:sure];
+        [self presentViewController:alertC animated:YES completion:nil];
+        
+    }else{
+    
     SqlitDataBase *dataBase = [SqlitDataBase dataBaseManger];
     [dataBase insertDataIntoDataBase:self.collectModel];
     [ProgressHUD showSuccess:@"收藏成功"];
+    }
 }
 
+- (void)viewWillDisappear:(BOOL)animated{
+    [super viewWillDisappear:animated];
+    self.tabBarController.tabBar.hidden = NO;
+}
 - (void)getCommentTopicIDRequest{
     AFHTTPSessionManager *httpManger = [AFHTTPSessionManager manager];
     httpManger.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"text/html",@"text/plain", nil];

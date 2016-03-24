@@ -14,6 +14,7 @@
 #import "UseCarViewController.h"
 #import "CollectionViewController.h"
 #import "SqlitDataBase.h"
+#import <BmobSDK/Bmob.h>
 @interface MainViewController ()<UITableViewDataSource, UITableViewDelegate>
 @property(nonatomic, strong) UITableView *tableView;
 @property(nonatomic, strong) UIButton *hitLoginBtn;
@@ -40,7 +41,7 @@
     self.navigationItem.rightBarButtonItem = rightBar;
     
     [self tableViewHeadView];
-    self.allCellArray = @[@"违章查询", @"夜间模式", @"离线下载", @"帮助与反馈"];
+    self.allCellArray = @[@"违章查询", @"夜间模式", @"给我评分", @"退出登录", @"帮助与反馈",@"离线下载"];
     
 }
 
@@ -138,7 +139,16 @@
             //违章查询
             [self violationofTrafficRegulation];
             break;
+            case 2:
+        {
+            NSString *str = [NSString stringWithFormat:@"itms-apps://itunes.apple.com/app"];
+            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:str]];
+        }
+            break;
             case 3:
+            [self loginOut];
+            break;
+            case 4:
             //帮助
             [self helpYouToAll];
             break;
@@ -217,6 +227,26 @@
     [self.navigationController pushViewController:helpVC animated:YES];
 }
 
+- (void)loginOut{
+    
+    BmobUser *user = [BmobUser getCurrentUser];
+    if (user.objectId == nil) {
+        
+    }else{
+    UIAlertController *alertC = [UIAlertController alertControllerWithTitle:@"提示" message:@"退出当前登录？" preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *cencel = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+        
+    }];
+    UIAlertAction *sure = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        [BmobUser logout];
+        
+        
+    }];
+    [alertC addAction:cencel];
+    [alertC addAction:sure];
+    [self presentViewController:alertC animated:YES completion:nil];
+    }
+}
 #pragma mark -------------- LazyLoading
 - (UITableView *)tableView{
     if (!_tableView) {

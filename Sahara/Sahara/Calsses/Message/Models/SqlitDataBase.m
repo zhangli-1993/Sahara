@@ -14,6 +14,8 @@
 {
     NSString *dataBasePath;
 }
+@property(nonatomic, strong) BmobUser *user;
+
 @end
 
 @implementation SqlitDataBase
@@ -51,8 +53,8 @@ static sqlite3 *dataBase = nil;
 
 - (void)creatDataBaseTable{
     BmobUser *user = [BmobUser getCurrentUser];
-//    NSString *sql = @"CREATE TABLE essayTable1 (number INTEGER PRIMARY KEY AUTOINCREMENT, headImage TEXT, title TEXT, cellID TEXT)";
-    NSString *sql = [NSString stringWithFormat:@"CREATE TABLE %@Table (number INTEGER PRIMARY KEY AUTOINCREMENT, headImage TEXT, title TEXT, cellID TEXT)", user.username];
+    NSLog(@"CREATE TABLE %@Table (number INTEGER PRIMARY KEY AUTOINCREMENT, headImage TEXT, title TEXT, cellID TEXT)", user.username);
+    NSString *sql = [NSString stringWithFormat:@"CREATE TABLE t%@ (number INTEGER PRIMARY KEY AUTOINCREMENT, headImage TEXT, title TEXT, cellID TEXT)", user.username];
     
     char *err = nil;
     sqlite3_exec(dataBase, [sql UTF8String], NULL, NULL, &err);
@@ -71,10 +73,10 @@ static sqlite3 *dataBase = nil;
 - (void)insertDataIntoDataBase:(CollectionModel *)Cmodel{
     [self openDataBase];
     sqlite3_stmt *stmt = nil;
-//    NSString *insertSql = @"INSERT INTO essayTable1(headImage, title, cellID) VALUES(?,?,?)";
     BmobUser *user = [BmobUser getCurrentUser];
 
-    NSString *insertSql = [NSString stringWithFormat:@"INSERT INTO %@Table(headImage, title, cellID) VALUES(?,?,?)", user.username];
+    NSString *insertSql = [NSString stringWithFormat:@"INSERT INTO t%@(headImage, title, cellID) VALUES(?,?,?)", user.username];
+    NSLog(@"INSERT INTO %@ (headImage, title, cellID) VALUES(?,?,?)", user.username);
     int reslut = sqlite3_prepare(dataBase, [insertSql UTF8String], -1, &stmt, nil);
     if (reslut == SQLITE_OK) {
         //绑定
@@ -100,8 +102,7 @@ static sqlite3 *dataBase = nil;
     [self openDataBase];
     sqlite3_stmt *stmt = nil;
     BmobUser *user = [BmobUser getCurrentUser];
-    NSString *selectSql = [NSString stringWithFormat:@"SELECT * FROM %@Table", user.username];
-//    NSString *selectSql = @"SELECT * FROM essayTable1";
+    NSString *selectSql = [NSString stringWithFormat:@"SELECT * FROM t%@", user.username];
     int result = sqlite3_prepare(dataBase, [selectSql UTF8String], -1, &stmt, nil);
     NSMutableArray *selectArray = [NSMutableArray new];
     if (result == SQLITE_OK) {
@@ -127,8 +128,7 @@ static sqlite3 *dataBase = nil;
     [self openDataBase];
     sqlite3_stmt *stmt = nil;
     BmobUser *user = [BmobUser getCurrentUser];
-    NSString *deleteSql = [NSString stringWithFormat:@"DELETE FROM %@Table", user.username];
-//    NSString *deleteSql = @"DELETE FROM essayTable1 WHERE title = ?";
+    NSString *deleteSql = [NSString stringWithFormat:@"DELETE FROM t%@", user.username];
     int result = sqlite3_prepare(dataBase, [deleteSql UTF8String], -1, &stmt, nil);
     if (result == SQLITE_OK) {
         sqlite3_bind_text(stmt, 1, [title UTF8String], -1, nil);
