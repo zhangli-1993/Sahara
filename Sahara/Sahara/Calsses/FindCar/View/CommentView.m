@@ -24,7 +24,6 @@
     
 }
 - (void)requestModel{
-    NSLog(@"////%@", self.idStr);
     [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@", kComment, self.idStr]]]];
 
     [self addSubview:self.webView];

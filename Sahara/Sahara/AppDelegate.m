@@ -39,6 +39,7 @@
     [WeiboSDK registerApp:kWBAppKey];
     [WXApi registerApp:kWXAppKey];
     [Bmob registerWithAppKey:kBmobKey];
+    NSLog(@"%@", [NSBundle mainBundle].bundleIdentifier);
     _locationManager = [[CLLocationManager alloc] init];
     _geocoder = [[CLGeocoder alloc] init];
     if (![CLLocationManager locationServicesEnabled]) {

@@ -7,12 +7,9 @@
 //
 
 #import "StoreView.h"
-#import <MAMapKit/MAMapKit.h>
 #import <AFNetworking/AFHTTPSessionManager.h>
-@interface StoreView ()<MAMapViewDelegate>
-{
-    MAMapView *_mapView;
-}
+@interface StoreView ()<UIWebViewDelegate>
+@property (nonatomic, strong) UIWebView *webView;
 @end
 @implementation StoreView
 - (instancetype)initWithFrame:(CGRect)frame{
@@ -23,36 +20,45 @@
     return self;
 }
 - (void)comfigView{
-    [self requestModel];
-    [MAMapServices sharedServices].apiKey = kMapKey;
-    _mapView = [[MAMapView alloc] initWithFrame:self.frame];
-    _mapView.delegate = self;
-//    _mapView.mapType = MAMapTypeSatellite;
-    _mapView.showsUserLocation = YES;
-    [_mapView setUserTrackingMode:MAUserTrackingModeNone animated:YES];
-    [self addSubview:_mapView];
+    self.backgroundColor = [UIColor colorWithRed:0.7 green:0.7 blue:0.7 alpha:0.3];
+    [self setButton];
 }
--(void)mapView:(MAMapView *)mapView didUpdateUserLocation:(MAUserLocation *)userLocation
-updatingLocation:(BOOL)updatingLocation
-{
-    if(updatingLocation)
-    {
-        //取出当前位置的坐标
-        NSLog(@"latitude : %f,longitude: %f",userLocation.coordinate.latitude,userLocation.coordinate.longitude);
-    }
-}
+
 - (void)requestModel{
-    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
-    manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"text/html", @"text/plain", @"application/json",nil];
-    manager.responseSerializer = [AFCompoundResponseSerializer serializer];
-    [manager GET:kStore parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
-        
-    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        NSLog(@"%@", responseObject);
-    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        NSLog(@"%@", error);
-    }];
+    [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@&areaId=268", kStore, self.idStr]]]];
+     [self addSubview:self.webView];
 }
+- (void)setButton{
+    self.btn = [UIButton buttonWithType:UIButtonTypeCustom];
+    self.btn.frame = CGRectMake(kWidth - 100, 0, 100, 40);
+    [self.btn setTitle:@"地图模式" forState:UIControlStateNormal];
+    [self.btn setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
+
+    [self addSubview:self.btn];
+}
+#pragma mark---UIWebViewDelegate
+- (void)webViewDidFinishLoad:(UIWebView *)webView{
+    NSArray *arr = [webView subviews];
+    UIScrollView *scrollView1 = [arr objectAtIndex:0];
+    self.webView.frame = CGRectMake(0, 40, kWidth, [scrollView1 contentSize].height - 100);
+}
+- (UIWebView *)webView{
+    if (_webView == nil) {
+        self.webView = [[UIWebView alloc] initWithFrame:CGRectMake(0, 90, kWidth, kHeight - 90)];
+        self.webView.delegate = self;
+        self.webView.scalesPageToFit = YES;
+        self.webView.opaque = NO;
+    }
+    return _webView;
+}
+- (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType{
+    
+    return YES;
+}
+
+
+
+
 /*
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.
