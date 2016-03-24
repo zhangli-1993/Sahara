@@ -1,44 +1,39 @@
 //
-//  LiveOtherViewController.m
+//  CarWebViewController.m
 //  Sahara
 //
-//  Created by scjy on 16/3/17.
+//  Created by scjy on 16/3/23.
 //  Copyright © 2016年 scjy. All rights reserved.
 //
 
-#import "LiveOtherViewController.h"
+#import "CarWebViewController.h"
 
-@interface LiveOtherViewController ()<UIWebViewDelegate>
+@interface CarWebViewController ()<UIWebViewDelegate>
 
 @property(nonatomic, strong) UIWebView *webView;
 
 @end
 
-@implementation LiveOtherViewController
+@implementation CarWebViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    [self.view addSubview:self.webView];
-    self.navigationItem.title = @"评论";
     [self backToPreviousPageWithImage];
+    self.title = @"宝典详情";
     self.view.backgroundColor = [UIColor whiteColor];
+    [self.view addSubview:self.webView];
     self.tabBarController.tabBar.hidden = YES;
 }
 
-- (void)viewWillDisappear:(BOOL)animated{
-    [super viewWillDisappear:animated];
-    self.tabBarController.tabBar.hidden = NO;
-}
-
-#pragma mark ---------------- LazyLoading
 - (UIWebView *)webView{
     if (!_webView) {
-        self.webView = [[UIWebView alloc] initWithFrame:self.view.frame];
+        self.webView = [[UIWebView alloc] initWithFrame:CGRectMake(0, 0, kWidth, kHeight + 64)];
         self.webView.delegate = self;
         self.webView.scalesPageToFit = YES;
-        NSString *url = [NSString stringWithFormat:@"%@%@?%@", kLiveOther, self.loveOtherID, kOtherPort];
-        [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:url]]];
+        NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://mrobot.pcauto.com.cn/v3/cms/articles/%@?articleTemplate=4.8.0&app=pcautobrowser&channelId=0&serialId=0&size=18&picRule=2", self.useCarID]];
+        [self.webView loadRequest:[NSURLRequest requestWithURL:url]];
+        
     }
     return _webView;
 }

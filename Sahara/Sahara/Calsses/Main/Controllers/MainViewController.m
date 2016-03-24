@@ -11,6 +11,9 @@
 #import "HelpViewController.h"
 #import "SetViewController.h"
 #import "LoginViewController.h"
+#import "UseCarViewController.h"
+#import "CollectionViewController.h"
+#import "SqlitDataBase.h"
 @interface MainViewController ()<UITableViewDataSource, UITableViewDelegate>
 @property(nonatomic, strong) UITableView *tableView;
 @property(nonatomic, strong) UIButton *hitLoginBtn;
@@ -67,14 +70,14 @@
     [loginView addSubview:lineLAbel];
     
     self.titleArray = @[@"我的帖子", @"我的订阅", @"我的评论", @"我的收藏", @"我的好友"];
-    self.btnArray = @[@"帖子回复", @"我的私信", @"评论回复", @"系统消息"];
+    self.btnArray = @[@"用车宝典", @"价格导购", @"评论回复", @"系统消息"];
     
     for (int i = 0; i < 5; i++) {
         UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
         button.frame = CGRectMake(kWidth/5 * i + 10, kWidth/3, kWidth/6, kWidth/6);
         [button addTarget:self action:@selector(tableHeadButton:) forControlEvents:UIControlEventTouchUpInside];
         NSString *imageStr = [NSString stringWithFormat:@"pc_menu_%02d", i];
-        button.imageEdgeInsets = UIEdgeInsetsMake(0, 8, 20, 0);
+        button.imageEdgeInsets = UIEdgeInsetsMake(0, 15, 20, 0);
         [button setTitle:self.titleArray[i] forState:UIControlStateNormal];
         [button setTitleEdgeInsets:UIEdgeInsetsMake(30, -20, 0, 0)];
         button.titleLabel.font = [UIFont systemFontOfSize:12];
@@ -107,12 +110,25 @@
 
 //第一行
 - (void)tableHeadButton:(UIButton *)btn{
-    
+    if (btn.tag == 13) {
+        CollectionViewController *collectionVC = [[CollectionViewController alloc] init];
+        [self.navigationController pushViewController:collectionVC animated:YES];
+    }
     
 }
 //第二行
 - (void)btnArrayAction:(UIButton *)btn{
-    
+    switch (btn.tag) {
+        case 110:
+        {
+            UseCarViewController *useCarVC = [[UseCarViewController alloc] init];
+            [self.navigationController pushViewController:useCarVC animated:YES];
+        }
+            break;
+            
+        default:
+            break;
+    }
 }
 
 #pragma mark --------------- UITableVIewDelegate

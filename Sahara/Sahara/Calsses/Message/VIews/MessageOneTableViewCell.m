@@ -25,6 +25,7 @@
 
 
 - (void)setMessageModel:(MessageModel *)messageModel{
+    [self.headImage setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"bendi"]]];
     [self.headImage sd_setImageWithURL:[NSURL URLWithString:messageModel.image] placeholderImage:nil];
     self.titleLabel.text = messageModel.title;
     self.timeLabel.text = [NSString stringWithFormat:@"%@", messageModel.pubDate];

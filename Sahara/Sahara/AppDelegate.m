@@ -149,9 +149,9 @@
         NSString *token = authorize.accessToken;
         NSString *uid = authorize.userID;
         NSDate *date = authorize.expirationDate;
-            NSLog(@"%@", token);
-            NSLog(@"%@", uid);
-            NSLog(@"%@", date);
+//            NSLog(@"%@", token);
+//            NSLog(@"%@", uid);
+//            NSLog(@"%@", date);
         NSDictionary *dict = @{@"access_token":token, @"uid":uid, @"expirationDate":date};
         AFHTTPSessionManager *httpManger = [AFHTTPSessionManager manager];
         httpManger.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", nil];

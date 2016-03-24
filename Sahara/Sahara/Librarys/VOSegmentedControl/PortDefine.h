@@ -26,7 +26,6 @@
 #define kSegementPort @"http://mrobot.pcauto.com.cn/configs/pcauto_v4_cms_android_channel_tree"
 #define kArticle @"http://mrobot.pcauto.com.cn/v3/price/getNewestInfoListBySerialId/"
 #define kArticleDetail @"http://www.pcauto.com.cn/pingce/558/5588099.html"
-//http://www.pcauto.com.cn/pingce/558/5588099.html
 #define kComment @"http://mrobot.pcauto.com.cn/v3/price/serialCommentList/"
 #define kCarForum @"http://mrobot.pcauto.com.cn/v3/bbs/newForumsv45/"
 #define kCarImage @"http://mrobot.pcauto.com.cn/v2/price/nav_picturesv47?serialGroupId="
@@ -51,5 +50,8 @@
 #define kCheckPort @"http://www.zonghengche.com/ad/pcautoweizhang/app/weizhang.html"
 //bmob
 #define kBmobKey @"94f1100bc7e5eebe98292eea9b012494"
+
+//视频分类
+#define kVideoKind @"http://mrobot.pcauto.com.cn/xsp/s/auto/info/v4.8/videoList.xsp?pageSize=20&viewCount=true"
 
 #endif /* PortDefine_h */

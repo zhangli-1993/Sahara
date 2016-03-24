@@ -65,6 +65,14 @@
 		7A2E7AE91C984DDA0045F332 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A2E7AE81C984DDA0045F332 /* AppDelegate.m */; };
 		7A2E7AEB1C984DDA0045F332 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A2E7AEA1C984DDA0045F332 /* Assets.xcassets */; };
 		7A2E7AEE1C984DDA0045F332 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A2E7AEC1C984DDA0045F332 /* LaunchScreen.storyboard */; };
+		7A339BB71CA1851500DCBC5D /* VideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A339BB61CA1851500DCBC5D /* VideoViewController.m */; };
+		7A59D97C1CA2290F00307189 /* UseCarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A59D97B1CA2290F00307189 /* UseCarViewController.m */; };
+		7A59D9821CA26B3900307189 /* CarWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A59D9811CA26B3900307189 /* CarWebViewController.m */; };
+		7A59D9851CA27D5500307189 /* SqlitDataBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A59D9841CA27D5500307189 /* SqlitDataBase.m */; };
+		7A59D9891CA2880100307189 /* bendi.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A59D9881CA2880100307189 /* bendi.png */; };
+		7A59D98C1CA2984300307189 /* CollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A59D98B1CA2984300307189 /* CollectionViewController.m */; };
+		7A59D98F1CA2B15B00307189 /* CollectionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A59D98E1CA2B15B00307189 /* CollectionModel.m */; };
+		7A59D9921CA2B84C00307189 /* CollectionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A59D9911CA2B84C00307189 /* CollectionTableViewCell.m */; };
 		7A6591331C9D329C00EA47BE /* CompeteModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A6591321C9D329C00EA47BE /* CompeteModel.m */; };
 		7A6C0BD71C995E7C00205D61 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A6C0BD61C995E7C00205D61 /* DetailViewController.m */; };
 		7A84D1A81C98FF38006EE2F1 /* blueArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A84D1A41C98FF38006EE2F1 /* blueArrow.png */; };
@@ -206,6 +214,21 @@
 		7A2E7AEA1C984DDA0045F332 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7A2E7AED1C984DDA0045F332 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7A2E7AEF1C984DDA0045F332 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7A339BB51CA1851500DCBC5D /* VideoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoViewController.h; sourceTree = "<group>"; };
+		7A339BB61CA1851500DCBC5D /* VideoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoViewController.m; sourceTree = "<group>"; };
+		7A59D97A1CA2290F00307189 /* UseCarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UseCarViewController.h; sourceTree = "<group>"; };
+		7A59D97B1CA2290F00307189 /* UseCarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UseCarViewController.m; sourceTree = "<group>"; };
+		7A59D9801CA26B3900307189 /* CarWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarWebViewController.h; sourceTree = "<group>"; };
+		7A59D9811CA26B3900307189 /* CarWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CarWebViewController.m; sourceTree = "<group>"; };
+		7A59D9831CA27D5500307189 /* SqlitDataBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SqlitDataBase.h; sourceTree = "<group>"; };
+		7A59D9841CA27D5500307189 /* SqlitDataBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SqlitDataBase.m; sourceTree = "<group>"; };
+		7A59D9881CA2880100307189 /* bendi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bendi.png; sourceTree = "<group>"; };
+		7A59D98A1CA2984300307189 /* CollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewController.h; sourceTree = "<group>"; };
+		7A59D98B1CA2984300307189 /* CollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewController.m; sourceTree = "<group>"; };
+		7A59D98D1CA2B15B00307189 /* CollectionModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionModel.h; sourceTree = "<group>"; };
+		7A59D98E1CA2B15B00307189 /* CollectionModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionModel.m; sourceTree = "<group>"; };
+		7A59D9901CA2B84C00307189 /* CollectionTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CollectionTableViewCell.h; path = Sahara/Calsses/Message/Models/CollectionTableViewCell.h; sourceTree = SOURCE_ROOT; };
+		7A59D9911CA2B84C00307189 /* CollectionTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CollectionTableViewCell.m; path = Sahara/Calsses/Message/Models/CollectionTableViewCell.m; sourceTree = SOURCE_ROOT; };
 		7A6591311C9D329C00EA47BE /* CompeteModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CompeteModel.h; sourceTree = "<group>"; };
 		7A6591321C9D329C00EA47BE /* CompeteModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CompeteModel.m; sourceTree = "<group>"; };
 		7A6C0BD51C995E7C00205D61 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
@@ -526,6 +549,12 @@
 				7ABB847A1C9E988B00621CC4 /* RegisterViewController.m */,
 				7ABB847C1C9E98B500621CC4 /* ForgotPassViewController.h */,
 				7ABB847D1C9E98B500621CC4 /* ForgotPassViewController.m */,
+				7A59D97A1CA2290F00307189 /* UseCarViewController.h */,
+				7A59D97B1CA2290F00307189 /* UseCarViewController.m */,
+				7A59D9801CA26B3900307189 /* CarWebViewController.h */,
+				7A59D9811CA26B3900307189 /* CarWebViewController.m */,
+				7A59D98A1CA2984300307189 /* CollectionViewController.h */,
+				7A59D98B1CA2984300307189 /* CollectionViewController.m */,
 				7ABB84661C9E438200621CC4 /* yue.png */,
 				7ABB84681C9E443400621CC4 /* sun.png */,
 			);
@@ -543,6 +572,8 @@
 			isa = PBXGroup;
 			children = (
 				7ABB84811C9E98F300621CC4 /* Login.storyboard */,
+				7A59D9901CA2B84C00307189 /* CollectionTableViewCell.h */,
+				7A59D9911CA2B84C00307189 /* CollectionTableViewCell.m */,
 			);
 			path = VIews;
 			sourceTree = "<group>";
@@ -570,6 +601,8 @@
 				7A1225771C9A9C9500E16422 /* LiveOtherViewController.m */,
 				7AAB55AF1C9AB7580096B1C1 /* AppriseViewController.h */,
 				7AAB55B01C9AB7580096B1C1 /* AppriseViewController.m */,
+				7A339BB51CA1851500DCBC5D /* VideoViewController.h */,
+				7A339BB61CA1851500DCBC5D /* VideoViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -581,6 +614,10 @@
 				7AB3626F1C98F7A200C03E74 /* MessageModel.m */,
 				7AAB55B71C9ADBEE0096B1C1 /* AppriseModel.h */,
 				7AAB55B81C9ADBEE0096B1C1 /* AppriseModel.m */,
+				7A59D9831CA27D5500307189 /* SqlitDataBase.h */,
+				7A59D9841CA27D5500307189 /* SqlitDataBase.m */,
+				7A59D98D1CA2B15B00307189 /* CollectionModel.h */,
+				7A59D98E1CA2B15B00307189 /* CollectionModel.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -596,6 +633,7 @@
 				7AB362781C98F89800C03E74 /* MessageTwoTableViewCell.xib */,
 				7AAB55B21C9AC5E70096B1C1 /* AppriseTableViewCell.h */,
 				7AAB55B31C9AC5E70096B1C1 /* AppriseTableViewCell.m */,
+				7A59D9881CA2880100307189 /* bendi.png */,
 			);
 			path = VIews;
 			sourceTree = "<group>";
@@ -823,6 +861,7 @@
 				7A0C78B11C9E4DC30048C4F3 /* comment in Resources */,
 				7AD7F7E71C9934CE00BF2460 /* hot in Resources */,
 				7A0ACB031CA0314500355E67 /* store in Resources */,
+				7A59D9891CA2880100307189 /* bendi.png in Resources */,
 				7A07E69F1C9F82DD003D0843 /* ProgressHUD.bundle in Resources */,
 				7AB362751C98F85500C03E74 /* MessageOneTableViewCell.xib in Resources */,
 				7A0ACAF01C9FA47900355E67 /* carForum in Resources */,
@@ -890,9 +929,12 @@
 				7AB3626C1C98F2B500C03E74 /* VOSegment.m in Sources */,
 				7A0ACB011CA026C800355E67 /* StoreView.m in Sources */,
 				7AF9C5BB1C9AB03A00074B54 /* ForumViewController.m in Sources */,
+				7A59D9851CA27D5500307189 /* SqlitDataBase.m in Sources */,
 				7A0A919F1C999F6C0007192D /* CarPriceView.m in Sources */,
 				7A08A8C31C9AD98B00D036E7 /* HotViewController.m in Sources */,
 				7A0A919C1C999D020007192D /* CarPriceModel.m in Sources */,
+				7A59D98C1CA2984300307189 /* CollectionViewController.m in Sources */,
+				7A59D97C1CA2290F00307189 /* UseCarViewController.m in Sources */,
 				7A07E6A01C9F82DD003D0843 /* ProgressHUD.m in Sources */,
 				7AD7F7F11C9945E800BF2460 /* AllBrandsModel.m in Sources */,
 				7A0C78A61C9E2E1D0048C4F3 /* ActicleView.m in Sources */,
@@ -914,18 +956,22 @@
 				7A0C78B41C9E929A0048C4F3 /* CarForum.m in Sources */,
 				7A0ACADB1C9F82BA00355E67 /* CarImageModel.m in Sources */,
 				7AB362741C98F85500C03E74 /* MessageOneTableViewCell.m in Sources */,
+				7A59D98F1CA2B15B00307189 /* CollectionModel.m in Sources */,
 				7ABB84781C9E986300621CC4 /* LoginViewController.m in Sources */,
 				7A08A8CB1C9AE4B900D036E7 /* HotTableViewCell.m in Sources */,
 				7AF9C5BC1C9AB03A00074B54 /* ForumModel.m in Sources */,
+				7A59D9921CA2B84C00307189 /* CollectionTableViewCell.m in Sources */,
 				7AB3624F1C98E41800C03E74 /* PrimeViewController.m in Sources */,
 				7AAB55B11C9AB7580096B1C1 /* AppriseViewController.m in Sources */,
 				7AB3626B1C98F2B500C03E74 /* VOIndicatorAnimation.m in Sources */,
 				7A0C78AF1C9E475A0048C4F3 /* CommentView.m in Sources */,
 				7ABB847B1C9E988B00621CC4 /* RegisterViewController.m in Sources */,
 				7ABB846F1C9E4B5800621CC4 /* HelpViewController.m in Sources */,
+				7A59D9821CA26B3900307189 /* CarWebViewController.m in Sources */,
 				7AAB55AE1C9AA55C0096B1C1 /* UIViewController+BackPront.m in Sources */,
 				7AF9C5BD1C9AB03A00074B54 /* ForumOneTableViewCell.m in Sources */,
 				7A0C78AC1C9E37600048C4F3 /* ActicleDetailViewController.m in Sources */,
+				7A339BB71CA1851500DCBC5D /* VideoViewController.m in Sources */,
 				7A1225781C9A9C9500E16422 /* LiveOtherViewController.m in Sources */,
 				7A0ACAF31C9FD4E700355E67 /* Tools.m in Sources */,
 				7AB362791C98F89800C03E74 /* MessageTwoTableViewCell.m in Sources */,

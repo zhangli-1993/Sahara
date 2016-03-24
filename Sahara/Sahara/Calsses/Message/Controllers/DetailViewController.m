@@ -9,6 +9,8 @@
 #import "DetailViewController.h"
 #import <AFHTTPSessionManager.h>
 #import "AppriseViewController.h"
+#import "SqlitDataBase.h"
+#import "ProgressHUD.h"
 @interface DetailViewController ()<UIWebViewDelegate>
 {
     NSInteger _dianzanCount;
@@ -29,6 +31,7 @@
     [self.view addSubview:self.webView];
     [self backToPreviousPageWithImage];
     [self getCommentTopicIDRequest];
+    self.tabBarController.tabBar.hidden = YES;
 
     //查看评论
     UIButton *commentBtn = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -43,9 +46,20 @@
     [self.zanBtn setImage:[UIImage imageNamed:@"btn_list_praise"] forState:UIControlStateNormal];
     [self.zanBtn addTarget:self action:@selector(dianZan:) forControlEvents:UIControlEventTouchUpInside];
     UIBarButtonItem *zanBar = [[UIBarButtonItem alloc] initWithCustomView:self.zanBtn];
-    self.navigationItem.rightBarButtonItems= @[commentBar, zanBar];
     
+    UIButton *collectBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    collectBtn.frame = CGRectMake(kWidth/3 + kWidth/8, 0, kWidth/6, kWidth/8);
+    [collectBtn setImage:[UIImage imageNamed:@"pc_menu_03"] forState:UIControlStateNormal];
+    [collectBtn addTarget:self action:@selector(collectEassy) forControlEvents:UIControlEventTouchUpInside];
+    UIBarButtonItem *collectBar = [[UIBarButtonItem alloc] initWithCustomView:collectBtn];
+    self.navigationItem.rightBarButtonItems= @[commentBar, zanBar, collectBar];
+
     
+}
+
+- (void)viewWillDisappear:(BOOL)animated{
+    [super viewWillDisappear:animated];
+    self.tabBarController.tabBar.hidden = NO;
 }
 
 #pragma mark ---------------- 导航栏点击事件
@@ -70,6 +84,12 @@
     
 }
 
+- (void)collectEassy{
+    SqlitDataBase *dataBase = [SqlitDataBase dataBaseManger];
+    [dataBase insertDataIntoDataBase:self.collectModel];
+    [ProgressHUD showSuccess:@"收藏成功"];
+}
+
 - (void)getCommentTopicIDRequest{
     AFHTTPSessionManager *httpManger = [AFHTTPSessionManager manager];
     httpManger.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"text/html",@"text/plain", nil];
@@ -91,7 +111,7 @@
 #pragma mark ----------- LazyLoading
 - (UIWebView *)webView{
     if (!_webView) {
-        self.webView = [[UIWebView alloc] initWithFrame:self.view.frame];
+        self.webView = [[UIWebView alloc] initWithFrame:CGRectMake(0, 0, kWidth, kHeight + 64)];
         self.webView.delegate = self;
         NSString *urlStr = [NSString stringWithFormat:@"%@%@?%@", kDetailFront, self.detailID, kDetailPort];
         NSURL *url = [[NSURL alloc] initWithString:urlStr];
