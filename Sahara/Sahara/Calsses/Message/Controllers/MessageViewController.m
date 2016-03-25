@@ -252,10 +252,6 @@
 }
 //视频分类
 - (void)videoAction:(UIButton *)btn{
-//    self.viedoView = [[ViedoView alloc] initWithFrame:CGRectMake(0, kWidth/6-5, kWidth, kHeight - kWidth/6+5)];
-//    self.viedoView.tableView.delegate = self;
-//    [self.view addSubview:_viedoView];
-    
     VideoViewController *videoVC = [[VideoViewController alloc] init];
     UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:videoVC];
     videoVC.delegate = self;
@@ -323,7 +319,7 @@
 
 - (PullingRefreshTableView *)tableView{
     if (!_tableView) {
-        self.tableView = [[PullingRefreshTableView alloc] initWithFrame:CGRectMake(0, 100, kWidth, kHeight - 140) pullingDelegate:self];
+        self.tableView = [[PullingRefreshTableView alloc] initWithFrame:CGRectMake(0, 100, kWidth, kHeight - kWidth/3 - 20) pullingDelegate:self];
         self.tableView.delegate = self;
         self.tableView.dataSource = self;
         self.tableView.rowHeight = 110;

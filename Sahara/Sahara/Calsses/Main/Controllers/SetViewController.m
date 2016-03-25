@@ -45,9 +45,7 @@
         case 0:
             [self clearImage];
             break;
-            case 1:
-            [self pushMessage];
-            break;
+            
             
         default:
             break;
@@ -63,7 +61,15 @@
         tableCell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cell];
         
     }
+    if (indexPath.row == 1) {
+        UISwitch *switchPush = [[UISwitch alloc] initWithFrame:CGRectMake(kWidth * 5/6, 5, kWidth/6, 30)];
+        switchPush.on = NO;
+        [switchPush addTarget:self action:@selector(pushMessage:) forControlEvents:UIControlEventTouchUpInside];
+        [tableCell addSubview:switchPush];
+    }
+    
     tableCell.textLabel.text = self.allSetArray[indexPath.row];
+    tableCell.selectionStyle = UITableViewCellSelectionStyleNone;
     return tableCell;
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
@@ -96,8 +102,13 @@
     [alertC addAction:sure];
     [self presentViewController:alertC animated:YES completion:nil];
     }
-- (void)pushMessage{
-    
+- (void)pushMessage:(UISwitch *)pushSwitch{
+    if (pushSwitch.on) {
+        
+    }else{
+        
+        
+    }
     
 }
 

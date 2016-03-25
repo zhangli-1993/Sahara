@@ -67,11 +67,13 @@
 		7A1368661CA0E96200C401D7 /* privilege in Resources */ = {isa = PBXBuildFile; fileRef = 7A1368651CA0E96200C401D7 /* privilege */; };
 		7A1368691CA0EE9B00C401D7 /* CarPrivilegeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A1368681CA0EE9B00C401D7 /* CarPrivilegeView.m */; };
 		7A13686E1CA16AA000C401D7 /* CarConfigView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A13686D1CA16AA000C401D7 /* CarConfigView.m */; };
+		7A1767F51CA4DD9000E5FAAD /* PriceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A1767F41CA4DD9000E5FAAD /* PriceViewController.m */; };
+		7A1767F81CA4E55C00E5FAAD /* PriceModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A1767F71CA4E55C00E5FAAD /* PriceModel.m */; };
+		7A1767FB1CA4EF5300E5FAAD /* PriceWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A1767FA1CA4EF5300E5FAAD /* PriceWebViewController.m */; };
 		7A2E7AE61C984DDA0045F332 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A2E7AE51C984DDA0045F332 /* main.m */; };
 		7A2E7AE91C984DDA0045F332 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A2E7AE81C984DDA0045F332 /* AppDelegate.m */; };
 		7A2E7AEB1C984DDA0045F332 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A2E7AEA1C984DDA0045F332 /* Assets.xcassets */; };
 		7A2E7AEE1C984DDA0045F332 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A2E7AEC1C984DDA0045F332 /* LaunchScreen.storyboard */; };
-
 		7A339BB71CA1851500DCBC5D /* VideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A339BB61CA1851500DCBC5D /* VideoViewController.m */; };
 		7A59D97C1CA2290F00307189 /* UseCarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A59D97B1CA2290F00307189 /* UseCarViewController.m */; };
 		7A59D9821CA26B3900307189 /* CarWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A59D9811CA26B3900307189 /* CarWebViewController.m */; };
@@ -80,7 +82,6 @@
 		7A59D98C1CA2984300307189 /* CollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A59D98B1CA2984300307189 /* CollectionViewController.m */; };
 		7A59D98F1CA2B15B00307189 /* CollectionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A59D98E1CA2B15B00307189 /* CollectionModel.m */; };
 		7A59D9921CA2B84C00307189 /* CollectionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A59D9911CA2B84C00307189 /* CollectionTableViewCell.m */; };
-
 		7A5C17341CA299B0003C15D8 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A5C17331CA299B0003C15D8 /* MapViewController.m */; };
 		7A6591331C9D329C00EA47BE /* CompeteModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A6591321C9D329C00EA47BE /* CompeteModel.m */; };
 		7A6C0BD71C995E7C00205D61 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A6C0BD61C995E7C00205D61 /* DetailViewController.m */; };
@@ -226,6 +227,12 @@
 		7A1368681CA0EE9B00C401D7 /* CarPrivilegeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CarPrivilegeView.m; sourceTree = "<group>"; };
 		7A13686C1CA16AA000C401D7 /* CarConfigView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarConfigView.h; sourceTree = "<group>"; };
 		7A13686D1CA16AA000C401D7 /* CarConfigView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CarConfigView.m; sourceTree = "<group>"; };
+		7A1767F31CA4DD9000E5FAAD /* PriceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PriceViewController.h; sourceTree = "<group>"; };
+		7A1767F41CA4DD9000E5FAAD /* PriceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PriceViewController.m; sourceTree = "<group>"; };
+		7A1767F61CA4E55C00E5FAAD /* PriceModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PriceModel.h; path = Sahara/Calsses/Main/Controllers/PriceModel.h; sourceTree = SOURCE_ROOT; };
+		7A1767F71CA4E55C00E5FAAD /* PriceModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PriceModel.m; path = Sahara/Calsses/Main/Controllers/PriceModel.m; sourceTree = SOURCE_ROOT; };
+		7A1767F91CA4EF5300E5FAAD /* PriceWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PriceWebViewController.h; sourceTree = "<group>"; };
+		7A1767FA1CA4EF5300E5FAAD /* PriceWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PriceWebViewController.m; sourceTree = "<group>"; };
 		7A2E7AE11C984DDA0045F332 /* Sahara.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sahara.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A2E7AE51C984DDA0045F332 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7A2E7AE71C984DDA0045F332 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -233,7 +240,6 @@
 		7A2E7AEA1C984DDA0045F332 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7A2E7AED1C984DDA0045F332 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7A2E7AEF1C984DDA0045F332 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-
 		7A339BB51CA1851500DCBC5D /* VideoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoViewController.h; sourceTree = "<group>"; };
 		7A339BB61CA1851500DCBC5D /* VideoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoViewController.m; sourceTree = "<group>"; };
 		7A59D97A1CA2290F00307189 /* UseCarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UseCarViewController.h; sourceTree = "<group>"; };
@@ -249,7 +255,6 @@
 		7A59D98E1CA2B15B00307189 /* CollectionModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionModel.m; sourceTree = "<group>"; };
 		7A59D9901CA2B84C00307189 /* CollectionTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CollectionTableViewCell.h; path = Sahara/Calsses/Message/Models/CollectionTableViewCell.h; sourceTree = SOURCE_ROOT; };
 		7A59D9911CA2B84C00307189 /* CollectionTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CollectionTableViewCell.m; path = Sahara/Calsses/Message/Models/CollectionTableViewCell.m; sourceTree = SOURCE_ROOT; };
-
 		7A5C17321CA299B0003C15D8 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
 		7A5C17331CA299B0003C15D8 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 		7A6591311C9D329C00EA47BE /* CompeteModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CompeteModel.h; sourceTree = "<group>"; };
@@ -581,6 +586,10 @@
 				7A59D9811CA26B3900307189 /* CarWebViewController.m */,
 				7A59D98A1CA2984300307189 /* CollectionViewController.h */,
 				7A59D98B1CA2984300307189 /* CollectionViewController.m */,
+				7A1767F31CA4DD9000E5FAAD /* PriceViewController.h */,
+				7A1767F41CA4DD9000E5FAAD /* PriceViewController.m */,
+				7A1767F91CA4EF5300E5FAAD /* PriceWebViewController.h */,
+				7A1767FA1CA4EF5300E5FAAD /* PriceWebViewController.m */,
 				7ABB84661C9E438200621CC4 /* yue.png */,
 				7ABB84681C9E443400621CC4 /* sun.png */,
 			);
@@ -590,6 +599,8 @@
 		7AB362461C98E3F200C03E74 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				7A1767F61CA4E55C00E5FAAD /* PriceModel.h */,
+				7A1767F71CA4E55C00E5FAAD /* PriceModel.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -985,6 +996,7 @@
 				7ABB847E1C9E98B500621CC4 /* ForgotPassViewController.m in Sources */,
 				7AB3626A1C98F2B500C03E74 /* VOContentLayer.m in Sources */,
 				7AAB55B41C9AC5E70096B1C1 /* AppriseTableViewCell.m in Sources */,
+				7A1767F51CA4DD9000E5FAAD /* PriceViewController.m in Sources */,
 				7ABB846C1C9E45CE00621CC4 /* CheckViewController.m in Sources */,
 				7AB362521C98E42B00C03E74 /* FindCarViewController.m in Sources */,
 				7A6C0BD71C995E7C00205D61 /* DetailViewController.m in Sources */,
@@ -1021,10 +1033,12 @@
 				7AB362791C98F89800C03E74 /* MessageTwoTableViewCell.m in Sources */,
 				7A089ACF1C9BD83E00EF030E /* CarSumView.m in Sources */,
 				7A2E7AE61C984DDA0045F332 /* main.m in Sources */,
+				7A1767FB1CA4EF5300E5FAAD /* PriceWebViewController.m in Sources */,
 				7A0C78A31C9E2CE50048C4F3 /* ArticleModel.m in Sources */,
 				7A1368691CA0EE9B00C401D7 /* CarPrivilegeView.m in Sources */,
 				7A08A8C81C9AE37900D036E7 /* HotModel.m in Sources */,
 				7ABB84751C9E860A00621CC4 /* SetViewController.m in Sources */,
+				7A1767F81CA4E55C00E5FAAD /* PriceModel.m in Sources */,
 				7AB3625B1C98E45600C03E74 /* MessageViewController.m in Sources */,
 				7A6591331C9D329C00EA47BE /* CompeteModel.m in Sources */,
 				7A84D1AA1C98FF38006EE2F1 /* PullingRefreshTableView.m in Sources */,
@@ -1148,6 +1162,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Sahara/Librarys/libWeiboSDK",
 					"$(PROJECT_DIR)/Sahara/Librarys/SDKExport",
+					"$(PROJECT_DIR)/Sahara/Librarys/UMessage_Sdk_1.2.6",
 				);
 				OTHER_LDFLAGS = (
 					"$(inherited)",
@@ -1203,6 +1218,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Sahara/Librarys/libWeiboSDK",
 					"$(PROJECT_DIR)/Sahara/Librarys/SDKExport",
+					"$(PROJECT_DIR)/Sahara/Librarys/UMessage_Sdk_1.2.6",
 				);
 				OTHER_LDFLAGS = (
 					"$(inherited)",

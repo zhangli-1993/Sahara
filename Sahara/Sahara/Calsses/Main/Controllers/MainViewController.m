@@ -15,6 +15,7 @@
 #import "CollectionViewController.h"
 #import "SqlitDataBase.h"
 #import <BmobSDK/Bmob.h>
+#import "PriceViewController.h"
 @interface MainViewController ()<UITableViewDataSource, UITableViewDelegate>
 @property(nonatomic, strong) UITableView *tableView;
 @property(nonatomic, strong) UIButton *hitLoginBtn;
@@ -124,6 +125,12 @@
         {
             UseCarViewController *useCarVC = [[UseCarViewController alloc] init];
             [self.navigationController pushViewController:useCarVC animated:YES];
+        }
+            break;
+            case 111:
+        {
+            PriceViewController *priceVC = [[PriceViewController alloc] init];
+            [self.navigationController pushViewController:priceVC animated:YES];
         }
             break;
             

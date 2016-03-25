@@ -53,7 +53,6 @@ static sqlite3 *dataBase = nil;
 
 - (void)creatDataBaseTable{
     BmobUser *user = [BmobUser getCurrentUser];
-    NSLog(@"CREATE TABLE %@Table (number INTEGER PRIMARY KEY AUTOINCREMENT, headImage TEXT, title TEXT, cellID TEXT)", user.username);
     NSString *sql = [NSString stringWithFormat:@"CREATE TABLE t%@ (number INTEGER PRIMARY KEY AUTOINCREMENT, headImage TEXT, title TEXT, cellID TEXT)", user.username];
     
     char *err = nil;
@@ -76,7 +75,6 @@ static sqlite3 *dataBase = nil;
     BmobUser *user = [BmobUser getCurrentUser];
 
     NSString *insertSql = [NSString stringWithFormat:@"INSERT INTO t%@(headImage, title, cellID) VALUES(?,?,?)", user.username];
-    NSLog(@"INSERT INTO %@ (headImage, title, cellID) VALUES(?,?,?)", user.username);
     int reslut = sqlite3_prepare(dataBase, [insertSql UTF8String], -1, &stmt, nil);
     if (reslut == SQLITE_OK) {
         //绑定

@@ -21,6 +21,7 @@
 @property(nonatomic, strong) UIWebView *webView;
 @property(nonatomic, copy) NSString *topicID;
 @property(nonatomic, strong) UIButton *zanBtn;
+@property(nonatomic, strong) UIButton *collectBtn;
 
 @end
 
@@ -49,11 +50,28 @@
     [self.zanBtn addTarget:self action:@selector(dianZan:) forControlEvents:UIControlEventTouchUpInside];
     UIBarButtonItem *zanBar = [[UIBarButtonItem alloc] initWithCustomView:self.zanBtn];
     
-    UIButton *collectBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    collectBtn.frame = CGRectMake(kWidth/3 + kWidth/8, 0, kWidth/6, kWidth/8);
-    [collectBtn setImage:[UIImage imageNamed:@"pc_menu_03"] forState:UIControlStateNormal];
-    [collectBtn addTarget:self action:@selector(collectEassy) forControlEvents:UIControlEventTouchUpInside];
-    UIBarButtonItem *collectBar = [[UIBarButtonItem alloc] initWithCustomView:collectBtn];
+    self.collectBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    _collectBtn.frame = CGRectMake(kWidth/3 + kWidth/8, 0, kWidth/6, kWidth/8);
+    
+    SqlitDataBase *manger = [SqlitDataBase dataBaseManger];
+    NSMutableArray *array = [manger selectDataDic];
+    if(array.count == 0){
+        [_collectBtn setImage:[UIImage imageNamed:@"pc_menu_03"] forState:UIControlStateNormal];
+        self.collectBtn.tag = 11;
+    }else{
+        for (NSDictionary *dic in array) {
+            NSString *idStr = dic[@"cellID"];
+            if ([idStr isEqualToString:self.collectModel.messageID]) {
+                [self.collectBtn setImage:[UIImage imageNamed:@"pc_menu_collect_normal_ic"] forState:UIControlStateNormal];
+                self.collectBtn.tag = 10;
+            }else{
+                [_collectBtn setImage:[UIImage imageNamed:@"pc_menu_03"] forState:UIControlStateNormal];
+                self.collectBtn.tag = 11;
+            }
+        }
+    }
+    [_collectBtn addTarget:self action:@selector(collectEassy:) forControlEvents:UIControlEventTouchUpInside];
+    UIBarButtonItem *collectBar = [[UIBarButtonItem alloc] initWithCustomView:_collectBtn];
     self.navigationItem.rightBarButtonItems= @[commentBar, zanBar, collectBar];
 
     
@@ -81,7 +99,43 @@
     
 }
 
-- (void)collectEassy{
+- (void)collectEassy:(UIButton *)btn{
+    SqlitDataBase *dataBase = [SqlitDataBase dataBaseManger];
+    if (btn.tag == 10) {
+        [dataBase deleteData:self.collectModel.title];
+        [self.collectBtn setImage:[UIImage imageNamed:@"pc_menu_03"] forState:UIControlStateNormal];
+        self.collectBtn.tag = 11;
+        [ProgressHUD showSuccess:@"取消收藏"];
+    }else if (btn.tag == 11){
+        BmobUser *user = [BmobUser getCurrentUser];
+        if (user.objectId == nil) {
+            UIAlertController *alertC = [UIAlertController alertControllerWithTitle:@"提示" message:@"😊，你还没有登陆哦!" preferredStyle:UIAlertControllerStyleAlert];
+            UIAlertAction *cencel = [UIAlertAction actionWithTitle:@"不了/(ㄒoㄒ)/~~" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+                
+            }];
+            UIAlertAction *sure = [UIAlertAction actionWithTitle:@"我要登陆:-D" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+                UIStoryboard *story = [UIStoryboard storyboardWithName:@"Login" bundle:nil];
+                LoginViewController *loginVC = [story instantiateViewControllerWithIdentifier:@"LoginVC"];
+                [self.navigationController pushViewController:loginVC animated:YES];
+                
+            }];
+            [alertC addAction:cencel];
+            [alertC addAction:sure];
+            [self presentViewController:alertC animated:YES completion:nil];
+            
+        }else{
+            
+            [self.collectBtn setImage:[UIImage imageNamed:@"pc_menu_collect_normal_ic"] forState:UIControlStateNormal];
+            self.collectBtn.tag = 10;
+            [dataBase insertDataIntoDataBase:self.collectModel];
+            [ProgressHUD showSuccess:@"收藏成功"];
+            
+        }
+    }
+
+}
+
+- (void)checkLogin{
     BmobUser *user = [BmobUser getCurrentUser];
     if (user.objectId == nil) {
         UIAlertController *alertC = [UIAlertController alertControllerWithTitle:@"提示" message:@"😊，你还没有登陆哦!" preferredStyle:UIAlertControllerStyleAlert];
@@ -98,12 +152,8 @@
         [alertC addAction:sure];
         [self presentViewController:alertC animated:YES completion:nil];
         
-    }else{
-    
-    SqlitDataBase *dataBase = [SqlitDataBase dataBaseManger];
-    [dataBase insertDataIntoDataBase:self.collectModel];
-    [ProgressHUD showSuccess:@"收藏成功"];
     }
+
 }
 
 - (void)viewWillDisappear:(BOOL)animated{

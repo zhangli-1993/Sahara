@@ -54,4 +54,7 @@
 //视频分类
 #define kVideoKind @"http://mrobot.pcauto.com.cn/xsp/s/auto/info/v4.8/videoList.xsp?pageSize=20&viewCount=true"
 
+//推送
+#define kPushAppKey @"56f3a900e0f55acbec002437"
+
 #endif /* PortDefine_h */
