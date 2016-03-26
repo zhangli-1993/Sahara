@@ -26,6 +26,7 @@
 
 @property(nonatomic, strong) UITabBarController *tabBarVC;
 @property(nonatomic, strong) UINavigationController *mainNav;
+@property(nonatomic, assign) BOOL isLogin;
 
 @end
 
@@ -39,6 +40,8 @@
     [WeiboSDK registerApp:kWBAppKey];
     [WXApi registerApp:kWXAppKey];
     [Bmob registerWithAppKey:kBmobKey];
+//    [UMessage startWithAppkey:kPushAppKey launchOptions:launchOptions];
+    
     NSLog(@"%@", [NSBundle mainBundle].bundleIdentifier);
     _locationManager = [[CLLocationManager alloc] init];
     _geocoder = [[CLGeocoder alloc] init];
@@ -98,6 +101,18 @@
     self.tabBarVC.viewControllers = @[messageNav, forumNav, findNav, primeNav, _mainNav];
     self.window.rootViewController = self.tabBarVC;
     
+    //推送
+    if ([application respondsToSelector:@selector(isRegisteredForRemoteNotifications)]) {
+        //ios8
+        //创建
+        UIUserNotificationSettings *userSet = [UIUserNotificationSettings settingsForTypes:(UIUserNotificationTypeBadge | UIUserNotificationTypeAlert | UIRemoteNotificationTypeSound) categories:nil];
+        [application registerUserNotificationSettings:userSet];
+    }else{
+        //ios7
+        [application registerForRemoteNotificationTypes:(UIRemoteNotificationTypeBadge | UIRemoteNotificationTypeSound)];
+    }
+    
+    //寻找deviceToken
     
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
@@ -134,6 +149,20 @@
     return [WeiboSDK handleOpenURL:url delegate:self];
     return [WXApi handleOpenURL:url delegate:self];
 }
+
+#pragma mark -------------PushMessage
+- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken{
+
+}
+
+- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo{
+//    [UMessage didReceiveRemoteNotification:userInfo];
+    
+}
+- (void)application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *)error{
+    NSLog(@"error = %@", error);
+}
+
 - (void)onReq:(BaseReq *)req{
     
 }
@@ -151,9 +180,9 @@
         NSString *token = authorize.accessToken;
         NSString *uid = authorize.userID;
         NSDate *date = authorize.expirationDate;
-            NSLog(@"%@", token);
-            NSLog(@"%@", uid);
-            NSLog(@"%@", date);
+//            NSLog(@"%@", token);
+//            NSLog(@"%@", uid);
+//            NSLog(@"%@", date);
         NSDictionary *dict = @{@"access_token":token, @"uid":uid, @"expirationDate":date};
         AFHTTPSessionManager *httpManger = [AFHTTPSessionManager manager];
         httpManger.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", nil];
@@ -170,6 +199,7 @@
                 if (error) {
                     NSLog(@"err = %@", error);
                 }else{
+                    self.isLogin = YES;
                     MainViewController *setVC = [[MainViewController alloc] init];
                     setVC.name = title;
                     setVC.headImage = headImage;

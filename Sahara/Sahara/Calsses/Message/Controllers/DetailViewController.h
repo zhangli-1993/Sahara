@@ -7,10 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "CollectionModel.h"
 @interface DetailViewController : UIViewController
 
 @property(nonatomic, strong) NSString *detailID;
 @property(nonatomic, strong) NSString *detailURL;
+@property(nonatomic, strong) CollectionModel *collectModel;
+
 
 @end

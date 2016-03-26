@@ -71,18 +71,10 @@
         [self.delegate buttonTarget:btn];
     }
     
-        
-    
-    
-    
-    
-    
-    
+
 }
 
 - (void)setAppModel:(AppriseModel *)appModel{
-    
-    
     self.nameLabel.text = appModel.name;
     self.floorLabel.text = [NSString stringWithFormat:@"%@楼", appModel.floor];
     

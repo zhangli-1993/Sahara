@@ -11,6 +11,11 @@
 #import "HelpViewController.h"
 #import "SetViewController.h"
 #import "LoginViewController.h"
+#import "UseCarViewController.h"
+#import "CollectionViewController.h"
+#import "SqlitDataBase.h"
+#import <BmobSDK/Bmob.h>
+#import "PriceViewController.h"
 @interface MainViewController ()<UITableViewDataSource, UITableViewDelegate>
 @property(nonatomic, strong) UITableView *tableView;
 @property(nonatomic, strong) UIButton *hitLoginBtn;
@@ -37,7 +42,7 @@
     self.navigationItem.rightBarButtonItem = rightBar;
     
     [self tableViewHeadView];
-    self.allCellArray = @[@"违章查询", @"夜间模式", @"离线下载", @"帮助与反馈"];
+    self.allCellArray = @[@"违章查询", @"夜间模式", @"给我评分", @"退出登录", @"帮助与反馈",@"离线下载"];
     
 }
 
@@ -67,14 +72,14 @@
     [loginView addSubview:lineLAbel];
     
     self.titleArray = @[@"我的帖子", @"我的订阅", @"我的评论", @"我的收藏", @"我的好友"];
-    self.btnArray = @[@"帖子回复", @"我的私信", @"评论回复", @"系统消息"];
+    self.btnArray = @[@"用车宝典", @"价格导购", @"评论回复", @"系统消息"];
     
     for (int i = 0; i < 5; i++) {
         UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
         button.frame = CGRectMake(kWidth/5 * i + 10, kWidth/3, kWidth/6, kWidth/6);
         [button addTarget:self action:@selector(tableHeadButton:) forControlEvents:UIControlEventTouchUpInside];
         NSString *imageStr = [NSString stringWithFormat:@"pc_menu_%02d", i];
-        button.imageEdgeInsets = UIEdgeInsetsMake(0, 8, 20, 0);
+        button.imageEdgeInsets = UIEdgeInsetsMake(0, 15, 20, 0);
         [button setTitle:self.titleArray[i] forState:UIControlStateNormal];
         [button setTitleEdgeInsets:UIEdgeInsetsMake(30, -20, 0, 0)];
         button.titleLabel.font = [UIFont systemFontOfSize:12];
@@ -107,12 +112,31 @@
 
 //第一行
 - (void)tableHeadButton:(UIButton *)btn{
-    
+    if (btn.tag == 13) {
+        CollectionViewController *collectionVC = [[CollectionViewController alloc] init];
+        [self.navigationController pushViewController:collectionVC animated:YES];
+    }
     
 }
 //第二行
 - (void)btnArrayAction:(UIButton *)btn{
-    
+    switch (btn.tag) {
+        case 110:
+        {
+            UseCarViewController *useCarVC = [[UseCarViewController alloc] init];
+            [self.navigationController pushViewController:useCarVC animated:YES];
+        }
+            break;
+            case 111:
+        {
+            PriceViewController *priceVC = [[PriceViewController alloc] init];
+            [self.navigationController pushViewController:priceVC animated:YES];
+        }
+            break;
+            
+        default:
+            break;
+    }
 }
 
 #pragma mark --------------- UITableVIewDelegate
@@ -122,7 +146,16 @@
             //违章查询
             [self violationofTrafficRegulation];
             break;
+            case 2:
+        {
+            NSString *str = [NSString stringWithFormat:@"itms-apps://itunes.apple.com/app"];
+            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:str]];
+        }
+            break;
             case 3:
+            [self loginOut];
+            break;
+            case 4:
             //帮助
             [self helpYouToAll];
             break;
@@ -201,6 +234,26 @@
     [self.navigationController pushViewController:helpVC animated:YES];
 }
 
+- (void)loginOut{
+    
+    BmobUser *user = [BmobUser getCurrentUser];
+    if (user.objectId == nil) {
+        
+    }else{
+    UIAlertController *alertC = [UIAlertController alertControllerWithTitle:@"提示" message:@"退出当前登录？" preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *cencel = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+        
+    }];
+    UIAlertAction *sure = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        [BmobUser logout];
+        
+        
+    }];
+    [alertC addAction:cencel];
+    [alertC addAction:sure];
+    [self presentViewController:alertC animated:YES completion:nil];
+    }
+}
 #pragma mark -------------- LazyLoading
 - (UITableView *)tableView{
     if (!_tableView) {

@@ -10,6 +10,7 @@
 #import "PullingRefreshTableView.h"
 #import "AppriseTableViewCell.h"
 #import <AFNetworking/AFHTTPSessionManager.h>
+#import "Tools.h"
 @interface AppriseViewController ()<UITableViewDataSource, UITableViewDelegate, PullingRefreshTableViewDelegate, dianzanWithCommentDelegate>
 {
     NSInteger _pageCount;
@@ -185,6 +186,10 @@
 }
 - (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate{
     [self.tableView tableViewDidEndDragging:scrollView];
+}
+
+- (NSDate *)pullingTableViewRefreshingFinishedDate{
+    return [Tools getSystemNowDate];
 }
 
 #pragma mark -------------- LazyLoading

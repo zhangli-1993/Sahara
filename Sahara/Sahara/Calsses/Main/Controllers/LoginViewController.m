@@ -12,6 +12,9 @@
 #import <BmobSDK/Bmob.h>
 #import "WeiboSDK.h"
 @interface LoginViewController ()
+{
+    BOOL isLogin;
+}
 @property (weak, nonatomic) IBOutlet UITextField *userNameText;
 @property (weak, nonatomic) IBOutlet UITextField *passwordText;
 
@@ -40,7 +43,8 @@
     [BmobUser loginWithUsernameInBackground:self.userNameText.text password:self.passwordText.text block:^(BmobUser *user, NSError *error) {
         if (user) {
             [ProgressHUD showSuccess:@"登陆成功"];
-//            [self.navigationController popToRootViewControllerAnimated:YES];
+            isLogin = YES;
+            [self.navigationController popToRootViewControllerAnimated:YES];
         }else{
             UIAlertController *alertC = [UIAlertController alertControllerWithTitle:@"提示" message:@"用户名或密码不正确" preferredStyle:UIAlertControllerStyleAlert];
             UIAlertAction *alertAction = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {

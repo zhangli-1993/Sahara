@@ -10,5 +10,6 @@
 
 @interface MessageViewController : UIViewController
 
+@property(nonatomic, copy) NSString *headTitle;
 
 @end

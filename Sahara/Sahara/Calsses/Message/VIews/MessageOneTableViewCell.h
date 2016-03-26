@@ -8,8 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import "MessageModel.h"
+#import "PriceModel.h"
 @interface MessageOneTableViewCell : UITableViewCell
 
 @property(nonatomic, strong) MessageModel *messageModel;
+@property(nonatomic, strong) PriceModel *priceModel;
 
 @end

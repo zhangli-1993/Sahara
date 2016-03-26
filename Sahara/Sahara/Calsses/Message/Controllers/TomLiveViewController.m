@@ -9,6 +9,7 @@
 #import "TomLiveViewController.h"
 #import "AppriseViewController.h"
 #import <AFHTTPSessionManager.h>
+#import "ShareView.h"
 @interface TomLiveViewController ()<UIWebViewDelegate>
 
 @property(nonatomic, strong) UIWebView *webView;
@@ -38,6 +39,7 @@
     //文章正序倒叙
     
     
+    
     //标题和直播时间
     UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, kWidth/6, kWidth-20, kWidth / 9)];
     titleLabel.text = self.liveModel.title;
@@ -59,6 +61,9 @@
 
 //分享
 - (void)shareFriend{
+    ShareView *shareView = [[ShareView alloc] init];
+    [self.view addSubview:shareView];
+    
     
 }
 
@@ -97,11 +102,6 @@
         
     }
     return _webView;
-}
-
-- (void)viewDidAppear:(BOOL)animated{
-    [super viewDidAppear:animated];
-    self.tabBarController.tabBar.hidden = NO;
 }
 
 

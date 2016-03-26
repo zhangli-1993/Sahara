@@ -16,11 +16,14 @@
 #import "MessageTwoTableViewCell.h"
 #import "TomLiveViewController.h"
 #import "LiveOtherViewController.h"
-@interface MessageViewController ()<PullingRefreshTableViewDelegate, UITableViewDataSource, UITableViewDelegate, UIWebViewDelegate>
+#import "VideoViewController.h"
+#import "Tools.h"
+@interface MessageViewController ()<PullingRefreshTableViewDelegate, UITableViewDataSource, UITableViewDelegate, viewCellVideoDelegate>
 {
     NSInteger _pageCount;
     NSString *cellID;
     NSInteger index;
+    NSString *videoid;
 }
 
 @property(nonatomic, strong) VOSegmentedControl *VOsegment;
@@ -28,6 +31,10 @@
 @property(nonatomic, strong) PullingRefreshTableView *tableView;
 @property(nonatomic, assign) BOOL refresh;
 @property(nonatomic, strong) NSMutableArray *allCellArray;
+//@property(nonatomic, strong) ViedoView *viedoView;
+@property(nonatomic, strong) NSMutableArray *viedoArray;
+@property(nonatomic, strong) NSMutableArray *safetyArray;
+@property(nonatomic, copy) NSString *cellName;
 
 @end
 
@@ -49,6 +56,33 @@
     [self.view addSubview:self.VOsegment];
     [self.view addSubview:self.tableView];
     
+}
+
+- (void)getVideoID:(NSString *)videoID withName:(NSString *)name{
+    videoid = videoID;
+    self.cellName = name;
+    [self chooseRequest];
+}
+
+- (void)chooseRequest{
+    [self.tableView launchRefreshing];
+    if (index == 3) {
+        [self getVideoRequest];
+    }else{
+        [self homePagePortRequest];
+    }
+}
+
+- (void)showRequest{
+    if (self.refresh) {
+        if (self.allTitleArray.count > 0) {
+            [self.allTitleArray removeAllObjects];
+        }
+    }
+    if (index == 3) {
+         self.allTitleArray = self.viedoArray;
+    }
+    [self.tableView reloadData];
 }
 
 #pragma mark -------------- Custom Method
@@ -152,13 +186,77 @@
     }else{
     
     DetailViewController *detailVC = [[DetailViewController alloc] init];
-    MessageModel *model = self.allTitleArray[indexPath.row];
-    detailVC.detailID = model.messageID;
+        MessageModel *model = self.allTitleArray[indexPath.row];
+        detailVC.detailID = model.messageID;
         detailVC.detailURL = model.url;
-    [self.navigationController pushViewController:detailVC animated:YES];
+        detailVC.collectModel = self.allTitleArray[indexPath.row];
+        [self.navigationController pushViewController:detailVC animated:YES];
+    }
+    
+}
+
+//菜单栏
+- (void)getVideoRequest{
+    AFHTTPSessionManager *httpManger = [AFHTTPSessionManager manager];
+    httpManger.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"text/html",@"application/json", nil];
+    [httpManger GET:[NSString stringWithFormat:@"%@&cid=%@&pageNo=%lu", kVideoKind, videoid, _pageCount] parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
+        
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        NSDictionary *rootDic = responseObject;
+        NSArray *dataArray = rootDic[@"data"];
+        if (self.refresh) {
+            if (self.viedoArray.count > 0) {
+                [self.viedoArray removeAllObjects];
+            }
+        }
+        for (NSDictionary *dic in dataArray) {
+            MessageModel *model = [[MessageModel alloc] initWithDictionary:dic];
+            [self.viedoArray addObject:model];
+            
+        }
+        [self.tableView reloadData];
+        [self.tableView tableViewDidFinishedLoading];
+        self.tableView.reachedTheEnd = NO;
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        NSLog(@"%@", error);
+    }];
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
+    if (index == 3 && section == 0) {
+        return 30;
+    }else{
+        return 0;
     }
 }
 
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
+    UIView *sectionView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, kWidth, 30)];
+    sectionView.backgroundColor = [UIColor colorWithRed:230/255.0 green:230/255.0 blue:230/255.0 alpha:1.0];
+    UILabel *shiLAbel = [[UILabel alloc] initWithFrame:CGRectMake(10, 0, kWidth/4, 30)];
+    shiLAbel.text = @"视频分类";
+    shiLAbel.textColor = [UIColor grayColor];
+    
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    button.frame = CGRectMake(kWidth*3/4-10, 0, kWidth/4, 30);
+    [button addTarget:self action:@selector(videoAction:) forControlEvents:UIControlEventTouchUpInside];
+    if (self.cellName != nil) {
+        [button setTitle:_cellName forState:UIControlStateNormal];
+    }else{
+    [button setTitle:@"全部视频" forState:UIControlStateNormal];
+    }
+    [sectionView addSubview:button];
+    [sectionView addSubview:shiLAbel];
+    
+    return sectionView;
+}
+//视频分类
+- (void)videoAction:(UIButton *)btn{
+    VideoViewController *videoVC = [[VideoViewController alloc] init];
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:videoVC];
+    videoVC.delegate = self;
+    [self.navigationController presentViewController:nav animated:YES completion:nil];
+}
 
 #pragma Mark --------- PullingTableViewDelegate
 - (void)pullingTableViewDidStartLoading:(PullingRefreshTableView *)tableView{
@@ -181,6 +279,10 @@
     [self.tableView tableViewDidScroll:scrollView];
     
 }
+- (NSDate *)pullingTableViewRefreshingFinishedDate{
+    return [Tools getSystemNowDate];
+}
+
 #pragma mark -------------- LazyLoading
 - (VOSegmentedControl *)VOsegment{
     if (!_VOsegment) {
@@ -217,7 +319,7 @@
 
 - (PullingRefreshTableView *)tableView{
     if (!_tableView) {
-        self.tableView = [[PullingRefreshTableView alloc] initWithFrame:CGRectMake(0, 100, kWidth, kHeight - 140) pullingDelegate:self];
+        self.tableView = [[PullingRefreshTableView alloc] initWithFrame:CGRectMake(0, 100, kWidth, kHeight - kWidth/3 - 20) pullingDelegate:self];
         self.tableView.delegate = self;
         self.tableView.dataSource = self;
         self.tableView.rowHeight = 110;
@@ -227,12 +329,24 @@
 
 - (void)segmentCtrlValuechange:(UISegmentedControl *)segement{
     index = segement.selectedSegmentIndex;
-    cellID = self.allCellArray[index];
+        cellID = self.allCellArray[index];
 //    NSLog(@"cellid = %@", self.allCellArray[index]);
-    [self homePagePortRequest];
+    [self chooseRequest];
     
 }
 
+- (NSMutableArray *)viedoArray{
+    if (!_viedoArray) {
+        self.viedoArray = [NSMutableArray new];
+    }
+    return _viedoArray;
+}
+- (NSMutableArray *)safetyArray{
+    if (!_safetyArray) {
+        self.safetyArray = [NSMutableArray new];
+    }
+    return _safetyArray;
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
