@@ -10,16 +10,18 @@
 #import <AFNetworking/AFHTTPSessionManager.h>
 #import <SDWebImage/UIImageView+WebCache.h>
 #import "CarPriceModel.h"
+#import "AppDelegate.h"
+#import "CarDetailViewController.h"
+#import "FindCarViewController.h"
 @interface CarPriceView ()<UITableViewDataSource, UITableViewDelegate>
 @property (nonatomic, strong) UIView *spaceView;
 
 @property (nonatomic, strong) NSMutableArray *titleArray;
 @property (nonatomic, strong) UIView *headview;
-@property (nonatomic, strong) UISegmentedControl *segment;
 @property (nonatomic, strong) UIImageView *imageview;
-@property (nonatomic, strong) UILabel *name;
 @property (nonatomic, strong) UILabel *price;
 @property (nonatomic, strong) UILabel *type;
+@property (nonatomic, strong) UILabel *name;
 
 @end
 @implementation CarPriceView
@@ -36,7 +38,6 @@
 - (void)requestModel{
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     manager.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"application/json"];
-    NSLog(@"+++%@", self.idStr);
     [manager GET:[NSString stringWithFormat:@"%@bid=%@&type=1", kCarPrice, self.idStr] parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         NSDictionary *dic = responseObject;
@@ -96,7 +97,6 @@
 }
 #pragma mark----buttonAction
 - (void)pressed:(UISegmentedControl *)sender{
-    NSInteger selectIndex = sender.selectedSegmentIndex;
     [self requestModel];
 
 
@@ -152,9 +152,6 @@
 }
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
     return self.titleArray[section];
-}
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    
 }
 -(void) handlePan:(UIPanGestureRecognizer*) recognizer
 {

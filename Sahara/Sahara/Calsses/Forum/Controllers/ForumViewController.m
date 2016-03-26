@@ -456,9 +456,12 @@
             
             
         }
+
         NSLog(@"%ld",self.allTitleArray.count);
         
         
+
+       
         [self.view addSubview:self.tableView];
         [self.tableView reloadData];
        

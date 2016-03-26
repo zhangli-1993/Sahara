@@ -1,0 +1,176 @@
+{
+adMark = "";
+advantage = "\U7f24\U667a\U5b6a\U751f\U8f66\U578b\Uff0c\U914d\U7f6e\U66f4\U9ad8\Uff0c\U4ef7\U683c\U66f4\U4f4e\Uff0c\U8f66\U5185\U7a7a\U95f4\U5229\U7528\U7387\U9ad8\Uff0c\U6a2a\U8d2f\U5f0f\U5c3e\U706f\U5438\U5f15\U773c\U7403\U3002";
+bbsId = 21155;
+brand = "\U672c\U7530";
+brandId = 3;
+carField = 4;
+carVersion = 1;
+city = "\U6d1b\U9633";
+competeSerials =     {
+data =         (
+{
+hotCompeteModelId = 43005;
+hotCompeteModelName = "2016\U6b3e 1.8L CVT \U4e24\U9a71\U5148\U950b\U7248";
+hotModelId = 36010;
+hotModelName = "2015\U6b3e 1.5L LXi \U81ea\U52a8\U7ecf\U5178\U7248";
+manufacturerName = "\U5e7f\U6c7d\U672c\U7530";
+photo = "http://img.pconline.com.cn/images/upload/upc/tx/auto5/1409/28/c2/39067263_39067263_1411871361102_120x90.jpg";
+priceRange = "12.88-18.98\U4e07";
+serialGroupId = 10791;
+serialGroupName = "\U7f24\U667a";
+},
+{
+hotCompeteModelId = 42319;
+hotCompeteModelName = "2016\U6b3e 1.2T \U81ea\U52a8\U65f6\U5c1a\U7248";
+hotModelId = 36010;
+hotModelName = "2015\U6b3e 1.5L LXi \U81ea\U52a8\U7ecf\U5178\U7248";
+manufacturerName = "\U4e1c\U98ce\U65e5\U4ea7";
+photo = "http://img.pcauto.com.cn/images/upload/upc/tx/auto5/1512/01/c51/15967780_15967780_1448967111289_120x90.jpg";
+priceRange = "13.98-21.98\U4e07";
+serialGroupId = 3127;
+serialGroupName = "\U900d\U5ba2";
+},
+{
+hotCompeteModelId = 35168;
+hotCompeteModelName = "2015\U6b3e 1.6L GS \U624b\U52a8\U4e24\U9a71\U65f6\U5c1a\U578b";
+hotModelId = 36010;
+hotModelName = "2015\U6b3e 1.5L LXi \U81ea\U52a8\U7ecf\U5178\U7248";
+manufacturerName = "\U5317\U4eac\U73b0\U4ee3";
+photo = "http://img.pconline.com.cn/images/upload/upc/tx/auto5/1409/29/c3/39110294_39110294_1411957254899_120x90.jpg";
+priceRange = "11.98-18.68\U4e07";
+serialGroupId = 9917;
+serialGroupName = "\U5317\U4eac\U73b0\U4ee3ix25";
+}
+);
+total = 3;
+};
+dealerCount = 3;
+disadvatage = "\U4e2d\U63a7\U53f0\U4e3a\U5168\U5851\U6599\U6750\U8d28\Uff0c\U624b\U611f\U4e00\U822c\Uff1b\U591a\U5a92\U4f53\U7cfb\U7edf\U65e0\U5bfc\U822a\U529f\U80fd\Uff0c\U6682\U7f3a\U56db\U9a71\U7248\U672c\U3002";
+displacement = "1.5L 1.8L";
+ftcSgPhotoTotal = 2962;
+gearbox = "\U624b\U52a8 \U65e0\U7ea7\U53d8\U901f";
+isGDA = 0;
+kind = "\U5c0f\U578bSUV";
+manufacturer = "\U4e1c\U98ce\U672c\U7530";
+manufacturerId = 147;
+photo = "http://img.pcauto.com.cn/images/upload/upc/tx/auto5/1506/19/c19/8637003_8637003_1434688023222_120x90.jpg";
+photoTotal = 2962;
+"photo_400x300" = "http://img.pcauto.com.cn/images/upload/upc/tx/auto5/1506/19/c19/8637003_8637003_1434688023222_400x300.jpg";
+priceRange = "12.78~16.28\U4e07";
+saleStops =     (
+);
+saleUpcomming =     (
+);
+sales =     (
+{
+data =             (
+{
+config = "6\U6321\U624b\U52a8 \U524d\U7f6e\U524d\U9a71 \U8f66\U8eab\U7a33\U5b9a\U63a7\U5236 ";
+glassPercent = "0.0019";
+id = 36009;
+introduce = 0;
+isNews = 0;
+jqx = 950;
+minPrice = "12.5";
+paiLiang = "";
+photo = "http://img.pcauto.com.cn/images/upload/upc/tx/auto5/1506/19/c19/8637003_8637003_1434688023222_120x90.jpg";
+pl = "1.5";
+price = "12.78";
+rjBzzw = 5;
+state = "\U5728\U552e";
+status = "\U5728\U552e";
+title = "2015\U6b3e 1.5L LXi \U624b\U52a8\U7ecf\U5178\U7248";
+},
+{
+config = "CVT\U65e0\U7ea7\U53d8\U901f \U524d\U7f6e\U524d\U9a71 \U8f66\U8eab\U7a33\U5b9a\U63a7\U5236 ";
+glassPercent = "0.0019";
+id = 36010;
+introduce = 0;
+isNews = 0;
+jqx = 950;
+minPrice = "13.5";
+paiLiang = "";
+photo = "http://img.pcauto.com.cn/images/upload/upc/tx/auto5/1506/24/c41/8850644_8850644_1435140922623_120x90.jpg";
+pl = "1.5";
+price = "13.78";
+rjBzzw = 5;
+state = "\U5728\U552e";
+status = "\U5728\U552e";
+title = "2015\U6b3e 1.5L LXi \U81ea\U52a8\U7ecf\U5178\U7248";
+}
+);
+title = " 1.5L 131\U9a6c\U529b";
+},
+{
+data =             (
+{
+config = "6\U6321\U624b\U52a8 \U524d\U7f6e\U524d\U9a71 \U8f66\U8eab\U7a33\U5b9a\U63a7\U5236 \U5929\U7a97";
+glassPercent = "0.0019";
+id = 36006;
+introduce = 0;
+isNews = 0;
+jqx = 950;
+minPrice = "13.7";
+paiLiang = "";
+photo = "http://img.pcauto.com.cn/images/upload/upc/tx/auto5/1510/23/c11/14340018_14340018_1445572662619_120x90.JPG";
+pl = "1.8";
+price = "13.98";
+rjBzzw = 5;
+state = "\U5728\U552e";
+status = "\U5728\U552e";
+title = "2015\U6b3e 1.8L EXi \U624b\U52a8\U8212\U9002\U7248";
+},
+{
+config = "CVT\U65e0\U7ea7\U53d8\U901f \U524d\U7f6e\U524d\U9a71 \U8f66\U8eab\U7a33\U5b9a\U63a7\U5236 \U5929\U7a97";
+glassPercent = "0.0019";
+id = 36007;
+introduce = 0;
+isNews = 0;
+jqx = 950;
+minPrice = "14.7";
+paiLiang = "";
+photo = "http://img.pcauto.com.cn/images/upload/upc/tx/auto5/1411/26/c1/41339180_41339180_1416993348154_120x90.jpg";
+pl = "1.8";
+price = "14.98";
+rjBzzw = 5;
+state = "\U5728\U552e";
+status = "\U5728\U552e";
+title = "2015\U6b3e 1.8L EXi \U81ea\U52a8\U8212\U9002\U7248";
+},
+{
+config = "CVT\U65e0\U7ea7\U53d8\U901f \U524d\U7f6e\U524d\U9a71 \U8f66\U8eab\U7a33\U5b9a\U63a7\U5236 \U5929\U7a97";
+glassPercent = "0.0019";
+id = 36008;
+introduce = 0;
+isNews = 0;
+jqx = 950;
+minPrice = "16.0";
+paiLiang = "";
+photo = "http://img.pcauto.com.cn/images/upload/upc/tx/auto5/1506/09/c33/8214652_8214652_1433844517433_120x90.JPG";
+pl = "1.8";
+price = "16.28";
+rjBzzw = 5;
+state = "\U5728\U552e";
+status = "\U5728\U552e";
+title = "2015\U6b3e 1.8L VTi \U81ea\U52a8\U8c6a\U534e\U7248";
+}
+);
+title = " 1.8L 136\U9a6c\U529b";
+}
+);
+salesStops = 1;
+sellStatus = 3;
+serialGroupName = "\U672c\U7530XR-V";
+serialId = 11382;
+sgAverageScore = "4.25";
+shareUrl = "http://price.pcauto.com.cn/sg11382/";
+structure = SUV;
+tuanList =     (
+{
+id = 9703;
+title = "\U4e1c\U98ce\U672c\U7530\U6d1b\U9633\U5f00\U5143\U5e97 \U6b22\U4e50\U8bda\U4fe1\U8d2d\U8f66\U8282\Uff01";
+url = "http://mall.pcauto.com.cn/gct/r268/g9703/";
+}
+);
+}
