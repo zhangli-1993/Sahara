@@ -7,7 +7,8 @@
 //
 
 #import "Tools.h"
-
+#import <AFNetworking/AFHTTPSessionManager.h>
+#import "ProgressHUD.h"
 @implementation Tools
 + (NSString *)getDataFromString:(NSString *)timeTamp{
 
@@ -30,7 +31,6 @@
     
     
 }
-
 + (NSDate *)getSystemNowDate{
     NSDateFormatter *df = [[NSDateFormatter alloc] init ];
     df.dateFormat = @"yyyy-MM-dd HH:mm";
@@ -38,9 +38,6 @@
     NSDate *date = [df dateFromString:dateStr];
     return date;
 }
-
-
-
 + (CGFloat)getLableTextHeight:(NSString *)text bigestSize:(CGSize)bigestSize textFont:(CGFloat)font{
     CGFloat textHeight;
     CGRect textRect = [text boundingRectWithSize:bigestSize options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:font]} context:nil];
@@ -48,7 +45,30 @@
     return textHeight;
 }
 
++ (void)requestData{
+    NSMutableDictionary *areaDic = [NSMutableDictionary new];
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    manager.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"application/json"];
+    [manager GET:kAreaID parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        NSDictionary *dic = responseObject;
+        for (char i = 'A'; i < 'Z'; i++) {
+            NSString *str = [NSString stringWithFormat:@"%c", i];
+            NSArray *array = dic[str];
+            for (NSDictionary *dict in array) {
+                NSString *areaid = dict[@"areaId"];
+                NSString *name = dict[@"city"];
+                [areaDic setValue:areaid forKey:name];
+            }
+        }
+        NSUserDefaults *def = [NSUserDefaults standardUserDefaults];
+        [def setValue:areaDic forKey:@"cityID"];
+        [def synchronize];
+        [ProgressHUD showSuccess:@"加载完成"];
 
-
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        NSLog(@"%@", error);
+    }];
+}
 
 @end

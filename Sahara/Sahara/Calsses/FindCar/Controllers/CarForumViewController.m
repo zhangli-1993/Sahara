@@ -27,9 +27,6 @@
 #pragma mark---UIWebViewDelegate
 - (void)webViewDidFinishLoad:(UIWebView *)webView{
 //    [self.webView stringByEvaluatingJavaScriptFromString:@"document.getElementsByClassName('header_wrap cle')[0].style.display = 'NONE'"];
-    NSArray *arr = [webView subviews];
-    UIScrollView *scrollView1 = [arr objectAtIndex:0];
-    self.webView.frame = CGRectMake(0, 0, kWidth, [scrollView1 contentSize].height);
 }
 
 

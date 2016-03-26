@@ -116,8 +116,9 @@
         CLPlacemark *placeMark = [placemarks firstObject];
         [[NSUserDefaults standardUserDefaults] setValue:placeMark.addressDictionary[@"City"] forKey:@"city"];
         [userDef synchronize];
-        NSLog(@"++++error%@", error);
-        NSLog(@"++++%@", placeMark.addressDictionary);
+//        NSLog(@"111%@",placeMark.addressDictionary[@"City"]);
+//        NSLog(@"++++error%@", error);
+//        NSLog(@"++++%@", placeMark.addressDictionary);
     }];
     [_locationManager stopUpdatingLocation];
     

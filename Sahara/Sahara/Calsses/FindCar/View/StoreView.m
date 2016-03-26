@@ -9,7 +9,6 @@
 #import "StoreView.h"
 #import <AFNetworking/AFHTTPSessionManager.h>
 @interface StoreView ()<UIWebViewDelegate>
-@property (nonatomic, strong) UIWebView *webView;
 @end
 @implementation StoreView
 - (instancetype)initWithFrame:(CGRect)frame{
@@ -36,26 +35,15 @@
 
     [self addSubview:self.btn];
 }
-#pragma mark---UIWebViewDelegate
-- (void)webViewDidFinishLoad:(UIWebView *)webView{
-    NSArray *arr = [webView subviews];
-    UIScrollView *scrollView1 = [arr objectAtIndex:0];
-    self.webView.frame = CGRectMake(0, 40, kWidth, [scrollView1 contentSize].height - 100);
-}
+
 - (UIWebView *)webView{
     if (_webView == nil) {
-        self.webView = [[UIWebView alloc] initWithFrame:CGRectMake(0, 90, kWidth, kHeight - 90)];
-        self.webView.delegate = self;
+        self.webView = [[UIWebView alloc] initWithFrame:CGRectMake(0, 50, kWidth, kHeight - 50)];
         self.webView.scalesPageToFit = YES;
         self.webView.opaque = NO;
     }
     return _webView;
 }
-- (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType{
-    
-    return YES;
-}
-
 
 
 
