@@ -1,0 +1,36 @@
+
+
+//- (void)city{
+//
+//    AFHTTPSessionManager *messionmanger = [AFHTTPSessionManager manager];
+//    messionmanger.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"text/html", @"application/json", nil];
+//    [messionmanger GET:self.urlString parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
+//    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+//
+//        NSDictionary *rootDic = responseObject;
+//        NSArray *childrenArr = rootDic[@"children"];
+//        NSDictionary *item1 = childrenArr[1];
+//        NSArray *array1 = item1[@"children"];
+//        self.placeArray = [NSMutableArray new];
+//        NSMutableArray *arry3 = [NSMutableArray new];
+//        for (NSDictionary *dic in array1) {
+//            NSArray *array2 = dic[@"children"];
+//            for (NSDictionary *dict in array2) {
+//                NSArray *me = dict[@"me"];
+//                [arry3 addObject:me[1]];
+//            }
+//            [self.placeArray addObject:arry3];
+//        }
+//        /**
+//         *  127.0.0.1
+//         */
+//
+//        [self.tableView reloadData];
+//
+//    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+//        NSLog(@"%@", error);
+//    }];
+//
+//
+//
+//}

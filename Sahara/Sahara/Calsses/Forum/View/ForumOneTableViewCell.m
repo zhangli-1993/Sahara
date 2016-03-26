@@ -8,7 +8,7 @@
 
 #import "ForumOneTableViewCell.h"
 #import <SDWebImage/UIImageView+WebCache.h>
-
+#import "ForumDetailsViewController.h"
 @interface ForumOneTableViewCell ()
 
 @property (weak, nonatomic) IBOutlet UIImageView *headImage;
@@ -17,7 +17,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *titleLable;
 
 @property (weak, nonatomic) IBOutlet UILabel *fromLable;
-
 
 
 @end
@@ -33,7 +32,11 @@
 
 }
 
+- (void)setModel:(ForumModel *)model{
 
+
+
+}
 
 
 - (void)awakeFromNib {
