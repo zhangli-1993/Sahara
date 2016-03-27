@@ -12,7 +12,7 @@
 + (NSString *)getDataFromString:(NSString *)timeTamp{
 
    
-    NSDate *date2 = [[NSDate alloc] initWithTimeIntervalSinceNow:(int)timeTamp];
+    NSDate *date2 = [[NSDate alloc] initWithTimeIntervalSince1970:(int)timeTamp];
     NSTimeInterval time1 = [date2 timeIntervalSinceNow];
 
 //    NSLog(@"%f", time1);

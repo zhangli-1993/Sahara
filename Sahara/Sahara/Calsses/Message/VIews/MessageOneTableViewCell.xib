@@ -16,9 +16,9 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yDK-r8-UPX">
-                        <rect key="frame" x="111" y="8" width="253" height="49"/>
+                        <rect key="frame" x="111" y="8" width="253" height="62"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="49" id="C3e-pf-EoR"/>
+                            <constraint firstAttribute="height" constant="62" id="C3e-pf-EoR"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -53,12 +53,12 @@
                     <constraint firstItem="8yG-Tj-zAZ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="5" id="Kfq-gg-own"/>
                     <constraint firstItem="CXt-IY-bla" firstAttribute="width" secondItem="2YA-Ny-oY2" secondAttribute="width" id="RrF-UG-FrO"/>
                     <constraint firstAttribute="trailingMargin" secondItem="yDK-r8-UPX" secondAttribute="trailing" constant="10" id="VOb-JI-cEa"/>
-                    <constraint firstItem="2YA-Ny-oY2" firstAttribute="top" secondItem="yDK-r8-UPX" secondAttribute="bottom" constant="16" id="WwI-TU-uaB"/>
+                    <constraint firstItem="2YA-Ny-oY2" firstAttribute="top" secondItem="yDK-r8-UPX" secondAttribute="bottom" id="WwI-TU-uaB"/>
                     <constraint firstItem="8yG-Tj-zAZ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="10" id="ZSg-dA-pYw"/>
                     <constraint firstItem="yDK-r8-UPX" firstAttribute="top" secondItem="8yG-Tj-zAZ" secondAttribute="top" id="hnJ-hs-2UR"/>
                     <constraint firstItem="CXt-IY-bla" firstAttribute="height" secondItem="2YA-Ny-oY2" secondAttribute="height" id="jyv-iZ-aHf"/>
                     <constraint firstItem="2YA-Ny-oY2" firstAttribute="leading" secondItem="yDK-r8-UPX" secondAttribute="leading" id="sy1-kf-H4T"/>
-                    <constraint firstItem="CXt-IY-bla" firstAttribute="top" secondItem="yDK-r8-UPX" secondAttribute="bottom" constant="16" id="vh1-cR-vkO"/>
+                    <constraint firstItem="CXt-IY-bla" firstAttribute="top" secondItem="yDK-r8-UPX" secondAttribute="bottom" id="vh1-cR-vkO"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>

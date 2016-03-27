@@ -15,7 +15,7 @@
 
 @property(nonatomic, strong) UITableView *tableView;
 @property(nonatomic, strong) NSMutableArray *allCollectionArray;
-
+@property(nonatomic, strong) UILabel *label;
 
 @end
 
@@ -27,15 +27,26 @@
     [self backToPreviousPageWithImage];
     self.title = @"我的收藏";
     self.tabBarController.tabBar.hidden = YES;
-    [self.view addSubview:self.tableView];
     SqlitDataBase *collectMager = [SqlitDataBase dataBaseManger];
     self.collectionArray  = [collectMager selectDataDic];
+    
+    if (self.collectionArray.count == 0) {
+        self.label = [[UILabel alloc] initWithFrame:CGRectMake(kWidth/4, kWidth/2, kWidth/2, kWidth/3)];
+        _label.text = @"   您还没有收藏文章哦！   赶紧去点击收藏吧";
+        _label.numberOfLines = 0;
+        _label.textColor = [UIColor grayColor];
+        [self.view addSubview:self.label];
+        [self.tableView removeFromSuperview];
+    }else{
     for (NSDictionary *dic in self.collectionArray) {
         CollectionModel *model = [[CollectionModel alloc] initWithDictionary:dic];
         [self.allCollectionArray addObject:model];
+        [self.view addSubview:self.tableView];
+        [self.label removeFromSuperview];
+
     }
     
-    
+    }
 }
 
 - (void)viewWillDisappear:(BOOL)animated{

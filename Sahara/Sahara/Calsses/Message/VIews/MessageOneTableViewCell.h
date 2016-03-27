@@ -9,9 +9,11 @@
 #import <UIKit/UIKit.h>
 #import "MessageModel.h"
 #import "PriceModel.h"
+#import "RSSModel.h"
 @interface MessageOneTableViewCell : UITableViewCell
 
 @property(nonatomic, strong) MessageModel *messageModel;
 @property(nonatomic, strong) PriceModel *priceModel;
+@property(nonatomic, strong) RSSModel *rssModel;
 
 @end
