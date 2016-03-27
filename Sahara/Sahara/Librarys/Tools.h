@@ -16,6 +16,6 @@
 + (NSDate *)getSystemNowDate;
 #pragma ---根据文字最大显示宽高计算高度
 + (CGFloat)getLableTextHeight:(NSString *)text bigestSize:(CGSize)bigestSize textFont:(CGFloat)font;
-
-
+//获取areaID
++ (void)requestData;
 @end

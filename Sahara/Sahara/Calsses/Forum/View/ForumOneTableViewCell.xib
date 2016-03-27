@@ -15,7 +15,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="  车友" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KVS-Y1-Z04">
-                        <rect key="frame" x="0.0" y="192" width="376" height="23"/>
+                        <rect key="frame" x="0.0" y="192" width="350" height="23"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -25,7 +25,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="376" height="133"/>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="  标签" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ght-Nl-REv">
-                        <rect key="frame" x="0.0" y="141" width="376" height="35"/>
+                        <rect key="frame" x="0.0" y="141" width="350" height="35"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -38,7 +38,7 @@
                 <outlet property="headImage" destination="Jjf-3t-fWL" id="7hD-Tu-lfj"/>
                 <outlet property="titleLable" destination="ght-Nl-REv" id="XCa-3j-zWY"/>
             </connections>
-            <point key="canvasLocation" x="495" y="495.5"/>
+            <point key="canvasLocation" x="494.5" y="495"/>
         </tableViewCell>
     </objects>
 </document>

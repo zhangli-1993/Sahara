@@ -331,6 +331,10 @@
     index = segement.selectedSegmentIndex;
         cellID = self.allCellArray[index];
 //    NSLog(@"cellid = %@", self.allCellArray[index]);
+
+       [self homePagePortRequest];
+    
+
     [self chooseRequest];
     
 }

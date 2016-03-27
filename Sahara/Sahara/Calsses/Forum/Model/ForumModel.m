@@ -14,23 +14,23 @@
 - (void)setValue:(id)value forUndefinedKey:(NSString *)key{
     
     
+    
+    
 }
 
 
+- (instancetype)initWithDictionary:(NSDictionary *)dict{
 
-//
-//- (instancetype)initWithDictionary:(NSDictionary *)dict{
-//
-//
-//    self = [super init];
-//    if (self) {
-//        self.pic = dict[@"pic"];
-//        self.title = dict[@"title"];
-//        self.summary = dict[@"summary"];
-//    }
-//
-//    return self;
-//}
+
+    self = [super init];
+    if (self) {
+        self.item1 = dict[@"item1"];
+        
+        
+    }
+
+    return self;
+}
 
 
 //- (instancetype)initWithArray:(NSArray *)array{
