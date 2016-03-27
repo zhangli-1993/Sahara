@@ -59,6 +59,11 @@
     
 }
 
+- (void)viewWillDisappear:(BOOL)animated{
+    [super viewWillDisappear:animated];
+    self.tabBarController.tabBar.hidden = NO;
+}
+
 //分享
 - (void)shareFriend{
     ShareView *shareView = [[ShareView alloc] init];

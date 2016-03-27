@@ -16,6 +16,7 @@
 #import "SqlitDataBase.h"
 #import <BmobSDK/Bmob.h>
 #import "PriceViewController.h"
+#import "RSSViewController.h"
 @interface MainViewController ()<UITableViewDataSource, UITableViewDelegate>
 @property(nonatomic, strong) UITableView *tableView;
 @property(nonatomic, strong) UIButton *hitLoginBtn;
@@ -53,6 +54,8 @@
     [self.navigationController pushViewController:setVC animated:YES];
 
 }
+
+
 
 - (void)tableViewHeadView{
     UIView *headView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, kWidth, kWidth*3/4)];
@@ -115,6 +118,9 @@
     if (btn.tag == 13) {
         CollectionViewController *collectionVC = [[CollectionViewController alloc] init];
         [self.navigationController pushViewController:collectionVC animated:YES];
+    }else if (btn.tag == 11){
+        RSSViewController *rssVC = [[RSSViewController alloc] init];
+        [self.navigationController pushViewController:rssVC animated:YES];
     }
     
 }
@@ -291,10 +297,6 @@
         
     }
     return _titleLabel;
-}
-- (void)viewWillAppear:(BOOL)animated{
-    [super viewWillAppear:animated];
-    [self.navigationItem setHidesBackButton:YES];
 }
 
 //登录

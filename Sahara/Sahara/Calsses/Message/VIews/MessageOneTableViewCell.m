@@ -8,6 +8,7 @@
 
 #import "MessageOneTableViewCell.h"
 #import <SDWebImage/UIImageView+WebCache.h>
+#import "Tools.h"
 @interface MessageOneTableViewCell ()
 @property (weak, nonatomic) IBOutlet UIImageView *headImage;
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
@@ -40,6 +41,15 @@
     self.timeLabel.text = [NSString stringWithFormat:@"%@", priceModel.pubDate];
     self.appriseLabel.text = [NSString stringWithFormat:@"%@评论", priceModel.count];
 }
+
+- (void)setRssModel:(RSSModel *)rssModel{
+    [self.headImage setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"bendi"]]];
+    [self.headImage sd_setImageWithURL:[NSURL URLWithString:rssModel.headImage] placeholderImage:nil];
+    self.titleLabel.text = rssModel.carTitle;
+    self.timeLabel.text = [NSString stringWithFormat:@"%@", [Tools getDataFromString:rssModel.date]];
+    self.appriseLabel.text = rssModel.carName;
+}
+
 
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
