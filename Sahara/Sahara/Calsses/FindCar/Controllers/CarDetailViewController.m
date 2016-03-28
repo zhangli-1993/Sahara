@@ -8,8 +8,6 @@
 
 #import "CarDetailViewController.h"
 #import "ShareView.h"
-#import "WeiboSDK.h"
-#import "AppDelegate.h"
 #import "VOSegmentedControl.h"
 #import "CarSumView.h"
 #import "ActicleView.h"
@@ -26,7 +24,11 @@
 #import "CarSumModel.h"
 #import "CompeteModel.h"
 #import "MapViewController.h"
-@interface CarDetailViewController ()<WBHttpRequestDelegate, UITableViewDelegate>
+#import "StoreDetailViewController.h"
+#import "MapViewController.h"
+#import "Tools.h"
+@interface CarDetailViewController ()<UITableViewDelegate, UIWebViewDelegate>
+
 
 @property (nonatomic, strong) ShareView *shareView;
 @property (nonatomic, strong) VOSegmentedControl *segment;
@@ -38,6 +40,7 @@
 @property (nonatomic, strong) StoreView *storeView;
 @property (nonatomic, strong) CarPrivilegeView *privilegeView;
 @property (nonatomic, strong) CarConfigView *configView;
+@property (nonatomic, strong) NSMutableDictionary *AreaDic;
 @end
 
 @implementation CarDetailViewController
@@ -54,13 +57,11 @@
     UIBarButtonItem *right = [[UIBarButtonItem alloc] initWithCustomView:shareBtn];
     self.navigationItem.rightBarButtonItem = right;
     [self.view addSubview:self.segment];
-//    [self segmentValueChange:self.segment];
-//    [self addOneView];
+    [self addOneView];
+    [Tools requestData];
 
+    
 }
-
-
-
 - (void)shareAction{
     self.shareView = [[ShareView alloc] init];
 }
@@ -122,7 +123,7 @@
     [self.privilegeView removeFromSuperview];
     [self.storeView removeFromSuperview];
     [self.configView removeFromSuperview];
-    self.carView = [[CarSumView alloc] initWithFrame:CGRectMake(0, 55, kWidth, kHeight - 55)];
+    self.carView = [[CarSumView alloc] initWithFrame:CGRectMake(0, 104, kWidth, kHeight - 104)];
     self.carView.idStr = self.artID;
     [self.carView requestModel];
     self.carView.tableView.delegate = self;
@@ -136,7 +137,7 @@
     [self.privilegeView removeFromSuperview];
     [self.storeView removeFromSuperview];
     [self.carView removeFromSuperview];
-    self.configView = [[CarConfigView alloc] initWithFrame:CGRectMake(0, 50, kWidth, kHeight+ 50)];
+    self.configView = [[CarConfigView alloc] initWithFrame:CGRectMake(0, 104, kWidth, kHeight- 104)];
     self.configView.idStr = self.artID;
     [self.configView requestModel];
     [self.view addSubview:self.configView];
@@ -150,7 +151,7 @@
     [self.carView removeFromSuperview];
     [self.configView removeFromSuperview];
     
-    self.carImage = [[CarImageView alloc] initWithFrame:CGRectMake(0, 50, kWidth, kHeight+ 50)];
+    self.carImage = [[CarImageView alloc] initWithFrame:CGRectMake(0, 104, kWidth, kHeight - 104)];
     self.carImage.idStr = self.artID;
     [self.carImage requestModel];
     [self.view addSubview:self.carImage];
@@ -164,7 +165,7 @@
     [self.carView removeFromSuperview];
     [self.configView removeFromSuperview];
     
-    self.privilegeView = [[CarPrivilegeView alloc] initWithFrame:CGRectMake(0, 54, kWidth, kHeight+ 54)];
+    self.privilegeView = [[CarPrivilegeView alloc] initWithFrame:CGRectMake(0, 104, kWidth, kHeight- 104)];
     self.privilegeView.idStr = self.artID;
     [self.privilegeView requestModel];
     [self.view addSubview:self.privilegeView];
@@ -192,7 +193,7 @@
     [self.storeView removeFromSuperview];
     [self.carView removeFromSuperview];
     [self.configView removeFromSuperview];
-    self.carForum = [[CarForum alloc]initWithFrame:CGRectMake(0, 55, kWidth, kHeight - 55)];
+    self.carForum = [[CarForum alloc]initWithFrame:CGRectMake(0, 104, kWidth, kHeight - 104)];
     self.carForum.idStr = self.artID;
     [self.carForum requestModel];
     self.carForum.tableView.delegate = self;
@@ -207,7 +208,7 @@
     [self.carView removeFromSuperview];
     [self.configView removeFromSuperview];
     
-    self.act = [[ActicleView alloc] initWithFrame:CGRectMake(0, 52, kWidth, kHeight - 52)];
+    self.act = [[ActicleView alloc] initWithFrame:CGRectMake(0, 104, kWidth, kHeight - 104)];
     self.act.idStr = self.artID;
     self.act.tableView.delegate = self;
     [self.act requestModel];
@@ -223,6 +224,7 @@
     [self.configView removeFromSuperview];
     self.storeView = [[StoreView alloc] initWithFrame:CGRectMake(0, 104, kWidth, kHeight - 104)];
     self.storeView.idStr = self.artID;
+    self.storeView.webView.delegate = self;
     [self.storeView requestModel];
     [self.storeView.btn addTarget:self action:@selector(showMap) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:self.storeView];
@@ -242,16 +244,7 @@
         cVC.htmlStr = model.html;
         [self.navigationController pushViewController:cVC animated:YES];
     }
-//    if (tableView == self.carView.tableView) {
-//        if (indexPath.section == 0) {
-//            
-//        }
-//        if (indexPath.section == 1) {
-//            CompeteModel *model = self.carView.competeArray[indexPath.row];
-//            self.artID = model.idStr;
-//            [self.view reloadInputViews];
-//        }
-//    }
+
 }
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
     UIView *headview = [[UIView alloc] initWithFrame:CGRectMake(0, 0, kWidth, 40)];
@@ -283,21 +276,6 @@
 }
 - (void)segmentindexChange:(UISegmentedControl *)seg{
     [self.carView.tableView reloadData];
-//    switch (seg.selectedSegmentIndex) {
-//        case 0:
-//        {
-//            [self.tableView reloadData];
-//        }
-//            break;
-//        case 1:
-//        {
-//            [self.tableView reloadData];
-//        }
-//            break;
-//            
-//        default:
-//            break;
-//    }
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
@@ -316,6 +294,9 @@
             return 80.0;
         }
     }
+    if (tableView == self.act.tableView) {
+        return 60.0;
+    }
     if (tableView == self.carForum.tableView) {
         if (self.carForum.imageArray.count == 0) {
             return 80 + self.carForum.titleH;
@@ -323,9 +304,62 @@
     }
     return 140 + self.carForum.titleH;
 }
-#pragma mark---WBHttpRequestDelegate
-- (void)request:(WBHttpRequest *)request didFinishLoadingWithResult:(NSString *)result{
-    
+- (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType{
+    if (webView == self.storeView.webView) {
+        if (navigationType == UIWebViewNavigationTypeLinkClicked) {
+            NSString *requestString = [[request URL] absoluteString];
+            NSLog(@"===%@", requestString);
+            NSArray *array1 = [requestString componentsSeparatedByString:@"/"];
+            NSString *str = array1[2];
+            if ([str isEqualToString:@"agents-detail"]) {
+                NSArray *array = [requestString componentsSeparatedByString:@"?"];
+                NSString *idStr = array.lastObject;
+                StoreDetailViewController *sVC = [[StoreDetailViewController alloc] init];
+                sVC.idStr = idStr;
+                [self.navigationController pushViewController:sVC animated:YES];
+            }
+            if ([str isEqualToString:@"abc-map"]) {
+                NSArray *array = [requestString componentsSeparatedByString:@"="];
+                NSString *nameStr = array.lastObject;
+                NSString *name = [nameStr stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+                NSString *str1 = array[1];
+                NSString *str2 = array[2];
+                NSArray *array1 = [str1 componentsSeparatedByString:@"&"];
+                NSArray *array2 = [str2 componentsSeparatedByString:@"&"];
+                NSString *jing = array1.firstObject;
+                NSString *wei = array2.firstObject;
+                NSLog(@"%@. %@", wei, jing);
+                MapViewController *mapVC = [[MapViewController alloc] init];
+                mapVC.lat = wei;
+                mapVC.lng = jing;
+                mapVC.name = name;
+                [self.navigationController pushViewController:mapVC animated:YES];
+            }
+            if ([str isEqualToString:@"webview_tel"]) {
+                NSArray *array = [requestString componentsSeparatedByString:@"/"];
+                NSString *str1 = array.lastObject;
+                NSArray *arr = [str1 componentsSeparatedByString:@","];
+                NSString *str2 = arr.firstObject;
+                NSLog(@"%@", str2);
+                NSMutableString * str=[[NSMutableString alloc] initWithFormat:@"tel:%@",str2];
+                UIWebView * callWebview = [[UIWebView alloc] init];
+                [callWebview loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:str]]];
+            }
+            if ([str isEqualToString:@"auto-ask-price"]) {
+                NSUserDefaults *user = [NSUserDefaults standardUserDefaults];
+                NSLog(@"%@", self.AreaDic);
+                NSString *city = [user valueForKey:@"city"];
+                NSArray *arr = [city componentsSeparatedByString:@"市"];
+                self.AreaDic = [user valueForKey:@"cityID"];
+                NSLog(@"%@", self.AreaDic);
+//                NSString *areaID = [self.AreaDic valueForKey:arr.firstObject];
+                NSString *areaID = [self.AreaDic valueForKey:@"洛阳"];
+                NSString *cityUTF = [arr.firstObject stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+                NSLog(@"++%@, %@, %@", areaID, arr.firstObject, cityUTF);
+            }
+        }
+    }
+    return YES;
 }
 - (VOSegmentedControl *)segment{
     if (_segment == nil) {
@@ -342,6 +376,12 @@
         [self.segment addTarget:self action:@selector(segmentValueChange:) forControlEvents:UIControlEventValueChanged];
     }
     return _segment;
+}
+- (NSMutableDictionary *)AreaDic{
+    if (_AreaDic == nil) {
+        self.AreaDic = [NSMutableDictionary new];
+    }
+    return _AreaDic;
 }
 
 - (void)didReceiveMemoryWarning {

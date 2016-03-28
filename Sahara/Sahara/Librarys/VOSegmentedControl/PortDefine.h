@@ -31,6 +31,8 @@
 #define kCarImage @"http://mrobot.pcauto.com.cn/v2/price/nav_picturesv47?serialGroupId="
 #define kStore @"http://mrobot.pcauto.com.cn/v3/price/dealersSerialv45?serialId="
 #define kPrivilege @"http://mrobot.pcauto.com.cn/v3/price/promotionList?areaId=268&pageNo=1&pageSize=20&orderBy=discountRange&serialId="
+#define kStoreDetail @"http://mrobot.pcauto.com.cn/v3/price/dealersDetailv45?"
+#define kAreaID @"http://mrobot.pcauto.com.cn/v2/cms/area_tree?order=alpha"
 
 //首页cell
 #define kHomePagePort @"http://mrobot.pcauto.com.cn/v2/cms/channels/"

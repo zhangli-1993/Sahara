@@ -23,7 +23,6 @@
         self.carTitle = dict[@"title"];
         self.carRSSid = dict[@"id"];
         self.data2 = dict[@"date2"];
-        self.date = dict[@"date"];
     }
     return self;
 }

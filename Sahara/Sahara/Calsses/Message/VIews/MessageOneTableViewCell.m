@@ -8,7 +8,6 @@
 
 #import "MessageOneTableViewCell.h"
 #import <SDWebImage/UIImageView+WebCache.h>
-#import "Tools.h"
 @interface MessageOneTableViewCell ()
 @property (weak, nonatomic) IBOutlet UIImageView *headImage;
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
@@ -46,10 +45,12 @@
     [self.headImage setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"bendi"]]];
     [self.headImage sd_setImageWithURL:[NSURL URLWithString:rssModel.headImage] placeholderImage:nil];
     self.titleLabel.text = rssModel.carTitle;
+
     self.timeLabel.text = @"优惠";
     self.appriseLabel.text = rssModel.carName;
     self.timeLabel.textColor = [UIColor redColor];
     self.timeLabel.textAlignment = NSTextAlignmentCenter;
+
 }
 
 

@@ -30,9 +30,9 @@
 }
 #pragma mark---UIWebViewDelegate
 - (void)webViewDidFinishLoad:(UIWebView *)webView{
-    NSArray *arr = [webView subviews];
-    UIScrollView *scrollView1 = [arr objectAtIndex:0];
-    self.webView.frame = CGRectMake(0, 0, kWidth, [scrollView1 contentSize].height);
+//    NSArray *arr = [webView subviews];
+//    UIScrollView *scrollView1 = [arr objectAtIndex:0];
+//    self.webView.frame = CGRectMake(0, 0, kWidth, [scrollView1 contentSize].height);
 }
 
 
@@ -40,7 +40,7 @@
 
 - (UIWebView *)webView{
     if (_webView == nil) {
-        self.webView = [[UIWebView alloc] initWithFrame:self.view.frame];
+        self.webView = [[UIWebView alloc] initWithFrame:CGRectMake(0, 0, kWidth, kHeight)];
         self.webView.delegate = self;
         self.webView.scalesPageToFit = YES;
         self.webView.opaque = NO;

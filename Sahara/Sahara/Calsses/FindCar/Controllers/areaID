@@ -1,0 +1,2902 @@
+{
+A =     (
+{
+areaId = 1021;
+city = "\U963f\U575d";
+cityIp = "\U963f\U575d\U5e02";
+countId = 5401;
+pro = "\U56db\U5ddd";
+provinceId = 12;
+},
+{
+areaId = 527;
+city = "\U963f\U514b\U82cf";
+cityIp = "\U963f\U514b\U82cf\U5e02";
+countId = 5401;
+pro = "\U65b0\U7586";
+provinceId = 17;
+},
+{
+areaId = 1030;
+city = "\U963f\U62c9\U5c14\U5e02";
+cityIp = "\U963f\U62c9\U5c14\U5e02\U5e02";
+countId = 5401;
+pro = "\U65b0\U7586";
+provinceId = 17;
+},
+{
+areaId = 1010;
+city = "\U963f\U62c9\U5584\U76df";
+cityIp = "\U963f\U62c9\U5584\U76df\U5e02";
+countId = 5401;
+pro = "\U5185\U8499\U53e4";
+provinceId = 27;
+},
+{
+areaId = 795;
+city = "\U963f\U52d2\U6cf0";
+cityIp = "\U963f\U52d2\U6cf0\U5e02";
+countId = 5401;
+pro = "\U65b0\U7586";
+provinceId = 17;
+},
+{
+areaId = 323;
+city = "\U978d\U5c71";
+cityIp = "\U978d\U5c71\U5e02";
+countId = 5401;
+pro = "\U8fbd\U5b81";
+provinceId = 2;
+},
+{
+areaId = 743;
+city = "\U5b89\U5eb7";
+cityIp = "\U5b89\U5eb7\U5e02";
+countId = 5401;
+pro = "\U9655\U897f";
+provinceId = 8;
+},
+{
+areaId = 493;
+city = "\U5b89\U5e86";
+cityIp = "\U5b89\U5e86\U5e02";
+countId = 5401;
+pro = "\U5b89\U5fbd";
+provinceId = 28;
+},
+{
+areaId = 663;
+city = "\U5b89\U987a";
+cityIp = "\U5b89\U987a\U5e02";
+countId = 5401;
+pro = "\U8d35\U5dde";
+provinceId = 26;
+},
+{
+areaId = 369;
+city = "\U5b89\U9633";
+cityIp = "\U5b89\U9633\U5e02";
+countId = 5401;
+pro = "\U6cb3\U5357";
+provinceId = 22;
+}
+);
+B =     (
+{
+areaId = 555;
+city = "\U5df4\U5f66\U6dd6\U5c14";
+cityIp = "\U5df4\U5f66\U6dd6\U5c14\U5e02";
+countId = 5401;
+pro = "\U5185\U8499\U53e4";
+provinceId = 27;
+},
+{
+areaId = 583;
+city = "\U5df4\U4e2d";
+cityIp = "\U5df4\U4e2d\U5e02";
+countId = 5401;
+pro = "\U56db\U5ddd";
+provinceId = 12;
+},
+{
+areaId = 539;
+city = "\U5df4\U5dde";
+cityIp = "\U5df4\U5dde\U5e02";
+countId = 5401;
+pro = "";
+provinceId = "";
+},
+{
+areaId = 337;
+city = "\U767d\U57ce";
+cityIp = "\U767d\U57ce\U5e02";
+countId = 5401;
+pro = "\U5409\U6797";
+provinceId = 24;
+},
+{
+areaId = 573;
+city = "\U767d\U5c71";
+cityIp = "\U767d\U5c71\U5e02";
+countId = 5401;
+pro = "\U5409\U6797";
+provinceId = 24;
+},
+{
+areaId = 586;
+city = "\U767d\U94f6";
+cityIp = "\U767d\U94f6\U5e02";
+countId = 5401;
+pro = "\U7518\U8083";
+provinceId = 25;
+},
+{
+areaId = 545;
+city = "\U767e\U8272";
+cityIp = "\U767e\U8272\U5e02";
+countId = 5401;
+pro = "\U5e7f\U897f";
+provinceId = 23;
+},
+{
+areaId = 491;
+city = "\U868c\U57e0";
+cityIp = "\U868c\U57e0\U5e02";
+countId = 5401;
+pro = "\U5b89\U5fbd";
+provinceId = 28;
+},
+{
+areaId = 482;
+city = "\U5305\U5934";
+cityIp = "\U5305\U5934\U5e02";
+countId = 5401;
+pro = "\U5185\U8499\U53e4";
+provinceId = 27;
+},
+{
+areaId = 277;
+city = "\U4fdd\U5b9a";
+cityIp = "\U4fdd\U5b9a\U5e02";
+countId = 5401;
+pro = "\U6cb3\U5317";
+provinceId = 11;
+},
+{
+areaId = 729;
+city = "\U4fdd\U5c71";
+cityIp = "\U4fdd\U5c71\U5e02";
+countId = 5401;
+pro = "\U4e91\U5357";
+provinceId = 9;
+},
+{
+areaId = 364;
+city = "\U5b9d\U9e21";
+cityIp = "\U5b9d\U9e21\U5e02";
+countId = 5401;
+pro = "\U9655\U897f";
+provinceId = 8;
+},
+{
+areaId = 564;
+city = "\U5317\U6d77";
+cityIp = "\U5317\U6d77\U5e02";
+countId = 5401;
+pro = "\U5e7f\U897f";
+provinceId = 23;
+},
+{
+areaId = 2;
+city = "\U5317\U4eac";
+cityIp = "\U5317\U4eac\U5e02";
+countId = 5401;
+pro = "\U5317\U4eac\U5e02";
+provinceId = 6;
+},
+{
+areaId = 1033;
+city = "\U5317\U5c6f\U5e02";
+cityIp = "\U5317\U5c6f\U5e02\U5e02";
+countId = 5401;
+pro = "\U65b0\U7586";
+provinceId = 17;
+},
+{
+areaId = 346;
+city = "\U672c\U6eaa";
+cityIp = "\U672c\U6eaa\U5e02";
+countId = 5401;
+pro = "\U8fbd\U5b81";
+provinceId = 2;
+},
+{
+areaId = 664;
+city = "\U6bd5\U8282";
+cityIp = "\U6bd5\U8282\U5e02";
+countId = 5401;
+pro = "\U8d35\U5dde";
+provinceId = 26;
+},
+{
+areaId = 358;
+city = "\U6ee8\U5dde";
+cityIp = "\U6ee8\U5dde\U5e02";
+countId = 5401;
+pro = "\U5c71\U4e1c";
+provinceId = 13;
+},
+{
+areaId = 656;
+city = "\U535a\U5c14\U5854\U62c9";
+cityIp = "\U535a\U5c14\U5854\U62c9\U5e02";
+countId = 5401;
+pro = "\U65b0\U7586";
+provinceId = 17;
+},
+{
+areaId = 542;
+city = "\U4eb3\U5dde";
+cityIp = "\U4eb3\U5dde\U5e02";
+countId = 5401;
+pro = "\U5b89\U5fbd";
+provinceId = 28;
+}
+);
+C =     (
+{
+areaId = 351;
+city = "\U6ca7\U5dde";
+cityIp = "\U6ca7\U5dde\U5e02";
+countId = 5401;
+pro = "\U6cb3\U5317";
+provinceId = 11;
+},
+{
+areaId = 1023;
+city = "\U660c\U90fd\U5730\U533a";
+cityIp = "\U660c\U90fd\U5730\U533a\U5e02";
+countId = 5401;
+pro = "\U897f\U85cf";
+provinceId = 29;
+},
+{
+areaId = 529;
+city = "\U660c\U5409";
+cityIp = "\U660c\U5409\U5e02";
+countId = 5401;
+pro = "\U65b0\U7586";
+provinceId = 17;
+},
+{
+areaId = 432;
+city = "\U5e38\U5fb7";
+cityIp = "\U5e38\U5fb7\U5e02";
+countId = 5401;
+pro = "\U6e56\U5357";
+provinceId = 10;
+},
+{
+areaId = 309;
+city = "\U5e38\U5dde";
+cityIp = "\U5e38\U5dde\U5e02";
+countId = 5401;
+pro = "\U6c5f\U82cf";
+provinceId = 1;
+},
+{
+areaId = 227;
+city = "\U957f\U6625";
+cityIp = "\U957f\U6625\U5e02";
+countId = 5401;
+pro = "\U5409\U6797";
+provinceId = 24;
+},
+{
+areaId = 117;
+city = "\U957f\U6c99";
+cityIp = "\U957f\U6c99\U5e02";
+countId = 5401;
+pro = "\U6e56\U5357";
+provinceId = 10;
+},
+{
+areaId = 473;
+city = "\U957f\U6cbb";
+cityIp = "\U957f\U6cbb\U5e02";
+countId = 5401;
+pro = "\U5c71\U897f";
+provinceId = 21;
+},
+{
+areaId = 344;
+city = "\U671d\U9633";
+cityIp = "\U671d\U9633\U5e02";
+countId = 5401;
+pro = "\U8fbd\U5b81";
+provinceId = 2;
+},
+{
+areaId = 290;
+city = "\U6f6e\U5dde";
+cityIp = "\U6f6e\U5dde\U5e02";
+countId = 5401;
+pro = "\U5e7f\U4e1c";
+provinceId = 5;
+},
+{
+areaId = 431;
+city = "\U90f4\U5dde";
+cityIp = "\U90f4\U5dde\U5e02";
+countId = 5401;
+pro = "\U6e56\U5357";
+provinceId = 10;
+},
+{
+areaId = 87;
+city = "\U6210\U90fd";
+cityIp = "\U6210\U90fd\U5e02";
+countId = 5401;
+pro = "\U56db\U5ddd";
+provinceId = 12;
+},
+{
+areaId = 354;
+city = "\U627f\U5fb7";
+cityIp = "\U627f\U5fb7\U5e02";
+countId = 5401;
+pro = "\U6cb3\U5317";
+provinceId = 11;
+},
+{
+areaId = 749;
+city = "\U6c60\U5dde";
+cityIp = "\U6c60\U5dde\U5e02";
+countId = 5401;
+pro = "\U5b89\U5fbd";
+provinceId = 28;
+},
+{
+areaId = 536;
+city = "\U8d64\U5cf0";
+cityIp = "\U8d64\U5cf0\U5e02";
+countId = 5401;
+pro = "\U5185\U8499\U53e4";
+provinceId = 27;
+},
+{
+areaId = 669;
+city = "\U5d07\U5de6";
+cityIp = "\U5d07\U5de6\U5e02";
+countId = 5401;
+pro = "\U5e7f\U897f";
+provinceId = 23;
+},
+{
+areaId = 495;
+city = "\U6ec1\U5dde";
+cityIp = "\U6ec1\U5dde\U5e02";
+countId = 5401;
+pro = "\U5b89\U5fbd";
+provinceId = 28;
+},
+{
+areaId = 758;
+city = "\U695a\U96c4";
+cityIp = "\U695a\U96c4\U5e02";
+countId = 5401;
+pro = "\U4e91\U5357";
+provinceId = 9;
+},
+{
+areaId = 77;
+city = "\U91cd\U5e86";
+cityIp = "\U91cd\U5e86\U5e02";
+countId = 5401;
+pro = "\U91cd\U5e86\U5e02";
+provinceId = 14;
+}
+);
+D =     (
+{
+areaId = 514;
+city = "\U8fbe\U5dde";
+cityIp = "\U8fbe\U5dde\U5e02";
+countId = 5401;
+pro = "\U56db\U5ddd";
+provinceId = 12;
+},
+{
+areaId = 455;
+city = "\U5927\U7406";
+cityIp = "\U5927\U7406\U5e02";
+countId = 5401;
+pro = "\U4e91\U5357";
+provinceId = 9;
+},
+{
+areaId = 248;
+city = "\U5927\U8fde";
+cityIp = "\U5927\U8fde\U5e02";
+countId = 5401;
+pro = "\U8fbd\U5b81";
+provinceId = 2;
+},
+{
+areaId = 330;
+city = "\U5927\U5e86";
+cityIp = "\U5927\U5e86\U5e02";
+countId = 5401;
+pro = "\U9ed1\U9f99\U6c5f";
+provinceId = 15;
+},
+{
+areaId = 326;
+city = "\U5927\U540c";
+cityIp = "\U5927\U540c\U5e02";
+countId = 5401;
+pro = "\U5c71\U897f";
+provinceId = 21;
+},
+{
+areaId = 976;
+city = "\U5927\U5174\U5b89\U5cad";
+cityIp = "\U5927\U5174\U5b89\U5cad\U5e02";
+countId = 5401;
+pro = "\U9ed1\U9f99\U6c5f";
+provinceId = 15;
+},
+{
+areaId = 342;
+city = "\U4e39\U4e1c";
+cityIp = "\U4e39\U4e1c\U5e02";
+countId = 5401;
+pro = "\U8fbd\U5b81";
+provinceId = 2;
+},
+{
+areaId = 861;
+city = "\U5fb7\U5b8f";
+cityIp = "\U5fb7\U5b8f\U5e02";
+countId = 5401;
+pro = "\U4e91\U5357";
+provinceId = 9;
+},
+{
+areaId = 423;
+city = "\U5fb7\U9633";
+cityIp = "\U5fb7\U9633\U5e02";
+countId = 5401;
+pro = "\U56db\U5ddd";
+provinceId = 12;
+},
+{
+areaId = 311;
+city = "\U5fb7\U5dde";
+cityIp = "\U5fb7\U5dde\U5e02";
+countId = 5401;
+pro = "\U5c71\U4e1c";
+provinceId = 13;
+},
+{
+areaId = 860;
+city = "\U8fea\U5e86";
+cityIp = "\U8fea\U5e86\U5e02";
+countId = 5401;
+pro = "\U4e91\U5357";
+provinceId = 9;
+},
+{
+areaId = 773;
+city = "\U5b9a\U897f";
+cityIp = "\U5b9a\U897f\U5e02";
+countId = 5401;
+pro = "\U7518\U8083";
+provinceId = 25;
+},
+{
+areaId = 1051;
+city = "\U4e1c\U65b9";
+cityIp = "\U4e1c\U65b9\U5e02";
+countId = 5401;
+pro = "\U6d77\U5357";
+provinceId = 18;
+},
+{
+areaId = 312;
+city = "\U4e1c\U8425";
+cityIp = "\U4e1c\U8425\U5e02";
+countId = 5401;
+pro = "\U5c71\U4e1c";
+provinceId = 13;
+},
+{
+areaId = 6;
+city = "\U4e1c\U839e";
+cityIp = "\U4e1c\U839e\U5e02";
+countId = 5401;
+pro = "\U5e7f\U4e1c";
+provinceId = 5;
+},
+{
+areaId = 1048;
+city = "\U510b\U5dde";
+cityIp = "\U510b\U5dde\U5e02";
+countId = 5401;
+pro = "\U6d77\U5357";
+provinceId = 18;
+}
+);
+E =     (
+{
+areaId = 483;
+city = "\U9102\U5c14\U591a\U65af";
+cityIp = "\U9102\U5c14\U591a\U65af\U5e02";
+countId = 5401;
+pro = "\U5185\U8499\U53e4";
+provinceId = 27;
+},
+{
+areaId = 601;
+city = "\U9102\U5dde";
+cityIp = "\U9102\U5dde\U5e02";
+countId = 5401;
+pro = "\U6e56\U5317";
+provinceId = 4;
+},
+{
+areaId = 730;
+city = "\U6069\U65bd";
+cityIp = "\U6069\U65bd\U5e02";
+countId = 5401;
+pro = "\U6e56\U5317";
+provinceId = 4;
+}
+);
+F =     (
+{
+areaId = 547;
+city = "\U9632\U57ce\U6e2f";
+cityIp = "\U9632\U57ce\U6e2f\U5e02";
+countId = 5401;
+pro = "\U5e7f\U897f";
+provinceId = 23;
+},
+{
+areaId = 35;
+city = "\U4f5b\U5c71";
+cityIp = "\U4f5b\U5c71\U5e02";
+countId = 5401;
+pro = "\U5e7f\U4e1c";
+provinceId = 5;
+},
+{
+areaId = 55;
+city = "\U798f\U5dde";
+cityIp = "\U798f\U5dde\U5e02";
+countId = 5401;
+pro = "\U798f\U5efa";
+provinceId = 3;
+},
+{
+areaId = 341;
+city = "\U629a\U987a";
+cityIp = "\U629a\U987a\U5e02";
+countId = 5401;
+pro = "\U8fbd\U5b81";
+provinceId = 2;
+},
+{
+areaId = 552;
+city = "\U629a\U5dde";
+cityIp = "\U629a\U5dde\U5e02";
+countId = 5401;
+pro = "\U6c5f\U897f";
+provinceId = 16;
+},
+{
+areaId = 345;
+city = "\U961c\U65b0";
+cityIp = "\U961c\U65b0\U5e02";
+countId = 5401;
+pro = "\U8fbd\U5b81";
+provinceId = 2;
+},
+{
+areaId = 496;
+city = "\U961c\U9633";
+cityIp = "\U961c\U9633\U5e02";
+countId = 5401;
+pro = "\U5b89\U5fbd";
+provinceId = 28;
+}
+);
+G =     (
+{
+areaId = 981;
+city = "\U7518\U5357";
+cityIp = "\U7518\U5357\U5e02";
+countId = 5401;
+pro = "\U7518\U8083";
+provinceId = 25;
+},
+{
+areaId = 1022;
+city = "\U7518\U5b5c";
+cityIp = "\U7518\U5b5c\U5e02";
+countId = 5401;
+pro = "\U56db\U5ddd";
+provinceId = 12;
+},
+{
+areaId = 441;
+city = "\U8d63\U5dde";
+cityIp = "\U8d63\U5dde\U5e02";
+countId = 5401;
+pro = "\U6c5f\U897f";
+provinceId = 16;
+},
+{
+areaId = 686;
+city = "\U683c\U5c14\U6728";
+cityIp = "\U683c\U5c14\U6728\U5e02";
+countId = 5401;
+pro = "\U9752\U6d77";
+provinceId = 31;
+},
+{
+areaId = 659;
+city = "\U56fa\U539f";
+cityIp = "\U56fa\U539f\U5e02";
+countId = 5401;
+pro = "\U5b81\U590f";
+provinceId = 30;
+},
+{
+areaId = 582;
+city = "\U5e7f\U5b89";
+cityIp = "\U5e7f\U5b89\U5e02";
+countId = 5401;
+pro = "\U56db\U5ddd";
+provinceId = 12;
+},
+{
+areaId = 559;
+city = "\U5e7f\U5143";
+cityIp = "\U5e7f\U5143\U5e02";
+countId = 5401;
+pro = "\U56db\U5ddd";
+provinceId = 12;
+},
+{
+areaId = 1;
+city = "\U5e7f\U5dde";
+cityIp = "\U5e7f\U5dde\U5e02";
+countId = 5401;
+pro = "\U5e7f\U4e1c";
+provinceId = 5;
+},
+{
+areaId = 511;
+city = "\U6842\U6797";
+cityIp = "\U6842\U6797\U5e02";
+countId = 5401;
+pro = "\U5e7f\U897f";
+provinceId = 23;
+},
+{
+areaId = 550;
+city = "\U8d35\U6e2f";
+cityIp = "\U8d35\U6e2f\U5e02";
+countId = 5401;
+pro = "\U5e7f\U897f";
+provinceId = 23;
+},
+{
+areaId = 287;
+city = "\U8d35\U9633";
+cityIp = "\U8d35\U9633\U5e02";
+countId = 5401;
+pro = "\U8d35\U5dde";
+provinceId = 26;
+},
+{
+areaId = 1016;
+city = "\U679c\U6d1b";
+cityIp = "\U679c\U6d1b\U5e02";
+countId = 5401;
+pro = "\U9752\U6d77";
+provinceId = 31;
+}
+);
+H =     (
+{
+areaId = 187;
+city = "\U54c8\U5c14\U6ee8";
+cityIp = "\U54c8\U5c14\U6ee8\U5e02";
+countId = 5401;
+pro = "\U9ed1\U9f99\U6c5f";
+provinceId = 15;
+},
+{
+areaId = 526;
+city = "\U54c8\U5bc6";
+cityIp = "\U54c8\U5bc6\U5e02";
+countId = 5401;
+pro = "\U65b0\U7586";
+provinceId = 17;
+},
+{
+areaId = 1013;
+city = "\U6d77\U5317";
+cityIp = "\U6d77\U5317\U5e02";
+countId = 5401;
+pro = "\U9752\U6d77";
+provinceId = 31;
+},
+{
+areaId = 1012;
+city = "\U6d77\U4e1c";
+cityIp = "\U6d77\U4e1c\U5e02";
+countId = 5401;
+pro = "\U9752\U6d77";
+provinceId = 31;
+},
+{
+areaId = 259;
+city = "\U6d77\U53e3";
+cityIp = "\U6d77\U53e3\U5e02";
+countId = 5401;
+pro = "\U6d77\U5357";
+provinceId = 18;
+},
+{
+areaId = 1015;
+city = "\U6d77\U5357";
+cityIp = "\U6d77\U5357\U5e02";
+countId = 5401;
+pro = "\U9752\U6d77";
+provinceId = 31;
+},
+{
+areaId = 774;
+city = "\U6d77\U897f";
+cityIp = "\U6d77\U897f\U5e02";
+countId = 5401;
+pro = "\U9752\U6d77";
+provinceId = 31;
+},
+{
+areaId = 348;
+city = "\U90af\U90f8";
+cityIp = "\U90af\U90f8\U5e02";
+countId = 5401;
+pro = "\U6cb3\U5317";
+provinceId = 11;
+},
+{
+areaId = 522;
+city = "\U6c49\U4e2d";
+cityIp = "\U6c49\U4e2d\U5e02";
+countId = 5401;
+pro = "\U9655\U897f";
+provinceId = 8;
+},
+{
+areaId = 217;
+city = "\U676d\U5dde";
+cityIp = "\U676d\U5dde\U5e02";
+countId = 5401;
+pro = "\U6d59\U6c5f";
+provinceId = 19;
+},
+{
+areaId = 361;
+city = "\U83cf\U6cfd";
+cityIp = "\U83cf\U6cfd\U5e02";
+countId = 5401;
+pro = "\U5c71\U4e1c";
+provinceId = 13;
+},
+{
+areaId = 677;
+city = "\U548c\U7530";
+cityIp = "\U548c\U7530\U5e02";
+countId = 5401;
+pro = "\U65b0\U7586";
+provinceId = 17;
+},
+{
+areaId = 297;
+city = "\U5408\U80a5";
+cityIp = "\U5408\U80a5\U5e02";
+countId = 5401;
+pro = "\U5b89\U5fbd";
+provinceId = 28;
+},
+{
+areaId = 548;
+city = "\U6cb3\U6c60";
+cityIp = "\U6cb3\U6c60\U5e02";
+countId = 5401;
+pro = "\U5e7f\U897f";
+provinceId = 23;
+},
+{
+areaId = 463;
+city = "\U6cb3\U6e90";
+cityIp = "\U6cb3\U6e90\U5e02";
+countId = 5401;
+pro = "\U5e7f\U4e1c";
+provinceId = 5;
+},
+{
+areaId = 380;
+city = "\U9e64\U58c1";
+cityIp = "\U9e64\U58c1\U5e02";
+countId = 5401;
+pro = "\U6cb3\U5357";
+provinceId = 22;
+},
+{
+areaId = 334;
+city = "\U9e64\U5c97";
+cityIp = "\U9e64\U5c97\U5e02";
+countId = 5401;
+pro = "\U9ed1\U9f99\U6c5f";
+provinceId = 15;
+},
+{
+areaId = 584;
+city = "\U8d3a\U5dde";
+cityIp = "\U8d3a\U5dde\U5e02";
+countId = 5401;
+pro = "\U5e7f\U897f";
+provinceId = 23;
+},
+{
+areaId = 851;
+city = "\U9ed1\U6cb3";
+cityIp = "\U9ed1\U6cb3\U5e02";
+countId = 5401;
+pro = "\U9ed1\U9f99\U6c5f";
+provinceId = 15;
+},
+{
+areaId = 355;
+city = "\U8861\U6c34";
+cityIp = "\U8861\U6c34\U5e02";
+countId = 5401;
+pro = "\U6cb3\U5317";
+provinceId = 11;
+},
+{
+areaId = 429;
+city = "\U8861\U9633";
+cityIp = "\U8861\U9633\U5e02";
+countId = 5401;
+pro = "\U6e56\U5357";
+provinceId = 10;
+},
+{
+areaId = 745;
+city = "\U7ea2\U6cb3";
+cityIp = "\U7ea2\U6cb3\U5e02";
+countId = 5401;
+pro = "\U4e91\U5357";
+provinceId = 9;
+},
+{
+areaId = 481;
+city = "\U547c\U548c\U6d69\U7279";
+cityIp = "\U547c\U548c\U6d69\U7279\U5e02";
+countId = 5401;
+pro = "\U5185\U8499\U53e4";
+provinceId = 27;
+},
+{
+areaId = 480;
+city = "\U547c\U4f26\U8d1d\U5c14";
+cityIp = "\U547c\U4f26\U8d1d\U5c14\U5e02";
+countId = 5401;
+pro = "\U5185\U8499\U53e4";
+provinceId = 27;
+},
+{
+areaId = 340;
+city = "\U846b\U82a6\U5c9b";
+cityIp = "\U846b\U82a6\U5c9b\U5e02";
+countId = 5401;
+pro = "\U8fbd\U5b81";
+provinceId = 2;
+},
+{
+areaId = 302;
+city = "\U6e56\U5dde";
+cityIp = "\U6e56\U5dde\U5e02";
+countId = 5401;
+pro = "\U6d59\U6c5f";
+provinceId = 19;
+},
+{
+areaId = 435;
+city = "\U6000\U5316";
+cityIp = "\U6000\U5316\U5e02";
+countId = 5401;
+pro = "\U6e56\U5357";
+provinceId = 10;
+},
+{
+areaId = 389;
+city = "\U6dee\U5b89";
+cityIp = "\U6dee\U5b89\U5e02";
+countId = 5401;
+pro = "\U6c5f\U82cf";
+provinceId = 1;
+},
+{
+areaId = 489;
+city = "\U6dee\U5317";
+cityIp = "\U6dee\U5317\U5e02";
+countId = 5401;
+pro = "\U5b89\U5fbd";
+provinceId = 28;
+},
+{
+areaId = 488;
+city = "\U6dee\U5357";
+cityIp = "\U6dee\U5357\U5e02";
+countId = 5401;
+pro = "\U5b89\U5fbd";
+provinceId = 28;
+},
+{
+areaId = 420;
+city = "\U9ec4\U5188";
+cityIp = "\U9ec4\U5188\U5e02";
+countId = 5401;
+pro = "\U6e56\U5317";
+provinceId = 4;
+},
+{
+areaId = 1014;
+city = "\U9ec4\U5357";
+cityIp = "\U9ec4\U5357\U5e02";
+countId = 5401;
+pro = "\U9752\U6d77";
+provinceId = 31;
+},
+{
+areaId = 494;
+city = "\U9ec4\U5c71";
+cityIp = "\U9ec4\U5c71\U5e02";
+countId = 5401;
+pro = "\U5b89\U5fbd";
+provinceId = 28;
+},
+{
+areaId = 414;
+city = "\U9ec4\U77f3";
+cityIp = "\U9ec4\U77f3\U5e02";
+countId = 5401;
+pro = "\U6e56\U5317";
+provinceId = 4;
+},
+{
+areaId = 207;
+city = "\U60e0\U5dde";
+cityIp = "\U60e0\U5dde\U5e02";
+countId = 5401;
+pro = "\U5e7f\U4e1c";
+provinceId = 5;
+}
+);
+J =     (
+{
+areaId = 567;
+city = "\U9e21\U897f";
+cityIp = "\U9e21\U897f\U5e02";
+countId = 5401;
+pro = "\U9ed1\U9f99\U6c5f";
+provinceId = 15;
+},
+{
+areaId = 444;
+city = "\U5409\U5b89";
+cityIp = "\U5409\U5b89\U5e02";
+countId = 5401;
+pro = "\U6c5f\U897f";
+provinceId = 16;
+},
+{
+areaId = 335;
+city = "\U5409\U6797";
+cityIp = "\U5409\U6797\U5e02";
+countId = 5401;
+pro = "\U5409\U6797";
+provinceId = 24;
+},
+{
+areaId = 147;
+city = "\U6d4e\U5357";
+cityIp = "\U6d4e\U5357\U5e02";
+countId = 5401;
+pro = "\U5c71\U4e1c";
+provinceId = 13;
+},
+{
+areaId = 313;
+city = "\U6d4e\U5b81";
+cityIp = "\U6d4e\U5b81\U5e02";
+countId = 5401;
+pro = "\U5c71\U4e1c";
+provinceId = 13;
+},
+{
+areaId = 990;
+city = "\U6d4e\U6e90";
+cityIp = "\U6d4e\U6e90\U5e02";
+countId = 5401;
+pro = "\U6cb3\U5357";
+provinceId = 22;
+},
+{
+areaId = 304;
+city = "\U5609\U5174";
+cityIp = "\U5609\U5174\U5e02";
+countId = 5401;
+pro = "\U6d59\U6c5f";
+provinceId = 19;
+},
+{
+areaId = 541;
+city = "\U5609\U5cea\U5173";
+cityIp = "\U5609\U5cea\U5173\U5e02";
+countId = 5401;
+pro = "\U7518\U8083";
+provinceId = 25;
+},
+{
+areaId = 332;
+city = "\U4f73\U6728\U65af";
+cityIp = "\U4f73\U6728\U65af\U5e02";
+countId = 5401;
+pro = "\U9ed1\U9f99\U6c5f";
+provinceId = 15;
+},
+{
+areaId = 456;
+city = "\U6c5f\U95e8";
+cityIp = "\U6c5f\U95e8\U5e02";
+countId = 5401;
+pro = "\U5e7f\U4e1c";
+provinceId = 5;
+},
+{
+areaId = 381;
+city = "\U6c5f\U9634";
+cityIp = "\U6c5f\U9634\U5e02";
+countId = 5401;
+pro = "\U6c5f\U82cf";
+provinceId = 1;
+},
+{
+areaId = 368;
+city = "\U7126\U4f5c";
+cityIp = "\U7126\U4f5c\U5e02";
+countId = 5401;
+pro = "\U6cb3\U5357";
+provinceId = 22;
+},
+{
+areaId = 289;
+city = "\U63ed\U9633";
+cityIp = "\U63ed\U9633\U5e02";
+countId = 5401;
+pro = "\U5e7f\U4e1c";
+provinceId = 5;
+},
+{
+areaId = 713;
+city = "\U91d1\U660c";
+cityIp = "\U91d1\U660c\U5e02";
+countId = 5401;
+pro = "\U7518\U8083";
+provinceId = 25;
+},
+{
+areaId = 300;
+city = "\U91d1\U534e";
+cityIp = "\U91d1\U534e\U5e02";
+countId = 5401;
+pro = "\U6d59\U6c5f";
+provinceId = 19;
+},
+{
+areaId = 322;
+city = "\U9526\U5dde";
+cityIp = "\U9526\U5dde\U5e02";
+countId = 5401;
+pro = "\U8fbd\U5b81";
+provinceId = 2;
+},
+{
+areaId = 474;
+city = "\U664b\U57ce";
+cityIp = "\U664b\U57ce\U5e02";
+countId = 5401;
+pro = "\U5c71\U897f";
+provinceId = 21;
+},
+{
+areaId = 477;
+city = "\U664b\U4e2d";
+cityIp = "\U664b\U4e2d\U5e02";
+countId = 5401;
+pro = "\U5c71\U897f";
+provinceId = 21;
+},
+{
+areaId = 417;
+city = "\U8346\U95e8";
+cityIp = "\U8346\U95e8\U5e02";
+countId = 5401;
+pro = "\U6e56\U5317";
+provinceId = 4;
+},
+{
+areaId = 415;
+city = "\U8346\U5dde";
+cityIp = "\U8346\U5dde\U5e02";
+countId = 5401;
+pro = "\U6e56\U5317";
+provinceId = 4;
+},
+{
+areaId = 576;
+city = "\U666f\U5fb7\U9547";
+cityIp = "\U666f\U5fb7\U9547\U5e02";
+countId = 5401;
+pro = "\U6c5f\U897f";
+provinceId = 16;
+},
+{
+areaId = 440;
+city = "\U4e5d\U6c5f";
+cityIp = "\U4e5d\U6c5f\U5e02";
+countId = 5401;
+pro = "\U6c5f\U897f";
+provinceId = 16;
+},
+{
+areaId = 585;
+city = "\U9152\U6cc9";
+cityIp = "\U9152\U6cc9\U5e02";
+countId = 5401;
+pro = "\U7518\U8083";
+provinceId = 25;
+}
+);
+K =     (
+{
+areaId = 528;
+city = "\U5580\U4ec0";
+cityIp = "\U5580\U4ec0\U5e02";
+countId = 5401;
+pro = "\U65b0\U7586";
+provinceId = 17;
+},
+{
+areaId = 367;
+city = "\U5f00\U5c01";
+cityIp = "\U5f00\U5c01\U5e02";
+countId = 5401;
+pro = "\U6cb3\U5357";
+provinceId = 22;
+},
+{
+areaId = 523;
+city = "\U514b\U62c9\U739b\U4f9d";
+cityIp = "\U514b\U62c9\U739b\U4f9d\U5e02";
+countId = 5401;
+pro = "\U65b0\U7586";
+provinceId = 17;
+},
+{
+areaId = 1027;
+city = "\U514b\U5b5c\U52d2\U82cf";
+cityIp = "\U514b\U5b5c\U52d2\U82cf\U5e02";
+countId = 5401;
+pro = "\U65b0\U7586";
+provinceId = 17;
+},
+{
+areaId = 107;
+city = "\U6606\U660e";
+cityIp = "\U6606\U660e\U5e02";
+countId = 5401;
+pro = "\U4e91\U5357";
+provinceId = 9;
+}
+);
+L =     (
+{
+areaId = 518;
+city = "\U62c9\U8428";
+cityIp = "\U62c9\U8428\U5e02";
+countId = 5401;
+pro = "\U897f\U85cf";
+provinceId = 29;
+},
+{
+areaId = 360;
+city = "\U83b1\U829c";
+cityIp = "\U83b1\U829c\U5e02";
+countId = 5401;
+pro = "\U5c71\U4e1c";
+provinceId = 13;
+},
+{
+areaId = 626;
+city = "\U6765\U5bbe";
+cityIp = "\U6765\U5bbe\U5e02";
+countId = 5401;
+pro = "\U5e7f\U897f";
+provinceId = 23;
+},
+{
+areaId = 247;
+city = "\U5170\U5dde";
+cityIp = "\U5170\U5dde\U5e02";
+countId = 5401;
+pro = "\U7518\U8083";
+provinceId = 25;
+},
+{
+areaId = 353;
+city = "\U5eca\U574a";
+cityIp = "\U5eca\U574a\U5e02";
+countId = 5401;
+pro = "\U6cb3\U5317";
+provinceId = 11;
+},
+{
+areaId = 422;
+city = "\U4e50\U5c71";
+cityIp = "\U4e50\U5c71\U5e02";
+countId = 5401;
+pro = "\U56db\U5ddd";
+provinceId = 12;
+},
+{
+areaId = 702;
+city = "\U4e3d\U6c5f";
+cityIp = "\U4e3d\U6c5f\U5e02";
+countId = 5401;
+pro = "\U4e91\U5357";
+provinceId = 9;
+},
+{
+areaId = 402;
+city = "\U4e3d\U6c34";
+cityIp = "\U4e3d\U6c34\U5e02";
+countId = 5401;
+pro = "\U6d59\U6c5f";
+provinceId = 19;
+},
+{
+areaId = 382;
+city = "\U8fde\U4e91\U6e2f";
+cityIp = "\U8fde\U4e91\U6e2f\U5e02";
+countId = 5401;
+pro = "\U6c5f\U82cf";
+provinceId = 1;
+},
+{
+areaId = 744;
+city = "\U51c9\U5c71";
+cityIp = "\U51c9\U5c71\U5e02";
+countId = 5401;
+pro = "\U56db\U5ddd";
+provinceId = 12;
+},
+{
+areaId = 356;
+city = "\U804a\U57ce";
+cityIp = "\U804a\U57ce\U5e02";
+countId = 5401;
+pro = "\U5c71\U4e1c";
+provinceId = 13;
+},
+{
+areaId = 339;
+city = "\U8fbd\U9633";
+cityIp = "\U8fbd\U9633\U5e02";
+countId = 5401;
+pro = "\U8fbd\U5b81";
+provinceId = 2;
+},
+{
+areaId = 572;
+city = "\U8fbd\U6e90";
+cityIp = "\U8fbd\U6e90\U5e02";
+countId = 5401;
+pro = "\U5409\U6797";
+provinceId = 24;
+},
+{
+areaId = 1046;
+city = "\U6797\U533a";
+cityIp = "\U6797\U533a\U5e02";
+countId = 5401;
+pro = "\U6e56\U5317";
+provinceId = 4;
+},
+{
+areaId = 1026;
+city = "\U6797\U829d\U5730\U533a";
+cityIp = "\U6797\U829d\U5730\U533a\U5e02";
+countId = 5401;
+pro = "\U897f\U85cf";
+provinceId = 29;
+},
+{
+areaId = 666;
+city = "\U4e34\U6ca7";
+cityIp = "\U4e34\U6ca7\U5e02";
+countId = 5401;
+pro = "\U4e91\U5357";
+provinceId = 9;
+},
+{
+areaId = 325;
+city = "\U4e34\U6c7e";
+cityIp = "\U4e34\U6c7e\U5e02";
+countId = 5401;
+pro = "\U5c71\U897f";
+provinceId = 21;
+},
+{
+areaId = 980;
+city = "\U4e34\U590f";
+cityIp = "\U4e34\U590f\U5e02";
+countId = 5401;
+pro = "\U7518\U8083";
+provinceId = 25;
+},
+{
+areaId = 320;
+city = "\U4e34\U6c82";
+cityIp = "\U4e34\U6c82\U5e02";
+countId = 5401;
+pro = "\U5c71\U4e1c";
+provinceId = 13;
+},
+{
+areaId = 510;
+city = "\U67f3\U5dde";
+cityIp = "\U67f3\U5dde\U5e02";
+countId = 5401;
+pro = "\U5e7f\U897f";
+provinceId = 23;
+},
+{
+areaId = 499;
+city = "\U516d\U5b89";
+cityIp = "\U516d\U5b89\U5e02";
+countId = 5401;
+pro = "\U5b89\U5fbd";
+provinceId = 28;
+},
+{
+areaId = 580;
+city = "\U516d\U76d8\U6c34";
+cityIp = "\U516d\U76d8\U6c34\U5e02";
+countId = 5401;
+pro = "\U8d35\U5dde";
+provinceId = 26;
+},
+{
+areaId = 448;
+city = "\U9f99\U5ca9";
+cityIp = "\U9f99\U5ca9\U5e02";
+countId = 5401;
+pro = "\U798f\U5efa";
+provinceId = 3;
+},
+{
+areaId = 662;
+city = "\U9647\U5357";
+cityIp = "\U9647\U5357\U5e02";
+countId = 5401;
+pro = "\U7518\U8083";
+provinceId = 25;
+},
+{
+areaId = 436;
+city = "\U5a04\U5e95";
+cityIp = "\U5a04\U5e95\U5e02";
+countId = 5401;
+pro = "\U6e56\U5357";
+provinceId = 10;
+},
+{
+areaId = 478;
+city = "\U5415\U6881";
+cityIp = "\U5415\U6881\U5e02";
+countId = 5401;
+pro = "\U5c71\U897f";
+provinceId = 21;
+},
+{
+areaId = 268;
+city = "\U6d1b\U9633";
+cityIp = "\U6d1b\U9633\U5e02";
+countId = 5401;
+pro = "\U6cb3\U5357";
+provinceId = 22;
+},
+{
+areaId = 425;
+city = "\U6cf8\U5dde";
+cityIp = "\U6cf8\U5dde\U5e02";
+countId = 5401;
+pro = "\U56db\U5ddd";
+provinceId = 12;
+},
+{
+areaId = 376;
+city = "\U6f2f\U6cb3";
+cityIp = "\U6f2f\U6cb3\U5e02";
+countId = 5401;
+pro = "\U6cb3\U5357";
+provinceId = 22;
+}
+);
+M =     (
+{
+areaId = 492;
+city = "\U9a6c\U978d\U5c71";
+cityIp = "\U9a6c\U978d\U5c71\U5e02";
+countId = 5401;
+pro = "\U5b89\U5fbd";
+provinceId = 28;
+},
+{
+areaId = 459;
+city = "\U8302\U540d";
+cityIp = "\U8302\U540d\U5e02";
+countId = 5401;
+pro = "\U5e7f\U4e1c";
+provinceId = 5;
+},
+{
+areaId = 291;
+city = "\U6885\U5dde";
+cityIp = "\U6885\U5dde\U5e02";
+countId = 5401;
+pro = "\U5e7f\U4e1c";
+provinceId = 5;
+},
+{
+areaId = 428;
+city = "\U7709\U5c71";
+cityIp = "\U7709\U5c71\U5e02";
+countId = 5401;
+pro = "\U56db\U5ddd";
+provinceId = 12;
+},
+{
+areaId = 328;
+city = "\U7ef5\U9633";
+cityIp = "\U7ef5\U9633\U5e02";
+countId = 5401;
+pro = "\U56db\U5ddd";
+provinceId = 12;
+},
+{
+areaId = 331;
+city = "\U7261\U4e39\U6c5f";
+cityIp = "\U7261\U4e39\U6c5f\U5e02";
+countId = 5401;
+pro = "\U9ed1\U9f99\U6c5f";
+provinceId = 15;
+}
+);
+N =     (
+{
+areaId = 1025;
+city = "\U90a3\U66f2\U5730\U533a";
+cityIp = "\U90a3\U66f2\U5730\U533a\U5e02";
+countId = 5401;
+pro = "\U897f\U85cf";
+provinceId = 29;
+},
+{
+areaId = 237;
+city = "\U5357\U660c";
+cityIp = "\U5357\U660c\U5e02";
+countId = 5401;
+pro = "\U6c5f\U897f";
+provinceId = 16;
+},
+{
+areaId = 426;
+city = "\U5357\U5145";
+cityIp = "\U5357\U5145\U5e02";
+countId = 5401;
+pro = "\U56db\U5ddd";
+provinceId = 12;
+},
+{
+areaId = 177;
+city = "\U5357\U4eac";
+cityIp = "\U5357\U4eac\U5e02";
+countId = 5401;
+pro = "\U6c5f\U82cf";
+provinceId = 1;
+},
+{
+areaId = 197;
+city = "\U5357\U5b81";
+cityIp = "\U5357\U5b81\U5e02";
+countId = 5401;
+pro = "\U5e7f\U897f";
+provinceId = 23;
+},
+{
+areaId = 449;
+city = "\U5357\U5e73";
+cityIp = "\U5357\U5e73\U5e02";
+countId = 5401;
+pro = "\U798f\U5efa";
+provinceId = 3;
+},
+{
+areaId = 308;
+city = "\U5357\U901a";
+cityIp = "\U5357\U901a\U5e02";
+countId = 5401;
+pro = "\U6c5f\U82cf";
+provinceId = 1;
+},
+{
+areaId = 366;
+city = "\U5357\U9633";
+cityIp = "\U5357\U9633\U5e02";
+countId = 5401;
+pro = "\U6cb3\U5357";
+provinceId = 22;
+},
+{
+areaId = 427;
+city = "\U5185\U6c5f";
+cityIp = "\U5185\U6c5f\U5e02";
+countId = 5401;
+pro = "\U56db\U5ddd";
+provinceId = 12;
+},
+{
+areaId = 218;
+city = "\U5b81\U6ce2";
+cityIp = "\U5b81\U6ce2\U5e02";
+countId = 5401;
+pro = "\U6d59\U6c5f";
+provinceId = 19;
+},
+{
+areaId = 500;
+city = "\U5b81\U5fb7";
+cityIp = "\U5b81\U5fb7\U5e02";
+countId = 5401;
+pro = "\U798f\U5efa";
+provinceId = 3;
+},
+{
+areaId = 978;
+city = "\U6012\U6c5f";
+cityIp = "\U6012\U6c5f\U5e02";
+countId = 5401;
+pro = "\U4e91\U5357";
+provinceId = 9;
+}
+);
+P =     (
+{
+areaId = 538;
+city = "\U6500\U679d\U82b1";
+cityIp = "\U6500\U679d\U82b1\U5e02";
+countId = 5401;
+pro = "\U56db\U5ddd";
+provinceId = 12;
+},
+{
+areaId = 324;
+city = "\U76d8\U9526";
+cityIp = "\U76d8\U9526\U5e02";
+countId = 5401;
+pro = "\U8fbd\U5b81";
+provinceId = 2;
+},
+{
+areaId = 442;
+city = "\U840d\U4e61";
+cityIp = "\U840d\U4e61\U5e02";
+countId = 5401;
+pro = "\U6c5f\U897f";
+provinceId = 16;
+},
+{
+areaId = 370;
+city = "\U5e73\U9876\U5c71";
+cityIp = "\U5e73\U9876\U5c71\U5e02";
+countId = 5401;
+pro = "\U6cb3\U5357";
+provinceId = 22;
+},
+{
+areaId = 661;
+city = "\U5e73\U51c9";
+cityIp = "\U5e73\U51c9\U5e02";
+countId = 5401;
+pro = "\U7518\U8083";
+provinceId = 25;
+},
+{
+areaId = 446;
+city = "\U8386\U7530";
+cityIp = "\U8386\U7530\U5e02";
+countId = 5401;
+pro = "\U798f\U5efa";
+provinceId = 3;
+},
+{
+areaId = 755;
+city = "\U666e\U6d31";
+cityIp = "\U666e\U6d31\U5e02";
+countId = 5401;
+pro = "\U4e91\U5357";
+provinceId = 9;
+},
+{
+areaId = 373;
+city = "\U6fee\U9633";
+cityIp = "\U6fee\U9633\U5e02";
+countId = 5401;
+pro = "\U6cb3\U5357";
+provinceId = 22;
+}
+);
+Q =     (
+{
+areaId = 644;
+city = "\U4e03\U53f0\U6cb3";
+cityIp = "\U4e03\U53f0\U6cb3\U5e02";
+countId = 5401;
+pro = "\U9ed1\U9f99\U6c5f";
+provinceId = 15;
+},
+{
+areaId = 329;
+city = "\U9f50\U9f50\U54c8\U5c14";
+cityIp = "\U9f50\U9f50\U54c8\U5c14\U5e02";
+countId = 5401;
+pro = "\U9ed1\U9f99\U6c5f";
+provinceId = 15;
+},
+{
+areaId = 814;
+city = "\U9ed4\U4e1c\U5357";
+cityIp = "\U9ed4\U4e1c\U5357\U5e02";
+countId = 5401;
+pro = "\U8d35\U5dde";
+provinceId = 26;
+},
+{
+areaId = 735;
+city = "\U9ed4\U5357";
+cityIp = "\U9ed4\U5357\U5e02";
+countId = 5401;
+pro = "\U8d35\U5dde";
+provinceId = 26;
+},
+{
+areaId = 740;
+city = "\U9ed4\U897f\U5357";
+cityIp = "\U9ed4\U897f\U5357\U5e02";
+countId = 5401;
+pro = "\U8d35\U5dde";
+provinceId = 26;
+},
+{
+areaId = 600;
+city = "\U6f5c\U6c5f";
+cityIp = "\U6f5c\U6c5f\U5e02";
+countId = 5401;
+pro = "\U6e56\U5317";
+provinceId = 4;
+},
+{
+areaId = 546;
+city = "\U94a6\U5dde";
+cityIp = "\U94a6\U5dde\U5e02";
+countId = 5401;
+pro = "\U5e7f\U897f";
+provinceId = 23;
+},
+{
+areaId = 349;
+city = "\U79e6\U7687\U5c9b";
+cityIp = "\U79e6\U7687\U5c9b\U5e02";
+countId = 5401;
+pro = "\U6cb3\U5317";
+provinceId = 11;
+},
+{
+areaId = 317;
+city = "\U9752\U5c9b";
+cityIp = "\U9752\U5c9b\U5e02";
+countId = 5401;
+pro = "\U5c71\U4e1c";
+provinceId = 13;
+},
+{
+areaId = 461;
+city = "\U6e05\U8fdc";
+cityIp = "\U6e05\U8fdc\U5e02";
+countId = 5401;
+pro = "\U5e7f\U4e1c";
+provinceId = 5;
+},
+{
+areaId = 469;
+city = "\U5e86\U9633";
+cityIp = "\U5e86\U9633\U5e02";
+countId = 5401;
+pro = "\U7518\U8083";
+provinceId = 25;
+},
+{
+areaId = 453;
+city = "\U66f2\U9756";
+cityIp = "\U66f2\U9756\U5e02";
+countId = 5401;
+pro = "\U4e91\U5357";
+provinceId = 9;
+},
+{
+areaId = 292;
+city = "\U6cc9\U5dde";
+cityIp = "\U6cc9\U5dde\U5e02";
+countId = 5401;
+pro = "\U798f\U5efa";
+provinceId = 3;
+},
+{
+areaId = 399;
+city = "\U8862\U5dde";
+cityIp = "\U8862\U5dde\U5e02";
+countId = 5401;
+pro = "\U6d59\U6c5f";
+provinceId = 19;
+}
+);
+R =     (
+{
+areaId = 794;
+city = "\U65e5\U5580\U5219\U5730\U533a";
+cityIp = "\U65e5\U5580\U5219\U5730\U533a\U5e02";
+countId = 5401;
+pro = "\U897f\U85cf";
+provinceId = 29;
+},
+{
+areaId = 357;
+city = "\U65e5\U7167";
+cityIp = "\U65e5\U7167\U5e02";
+countId = 5401;
+pro = "\U5c71\U4e1c";
+provinceId = 13;
+}
+);
+S =     (
+{
+areaId = 377;
+city = "\U4e09\U95e8\U5ce1";
+cityIp = "\U4e09\U95e8\U5ce1\U5e02";
+countId = 5401;
+pro = "\U6cb3\U5357";
+provinceId = 22;
+},
+{
+areaId = 451;
+city = "\U4e09\U660e";
+cityIp = "\U4e09\U660e\U5e02";
+countId = 5401;
+pro = "\U798f\U5efa";
+provinceId = 3;
+},
+{
+areaId = 467;
+city = "\U4e09\U4e9a";
+cityIp = "\U4e09\U4e9a\U5e02";
+countId = 5401;
+pro = "\U6d77\U5357";
+provinceId = 18;
+},
+{
+areaId = 1024;
+city = "\U5c71\U5357\U5730\U533a";
+cityIp = "\U5c71\U5357\U5730\U533a\U5e02";
+countId = 5401;
+pro = "\U897f\U85cf";
+provinceId = 29;
+},
+{
+areaId = 288;
+city = "\U6c55\U5934";
+cityIp = "\U6c55\U5934\U5e02";
+countId = 5401;
+pro = "\U5e7f\U4e1c";
+provinceId = 5;
+},
+{
+areaId = 465;
+city = "\U6c55\U5c3e";
+cityIp = "\U6c55\U5c3e\U5e02";
+countId = 5401;
+pro = "\U5e7f\U4e1c";
+provinceId = 5;
+},
+{
+areaId = 1020;
+city = "\U5546\U6d1b";
+cityIp = "\U5546\U6d1b\U5e02";
+countId = 5401;
+pro = "\U9655\U897f";
+provinceId = 8;
+},
+{
+areaId = 372;
+city = "\U5546\U4e18";
+cityIp = "\U5546\U4e18\U5e02";
+countId = 5401;
+pro = "\U6cb3\U5357";
+provinceId = 22;
+},
+{
+areaId = 3;
+city = "\U4e0a\U6d77";
+cityIp = "\U4e0a\U6d77\U5e02";
+countId = 5401;
+pro = "\U4e0a\U6d77\U5e02";
+provinceId = 7;
+},
+{
+areaId = 443;
+city = "\U4e0a\U9976";
+cityIp = "\U4e0a\U9976\U5e02";
+countId = 5401;
+pro = "\U6c5f\U897f";
+provinceId = 16;
+},
+{
+areaId = 460;
+city = "\U97f6\U5173";
+cityIp = "\U97f6\U5173\U5e02";
+countId = 5401;
+pro = "\U5e7f\U4e1c";
+provinceId = 5;
+},
+{
+areaId = 433;
+city = "\U90b5\U9633";
+cityIp = "\U90b5\U9633\U5e02";
+countId = 5401;
+pro = "\U6e56\U5357";
+provinceId = 10;
+},
+{
+areaId = 299;
+city = "\U7ecd\U5174";
+cityIp = "\U7ecd\U5174\U5e02";
+countId = 5401;
+pro = "\U6d59\U6c5f";
+provinceId = 19;
+},
+{
+areaId = 4;
+city = "\U6df1\U5733";
+cityIp = "\U6df1\U5733\U5e02";
+countId = 5401;
+pro = "\U5e7f\U4e1c";
+provinceId = 5;
+},
+{
+areaId = 1000;
+city = "\U795e\U519c\U67b6";
+cityIp = "\U795e\U519c\U67b6\U5e02";
+countId = 5401;
+pro = "\U6e56\U5317";
+provinceId = 4;
+},
+{
+areaId = 127;
+city = "\U6c88\U9633";
+cityIp = "\U6c88\U9633\U5e02";
+countId = 5401;
+pro = "\U8fbd\U5b81";
+provinceId = 2;
+},
+{
+areaId = 416;
+city = "\U5341\U5830";
+cityIp = "\U5341\U5830\U5e02";
+countId = 5401;
+pro = "\U6e56\U5317";
+provinceId = 4;
+},
+{
+areaId = 657;
+city = "\U77f3\U6cb3\U5b50";
+cityIp = "\U77f3\U6cb3\U5b50\U5e02";
+countId = 5401;
+pro = "\U65b0\U7586";
+provinceId = 17;
+},
+{
+areaId = 137;
+city = "\U77f3\U5bb6\U5e84";
+cityIp = "\U77f3\U5bb6\U5e84\U5e02";
+countId = 5401;
+pro = "\U6cb3\U5317";
+provinceId = 11;
+},
+{
+areaId = 1011;
+city = "\U77f3\U5634\U5c71";
+cityIp = "\U77f3\U5634\U5c71\U5e02";
+countId = 5401;
+pro = "\U5b81\U590f";
+provinceId = 30;
+},
+{
+areaId = 780;
+city = "\U53cc\U9e2d\U5c71";
+cityIp = "\U53cc\U9e2d\U5c71\U5e02";
+countId = 5401;
+pro = "\U9ed1\U9f99\U6c5f";
+provinceId = 15;
+},
+{
+areaId = 475;
+city = "\U6714\U5dde";
+cityIp = "\U6714\U5dde\U5e02";
+countId = 5401;
+pro = "\U5c71\U897f";
+provinceId = 21;
+},
+{
+areaId = 571;
+city = "\U56db\U5e73";
+cityIp = "\U56db\U5e73\U5e02";
+countId = 5401;
+pro = "\U5409\U6797";
+provinceId = 24;
+},
+{
+areaId = 338;
+city = "\U677e\U539f";
+cityIp = "\U677e\U539f\U5e02";
+countId = 5401;
+pro = "\U5409\U6797";
+provinceId = 24;
+},
+{
+areaId = 157;
+city = "\U82cf\U5dde";
+cityIp = "\U82cf\U5dde\U5e02";
+countId = 5401;
+pro = "\U6c5f\U82cf";
+provinceId = 1;
+},
+{
+areaId = 390;
+city = "\U5bbf\U8fc1";
+cityIp = "\U5bbf\U8fc1\U5e02";
+countId = 5401;
+pro = "\U6c5f\U82cf";
+provinceId = 1;
+},
+{
+areaId = 497;
+city = "\U5bbf\U5dde";
+cityIp = "\U5bbf\U5dde\U5e02";
+countId = 5401;
+pro = "\U5b89\U5fbd";
+provinceId = 28;
+},
+{
+areaId = 419;
+city = "\U968f\U5dde";
+cityIp = "\U968f\U5dde\U5e02";
+countId = 5401;
+pro = "\U6e56\U5317";
+provinceId = 4;
+},
+{
+areaId = 333;
+city = "\U7ee5\U5316";
+cityIp = "\U7ee5\U5316\U5e02";
+countId = 5401;
+pro = "\U9ed1\U9f99\U6c5f";
+provinceId = 15;
+},
+{
+areaId = 513;
+city = "\U9042\U5b81";
+cityIp = "\U9042\U5b81\U5e02";
+countId = 5401;
+pro = "\U56db\U5ddd";
+provinceId = 12;
+}
+);
+T =     (
+{
+areaId = 796;
+city = "\U5854\U57ce";
+cityIp = "\U5854\U57ce\U5e02";
+countId = 5401;
+pro = "\U65b0\U7586";
+provinceId = 17;
+},
+{
+areaId = 301;
+city = "\U53f0\U5dde";
+cityIp = "\U53f0\U5dde\U5e02";
+countId = 5401;
+pro = "\U6d59\U6c5f";
+provinceId = 19;
+},
+{
+areaId = 314;
+city = "\U6cf0\U5b89";
+cityIp = "\U6cf0\U5b89\U5e02";
+countId = 5401;
+pro = "\U5c71\U4e1c";
+provinceId = 13;
+},
+{
+areaId = 385;
+city = "\U6cf0\U5dde";
+cityIp = "\U6cf0\U5dde\U5e02";
+countId = 5401;
+pro = "\U6c5f\U82cf";
+provinceId = 1;
+},
+{
+areaId = 260;
+city = "\U592a\U539f";
+cityIp = "\U592a\U539f\U5e02";
+countId = 5401;
+pro = "\U5c71\U897f";
+provinceId = 21;
+},
+{
+areaId = 347;
+city = "\U5510\U5c71";
+cityIp = "\U5510\U5c71\U5e02";
+countId = 5401;
+pro = "\U6cb3\U5317";
+provinceId = 11;
+},
+{
+areaId = 257;
+city = "\U5929\U6d25";
+cityIp = "\U5929\U6d25\U5e02";
+countId = 5401;
+pro = "\U5929\U6d25\U5e02";
+provinceId = 20;
+},
+{
+areaId = 725;
+city = "\U5929\U6d25\U6ee8\U6d77";
+cityIp = "\U5929\U6d25\U6ee8\U6d77\U5e02";
+countId = 5401;
+pro = "\U5929\U6d25\U5e02";
+provinceId = 20;
+},
+{
+areaId = 736;
+city = "\U5929\U95e8";
+cityIp = "\U5929\U95e8\U5e02";
+countId = 5401;
+pro = "\U6e56\U5317";
+provinceId = 4;
+},
+{
+areaId = 468;
+city = "\U5929\U6c34";
+cityIp = "\U5929\U6c34\U5e02";
+countId = 5401;
+pro = "\U7518\U8083";
+provinceId = 25;
+},
+{
+areaId = 343;
+city = "\U94c1\U5cad";
+cityIp = "\U94c1\U5cad\U5e02";
+countId = 5401;
+pro = "\U8fbd\U5b81";
+provinceId = 2;
+},
+{
+areaId = 1034;
+city = "\U94c1\U95e8\U5173\U5e02";
+cityIp = "\U94c1\U95e8\U5173\U5e02\U5e02";
+countId = 5401;
+pro = "\U65b0\U7586";
+provinceId = 17;
+},
+{
+areaId = 551;
+city = "\U901a\U5316";
+cityIp = "\U901a\U5316\U5e02";
+countId = 5401;
+pro = "\U5409\U6797";
+provinceId = 24;
+},
+{
+areaId = 535;
+city = "\U901a\U8fbd";
+cityIp = "\U901a\U8fbd\U5e02";
+countId = 5401;
+pro = "\U5185\U8499\U53e4";
+provinceId = 27;
+},
+{
+areaId = 752;
+city = "\U94dc\U5ddd";
+cityIp = "\U94dc\U5ddd\U5e02";
+countId = 5401;
+pro = "\U9655\U897f";
+provinceId = 8;
+},
+{
+areaId = 610;
+city = "\U94dc\U9675";
+cityIp = "\U94dc\U9675\U5e02";
+countId = 5401;
+pro = "\U5b89\U5fbd";
+provinceId = 28;
+},
+{
+areaId = 665;
+city = "\U94dc\U4ec1";
+cityIp = "\U94dc\U4ec1\U5e02";
+countId = 5401;
+pro = "\U8d35\U5dde";
+provinceId = 26;
+},
+{
+areaId = 1031;
+city = "\U56fe\U6728\U8212\U514b\U5e02";
+cityIp = "\U56fe\U6728\U8212\U514b\U5e02\U5e02";
+countId = 5401;
+pro = "\U65b0\U7586";
+provinceId = 17;
+},
+{
+areaId = 525;
+city = "\U5410\U9c81\U756a";
+cityIp = "\U5410\U9c81\U756a\U5e02";
+countId = 5401;
+pro = "\U65b0\U7586";
+provinceId = 17;
+}
+);
+W =     (
+{
+areaId = 1050;
+city = "\U4e07\U5b81";
+cityIp = "\U4e07\U5b81\U5e02";
+countId = 5401;
+pro = "\U6d77\U5357";
+provinceId = 18;
+},
+{
+areaId = 315;
+city = "\U5a01\U6d77";
+cityIp = "\U5a01\U6d77\U5e02";
+countId = 5401;
+pro = "\U5c71\U4e1c";
+provinceId = 13;
+},
+{
+areaId = 319;
+city = "\U6f4d\U574a";
+cityIp = "\U6f4d\U574a\U5e02";
+countId = 5401;
+pro = "\U5c71\U4e1c";
+provinceId = 13;
+},
+{
+areaId = 519;
+city = "\U6e2d\U5357";
+cityIp = "\U6e2d\U5357\U5e02";
+countId = 5401;
+pro = "\U9655\U897f";
+provinceId = 8;
+},
+{
+areaId = 303;
+city = "\U6e29\U5dde";
+cityIp = "\U6e29\U5dde\U5e02";
+countId = 5401;
+pro = "\U6d59\U6c5f";
+provinceId = 19;
+},
+{
+areaId = 1049;
+city = "\U6587\U660c";
+cityIp = "\U6587\U660c\U5e02";
+countId = 5401;
+pro = "\U6d77\U5357";
+provinceId = 18;
+},
+{
+areaId = 777;
+city = "\U6587\U5c71";
+cityIp = "\U6587\U5c71\U5e02";
+countId = 5401;
+pro = "\U4e91\U5357";
+provinceId = 9;
+},
+{
+areaId = 534;
+city = "\U4e4c\U6d77";
+cityIp = "\U4e4c\U6d77\U5e02";
+countId = 5401;
+pro = "\U5185\U8499\U53e4";
+provinceId = 27;
+},
+{
+areaId = 660;
+city = "\U4e4c\U5170\U5bdf\U5e03";
+cityIp = "\U4e4c\U5170\U5bdf\U5e03\U5e02";
+countId = 5401;
+pro = "\U5185\U8499\U53e4";
+provinceId = 27;
+},
+{
+areaId = 258;
+city = "\U4e4c\U9c81\U6728\U9f50";
+cityIp = "\U4e4c\U9c81\U6728\U9f50\U5e02";
+countId = 5401;
+pro = "\U65b0\U7586";
+provinceId = 17;
+},
+{
+areaId = 305;
+city = "\U65e0\U9521";
+cityIp = "\U65e0\U9521\U5e02";
+countId = 5401;
+pro = "\U6c5f\U82cf";
+provinceId = 1;
+},
+{
+areaId = 490;
+city = "\U829c\U6e56";
+cityIp = "\U829c\U6e56\U5e02";
+countId = 5401;
+pro = "\U5b89\U5fbd";
+provinceId = 28;
+},
+{
+areaId = 549;
+city = "\U68a7\U5dde";
+cityIp = "\U68a7\U5dde\U5e02";
+countId = 5401;
+pro = "\U5e7f\U897f";
+provinceId = 23;
+},
+{
+areaId = 658;
+city = "\U5434\U5fe0";
+cityIp = "\U5434\U5fe0\U5e02";
+countId = 5401;
+pro = "\U5b81\U590f";
+provinceId = 30;
+},
+{
+areaId = 76;
+city = "\U6b66\U6c49";
+cityIp = "\U6b66\U6c49\U5e02";
+countId = 5401;
+pro = "\U6e56\U5317";
+provinceId = 4;
+},
+{
+areaId = 629;
+city = "\U6b66\U5a01";
+cityIp = "\U6b66\U5a01\U5e02";
+countId = 5401;
+pro = "\U7518\U8083";
+provinceId = 25;
+},
+{
+areaId = 1032;
+city = "\U4e94\U5bb6\U6e20\U5e02";
+cityIp = "\U4e94\U5bb6\U6e20\U5e02\U5e02";
+countId = 5401;
+pro = "\U65b0\U7586";
+provinceId = 17;
+},
+{
+areaId = 1047;
+city = "\U4e94\U6307\U5c71";
+cityIp = "\U4e94\U6307\U5c71\U5e02";
+countId = 5401;
+pro = "\U6d77\U5357";
+provinceId = 18;
+}
+);
+X =     (
+{
+areaId = 45;
+city = "\U897f\U5b89";
+cityIp = "\U897f\U5b89\U5e02";
+countId = 5401;
+pro = "\U9655\U897f";
+provinceId = 8;
+},
+{
+areaId = 673;
+city = "\U897f\U660c";
+cityIp = "\U897f\U660c\U5e02";
+countId = 5401;
+pro = "\U56db\U5ddd";
+provinceId = 12;
+},
+{
+areaId = 532;
+city = "\U897f\U5b81";
+cityIp = "\U897f\U5b81\U5e02";
+countId = 5401;
+pro = "\U9752\U6d77";
+provinceId = 31;
+},
+{
+areaId = 759;
+city = "\U897f\U53cc\U7248\U7eb3";
+cityIp = "\U897f\U53cc\U7248\U7eb3\U5e02";
+countId = 5401;
+pro = "\U4e91\U5357";
+provinceId = 9;
+},
+{
+areaId = 569;
+city = "\U9521\U6797\U90ed\U52d2\U76df";
+cityIp = "\U9521\U6797\U90ed\U52d2\U76df\U5e02";
+countId = 5401;
+pro = "\U5185\U8499\U53e4";
+provinceId = 27;
+},
+{
+areaId = 1035;
+city = "\U9521\U6797\U6d69\U7279";
+cityIp = "\U9521\U6797\U6d69\U7279\U5e02";
+countId = 5401;
+pro = "\U5185\U8499\U53e4";
+provinceId = 27;
+},
+{
+areaId = 293;
+city = "\U53a6\U95e8";
+cityIp = "\U53a6\U95e8\U5e02";
+countId = 5401;
+pro = "\U798f\U5efa";
+provinceId = 3;
+},
+{
+areaId = 579;
+city = "\U4ed9\U6843";
+cityIp = "\U4ed9\U6843\U5e02";
+countId = 5401;
+pro = "\U6e56\U5317";
+provinceId = 4;
+},
+{
+areaId = 421;
+city = "\U54b8\U5b81";
+cityIp = "\U54b8\U5b81\U5e02";
+countId = 5401;
+pro = "\U6e56\U5317";
+provinceId = 4;
+},
+{
+areaId = 671;
+city = "\U54b8\U9633";
+cityIp = "\U54b8\U9633\U5e02";
+countId = 5401;
+pro = "\U9655\U897f";
+provinceId = 8;
+},
+{
+areaId = 687;
+city = "\U9999\U683c\U91cc\U62c9";
+cityIp = "\U9999\U683c\U91cc\U62c9\U5e02";
+countId = 5401;
+pro = "\U4e91\U5357";
+provinceId = 9;
+},
+{
+areaId = 413;
+city = "\U8944\U9633";
+cityIp = "\U8944\U9633\U5e02";
+countId = 5401;
+pro = "\U6e56\U5317";
+provinceId = 4;
+},
+{
+areaId = 434;
+city = "\U6e58\U6f6d";
+cityIp = "\U6e58\U6f6d\U5e02";
+countId = 5401;
+pro = "\U6e56\U5357";
+provinceId = 10;
+},
+{
+areaId = 764;
+city = "\U6e58\U897f";
+cityIp = "\U6e58\U897f\U5e02";
+countId = 5401;
+pro = "\U6e56\U5357";
+provinceId = 10;
+},
+{
+areaId = 508;
+city = "\U5b5d\U611f";
+cityIp = "\U5b5d\U611f\U5e02";
+countId = 5401;
+pro = "\U6e56\U5317";
+provinceId = 4;
+},
+{
+areaId = 374;
+city = "\U65b0\U4e61";
+cityIp = "\U65b0\U4e61\U5e02";
+countId = 5401;
+pro = "\U6cb3\U5357";
+provinceId = 22;
+},
+{
+areaId = 554;
+city = "\U65b0\U4f59";
+cityIp = "\U65b0\U4f59\U5e02";
+countId = 5401;
+pro = "\U6c5f\U897f";
+provinceId = 16;
+},
+{
+areaId = 476;
+city = "\U5ffb\U5dde";
+cityIp = "\U5ffb\U5dde\U5e02";
+countId = 5401;
+pro = "\U5c71\U897f";
+provinceId = 21;
+},
+{
+areaId = 375;
+city = "\U4fe1\U9633";
+cityIp = "\U4fe1\U9633\U5e02";
+countId = 5401;
+pro = "\U6cb3\U5357";
+provinceId = 22;
+},
+{
+areaId = 676;
+city = "\U5174\U5b89\U76df";
+cityIp = "\U5174\U5b89\U76df\U5e02";
+countId = 5401;
+pro = "\U5185\U8499\U53e4";
+provinceId = 27;
+},
+{
+areaId = 350;
+city = "\U90a2\U53f0";
+cityIp = "\U90a2\U53f0\U5e02";
+countId = 5401;
+pro = "\U6cb3\U5317";
+provinceId = 11;
+},
+{
+areaId = 307;
+city = "\U5f90\U5dde";
+cityIp = "\U5f90\U5dde\U5e02";
+countId = 5401;
+pro = "\U6c5f\U82cf";
+provinceId = 1;
+},
+{
+areaId = 371;
+city = "\U8bb8\U660c";
+cityIp = "\U8bb8\U660c\U5e02";
+countId = 5401;
+pro = "\U6cb3\U5357";
+provinceId = 22;
+},
+{
+areaId = 498;
+city = "\U5ba3\U57ce";
+cityIp = "\U5ba3\U57ce\U5e02";
+countId = 5401;
+pro = "\U5b89\U5fbd";
+provinceId = 28;
+}
+);
+Y =     (
+{
+areaId = 515;
+city = "\U96c5\U5b89";
+cityIp = "\U96c5\U5b89\U5e02";
+countId = 5401;
+pro = "\U56db\U5ddd";
+provinceId = 12;
+},
+{
+areaId = 318;
+city = "\U70df\U53f0";
+cityIp = "\U70df\U53f0\U5e02";
+countId = 5401;
+pro = "\U5c71\U4e1c";
+provinceId = 13;
+},
+{
+areaId = 895;
+city = "\U76d0\U57ce";
+cityIp = "\U76d0\U57ce\U5e02";
+countId = 5401;
+pro = "\U6c5f\U82cf";
+provinceId = 1;
+},
+{
+areaId = 521;
+city = "\U5ef6\U5b89";
+cityIp = "\U5ef6\U5b89\U5e02";
+countId = 5401;
+pro = "\U9655\U897f";
+provinceId = 8;
+},
+{
+areaId = 727;
+city = "\U5ef6\U8fb9";
+cityIp = "\U5ef6\U8fb9\U5e02";
+countId = 5401;
+pro = "\U5409\U6797";
+provinceId = 24;
+},
+{
+areaId = 310;
+city = "\U626c\U5dde";
+cityIp = "\U626c\U5dde\U5e02";
+countId = 5401;
+pro = "\U6c5f\U82cf";
+provinceId = 1;
+},
+{
+areaId = 462;
+city = "\U9633\U6c5f";
+cityIp = "\U9633\U6c5f\U5e02";
+countId = 5401;
+pro = "\U5e7f\U4e1c";
+provinceId = 5;
+},
+{
+areaId = 472;
+city = "\U9633\U6cc9";
+cityIp = "\U9633\U6cc9\U5e02";
+countId = 5401;
+pro = "\U5c71\U897f";
+provinceId = 21;
+},
+{
+areaId = 991;
+city = "\U4f0a\U6625";
+cityIp = "\U4f0a\U6625\U5e02";
+countId = 5401;
+pro = "\U9ed1\U9f99\U6c5f";
+provinceId = 15;
+},
+{
+areaId = 530;
+city = "\U4f0a\U7281";
+cityIp = "\U4f0a\U7281\U5e02";
+countId = 5401;
+pro = "\U65b0\U7586";
+provinceId = 17;
+},
+{
+areaId = 424;
+city = "\U5b9c\U5bbe";
+cityIp = "\U5b9c\U5bbe\U5e02";
+countId = 5401;
+pro = "\U56db\U5ddd";
+provinceId = 12;
+},
+{
+areaId = 327;
+city = "\U5b9c\U660c";
+cityIp = "\U5b9c\U660c\U5e02";
+countId = 5401;
+pro = "\U6e56\U5317";
+provinceId = 4;
+},
+{
+areaId = 502;
+city = "\U5b9c\U6625";
+cityIp = "\U5b9c\U6625\U5e02";
+countId = 5401;
+pro = "\U6c5f\U897f";
+provinceId = 16;
+},
+{
+areaId = 438;
+city = "\U76ca\U9633";
+cityIp = "\U76ca\U9633\U5e02";
+countId = 5401;
+pro = "\U6e56\U5357";
+provinceId = 10;
+},
+{
+areaId = 531;
+city = "\U94f6\U5ddd";
+cityIp = "\U94f6\U5ddd\U5e02";
+countId = 5401;
+pro = "\U5b81\U590f";
+provinceId = 30;
+},
+{
+areaId = 553;
+city = "\U9e70\U6f6d";
+cityIp = "\U9e70\U6f6d\U5e02";
+countId = 5401;
+pro = "\U6c5f\U897f";
+provinceId = 16;
+},
+{
+areaId = 321;
+city = "\U8425\U53e3";
+cityIp = "\U8425\U53e3\U5e02";
+countId = 5401;
+pro = "\U8fbd\U5b81";
+provinceId = 2;
+},
+{
+areaId = 439;
+city = "\U6c38\U5dde";
+cityIp = "\U6c38\U5dde\U5e02";
+countId = 5401;
+pro = "\U6e56\U5357";
+provinceId = 10;
+},
+{
+areaId = 365;
+city = "\U6986\U6797";
+cityIp = "\U6986\U6797\U5e02";
+countId = 5401;
+pro = "\U9655\U897f";
+provinceId = 8;
+},
+{
+areaId = 512;
+city = "\U7389\U6797";
+cityIp = "\U7389\U6797\U5e02";
+countId = 5401;
+pro = "\U5e7f\U897f";
+provinceId = 23;
+},
+{
+areaId = 1017;
+city = "\U7389\U6811";
+cityIp = "\U7389\U6811\U5e02";
+countId = 5401;
+pro = "\U9752\U6d77";
+provinceId = 31;
+},
+{
+areaId = 452;
+city = "\U7389\U6eaa";
+cityIp = "\U7389\U6eaa\U5e02";
+countId = 5401;
+pro = "\U4e91\U5357";
+provinceId = 9;
+},
+{
+areaId = 509;
+city = "\U5cb3\U9633";
+cityIp = "\U5cb3\U9633\U5e02";
+countId = 5401;
+pro = "\U6e56\U5357";
+provinceId = 10;
+},
+{
+areaId = 464;
+city = "\U4e91\U6d6e";
+cityIp = "\U4e91\U6d6e\U5e02";
+countId = 5401;
+pro = "\U5e7f\U4e1c";
+provinceId = 5;
+},
+{
+areaId = 479;
+city = "\U8fd0\U57ce";
+cityIp = "\U8fd0\U57ce\U5e02";
+countId = 5401;
+pro = "\U5c71\U897f";
+provinceId = 21;
+}
+);
+Z =     (
+{
+areaId = 359;
+city = "\U67a3\U5e84";
+cityIp = "\U67a3\U5e84\U5e02";
+countId = 5401;
+pro = "\U5c71\U4e1c";
+provinceId = 13;
+},
+{
+areaId = 457;
+city = "\U6e5b\U6c5f";
+cityIp = "\U6e5b\U6c5f\U5e02";
+countId = 5401;
+pro = "\U5e7f\U4e1c";
+provinceId = 5;
+},
+{
+areaId = 445;
+city = "\U6f33\U5dde";
+cityIp = "\U6f33\U5dde\U5e02";
+countId = 5401;
+pro = "\U798f\U5efa";
+provinceId = 3;
+},
+{
+areaId = 599;
+city = "\U5f20\U5bb6\U754c";
+cityIp = "\U5f20\U5bb6\U754c\U5e02";
+countId = 5401;
+pro = "\U6e56\U5357";
+provinceId = 10;
+},
+{
+areaId = 352;
+city = "\U5f20\U5bb6\U53e3";
+cityIp = "\U5f20\U5bb6\U53e3\U5e02";
+countId = 5401;
+pro = "\U6cb3\U5317";
+provinceId = 11;
+},
+{
+areaId = 628;
+city = "\U5f20\U6396";
+cityIp = "\U5f20\U6396\U5e02";
+countId = 5401;
+pro = "\U7518\U8083";
+provinceId = 25;
+},
+{
+areaId = 604;
+city = "\U662d\U901a";
+cityIp = "\U662d\U901a\U5e02";
+countId = 5401;
+pro = "\U4e91\U5357";
+provinceId = 9;
+},
+{
+areaId = 458;
+city = "\U8087\U5e86";
+cityIp = "\U8087\U5e86\U5e02";
+countId = 5401;
+pro = "\U5e7f\U4e1c";
+provinceId = 5;
+},
+{
+areaId = 306;
+city = "\U9547\U6c5f";
+cityIp = "\U9547\U6c5f\U5e02";
+countId = 5401;
+pro = "\U6c5f\U82cf";
+provinceId = 1;
+},
+{
+areaId = 267;
+city = "\U90d1\U5dde";
+cityIp = "\U90d1\U5dde\U5e02";
+countId = 5401;
+pro = "\U6cb3\U5357";
+provinceId = 22;
+},
+{
+areaId = 238;
+city = "\U4e2d\U5c71";
+cityIp = "\U4e2d\U5c71\U5e02";
+countId = 5401;
+pro = "\U5e7f\U4e1c";
+provinceId = 5;
+},
+{
+areaId = 587;
+city = "\U821f\U5c71";
+cityIp = "\U821f\U5c71\U5e02";
+countId = 5401;
+pro = "\U6d59\U6c5f";
+provinceId = 19;
+},
+{
+areaId = 379;
+city = "\U5468\U53e3";
+cityIp = "\U5468\U53e3\U5e02";
+countId = 5401;
+pro = "\U6cb3\U5357";
+provinceId = 22;
+},
+{
+areaId = 298;
+city = "\U73e0\U6d77";
+cityIp = "\U73e0\U6d77\U5e02";
+countId = 5401;
+pro = "\U5e7f\U4e1c";
+provinceId = 5;
+},
+{
+areaId = 430;
+city = "\U682a\U6d32";
+cityIp = "\U682a\U6d32\U5e02";
+countId = 5401;
+pro = "\U6e56\U5357";
+provinceId = 10;
+},
+{
+areaId = 378;
+city = "\U9a7b\U9a6c\U5e97";
+cityIp = "\U9a7b\U9a6c\U5e97\U5e02";
+countId = 5401;
+pro = "\U6cb3\U5357";
+provinceId = 22;
+},
+{
+areaId = 874;
+city = "\U8d44\U9633";
+cityIp = "\U8d44\U9633\U5e02";
+countId = 5401;
+pro = "\U56db\U5ddd";
+provinceId = 12;
+},
+{
+areaId = 316;
+city = "\U6dc4\U535a";
+cityIp = "\U6dc4\U535a\U5e02";
+countId = 5401;
+pro = "\U5c71\U4e1c";
+provinceId = 13;
+},
+{
+areaId = 581;
+city = "\U81ea\U8d21";
+cityIp = "\U81ea\U8d21\U5e02";
+countId = 5401;
+pro = "\U56db\U5ddd";
+provinceId = 12;
+},
+{
+areaId = 516;
+city = "\U9075\U4e49";
+cityIp = "\U9075\U4e49\U5e02";
+countId = 5401;
+pro = "\U8d35\U5dde";
+provinceId = 26;
+}
+);
+}

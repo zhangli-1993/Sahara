@@ -25,10 +25,8 @@
 		7A089AF01C9BE34900EF030E /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A089AEF1C9BE34900EF030E /* libz.tbd */; };
 		7A089AF21C9BE35B00EF030E /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A089AF11C9BE35B00EF030E /* libsqlite3.tbd */; };
 		7A089AF51C9BE67E00EF030E /* ShareView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A089AF41C9BE67E00EF030E /* ShareView.m */; };
-		7A089AFA1C9BF37900EF030E /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A089AF71C9BF37900EF030E /* libWeChatSDK.a */; };
 		7A089AFC1C9BF50300EF030E /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A089AFB1C9BF50300EF030E /* libsqlite3.0.tbd */; };
 		7A089AFE1C9BF51100EF030E /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A089AFD1C9BF51100EF030E /* libc++.tbd */; };
-		7A089B001C9C08AB00EF030E /* Filefff in Resources */ = {isa = PBXBuildFile; fileRef = 7A089AFF1C9C08AB00EF030E /* Filefff */; };
 		7A089B031C9C19CD00EF030E /* CarSumModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A089B021C9C19CD00EF030E /* CarSumModel.m */; };
 		7A089B081C9C277100EF030E /* Config in Resources */ = {isa = PBXBuildFile; fileRef = 7A089B071C9C277100EF030E /* Config */; };
 		7A08A8BB1C9A33A100D036E7 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A08A8BA1C9A33A100D036E7 /* QuartzCore.framework */; };
@@ -38,6 +36,8 @@
 		7A08A8C51C9ADF8100D036E7 /* hotCar in Resources */ = {isa = PBXBuildFile; fileRef = 7A08A8C41C9ADF8100D036E7 /* hotCar */; };
 		7A08A8C81C9AE37900D036E7 /* HotModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A08A8C71C9AE37900D036E7 /* HotModel.m */; };
 		7A08A8CB1C9AE4B900D036E7 /* HotTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A08A8CA1C9AE4B900D036E7 /* HotTableViewCell.m */; };
+		7A0A4AA81CA3D57A00AE3C94 /* StoreDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A0A4AA71CA3D57A00AE3C94 /* StoreDetailViewController.m */; };
+		7A0A4AAA1CA4056100AE3C94 /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A0A4AA91CA4056100AE3C94 /* libWeChatSDK.a */; };
 		7A0A919C1C999D020007192D /* CarPriceModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A0A919B1C999D020007192D /* CarPriceModel.m */; };
 		7A0A919F1C999F6C0007192D /* CarPriceView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A0A919E1C999F6C0007192D /* CarPriceView.m */; };
 		7A0ACAD81C9F7F9A00355E67 /* CarImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A0ACAD71C9F7F9A00355E67 /* CarImageView.m */; };
@@ -51,6 +51,7 @@
 		7A0ACAFE1CA024C900355E67 /* libstdc++.6.0.9.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A0ACAFD1CA024C900355E67 /* libstdc++.6.0.9.tbd */; };
 		7A0ACB011CA026C800355E67 /* StoreView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A0ACB001CA026C800355E67 /* StoreView.m */; };
 		7A0ACB031CA0314500355E67 /* store in Resources */ = {isa = PBXBuildFile; fileRef = 7A0ACB021CA0314500355E67 /* store */; };
+		7A0B3A911CA4DE2400620755 /* areaID in Resources */ = {isa = PBXBuildFile; fileRef = 7A0B3A901CA4DE2400620755 /* areaID */; };
 		7A0C78A01C9E2C8A0048C4F3 /* Article in Resources */ = {isa = PBXBuildFile; fileRef = 7A0C789F1C9E2C8A0048C4F3 /* Article */; };
 		7A0C78A31C9E2CE50048C4F3 /* ArticleModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A0C78A21C9E2CE50048C4F3 /* ArticleModel.m */; };
 		7A0C78A61C9E2E1D0048C4F3 /* ActicleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A0C78A51C9E2E1D0048C4F3 /* ActicleView.m */; };
@@ -59,6 +60,7 @@
 		7A0C78B11C9E4DC30048C4F3 /* comment in Resources */ = {isa = PBXBuildFile; fileRef = 7A0C78B01C9E4DC30048C4F3 /* comment */; };
 		7A0C78B41C9E929A0048C4F3 /* CarForum.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A0C78B31C9E929A0048C4F3 /* CarForum.m */; };
 		7A0C78B71C9E9AF30048C4F3 /* CarForumModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A0C78B61C9E9AF30048C4F3 /* CarForumModel.m */; };
+		7A0D08311CA2C180003FDFFA /* Filef in Resources */ = {isa = PBXBuildFile; fileRef = 7A0D08301CA2C180003FDFFA /* Filef */; };
 		7A1225751C9A90C000E16422 /* TomLiveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A1225741C9A90C000E16422 /* TomLiveViewController.m */; };
 		7A1225781C9A9C9500E16422 /* LiveOtherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A1225771C9A9C9500E16422 /* LiveOtherViewController.m */; };
 		7A1368101CA0D08300C401D7 /* privilegeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A13680E1CA0D08300C401D7 /* privilegeTableViewCell.m */; };
@@ -72,11 +74,15 @@
 		7A1767F51CA4DD9000E5FAAD /* PriceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A1767F41CA4DD9000E5FAAD /* PriceViewController.m */; };
 		7A1767FB1CA4EF5300E5FAAD /* PriceWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A1767FA1CA4EF5300E5FAAD /* PriceWebViewController.m */; };
 		7A1768001CA518CC00E5FAAD /* RSSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A1767FF1CA518CC00E5FAAD /* RSSViewController.m */; };
+		7A1954241CA409A600B84B03 /* File in Resources */ = {isa = PBXBuildFile; fileRef = 7A1954231CA409A600B84B03 /* File */; };
+		7A1EC5541CA53DF1008A14BB /* ComprehensiveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A1EC5521CA53DF1008A14BB /* ComprehensiveViewController.m */; };
+		7A1EC5551CA53DF1008A14BB /* ComprehensiveViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7A1EC5531CA53DF1008A14BB /* ComprehensiveViewController.xib */; };
 		7A2E7AE61C984DDA0045F332 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A2E7AE51C984DDA0045F332 /* main.m */; };
 		7A2E7AE91C984DDA0045F332 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A2E7AE81C984DDA0045F332 /* AppDelegate.m */; };
 		7A2E7AEB1C984DDA0045F332 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A2E7AEA1C984DDA0045F332 /* Assets.xcassets */; };
 		7A2E7AEE1C984DDA0045F332 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A2E7AEC1C984DDA0045F332 /* LaunchScreen.storyboard */; };
 		7A339BB71CA1851500DCBC5D /* VideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A339BB61CA1851500DCBC5D /* VideoViewController.m */; };
+		7A33F8D71CA614360063C022 /* AskPriceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A33F8D61CA614360063C022 /* AskPriceViewController.m */; };
 		7A59D97C1CA2290F00307189 /* UseCarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A59D97B1CA2290F00307189 /* UseCarViewController.m */; };
 		7A59D9821CA26B3900307189 /* CarWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A59D9811CA26B3900307189 /* CarWebViewController.m */; };
 		7A59D9851CA27D5500307189 /* SqlitDataBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A59D9841CA27D5500307189 /* SqlitDataBase.m */; };
@@ -87,6 +93,7 @@
 		7A5C17341CA299B0003C15D8 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A5C17331CA299B0003C15D8 /* MapViewController.m */; };
 		7A6591331C9D329C00EA47BE /* CompeteModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A6591321C9D329C00EA47BE /* CompeteModel.m */; };
 		7A6C0BD71C995E7C00205D61 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A6C0BD61C995E7C00205D61 /* DetailViewController.m */; };
+		7A7D3EFE1C9B93AD002B8008 /* for.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7A7D3EFD1C9B93AD002B8008 /* for.plist */; };
 		7A84D1A81C98FF38006EE2F1 /* blueArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A84D1A41C98FF38006EE2F1 /* blueArrow.png */; };
 		7A84D1A91C98FF38006EE2F1 /* blueArrowDown.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A84D1A51C98FF38006EE2F1 /* blueArrowDown.png */; };
 		7A84D1AA1C98FF38006EE2F1 /* PullingRefreshTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A84D1A71C98FF38006EE2F1 /* PullingRefreshTableView.m */; };
@@ -121,10 +128,15 @@
 		7AD7F7E91C9943A700BF2460 /* allBrands in Resources */ = {isa = PBXBuildFile; fileRef = 7AD7F7E81C9943A700BF2460 /* allBrands */; };
 		7AD7F7F11C9945E800BF2460 /* AllBrandsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AD7F7F01C9945E800BF2460 /* AllBrandsModel.m */; };
 		7AD7F7F41C9946E500BF2460 /* AllTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AD7F7F31C9946E500BF2460 /* AllTableViewCell.m */; };
-		7AF9C5BB1C9AB03A00074B54 /* ForumViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AF9C5B31C9AB03A00074B54 /* ForumViewController.m */; };
+		7AE336021CA8B68A00C30F4C /* libWeChatSDK.a in Resources */ = {isa = PBXBuildFile; fileRef = 7A0A4AA91CA4056100AE3C94 /* libWeChatSDK.a */; };
+		7AE336031CA8B6F200C30F4C /* libWeiboSDK.a in Resources */ = {isa = PBXBuildFile; fileRef = 7A089AD11C9BE21F00EF030E /* libWeiboSDK.a */; };
+		7AE336181CA8CD1500C30F4C /* ForumViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AF9C5B31C9AB03A00074B54 /* ForumViewController.m */; };
+		7AE793A51C9BD534001E9231 /* Filefff in Resources */ = {isa = PBXBuildFile; fileRef = 7AE793A41C9BD533001E9231 /* Filefff */; };
+		7AE793CE1C9C0324001E9231 /* PlaceView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AE793CD1C9C0324001E9231 /* PlaceView.m */; };
 		7AF9C5BC1C9AB03A00074B54 /* ForumModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AF9C5B61C9AB03A00074B54 /* ForumModel.m */; };
 		7AF9C5BD1C9AB03A00074B54 /* ForumOneTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AF9C5B91C9AB03A00074B54 /* ForumOneTableViewCell.m */; };
 		7AF9C5BE1C9AB03A00074B54 /* ForumOneTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7AF9C5BA1C9AB03A00074B54 /* ForumOneTableViewCell.xib */; };
+		7AF9C5C41C9AE83000074B54 /* ForumDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AF9C5C31C9AE83000074B54 /* ForumDetailsViewController.m */; };
 		7AFB2E441CA7F3E8009475EA /* GoupOnViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AFB2E431CA7F3E8009475EA /* GoupOnViewController.m */; };
 		7AFB2E471CA80E19009475EA /* MyselfViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AFB2E461CA80E19009475EA /* MyselfViewController.m */; };
 /* End PBXBuildFile section */
@@ -163,12 +175,10 @@
 		7A089AF11C9BE35B00EF030E /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		7A089AF31C9BE67E00EF030E /* ShareView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareView.h; sourceTree = "<group>"; };
 		7A089AF41C9BE67E00EF030E /* ShareView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShareView.m; sourceTree = "<group>"; };
-		7A089AF71C9BF37900EF030E /* libWeChatSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libWeChatSDK.a; sourceTree = "<group>"; };
 		7A089AF81C9BF37900EF030E /* WXApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApi.h; sourceTree = "<group>"; };
 		7A089AF91C9BF37900EF030E /* WXApiObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApiObject.h; sourceTree = "<group>"; };
 		7A089AFB1C9BF50300EF030E /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		7A089AFD1C9BF51100EF030E /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
-		7A089AFF1C9C08AB00EF030E /* Filefff */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Filefff; sourceTree = "<group>"; };
 		7A089B011C9C19CD00EF030E /* CarSumModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarSumModel.h; sourceTree = "<group>"; };
 		7A089B021C9C19CD00EF030E /* CarSumModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CarSumModel.m; sourceTree = "<group>"; };
 		7A089B071C9C277100EF030E /* Config */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Config; sourceTree = "<group>"; };
@@ -183,6 +193,9 @@
 		7A08A8C71C9AE37900D036E7 /* HotModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HotModel.m; sourceTree = "<group>"; };
 		7A08A8C91C9AE4B900D036E7 /* HotTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HotTableViewCell.h; sourceTree = "<group>"; };
 		7A08A8CA1C9AE4B900D036E7 /* HotTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HotTableViewCell.m; sourceTree = "<group>"; };
+		7A0A4AA61CA3D57A00AE3C94 /* StoreDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoreDetailViewController.h; sourceTree = "<group>"; };
+		7A0A4AA71CA3D57A00AE3C94 /* StoreDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoreDetailViewController.m; sourceTree = "<group>"; };
+		7A0A4AA91CA4056100AE3C94 /* libWeChatSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libWeChatSDK.a; sourceTree = "<group>"; };
 		7A0A919A1C999D020007192D /* CarPriceModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarPriceModel.h; sourceTree = "<group>"; };
 		7A0A919B1C999D020007192D /* CarPriceModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CarPriceModel.m; sourceTree = "<group>"; };
 		7A0A919D1C999F6C0007192D /* CarPriceView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarPriceView.h; sourceTree = "<group>"; };
@@ -203,6 +216,7 @@
 		7A0ACAFF1CA026C800355E67 /* StoreView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoreView.h; sourceTree = "<group>"; };
 		7A0ACB001CA026C800355E67 /* StoreView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoreView.m; sourceTree = "<group>"; };
 		7A0ACB021CA0314500355E67 /* store */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = store; sourceTree = "<group>"; };
+		7A0B3A901CA4DE2400620755 /* areaID */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = areaID; sourceTree = "<group>"; };
 		7A0C789F1C9E2C8A0048C4F3 /* Article */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Article; sourceTree = "<group>"; };
 		7A0C78A11C9E2CE50048C4F3 /* ArticleModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArticleModel.h; sourceTree = "<group>"; };
 		7A0C78A21C9E2CE50048C4F3 /* ArticleModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArticleModel.m; sourceTree = "<group>"; };
@@ -217,6 +231,7 @@
 		7A0C78B31C9E929A0048C4F3 /* CarForum.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CarForum.m; sourceTree = "<group>"; };
 		7A0C78B51C9E9AF30048C4F3 /* CarForumModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarForumModel.h; sourceTree = "<group>"; };
 		7A0C78B61C9E9AF30048C4F3 /* CarForumModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CarForumModel.m; sourceTree = "<group>"; };
+		7A0D08301CA2C180003FDFFA /* Filef */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Filef; sourceTree = "<group>"; };
 		7A1225731C9A90C000E16422 /* TomLiveViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TomLiveViewController.h; sourceTree = "<group>"; };
 		7A1225741C9A90C000E16422 /* TomLiveViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TomLiveViewController.m; sourceTree = "<group>"; };
 		7A1225761C9A9C9500E16422 /* LiveOtherViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LiveOtherViewController.h; sourceTree = "<group>"; };
@@ -241,6 +256,10 @@
 		7A1767FA1CA4EF5300E5FAAD /* PriceWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PriceWebViewController.m; sourceTree = "<group>"; };
 		7A1767FE1CA518CC00E5FAAD /* RSSViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSSViewController.h; sourceTree = "<group>"; };
 		7A1767FF1CA518CC00E5FAAD /* RSSViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSSViewController.m; sourceTree = "<group>"; };
+		7A1954231CA409A600B84B03 /* File */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = File; sourceTree = "<group>"; };
+		7A1EC5511CA53DF1008A14BB /* ComprehensiveViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComprehensiveViewController.h; sourceTree = "<group>"; };
+		7A1EC5521CA53DF1008A14BB /* ComprehensiveViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ComprehensiveViewController.m; sourceTree = "<group>"; };
+		7A1EC5531CA53DF1008A14BB /* ComprehensiveViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ComprehensiveViewController.xib; sourceTree = "<group>"; };
 		7A2E7AE11C984DDA0045F332 /* Sahara.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sahara.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A2E7AE51C984DDA0045F332 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7A2E7AE71C984DDA0045F332 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -250,6 +269,8 @@
 		7A2E7AEF1C984DDA0045F332 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7A339BB51CA1851500DCBC5D /* VideoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoViewController.h; sourceTree = "<group>"; };
 		7A339BB61CA1851500DCBC5D /* VideoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoViewController.m; sourceTree = "<group>"; };
+		7A33F8D51CA614360063C022 /* AskPriceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AskPriceViewController.h; sourceTree = "<group>"; };
+		7A33F8D61CA614360063C022 /* AskPriceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AskPriceViewController.m; sourceTree = "<group>"; };
 		7A59D97A1CA2290F00307189 /* UseCarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UseCarViewController.h; sourceTree = "<group>"; };
 		7A59D97B1CA2290F00307189 /* UseCarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UseCarViewController.m; sourceTree = "<group>"; };
 		7A59D9801CA26B3900307189 /* CarWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarWebViewController.h; sourceTree = "<group>"; };
@@ -269,6 +290,7 @@
 		7A6591321C9D329C00EA47BE /* CompeteModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CompeteModel.m; sourceTree = "<group>"; };
 		7A6C0BD51C995E7C00205D61 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		7A6C0BD61C995E7C00205D61 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		7A7D3EFD1C9B93AD002B8008 /* for.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = for.plist; sourceTree = "<group>"; };
 		7A84D1A41C98FF38006EE2F1 /* blueArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blueArrow.png; sourceTree = "<group>"; };
 		7A84D1A51C98FF38006EE2F1 /* blueArrowDown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blueArrowDown.png; sourceTree = "<group>"; };
 		7A84D1A61C98FF38006EE2F1 /* PullingRefreshTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PullingRefreshTableView.h; sourceTree = "<group>"; };
@@ -330,6 +352,9 @@
 		7AD7F7F01C9945E800BF2460 /* AllBrandsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AllBrandsModel.m; sourceTree = "<group>"; };
 		7AD7F7F21C9946E500BF2460 /* AllTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AllTableViewCell.h; sourceTree = "<group>"; };
 		7AD7F7F31C9946E500BF2460 /* AllTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AllTableViewCell.m; sourceTree = "<group>"; };
+		7AE793A41C9BD533001E9231 /* Filefff */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Filefff; sourceTree = "<group>"; };
+		7AE793CC1C9C0324001E9231 /* PlaceView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaceView.h; sourceTree = "<group>"; };
+		7AE793CD1C9C0324001E9231 /* PlaceView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaceView.m; sourceTree = "<group>"; };
 		7AF9C5B21C9AB03A00074B54 /* ForumViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForumViewController.h; sourceTree = "<group>"; };
 		7AF9C5B31C9AB03A00074B54 /* ForumViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForumViewController.m; sourceTree = "<group>"; };
 		7AF9C5B51C9AB03A00074B54 /* ForumModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForumModel.h; sourceTree = "<group>"; };
@@ -337,6 +362,8 @@
 		7AF9C5B81C9AB03A00074B54 /* ForumOneTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForumOneTableViewCell.h; sourceTree = "<group>"; };
 		7AF9C5B91C9AB03A00074B54 /* ForumOneTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForumOneTableViewCell.m; sourceTree = "<group>"; };
 		7AF9C5BA1C9AB03A00074B54 /* ForumOneTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ForumOneTableViewCell.xib; sourceTree = "<group>"; };
+		7AF9C5C21C9AE83000074B54 /* ForumDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForumDetailsViewController.h; sourceTree = "<group>"; };
+		7AF9C5C31C9AE83000074B54 /* ForumDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForumDetailsViewController.m; sourceTree = "<group>"; };
 		7AFB2E421CA7F3E8009475EA /* GoupOnViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoupOnViewController.h; sourceTree = "<group>"; };
 		7AFB2E431CA7F3E8009475EA /* GoupOnViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoupOnViewController.m; sourceTree = "<group>"; };
 		7AFB2E451CA80E19009475EA /* MyselfViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyselfViewController.h; sourceTree = "<group>"; };
@@ -354,7 +381,6 @@
 				7A0ACAF81CA023AA00355E67 /* MAMapKit.framework in Frameworks */,
 				7A089AFE1C9BF51100EF030E /* libc++.tbd in Frameworks */,
 				7A089AFC1C9BF50300EF030E /* libsqlite3.0.tbd in Frameworks */,
-				7A089AFA1C9BF37900EF030E /* libWeChatSDK.a in Frameworks */,
 				7A089AF21C9BE35B00EF030E /* libsqlite3.tbd in Frameworks */,
 				7A089AF01C9BE34900EF030E /* libz.tbd in Frameworks */,
 				7A089AEE1C9BE33900EF030E /* CoreGraphics.framework in Frameworks */,
@@ -362,6 +388,7 @@
 				7A089AEA1C9BE32200EF030E /* UIKit.framework in Frameworks */,
 				7A089AE81C9BE31800EF030E /* CoreText.framework in Frameworks */,
 				7A089AE61C9BE30700EF030E /* CoreTelephony.framework in Frameworks */,
+				7A0A4AAA1CA4056100AE3C94 /* libWeChatSDK.a in Frameworks */,
 				7A089AE41C9BE2F800EF030E /* Security.framework in Frameworks */,
 				7A089AE21C9BE2EE00EF030E /* SystemConfiguration.framework in Frameworks */,
 				7A089AE01C9BE2E000EF030E /* ImageIO.framework in Frameworks */,
@@ -407,7 +434,7 @@
 		7A089AF61C9BF37900EF030E /* SDKExport */ = {
 			isa = PBXGroup;
 			children = (
-				7A089AF71C9BF37900EF030E /* libWeChatSDK.a */,
+				7A0A4AA91CA4056100AE3C94 /* libWeChatSDK.a */,
 				7A089AF81C9BF37900EF030E /* WXApi.h */,
 				7A089AF91C9BF37900EF030E /* WXApiObject.h */,
 			);
@@ -559,7 +586,10 @@
 				7A0ACAF51C9FF28C00355E67 /* CarForumViewController.m */,
 				7A5C17321CA299B0003C15D8 /* MapViewController.h */,
 				7A5C17331CA299B0003C15D8 /* MapViewController.m */,
-				7A089AFF1C9C08AB00EF030E /* Filefff */,
+				7A0A4AA61CA3D57A00AE3C94 /* StoreDetailViewController.h */,
+				7A0A4AA71CA3D57A00AE3C94 /* StoreDetailViewController.m */,
+				7A33F8D51CA614360063C022 /* AskPriceViewController.h */,
+				7A33F8D61CA614360063C022 /* AskPriceViewController.m */,
 				7AD7F7E61C9934CE00BF2460 /* hot */,
 				7AD7F7E81C9943A700BF2460 /* allBrands */,
 				7A08A8BC1C9A493200D036E7 /* CarPrice */,
@@ -571,6 +601,7 @@
 				7A0ACAEF1C9FA47900355E67 /* carForum */,
 				7A0ACB021CA0314500355E67 /* store */,
 				7A1368651CA0E96200C401D7 /* privilege */,
+				7A0B3A901CA4DE2400620755 /* areaID */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -793,6 +824,13 @@
 			children = (
 				7AF9C5B21C9AB03A00074B54 /* ForumViewController.h */,
 				7AF9C5B31C9AB03A00074B54 /* ForumViewController.m */,
+				7A1954231CA409A600B84B03 /* File */,
+				7AF9C5C21C9AE83000074B54 /* ForumDetailsViewController.h */,
+				7AF9C5C31C9AE83000074B54 /* ForumDetailsViewController.m */,
+				7A1EC5511CA53DF1008A14BB /* ComprehensiveViewController.h */,
+				7A1EC5521CA53DF1008A14BB /* ComprehensiveViewController.m */,
+				7A1EC5531CA53DF1008A14BB /* ComprehensiveViewController.xib */,
+				7AE793A41C9BD533001E9231 /* Filefff */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -802,6 +840,8 @@
 			children = (
 				7AF9C5B51C9AB03A00074B54 /* ForumModel.h */,
 				7AF9C5B61C9AB03A00074B54 /* ForumModel.m */,
+				7A0D08301CA2C180003FDFFA /* Filef */,
+				7A7D3EFD1C9B93AD002B8008 /* for.plist */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -812,6 +852,8 @@
 				7AF9C5B81C9AB03A00074B54 /* ForumOneTableViewCell.h */,
 				7AF9C5B91C9AB03A00074B54 /* ForumOneTableViewCell.m */,
 				7AF9C5BA1C9AB03A00074B54 /* ForumOneTableViewCell.xib */,
+				7AE793CC1C9C0324001E9231 /* PlaceView.h */,
+				7AE793CD1C9C0324001E9231 /* PlaceView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -883,6 +925,7 @@
 				TargetAttributes = {
 					7A2E7AE01C984DDA0045F332 = {
 						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = 4JS35T698G;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 1;
@@ -914,16 +957,23 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7A089B001C9C08AB00EF030E /* Filefff in Resources */,
+				7AE336031CA8B6F200C30F4C /* libWeiboSDK.a in Resources */,
+				7AE336021CA8B68A00C30F4C /* libWeChatSDK.a in Resources */,
+				7A0B3A911CA4DE2400620755 /* areaID in Resources */,
 				7A2E7AEB1C984DDA0045F332 /* Assets.xcassets in Resources */,
 				7A1368661CA0E96200C401D7 /* privilege in Resources */,
 				7A1368111CA0D08300C401D7 /* privilegeTableViewCell.xib in Resources */,
 				7A08A8BD1C9A493200D036E7 /* CarPrice in Resources */,
+				7A1954241CA409A600B84B03 /* File in Resources */,
+				7A0D08311CA2C180003FDFFA /* Filef in Resources */,
 				7ABB84691C9E443400621CC4 /* sun.png in Resources */,
 				7A84D1A91C98FF38006EE2F1 /* blueArrowDown.png in Resources */,
 				7A2E7AEE1C984DDA0045F332 /* LaunchScreen.storyboard in Resources */,
 				7ABB84671C9E438200621CC4 /* yue.png in Resources */,
 				7AF9C5BE1C9AB03A00074B54 /* ForumOneTableViewCell.xib in Resources */,
+				7A1EC5551CA53DF1008A14BB /* ComprehensiveViewController.xib in Resources */,
+				7A84D1A81C98FF38006EE2F1 /* blueArrow.png in Resources */,
+				7A7D3EFE1C9B93AD002B8008 /* for.plist in Resources */,
 				7ABB84821C9E98F300621CC4 /* Login.storyboard in Resources */,
 				7A84D1A81C98FF38006EE2F1 /* blueArrow.png in Resources */,
 				7A08A8C51C9ADF8100D036E7 /* hotCar in Resources */,
@@ -931,6 +981,7 @@
 				7AD7F7E91C9943A700BF2460 /* allBrands in Resources */,
 				7A089AC91C9BD71900EF030E /* sum in Resources */,
 				7AB3627A1C98F89800C03E74 /* MessageTwoTableViewCell.xib in Resources */,
+				7AE793A51C9BD534001E9231 /* Filefff in Resources */,
 				7A0C78A01C9E2C8A0048C4F3 /* Article in Resources */,
 				7A0C78B11C9E4DC30048C4F3 /* comment in Resources */,
 				7AD7F7E71C9934CE00BF2460 /* hot in Resources */,
@@ -1002,9 +1053,9 @@
 				7AAB55B91C9ADBEE0096B1C1 /* AppriseModel.m in Sources */,
 				7AB3626C1C98F2B500C03E74 /* VOSegment.m in Sources */,
 				7A0ACB011CA026C800355E67 /* StoreView.m in Sources */,
-				7AF9C5BB1C9AB03A00074B54 /* ForumViewController.m in Sources */,
 				7A59D9851CA27D5500307189 /* SqlitDataBase.m in Sources */,
 				7A0A919F1C999F6C0007192D /* CarPriceView.m in Sources */,
+				7AE336181CA8CD1500C30F4C /* ForumViewController.m in Sources */,
 				7A08A8C31C9AD98B00D036E7 /* HotViewController.m in Sources */,
 				7A0A919C1C999D020007192D /* CarPriceModel.m in Sources */,
 				7A59D98C1CA2984300307189 /* CollectionViewController.m in Sources */,
@@ -1013,11 +1064,11 @@
 				7AD7F7F11C9945E800BF2460 /* AllBrandsModel.m in Sources */,
 				7A0C78A61C9E2E1D0048C4F3 /* ActicleView.m in Sources */,
 				7A0ACAF61C9FF28C00355E67 /* CarForumViewController.m in Sources */,
-				7A1768001CA518CC00E5FAAD /* RSSViewController.m in Sources */,
 				7A08A8C01C9AD73700D036E7 /* CarDetailViewController.m in Sources */,
 				7ABB847E1C9E98B500621CC4 /* ForgotPassViewController.m in Sources */,
 				7AB3626A1C98F2B500C03E74 /* VOContentLayer.m in Sources */,
 				7AAB55B41C9AC5E70096B1C1 /* AppriseTableViewCell.m in Sources */,
+				7A1768001CA518CC00E5FAAD /* RSSViewController.m in Sources */,
 				7A1767F51CA4DD9000E5FAAD /* PriceViewController.m in Sources */,
 				7ABB846C1C9E45CE00621CC4 /* CheckViewController.m in Sources */,
 				7AB362521C98E42B00C03E74 /* FindCarViewController.m in Sources */,
@@ -1025,9 +1076,11 @@
 				7A0ACAD81C9F7F9A00355E67 /* CarImageView.m in Sources */,
 				7A1368641CA0E61E00C401D7 /* PrivilegeModel.m in Sources */,
 				7AB362581C98E44500C03E74 /* MainViewController.m in Sources */,
+				7A0A4AA81CA3D57A00AE3C94 /* StoreDetailViewController.m in Sources */,
 				7A0C78B71C9E9AF30048C4F3 /* CarForumModel.m in Sources */,
 				7A089B031C9C19CD00EF030E /* CarSumModel.m in Sources */,
 				7A2E7AE91C984DDA0045F332 /* AppDelegate.m in Sources */,
+				7A1EC5541CA53DF1008A14BB /* ComprehensiveViewController.m in Sources */,
 				7AB3626D1C98F2B500C03E74 /* VOSegmentedControl.m in Sources */,
 				7AD7F7F41C9946E500BF2460 /* AllTableViewCell.m in Sources */,
 				7A0C78B41C9E929A0048C4F3 /* CarForum.m in Sources */,
@@ -1044,6 +1097,7 @@
 				7AB3624F1C98E41800C03E74 /* PrimeViewController.m in Sources */,
 				7AAB55B11C9AB7580096B1C1 /* AppriseViewController.m in Sources */,
 				7AB3626B1C98F2B500C03E74 /* VOIndicatorAnimation.m in Sources */,
+				7AE793CE1C9C0324001E9231 /* PlaceView.m in Sources */,
 				7A0C78AF1C9E475A0048C4F3 /* CommentView.m in Sources */,
 				7AFB2E471CA80E19009475EA /* MyselfViewController.m in Sources */,
 				7ABB847B1C9E988B00621CC4 /* RegisterViewController.m in Sources */,
@@ -1052,6 +1106,7 @@
 				7A59D9821CA26B3900307189 /* CarWebViewController.m in Sources */,
 				7AAB55AE1C9AA55C0096B1C1 /* UIViewController+BackPront.m in Sources */,
 				7AF9C5BD1C9AB03A00074B54 /* ForumOneTableViewCell.m in Sources */,
+				7A33F8D71CA614360063C022 /* AskPriceViewController.m in Sources */,
 				7A0C78AC1C9E37600048C4F3 /* ActicleDetailViewController.m in Sources */,
 				7A339BB71CA1851500DCBC5D /* VideoViewController.m in Sources */,
 				7A1225781C9A9C9500E16422 /* LiveOtherViewController.m in Sources */,
@@ -1067,6 +1122,7 @@
 				7AB3625B1C98E45600C03E74 /* MessageViewController.m in Sources */,
 				7A6591331C9D329C00EA47BE /* CompeteModel.m in Sources */,
 				7A84D1AA1C98FF38006EE2F1 /* PullingRefreshTableView.m in Sources */,
+				7AF9C5C41C9AE83000074B54 /* ForumDetailsViewController.m in Sources */,
 				7A1225751C9A90C000E16422 /* TomLiveViewController.m in Sources */,
 				7A13686E1CA16AA000C401D7 /* CarConfigView.m in Sources */,
 				7A089AF51C9BE67E00EF030E /* ShareView.m in Sources */,
@@ -1175,6 +1231,9 @@
 			baseConfigurationReference = 3E5768CE4E443399640C3666 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ENABLE_BITCODE = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -1221,8 +1280,10 @@
 					"-framework",
 					"\"SystemConfiguration\"",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = zhangli.Sahara;
+				PRODUCT_BUNDLE_IDENTIFIER = Auroralizi.Sahara;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				VALID_ARCHS = "arm64 armv7 linker command failed with exit code 1 (use -v to see invocation) armv7s";
 			};
 			name = Debug;
 		};
@@ -1231,6 +1292,9 @@
 			baseConfigurationReference = 4483BA8AABB15E4CA5CAE736 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ENABLE_BITCODE = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -1277,8 +1341,10 @@
 					"-framework",
 					"\"SystemConfiguration\"",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = zhangli.Sahara;
+				PRODUCT_BUNDLE_IDENTIFIER = Auroralizi.Sahara;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				VALID_ARCHS = "arm64 armv7 linker command failed with exit code 1 (use -v to see invocation) armv7s";
 			};
 			name = Release;
 		};

@@ -123,6 +123,8 @@
     self.priceView.tableView.delegate = self;
     self.priceView.idStr = self.hotIDArray[indexPath.row];
     [self.priceView requestModel];
+     
+   
     
     [self.view addSubview:self.priceView];
 

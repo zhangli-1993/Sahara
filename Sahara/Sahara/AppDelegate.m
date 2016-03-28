@@ -102,16 +102,16 @@
     self.window.rootViewController = self.tabBarVC;
     
     //推送
-    if ([application respondsToSelector:@selector(isRegisteredForRemoteNotifications)]) {
-        //ios8
-        //创建
-        UIUserNotificationSettings *userSet = [UIUserNotificationSettings settingsForTypes:(UIUserNotificationTypeBadge | UIUserNotificationTypeAlert | UIRemoteNotificationTypeSound) categories:nil];
-        [application registerUserNotificationSettings:userSet];
-    }else{
-        //ios7
-        [application registerForRemoteNotificationTypes:(UIRemoteNotificationTypeBadge | UIRemoteNotificationTypeSound)];
-    }
-    
+//    if ([application respondsToSelector:@selector(isRegisteredForRemoteNotifications)]) {
+//        //ios8
+//        //创建
+//        UIUserNotificationSettings *userSet = [UIUserNotificationSettings settingsForTypes:(UIUserNotificationTypeBadge | UIUserNotificationTypeAlert | UIRemoteNotificationTypeSound) categories:nil];
+//        [application registerUserNotificationSettings:userSet];
+//    }else{
+//        //ios7
+//        [application registerForRemoteNotificationTypes:(UIRemoteNotificationTypeBadge | UIRemoteNotificationTypeSound)];
+//    }
+//    
     //寻找deviceToken
     
     self.window.backgroundColor = [UIColor whiteColor];
@@ -131,8 +131,9 @@
         CLPlacemark *placeMark = [placemarks firstObject];
         [[NSUserDefaults standardUserDefaults] setValue:placeMark.addressDictionary[@"City"] forKey:@"city"];
         [userDef synchronize];
-        NSLog(@"++++error%@", error);
-        NSLog(@"++++%@", placeMark.addressDictionary);
+//        NSLog(@"111%@",placeMark.addressDictionary[@"City"]);
+//        NSLog(@"++++error%@", error);
+//        NSLog(@"++++%@", placeMark.addressDictionary);
     }];
     [_locationManager stopUpdatingLocation];
     

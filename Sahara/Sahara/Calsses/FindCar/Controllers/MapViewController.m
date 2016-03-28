@@ -8,11 +8,19 @@
 
 #import "MapViewController.h"
 #import <MAMapKit/MAMapKit.h>
+#define kArrorHeight 10
+#define kPortraitMargin     5
+#define kPortraitWidth      70
+#define kPortraitHeight     50
 
+#define kTitleWidth         120
+#define kTitleHeight        20
 @interface MapViewController ()<MAMapViewDelegate>
 {
     MAMapView *_mapView;
 }
+@property (nonatomic, strong) UILabel *titleLabel;
+@property (nonatomic, strong) UIView *calloutView;
 @end
 
 @implementation MapViewController
@@ -21,27 +29,41 @@
     [super viewDidLoad];
     self.navigationController.navigationBar.barTintColor = kMainColor;
     [self backToPreviousPageWithImage];
-    MAPointAnnotation *pointAnnotation = [[MAPointAnnotation alloc] init];
-    pointAnnotation.coordinate = CLLocationCoordinate2DMake(39.989631, 116.481018);
-    pointAnnotation.title = @"方恒国际";
-    pointAnnotation.subtitle = @"阜通东大街6号";
-    
-    [_mapView addAnnotation:pointAnnotation];
+    _mapView.showsUserLocation = YES;
+    self.titleLabel.text = self.name;
+    [self.calloutView addSubview:self.titleLabel];
+    [self.view addSubview:self.calloutView];
 }
 -(void) viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
-
     [MAMapServices sharedServices].apiKey = kMapKey;
-    
     _mapView = [[MAMapView alloc] initWithFrame:self.view.frame];
     _mapView.language = MAMapLanguageZhCN;
-    _mapView.showsUserLocation = YES;
     _mapView.delegate = self;
     _mapView.pausesLocationUpdatesAutomatically = NO;
     _mapView.allowsBackgroundLocationUpdates = YES;//iOS9以上系统必须配置
     _mapView.userTrackingMode = 1;
+    MAPointAnnotation *point = [[MAPointAnnotation alloc] init];
+    point.coordinate = CLLocationCoordinate2DMake([self.lat doubleValue], [self.lng doubleValue]);
+    point.subtitle = self.name;
+    [_mapView addAnnotation:point];
     [self.view addSubview:_mapView];
+}
+- (MAAnnotationView *)mapView:(MAMapView *)mapView viewForAnnotation:(id<MAAnnotation>)annotation{
+    if ([annotation isKindOfClass:[MAPointAnnotation class]]) {
+        static NSString *str = @"reuse";
+        MAPinAnnotationView *annotationView = (MAPinAnnotationView*)[mapView dequeueReusableAnnotationViewWithIdentifier:str];
+        if (annotationView == nil) {
+            annotationView = [[MAPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:str];
+        }
+        annotationView.canShowCallout = YES;
+        annotationView.animatesDrop = YES;
+        annotationView.draggable = YES;        //设置标注可以拖动，默认为NO
+        annotationView.pinColor = MAPinAnnotationColorRed;
+        return annotationView;
+    }
+    return nil;
 }
 -(void)mapView:(MAMapView *)mapView didUpdateUserLocation:(MAUserLocation *)userLocation
 updatingLocation:(BOOL)updatingLocation
@@ -52,27 +74,59 @@ updatingLocation:(BOOL)updatingLocation
         NSLog(@"latitude : %f,longitude: %f",userLocation.coordinate.latitude,userLocation.coordinate.longitude);
     }
 }
-- (MAAnnotationView *)mapView:(MAMapView *)mapView viewForAnnotation:(id <MAAnnotation>)annotation
-{
-    if ([annotation isKindOfClass:[MAPointAnnotation class]])
-    {
-        static NSString *pointReuseIndentifier = @"pointReuseIndentifier";
-        MAPinAnnotationView *annotationView = (MAPinAnnotationView*)[mapView dequeueReusableAnnotationViewWithIdentifier:pointReuseIndentifier];
-        if (annotationView == nil)
-        {
-            annotationView = [[MAPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:pointReuseIndentifier];
-        }
-        annotationView.canShowCallout= YES;       //设置气泡可以弹出，默认为NO
-        annotationView.animatesDrop = YES;        //设置标注动画显示，默认为NO
-        annotationView.draggable = YES;        //设置标注可以拖动，默认为NO
-        annotationView.pinColor = MAPinAnnotationColorPurple;
-        return annotationView;
-    }
-    return nil;
-}
 - (void)mapView:(MAMapView *)mapView didFailToLocateUserWithError:(NSError *)error{
     NSLog(@"%@", error);
 }
+//自定义气泡
+- (void)drawRect:(CGRect)rect
+{
+    [self drawInContext:UIGraphicsGetCurrentContext()];
+    
+    self.view.layer.shadowColor = [[UIColor blackColor] CGColor];
+    self.view.layer.shadowOpacity = 1.0;
+    self.view.layer.shadowOffset = CGSizeMake(0.0f, 0.0f);
+}
+- (void)drawInContext:(CGContextRef)context
+{
+    
+    CGContextSetLineWidth(context, 2.0);
+    CGContextSetFillColorWithColor(context, [UIColor colorWithRed:0.3 green:0.3 blue:0.3 alpha:0.8].CGColor);
+    [self getDrawPath:context];
+    CGContextFillPath(context);
+}
+- (void)getDrawPath:(CGContextRef)context
+{
+    CGRect rrect = [UIScreen mainScreen].bounds;
+    CGFloat radius = 6.0;
+    CGFloat minx = CGRectGetMinX(rrect),
+    midx = CGRectGetMidX(rrect),
+    maxx = CGRectGetMaxX(rrect);
+    CGFloat miny = CGRectGetMinY(rrect),
+    maxy = CGRectGetMaxY(rrect)-kArrorHeight;
+    CGContextMoveToPoint(context, midx+kArrorHeight, maxy);
+    CGContextAddLineToPoint(context,midx, maxy+kArrorHeight);
+    CGContextAddLineToPoint(context,midx-kArrorHeight, maxy);
+    CGContextAddArcToPoint(context, minx, maxy, minx, miny, radius);
+    CGContextAddArcToPoint(context, minx, minx, maxx, miny, radius);
+    CGContextAddArcToPoint(context, maxx, miny, maxx, maxx, radius);
+    CGContextAddArcToPoint(context, maxx, maxy, midx, maxy, radius);
+    CGContextClosePath(context);
+}
+
+
+
+
+
+- (UILabel *)titleLabel{
+    if (_titleLabel == nil) {
+        self.titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(kPortraitMargin, kPortraitMargin, kTitleWidth, kTitleHeight)];
+        
+    }
+    return _titleLabel;
+}
+
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
