@@ -131,6 +131,7 @@
 		7AE336021CA8B68A00C30F4C /* libWeChatSDK.a in Resources */ = {isa = PBXBuildFile; fileRef = 7A0A4AA91CA4056100AE3C94 /* libWeChatSDK.a */; };
 		7AE336031CA8B6F200C30F4C /* libWeiboSDK.a in Resources */ = {isa = PBXBuildFile; fileRef = 7A089AD11C9BE21F00EF030E /* libWeiboSDK.a */; };
 		7AE336181CA8CD1500C30F4C /* ForumViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AF9C5B31C9AB03A00074B54 /* ForumViewController.m */; };
+		7AE3361A1CA8DA9800C30F4C /* rssMy.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7AE336191CA8DA9800C30F4C /* rssMy.plist */; };
 		7AE793A51C9BD534001E9231 /* Filefff in Resources */ = {isa = PBXBuildFile; fileRef = 7AE793A41C9BD533001E9231 /* Filefff */; };
 		7AE793CE1C9C0324001E9231 /* PlaceView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AE793CD1C9C0324001E9231 /* PlaceView.m */; };
 		7AF9C5BC1C9AB03A00074B54 /* ForumModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AF9C5B61C9AB03A00074B54 /* ForumModel.m */; };
@@ -352,6 +353,7 @@
 		7AD7F7F01C9945E800BF2460 /* AllBrandsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AllBrandsModel.m; sourceTree = "<group>"; };
 		7AD7F7F21C9946E500BF2460 /* AllTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AllTableViewCell.h; sourceTree = "<group>"; };
 		7AD7F7F31C9946E500BF2460 /* AllTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AllTableViewCell.m; sourceTree = "<group>"; };
+		7AE336191CA8DA9800C30F4C /* rssMy.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = rssMy.plist; sourceTree = "<group>"; };
 		7AE793A41C9BD533001E9231 /* Filefff */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Filefff; sourceTree = "<group>"; };
 		7AE793CC1C9C0324001E9231 /* PlaceView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaceView.h; sourceTree = "<group>"; };
 		7AE793CD1C9C0324001E9231 /* PlaceView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaceView.m; sourceTree = "<group>"; };
@@ -659,6 +661,7 @@
 				7A1767FF1CA518CC00E5FAAD /* RSSViewController.m */,
 				7AFB2E451CA80E19009475EA /* MyselfViewController.h */,
 				7AFB2E461CA80E19009475EA /* MyselfViewController.m */,
+				7AE336191CA8DA9800C30F4C /* rssMy.plist */,
 				7AFB2E421CA7F3E8009475EA /* GoupOnViewController.h */,
 				7AFB2E431CA7F3E8009475EA /* GoupOnViewController.m */,
 				7ABB84661C9E438200621CC4 /* yue.png */,
@@ -972,6 +975,7 @@
 				7ABB84671C9E438200621CC4 /* yue.png in Resources */,
 				7AF9C5BE1C9AB03A00074B54 /* ForumOneTableViewCell.xib in Resources */,
 				7A1EC5551CA53DF1008A14BB /* ComprehensiveViewController.xib in Resources */,
+				7AE3361A1CA8DA9800C30F4C /* rssMy.plist in Resources */,
 				7A84D1A81C98FF38006EE2F1 /* blueArrow.png in Resources */,
 				7A7D3EFE1C9B93AD002B8008 /* for.plist in Resources */,
 				7ABB84821C9E98F300621CC4 /* Login.storyboard in Resources */,

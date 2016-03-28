@@ -101,19 +101,6 @@
     self.tabBarVC.viewControllers = @[messageNav, forumNav, findNav, primeNav, _mainNav];
     self.window.rootViewController = self.tabBarVC;
     
-    //推送
-//    if ([application respondsToSelector:@selector(isRegisteredForRemoteNotifications)]) {
-//        //ios8
-//        //创建
-//        UIUserNotificationSettings *userSet = [UIUserNotificationSettings settingsForTypes:(UIUserNotificationTypeBadge | UIUserNotificationTypeAlert | UIRemoteNotificationTypeSound) categories:nil];
-//        [application registerUserNotificationSettings:userSet];
-//    }else{
-//        //ios7
-//        [application registerForRemoteNotificationTypes:(UIRemoteNotificationTypeBadge | UIRemoteNotificationTypeSound)];
-//    }
-//    
-    //寻找deviceToken
-    
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     return YES;

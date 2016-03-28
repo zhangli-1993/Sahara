@@ -42,12 +42,12 @@
         if ([detail isEqualToString:@"agents-detail"]) {
             //公司
             NSString *detailID = [arrayDetail[3] componentsSeparatedByString:@"="][1];
-            
-            
+            NSLog(@"asdfghjk");
         }
         //地址
         NSArray *array = [urlStr componentsSeparatedByString:@"?"];
-        NSString *mapStr = [array[0] componentsSeparatedByString:@"/"][3];
+        NSString *mapStr = [array[0] componentsSeparatedByString:@"/"][2];
+        NSLog(@"abc-map = %@", mapStr);
         if ([mapStr isEqualToString:@"abc-map"]) {
         NSArray *lngArray = [array[1] componentsSeparatedByString:@"&"];
         NSString *lng = [lngArray[0] substringFromIndex:5];
@@ -59,17 +59,19 @@
         
         NSLog(@"%@ %@ %@ %@", lat, lng, cityName, addressName);
         MapViewController *mapVC = [[MapViewController alloc] init];
-            
-            
+            mapVC.lat = lat;
+            mapVC.lng = lng;
+            mapVC.name = addressName;
+            [self.navigationController pushViewController:mapVC animated:YES];
             
         }
         
         NSArray *telArray = [urlStr componentsSeparatedByString:@"/"];
-        NSString *trlStr = telArray[3];
+//        NSString *trlStr = telArray[3];
         NSLog(@"%@", telArray);
-        if ([trlStr isEqualToString:@"webview_tel"]) {
+        if ([mapStr isEqualToString:@"webview_tel"]) {
             //电话
-            NSString *telStr = telArray[4];
+            NSString *telStr = telArray[3];
             NSString *message = [NSString stringWithFormat:@"确认拨打:%@?", telStr];
             UIAlertController *alertC = [UIAlertController alertControllerWithTitle:@"提示" message:message preferredStyle:UIAlertControllerStyleAlert];
             UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
