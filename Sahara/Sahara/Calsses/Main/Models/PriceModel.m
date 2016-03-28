@@ -16,4 +16,16 @@
     }
 }
 
+
+- (instancetype)initWithDictionary:(NSDictionary *)dict{
+    self = [super init];
+    if (self) {
+        self.letter = dict[@"letter"];
+        self.myID = dict[@"id"];
+        self.myName = dict[@"name"];
+    }
+    return self;
+}
+
+
 @end

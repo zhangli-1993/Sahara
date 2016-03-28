@@ -26,6 +26,10 @@
     self.tabBarController.tabBar.hidden = YES;
 }
 
+- (void)viewWillDisappear:(BOOL)animated{
+    [super viewWillDisappear:animated];
+    self.tabBarController.tabBar.hidden = YES;
+}
 
 - (UIWebView *)webView{
     if (!_webView) {

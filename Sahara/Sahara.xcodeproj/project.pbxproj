@@ -117,9 +117,7 @@
 		7ABB84671C9E438200621CC4 /* yue.png in Resources */ = {isa = PBXBuildFile; fileRef = 7ABB84661C9E438200621CC4 /* yue.png */; };
 		7ABB84691C9E443400621CC4 /* sun.png in Resources */ = {isa = PBXBuildFile; fileRef = 7ABB84681C9E443400621CC4 /* sun.png */; };
 		7ABB846C1C9E45CE00621CC4 /* CheckViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ABB846B1C9E45CE00621CC4 /* CheckViewController.m */; };
-		7ABB846F1C9E4B5800621CC4 /* HelpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ABB846E1C9E4B5800621CC4 /* HelpViewController.m */; };
 		7ABB84721C9E4D9C00621CC4 /* QuestionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ABB84711C9E4D9C00621CC4 /* QuestionViewController.m */; };
-		7ABB84751C9E860A00621CC4 /* SetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ABB84741C9E860A00621CC4 /* SetViewController.m */; };
 		7ABB84781C9E986300621CC4 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ABB84771C9E986300621CC4 /* LoginViewController.m */; };
 		7ABB847B1C9E988B00621CC4 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ABB847A1C9E988B00621CC4 /* RegisterViewController.m */; };
 		7ABB847E1C9E98B500621CC4 /* ForgotPassViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ABB847D1C9E98B500621CC4 /* ForgotPassViewController.m */; };
@@ -131,7 +129,7 @@
 		7AE336021CA8B68A00C30F4C /* libWeChatSDK.a in Resources */ = {isa = PBXBuildFile; fileRef = 7A0A4AA91CA4056100AE3C94 /* libWeChatSDK.a */; };
 		7AE336031CA8B6F200C30F4C /* libWeiboSDK.a in Resources */ = {isa = PBXBuildFile; fileRef = 7A089AD11C9BE21F00EF030E /* libWeiboSDK.a */; };
 		7AE336181CA8CD1500C30F4C /* ForumViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AF9C5B31C9AB03A00074B54 /* ForumViewController.m */; };
-		7AE3361A1CA8DA9800C30F4C /* rssMy.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7AE336191CA8DA9800C30F4C /* rssMy.plist */; };
+		7AE3361F1CA91A1F00C30F4C /* RSSView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AE3361E1CA91A1F00C30F4C /* RSSView.m */; };
 		7AE793A51C9BD534001E9231 /* Filefff in Resources */ = {isa = PBXBuildFile; fileRef = 7AE793A41C9BD533001E9231 /* Filefff */; };
 		7AE793CE1C9C0324001E9231 /* PlaceView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AE793CD1C9C0324001E9231 /* PlaceView.m */; };
 		7AF9C5BC1C9AB03A00074B54 /* ForumModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AF9C5B61C9AB03A00074B54 /* ForumModel.m */; };
@@ -334,12 +332,8 @@
 		7ABB84681C9E443400621CC4 /* sun.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sun.png; sourceTree = "<group>"; };
 		7ABB846A1C9E45CE00621CC4 /* CheckViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CheckViewController.h; sourceTree = "<group>"; };
 		7ABB846B1C9E45CE00621CC4 /* CheckViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckViewController.m; sourceTree = "<group>"; };
-		7ABB846D1C9E4B5800621CC4 /* HelpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelpViewController.h; sourceTree = "<group>"; };
-		7ABB846E1C9E4B5800621CC4 /* HelpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HelpViewController.m; sourceTree = "<group>"; };
 		7ABB84701C9E4D9C00621CC4 /* QuestionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestionViewController.h; sourceTree = "<group>"; };
 		7ABB84711C9E4D9C00621CC4 /* QuestionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionViewController.m; sourceTree = "<group>"; };
-		7ABB84731C9E860A00621CC4 /* SetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetViewController.h; sourceTree = "<group>"; };
-		7ABB84741C9E860A00621CC4 /* SetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetViewController.m; sourceTree = "<group>"; };
 		7ABB84761C9E986300621CC4 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		7ABB84771C9E986300621CC4 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		7ABB84791C9E988B00621CC4 /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
@@ -353,7 +347,8 @@
 		7AD7F7F01C9945E800BF2460 /* AllBrandsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AllBrandsModel.m; sourceTree = "<group>"; };
 		7AD7F7F21C9946E500BF2460 /* AllTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AllTableViewCell.h; sourceTree = "<group>"; };
 		7AD7F7F31C9946E500BF2460 /* AllTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AllTableViewCell.m; sourceTree = "<group>"; };
-		7AE336191CA8DA9800C30F4C /* rssMy.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = rssMy.plist; sourceTree = "<group>"; };
+		7AE3361D1CA91A1F00C30F4C /* RSSView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSSView.h; sourceTree = "<group>"; };
+		7AE3361E1CA91A1F00C30F4C /* RSSView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSSView.m; sourceTree = "<group>"; };
 		7AE793A41C9BD533001E9231 /* Filefff */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Filefff; sourceTree = "<group>"; };
 		7AE793CC1C9C0324001E9231 /* PlaceView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaceView.h; sourceTree = "<group>"; };
 		7AE793CD1C9C0324001E9231 /* PlaceView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaceView.m; sourceTree = "<group>"; };
@@ -460,6 +455,8 @@
 				7A59D9901CA2B84C00307189 /* CollectionTableViewCell.h */,
 				7A59D9911CA2B84C00307189 /* CollectionTableViewCell.m */,
 				7ABB84811C9E98F300621CC4 /* Login.storyboard */,
+				7AE3361D1CA91A1F00C30F4C /* RSSView.h */,
+				7AE3361E1CA91A1F00C30F4C /* RSSView.m */,
 			);
 			name = Views;
 			path = Controllers/Views;
@@ -635,13 +632,8 @@
 				7AB362571C98E44500C03E74 /* MainViewController.m */,
 				7ABB846A1C9E45CE00621CC4 /* CheckViewController.h */,
 				7ABB846B1C9E45CE00621CC4 /* CheckViewController.m */,
-				7ABB846D1C9E4B5800621CC4 /* HelpViewController.h */,
-				7ABB846E1C9E4B5800621CC4 /* HelpViewController.m */,
 				7ABB84701C9E4D9C00621CC4 /* QuestionViewController.h */,
 				7ABB84711C9E4D9C00621CC4 /* QuestionViewController.m */,
-				7ABB84731C9E860A00621CC4 /* SetViewController.h */,
-				7A59D98B1CA2984300307189 /* CollectionViewController.m */,
-				7ABB84741C9E860A00621CC4 /* SetViewController.m */,
 				7ABB84761C9E986300621CC4 /* LoginViewController.h */,
 				7ABB84771C9E986300621CC4 /* LoginViewController.m */,
 				7ABB84791C9E988B00621CC4 /* RegisterViewController.h */,
@@ -653,6 +645,7 @@
 				7A59D9801CA26B3900307189 /* CarWebViewController.h */,
 				7A59D9811CA26B3900307189 /* CarWebViewController.m */,
 				7A59D98A1CA2984300307189 /* CollectionViewController.h */,
+				7A59D98B1CA2984300307189 /* CollectionViewController.m */,
 				7A1767F31CA4DD9000E5FAAD /* PriceViewController.h */,
 				7A1767F41CA4DD9000E5FAAD /* PriceViewController.m */,
 				7A1767F91CA4EF5300E5FAAD /* PriceWebViewController.h */,
@@ -661,7 +654,6 @@
 				7A1767FF1CA518CC00E5FAAD /* RSSViewController.m */,
 				7AFB2E451CA80E19009475EA /* MyselfViewController.h */,
 				7AFB2E461CA80E19009475EA /* MyselfViewController.m */,
-				7AE336191CA8DA9800C30F4C /* rssMy.plist */,
 				7AFB2E421CA7F3E8009475EA /* GoupOnViewController.h */,
 				7AFB2E431CA7F3E8009475EA /* GoupOnViewController.m */,
 				7ABB84661C9E438200621CC4 /* yue.png */,
@@ -975,7 +967,6 @@
 				7ABB84671C9E438200621CC4 /* yue.png in Resources */,
 				7AF9C5BE1C9AB03A00074B54 /* ForumOneTableViewCell.xib in Resources */,
 				7A1EC5551CA53DF1008A14BB /* ComprehensiveViewController.xib in Resources */,
-				7AE3361A1CA8DA9800C30F4C /* rssMy.plist in Resources */,
 				7A84D1A81C98FF38006EE2F1 /* blueArrow.png in Resources */,
 				7A7D3EFE1C9B93AD002B8008 /* for.plist in Resources */,
 				7ABB84821C9E98F300621CC4 /* Login.storyboard in Resources */,
@@ -1077,6 +1068,7 @@
 				7ABB846C1C9E45CE00621CC4 /* CheckViewController.m in Sources */,
 				7AB362521C98E42B00C03E74 /* FindCarViewController.m in Sources */,
 				7A6C0BD71C995E7C00205D61 /* DetailViewController.m in Sources */,
+				7AE3361F1CA91A1F00C30F4C /* RSSView.m in Sources */,
 				7A0ACAD81C9F7F9A00355E67 /* CarImageView.m in Sources */,
 				7A1368641CA0E61E00C401D7 /* PrivilegeModel.m in Sources */,
 				7AB362581C98E44500C03E74 /* MainViewController.m in Sources */,
@@ -1106,7 +1098,6 @@
 				7AFB2E471CA80E19009475EA /* MyselfViewController.m in Sources */,
 				7ABB847B1C9E988B00621CC4 /* RegisterViewController.m in Sources */,
 				7A168CAC1CA78E4E00BDD397 /* RSSModel.m in Sources */,
-				7ABB846F1C9E4B5800621CC4 /* HelpViewController.m in Sources */,
 				7A59D9821CA26B3900307189 /* CarWebViewController.m in Sources */,
 				7AAB55AE1C9AA55C0096B1C1 /* UIViewController+BackPront.m in Sources */,
 				7AF9C5BD1C9AB03A00074B54 /* ForumOneTableViewCell.m in Sources */,
@@ -1122,7 +1113,6 @@
 				7A0C78A31C9E2CE50048C4F3 /* ArticleModel.m in Sources */,
 				7A1368691CA0EE9B00C401D7 /* CarPrivilegeView.m in Sources */,
 				7A08A8C81C9AE37900D036E7 /* HotModel.m in Sources */,
-				7ABB84751C9E860A00621CC4 /* SetViewController.m in Sources */,
 				7AB3625B1C98E45600C03E74 /* MessageViewController.m in Sources */,
 				7A6591331C9D329C00EA47BE /* CompeteModel.m in Sources */,
 				7A84D1AA1C98FF38006EE2F1 /* PullingRefreshTableView.m in Sources */,

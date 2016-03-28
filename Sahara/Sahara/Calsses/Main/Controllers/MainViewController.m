@@ -8,8 +8,6 @@
 
 #import "MainViewController.h"
 #import "CheckViewController.h"
-#import "HelpViewController.h"
-#import "SetViewController.h"
 #import "LoginViewController.h"
 #import "UseCarViewController.h"
 #import "CollectionViewController.h"
@@ -17,13 +15,16 @@
 #import <BmobSDK/Bmob.h>
 #import "PriceViewController.h"
 #import "RSSViewController.h"
-@interface MainViewController ()<UITableViewDataSource, UITableViewDelegate>
+#import <SDWebImage/SDImageCache.h>
+#import <MessageUI/MessageUI.h>
+#import "QuestionViewController.h"
+@interface MainViewController ()<UITableViewDataSource, UITableViewDelegate, MFMailComposeViewControllerDelegate>
 @property(nonatomic, strong) UITableView *tableView;
 @property(nonatomic, strong) UIButton *hitLoginBtn;
 @property(nonatomic, strong) UILabel *titleLabel;
 @property(nonatomic, strong) NSArray *titleArray;
 @property(nonatomic, strong) NSArray *btnArray;
-@property(nonatomic, strong) NSArray *allCellArray;
+@property(nonatomic, strong) NSMutableArray *allCellArray;
 
 
 @end
@@ -37,26 +38,12 @@
     [self.view addSubview:self.tableView];
     UIButton *setBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     setBtn.frame = CGRectMake(kWidth - kWidth/9, 0, kWidth/9, 40);
-    [setBtn setImage:[UIImage imageNamed:@"btn_shezhi"] forState:UIControlStateNormal];
-    [setBtn addTarget:self action:@selector(setCellAction:) forControlEvents:UIControlEventTouchUpInside];
-    UIBarButtonItem *rightBar = [[UIBarButtonItem alloc] initWithCustomView:setBtn];
-    self.navigationItem.rightBarButtonItem = rightBar;
-    
     [self tableViewHeadView];
-    self.allCellArray = @[@"违章查询", @"夜间模式", @"给我评分", @"退出登录", @"帮助与反馈",@"离线下载"];
+    self.allCellArray = [NSMutableArray arrayWithObjects: @"违章查询", @"夜间模式", @"给我评分", @"退出登录", @"帮助与反馈",@"清理缓存", @"推送设置", @"常见问题",nil];
     
 }
 
 #pragma mark -------------- Custom Method
-- (void)setCellAction:(UIBarButtonItem *)btn{
-    SetViewController *setVC = [[SetViewController alloc] init];
-    
-    [self.navigationController pushViewController:setVC animated:YES];
-
-}
-
-
-
 - (void)tableViewHeadView{
     UIView *headView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, kWidth, kWidth*3/4)];
     self.tableView.tableHeaderView = headView;
@@ -161,9 +148,21 @@
             case 3:
             [self loginOut];
             break;
-            case 4:
+        case 4:
             //帮助
             [self helpYouToAll];
+            break;
+        case 5:
+            //清理缓存
+            [self clearImage];
+            break;
+        case 6:
+            //推送
+            
+            break;
+        case 7:
+            //常见问题
+            [self getquestion];
             break;
             
         default:
@@ -236,8 +235,46 @@
 }
 
 - (void)helpYouToAll{
-    HelpViewController *helpVC = [[HelpViewController alloc] init];
-    [self.navigationController pushViewController:helpVC animated:YES];
+    Class class = NSClassFromString(@"MFMailComposeViewController");
+    if (class != nil) {
+        if ([MFMailComposeViewController canSendMail]) {
+            MFMailComposeViewController *mailVC = [[MFMailComposeViewController alloc] init];
+            mailVC.mailComposeDelegate = self;
+            [mailVC setSubject:@"爱看汽车网"];
+            NSArray *receiveArray = [NSArray arrayWithObjects:@"1379556026@qq.com", nil];
+            [mailVC setToRecipients:receiveArray];
+            NSString *emailStr = @"请输入反馈信息……";
+            [mailVC setMessageBody:emailStr isHTML:NO];
+            [self presentViewController:mailVC animated:YES completion:nil];
+            
+        }else{
+            NSLog(@"未配置邮箱账号");
+        }
+    }else{
+        NSLog(@"设备不支持");
+    }
+    
+}
+//邮件发送后调用
+- (void)mailComposeController:(MFMailComposeViewController *)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error{
+    switch (result) {
+        case MFMailComposeResultCancelled:
+            NSLog(@"MFMailComposeResultCancelled-取消");
+            [self dismissViewControllerAnimated:YES completion:nil];
+            break;
+        case MFMailComposeResultSaved:
+            NSLog(@"MFMailComposeResultSaved-保存");
+            break;
+        case MFMailComposeResultFailed:
+            NSLog(@"MFMailComposeResultFailed-发送邮件");
+            break;
+        case MFMailComposeResultSent:
+            NSLog(@"MFMailComposeResultSent-尝试保存或发送失败");
+            break;
+            
+        default:
+            break;
+    }
 }
 
 - (void)loginOut{
@@ -259,6 +296,43 @@
     [alertC addAction:sure];
     [self presentViewController:alertC animated:YES completion:nil];
     }
+}
+
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+//    //计算图片缓存
+    SDImageCache *cacheImage = [SDImageCache sharedImageCache];
+    NSInteger cacheSize = [cacheImage getSize];
+    NSString *cacheStr = [NSString stringWithFormat:@"清除缓存(%.02fM)", (float)cacheSize/1024/1024];
+    [self.allCellArray replaceObjectAtIndex:5 withObject:cacheStr];
+//    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:5 inSection:0];
+//    [self.tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+}
+
+- (void)clearImage{
+    UIAlertController *alertC = [UIAlertController alertControllerWithTitle:@"提示" message:@"是否清理缓存?" preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *cencel = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+        
+    }];
+    UIAlertAction *sure = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        SDImageCache *imageCache = [SDImageCache sharedImageCache];
+        [imageCache clearDisk];
+        [self.allCellArray replaceObjectAtIndex:5 withObject:@"清理缓存"];
+        NSIndexPath *path = [NSIndexPath indexPathForRow:5 inSection:0];
+        [self.tableView reloadRowsAtIndexPaths:@[path] withRowAnimation:UITableViewRowAnimationAutomatic];
+        
+        
+    }];
+    [alertC addAction:cencel];
+    [alertC addAction:sure];
+    [self presentViewController:alertC animated:YES completion:nil];
+    
+    
+}
+
+- (void)getquestion{
+    QuestionViewController *questionVC = [[QuestionViewController alloc] init];
+    [self.navigationController pushViewController:questionVC animated:YES];
 }
 #pragma mark -------------- LazyLoading
 - (UITableView *)tableView{
