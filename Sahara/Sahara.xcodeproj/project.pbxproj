@@ -130,6 +130,9 @@
 		7AE336031CA8B6F200C30F4C /* libWeiboSDK.a in Resources */ = {isa = PBXBuildFile; fileRef = 7A089AD11C9BE21F00EF030E /* libWeiboSDK.a */; };
 		7AE336181CA8CD1500C30F4C /* ForumViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AF9C5B31C9AB03A00074B54 /* ForumViewController.m */; };
 		7AE3361F1CA91A1F00C30F4C /* RSSView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AE3361E1CA91A1F00C30F4C /* RSSView.m */; };
+		7AE3363D1CA9631E00C30F4C /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AE3363C1CA9631E00C30F4C /* libiconv.tbd */; };
+		7AE336431CA9662900C30F4C /* TencentOpenAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AE336421CA9662900C30F4C /* TencentOpenAPI.framework */; };
+		7AE336451CA9663100C30F4C /* TencentOpenApi_IOS_Bundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 7AE336441CA9663100C30F4C /* TencentOpenApi_IOS_Bundle.bundle */; };
 		7AE793A51C9BD534001E9231 /* Filefff in Resources */ = {isa = PBXBuildFile; fileRef = 7AE793A41C9BD533001E9231 /* Filefff */; };
 		7AE793CE1C9C0324001E9231 /* PlaceView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AE793CD1C9C0324001E9231 /* PlaceView.m */; };
 		7AF9C5BC1C9AB03A00074B54 /* ForumModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AF9C5B61C9AB03A00074B54 /* ForumModel.m */; };
@@ -349,6 +352,9 @@
 		7AD7F7F31C9946E500BF2460 /* AllTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AllTableViewCell.m; sourceTree = "<group>"; };
 		7AE3361D1CA91A1F00C30F4C /* RSSView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSSView.h; sourceTree = "<group>"; };
 		7AE3361E1CA91A1F00C30F4C /* RSSView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSSView.m; sourceTree = "<group>"; };
+		7AE3363C1CA9631E00C30F4C /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
+		7AE336421CA9662900C30F4C /* TencentOpenAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TencentOpenAPI.framework; sourceTree = "<group>"; };
+		7AE336441CA9663100C30F4C /* TencentOpenApi_IOS_Bundle.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = TencentOpenApi_IOS_Bundle.bundle; sourceTree = "<group>"; };
 		7AE793A41C9BD533001E9231 /* Filefff */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Filefff; sourceTree = "<group>"; };
 		7AE793CC1C9C0324001E9231 /* PlaceView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaceView.h; sourceTree = "<group>"; };
 		7AE793CD1C9C0324001E9231 /* PlaceView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaceView.m; sourceTree = "<group>"; };
@@ -373,6 +379,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7AE3363D1CA9631E00C30F4C /* libiconv.tbd in Frameworks */,
 				7A0ACAFE1CA024C900355E67 /* libstdc++.6.0.9.tbd in Frameworks */,
 				7A0ACAFC1CA024A000355E67 /* CoreLocation.framework in Frameworks */,
 				7A0ACAF81CA023AA00355E67 /* MAMapKit.framework in Frameworks */,
@@ -391,6 +398,7 @@
 				7A089AE01C9BE2E000EF030E /* ImageIO.framework in Frameworks */,
 				7A08A8BB1C9A33A100D036E7 /* QuartzCore.framework in Frameworks */,
 				7A089ADD1C9BE21F00EF030E /* libWeiboSDK.a in Frameworks */,
+				7AE336431CA9662900C30F4C /* TencentOpenAPI.framework in Frameworks */,
 				525A52B034E3688F1D9B5A41 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -733,6 +741,8 @@
 				7A0ACAF21C9FD4E700355E67 /* Tools.m */,
 				7AAB55AC1C9AA55C0096B1C1 /* UIViewController+BackPront.h */,
 				7AAB55AD1C9AA55C0096B1C1 /* UIViewController+BackPront.m */,
+				7AE336441CA9663100C30F4C /* TencentOpenApi_IOS_Bundle.bundle */,
+				7AE336421CA9662900C30F4C /* TencentOpenAPI.framework */,
 				7A07E69A1C9F82DD003D0843 /* ProgressHUD */,
 				7A84D1A31C98FF38006EE2F1 /* PullingRefreshTableView */,
 				7AB362611C98F2B500C03E74 /* VOSegmentedControl */,
@@ -865,6 +875,7 @@
 		FA7FD3E0088FFB46FCCE72F1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7AE3363C1CA9631E00C30F4C /* libiconv.tbd */,
 				7A0ACAFD1CA024C900355E67 /* libstdc++.6.0.9.tbd */,
 				7A0ACAFB1CA024A000355E67 /* CoreLocation.framework */,
 				7A0ACAF71CA023AA00355E67 /* MAMapKit.framework */,
@@ -976,6 +987,7 @@
 				7AD7F7E91C9943A700BF2460 /* allBrands in Resources */,
 				7A089AC91C9BD71900EF030E /* sum in Resources */,
 				7AB3627A1C98F89800C03E74 /* MessageTwoTableViewCell.xib in Resources */,
+				7AE336451CA9663100C30F4C /* TencentOpenApi_IOS_Bundle.bundle in Resources */,
 				7AE793A51C9BD534001E9231 /* Filefff in Resources */,
 				7A0C78A01C9E2C8A0048C4F3 /* Article in Resources */,
 				7A0C78B11C9E4DC30048C4F3 /* comment in Resources */,
@@ -1231,6 +1243,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Sahara/Librarys",
 				);
 				GCC_PREFIX_HEADER = /Users/scjy/Desktop/Sahara/Sahara/Sahara/Librarys/Sahara.pch;
 				INFOPLIST_FILE = Sahara/Info.plist;
@@ -1273,6 +1286,7 @@
 					"\"Security\"",
 					"-framework",
 					"\"SystemConfiguration\"",
+					"-fobjc-arc",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = Auroralizi.Sahara;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1292,6 +1306,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Sahara/Librarys",
 				);
 				GCC_PREFIX_HEADER = /Users/scjy/Desktop/Sahara/Sahara/Sahara/Librarys/Sahara.pch;
 				INFOPLIST_FILE = Sahara/Info.plist;
@@ -1334,6 +1349,7 @@
 					"\"Security\"",
 					"-framework",
 					"\"SystemConfiguration\"",
+					"-fobjc-arc",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = Auroralizi.Sahara;
 				PRODUCT_NAME = "$(TARGET_NAME)";

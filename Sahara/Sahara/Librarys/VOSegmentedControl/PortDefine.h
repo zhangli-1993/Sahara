@@ -59,4 +59,9 @@
 //推送
 #define kPushAppKey @"56f3a900e0f55acbec002437"
 
+//qq
+#define kQQAppID @"1105289678"
+#define kQQAppKey @"d3sH8Za23apcsjQ5"
+
+
 #endif /* PortDefine_h */

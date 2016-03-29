@@ -11,9 +11,13 @@
 #import "ProgressHUD.h"
 #import <BmobSDK/Bmob.h>
 #import "WeiboSDK.h"
-@interface LoginViewController ()
+#import <TencentOpenAPI/TencentOAuth.h>
+#import "MainViewController.h"
+
+@interface LoginViewController ()<TencentSessionDelegate>
 {
     BOOL isLogin;
+    TencentOAuth *tencenOAuth;
 }
 @property (weak, nonatomic) IBOutlet UITextField *userNameText;
 @property (weak, nonatomic) IBOutlet UITextField *passwordText;
@@ -49,7 +53,11 @@
         if (user) {
             [ProgressHUD showSuccess:@"登陆成功"];
             isLogin = YES;
-//            [self.navigationController popToRootViewControllerAnimated:YES];
+            MainViewController *mainVC = [[MainViewController alloc] init];
+            [self.navigationController pushViewController:mainVC animated:YES];
+            NSUserDefaults *defaultUser = [NSUserDefaults standardUserDefaults];
+            [defaultUser setValue:user.username forKey:@"userName"];
+            [defaultUser synchronize];
         }else{
             UIAlertController *alertC = [UIAlertController alertControllerWithTitle:@"提示" message:@"用户名或密码不正确" preferredStyle:UIAlertControllerStyleAlert];
             UIAlertAction *alertAction = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
@@ -81,7 +89,56 @@
     
 }
 - (IBAction)QQlogin:(id)sender {
+    
+    tencenOAuth = [[TencentOAuth alloc] initWithAppId:kQQAppID andDelegate:self];
+    tencenOAuth.redirectURI = @"www.qq.com";
+    NSArray *permissions = [NSArray arrayWithObjects:@"get_user_info", @"get_simple_userinfo", @"add_t", nil];
+    
+    [tencenOAuth authorize:permissions inSafari:NO];
+    
+    
 }
+//登录完成调用
+- (void)tencentDidLogin{
+    if (tencenOAuth.accessToken && [tencenOAuth.accessToken length] != 0) {
+//        NSString *token = tencenOAuth.accessToken;
+        [tencenOAuth getUserInfo];
+        
+    }else{
+        NSLog(@"登录不成功");
+    }
+    
+}
+
+- (void)tencentDidNotLogin:(BOOL)cancelled{
+    //用户取消登录
+    if (cancelled) {
+        NSLog(@"用户取消登录");
+    }
+}
+
+- (void)tencentDidNotNetWork{
+    NSLog(@"没有网络");
+}
+
+- (void)getUserInfoResponse:(APIResponse *)response{
+    NSDictionary *reqDic = response.jsonResponse;
+    NSString *userName = reqDic[@"nickname"];
+    NSString *userImage = reqDic[@"figureurl_qq_2"];
+    MainViewController  *mainVC = [[MainViewController alloc] init];
+//    mainVC.name = userName;
+//    mainVC.headImage = userImage;
+//    mainVC.userName = userName;
+    [self.navigationController pushViewController:mainVC animated:YES];
+    NSUserDefaults *defaultUser = [NSUserDefaults standardUserDefaults];
+    [defaultUser setValue:userName forKey:@"userName"];
+    [defaultUser setValue:userImage forKey:@"image"];
+    [defaultUser synchronize];
+    
+    
+    NSLog(@"++++++++++%@", response.jsonResponse);
+}
+
 - (IBAction)weixinLogin:(id)sender {
 }
 

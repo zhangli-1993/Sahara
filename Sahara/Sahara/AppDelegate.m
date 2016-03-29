@@ -17,7 +17,7 @@
 #import <BmobSDK/Bmob.h>
 #import <CoreLocation/CoreLocation.h>
 #import <AFHTTPSessionManager.h>
-
+#import <TencentOpenAPI/TencentOAuth.h>
 @interface AppDelegate ()<WeiboSDKDelegate, WXApiDelegate, CLLocationManagerDelegate>
 {
     CLLocationManager *_locationManager;
@@ -40,7 +40,8 @@
     [WeiboSDK registerApp:kWBAppKey];
     [WXApi registerApp:kWXAppKey];
     [Bmob registerWithAppKey:kBmobKey];
-//    [UMessage startWithAppkey:kPushAppKey launchOptions:launchOptions];
+    //qq
+        
     
     NSLog(@"%@", [NSBundle mainBundle].bundleIdentifier);
     _locationManager = [[CLLocationManager alloc] init];
@@ -131,23 +132,12 @@
 - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation{
     return [WeiboSDK handleOpenURL:url delegate:self];
     return [WXApi handleOpenURL:url delegate:self];
+    return [TencentOAuth HandleOpenURL:url];
 }
 - (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url{
     return [WeiboSDK handleOpenURL:url delegate:self];
     return [WXApi handleOpenURL:url delegate:self];
-}
-
-#pragma mark -------------PushMessage
-- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken{
-
-}
-
-- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo{
-//    [UMessage didReceiveRemoteNotification:userInfo];
-    
-}
-- (void)application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *)error{
-    NSLog(@"error = %@", error);
+    return [TencentOAuth HandleOpenURL:url];
 }
 
 - (void)onReq:(BaseReq *)req{
@@ -182,16 +172,17 @@
             NSString *title = resDic[@"name"];
             NSString *headImage = resDic[@"avatar_hd"];
             
+            NSUserDefaults *defaultUser = [NSUserDefaults standardUserDefaults];
+            [defaultUser setValue:title forKey:@"userName"];
+            [defaultUser setValue:headImage forKey:@"image"];
+            [defaultUser synchronize];
+            
             [BmobUser loginInBackgroundWithAuthorDictionary:dict platform:BmobSNSPlatformSinaWeibo block:^(BmobUser *user, NSError *error) {
                 if (error) {
                     NSLog(@"err = %@", error);
                 }else{
                     self.isLogin = YES;
                     MainViewController *setVC = [[MainViewController alloc] init];
-                    setVC.name = title;
-                    setVC.headImage = headImage;
-                    setVC.userName = user.username;
-                    NSLog(@"user = %@", user.username);
                     [self.mainNav pushViewController:setVC animated:YES];
                     
                 }

@@ -19,6 +19,9 @@
 #import <MessageUI/MessageUI.h>
 #import "QuestionViewController.h"
 @interface MainViewController ()<UITableViewDataSource, UITableViewDelegate, MFMailComposeViewControllerDelegate>
+{
+    BOOL isLogin;
+}
 @property(nonatomic, strong) UITableView *tableView;
 @property(nonatomic, strong) UIButton *hitLoginBtn;
 @property(nonatomic, strong) UILabel *titleLabel;
@@ -35,11 +38,12 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.navigationController.navigationBar.barTintColor = kMainColor;
+    [self.navigationItem setHidesBackButton:YES];
     [self.view addSubview:self.tableView];
     UIButton *setBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     setBtn.frame = CGRectMake(kWidth - kWidth/9, 0, kWidth/9, 40);
     [self tableViewHeadView];
-    self.allCellArray = [NSMutableArray arrayWithObjects: @"违章查询", @"夜间模式", @"给我评分", @"退出登录", @"帮助与反馈",@"清理缓存", @"推送设置", @"常见问题",nil];
+    self.allCellArray = [NSMutableArray arrayWithObjects: @"违章查询", @"夜间模式", @"给我评分", @"帮助与反馈",@"清理缓存", @"推送设置", @"常见问题", @"退出登录",nil];
     
 }
 
@@ -145,24 +149,25 @@
             [[UIApplication sharedApplication] openURL:[NSURL URLWithString:str]];
         }
             break;
-            case 3:
-            [self loginOut];
-            break;
-        case 4:
+           
+        case 3:
             //帮助
             [self helpYouToAll];
             break;
-        case 5:
+        case 4:
             //清理缓存
             [self clearImage];
             break;
-        case 6:
+        case 5:
             //推送
             
             break;
-        case 7:
+        case 6:
             //常见问题
             [self getquestion];
+            break;
+        case 7:
+            [self loginOut];
             break;
             
         default:
@@ -186,6 +191,7 @@
         [tableCell addSubview:yeSwitch];
         
     }
+    
     tableCell.selectionStyle = UITableViewCellSelectionStyleNone;
     return tableCell;
 }
@@ -279,8 +285,9 @@
 
 - (void)loginOut{
     
-    BmobUser *user = [BmobUser getCurrentUser];
-    if (user.objectId == nil) {
+     NSUserDefaults *user = [NSUserDefaults standardUserDefaults];
+    NSString *userN = [user objectForKey:@"userName"];
+    if (userN == nil) {
         
     }else{
     UIAlertController *alertC = [UIAlertController alertControllerWithTitle:@"提示" message:@"退出当前登录？" preferredStyle:UIAlertControllerStyleAlert];
@@ -289,7 +296,15 @@
     }];
     UIAlertAction *sure = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         [BmobUser logout];
+        isLogin = NO;
+        NSUserDefaults *user = [NSUserDefaults standardUserDefaults];
+        [user removeObjectForKey:@"userName"];
+        [user removeObjectForKey:@"image"];
+
+        [self.hitLoginBtn setImage:[UIImage imageNamed:@" "] forState:UIControlStateNormal];
         
+        self.titleLabel.text = @"点击登录/注册";
+
         
     }];
     [alertC addAction:cencel];
@@ -300,11 +315,12 @@
 
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
+    
 //    //计算图片缓存
     SDImageCache *cacheImage = [SDImageCache sharedImageCache];
     NSInteger cacheSize = [cacheImage getSize];
     NSString *cacheStr = [NSString stringWithFormat:@"清除缓存(%.02fM)", (float)cacheSize/1024/1024];
-    [self.allCellArray replaceObjectAtIndex:5 withObject:cacheStr];
+    [self.allCellArray replaceObjectAtIndex:4 withObject:cacheStr];
 //    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:5 inSection:0];
 //    [self.tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
 }
@@ -317,8 +333,8 @@
     UIAlertAction *sure = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         SDImageCache *imageCache = [SDImageCache sharedImageCache];
         [imageCache clearDisk];
-        [self.allCellArray replaceObjectAtIndex:5 withObject:@"清理缓存"];
-        NSIndexPath *path = [NSIndexPath indexPathForRow:5 inSection:0];
+        [self.allCellArray replaceObjectAtIndex:4 withObject:@"清理缓存"];
+        NSIndexPath *path = [NSIndexPath indexPathForRow:4 inSection:0];
         [self.tableView reloadRowsAtIndexPaths:@[path] withRowAnimation:UITableViewRowAnimationAutomatic];
         
         
@@ -350,9 +366,16 @@
         self.hitLoginBtn.frame = CGRectMake(20, 10, kWidth/4, kWidth/4);
         self.hitLoginBtn.clipsToBounds = YES;
         self.hitLoginBtn.layer.cornerRadius = kWidth/8;
-        if (self.userName != nil) {
-            [self.hitLoginBtn setImage:[UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:self.headImage]]] forState:UIControlStateNormal];
-            self.titleLabel.text = self.name;
+        
+        NSUserDefaults *userDefault = [NSUserDefaults standardUserDefaults];
+       NSString *benName = [userDefault objectForKey:@"userName"];
+        NSString *image = [userDefault objectForKey:@"image"];
+        
+        if (benName != nil) {
+            [self.hitLoginBtn setImage:[UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:image]]] forState:UIControlStateNormal];
+            
+            [self.hitLoginBtn setBackgroundImage:[UIImage imageNamed:@"un_signin"] forState:UIControlStateNormal];
+            self.titleLabel.text = benName;
         }else{
             [self.hitLoginBtn setBackgroundImage:[UIImage imageNamed:@"un_signin"] forState:UIControlStateNormal];
             self.titleLabel.text = @"点击登录/注册";
