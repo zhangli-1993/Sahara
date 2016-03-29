@@ -122,6 +122,7 @@
 		7ABB847B1C9E988B00621CC4 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ABB847A1C9E988B00621CC4 /* RegisterViewController.m */; };
 		7ABB847E1C9E98B500621CC4 /* ForgotPassViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ABB847D1C9E98B500621CC4 /* ForgotPassViewController.m */; };
 		7ABB84821C9E98F300621CC4 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7ABB84811C9E98F300621CC4 /* Login.storyboard */; };
+		7ACD623D1CAA6D54000470D9 /* BmobRSSView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ACD623C1CAA6D54000470D9 /* BmobRSSView.m */; };
 		7AD7F7E71C9934CE00BF2460 /* hot in Resources */ = {isa = PBXBuildFile; fileRef = 7AD7F7E61C9934CE00BF2460 /* hot */; };
 		7AD7F7E91C9943A700BF2460 /* allBrands in Resources */ = {isa = PBXBuildFile; fileRef = 7AD7F7E81C9943A700BF2460 /* allBrands */; };
 		7AD7F7F11C9945E800BF2460 /* AllBrandsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AD7F7F01C9945E800BF2460 /* AllBrandsModel.m */; };
@@ -344,6 +345,8 @@
 		7ABB847C1C9E98B500621CC4 /* ForgotPassViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForgotPassViewController.h; sourceTree = "<group>"; };
 		7ABB847D1C9E98B500621CC4 /* ForgotPassViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForgotPassViewController.m; sourceTree = "<group>"; };
 		7ABB84811C9E98F300621CC4 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Login.storyboard; path = Sahara/Calsses/Message/VIews/Login.storyboard; sourceTree = SOURCE_ROOT; };
+		7ACD623B1CAA6D54000470D9 /* BmobRSSView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BmobRSSView.h; sourceTree = "<group>"; };
+		7ACD623C1CAA6D54000470D9 /* BmobRSSView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BmobRSSView.m; sourceTree = "<group>"; };
 		7AD7F7E61C9934CE00BF2460 /* hot */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = hot; sourceTree = "<group>"; };
 		7AD7F7E81C9943A700BF2460 /* allBrands */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = allBrands; sourceTree = "<group>"; };
 		7AD7F7EF1C9945E800BF2460 /* AllBrandsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AllBrandsModel.h; sourceTree = "<group>"; };
@@ -465,6 +468,8 @@
 				7ABB84811C9E98F300621CC4 /* Login.storyboard */,
 				7AE3361D1CA91A1F00C30F4C /* RSSView.h */,
 				7AE3361E1CA91A1F00C30F4C /* RSSView.m */,
+				7ACD623B1CAA6D54000470D9 /* BmobRSSView.h */,
+				7ACD623C1CAA6D54000470D9 /* BmobRSSView.m */,
 			);
 			name = Views;
 			path = Controllers/Views;
@@ -1104,6 +1109,7 @@
 				7A168CAB1CA78E4E00BDD397 /* PriceModel.m in Sources */,
 				7AB3624F1C98E41800C03E74 /* PrimeViewController.m in Sources */,
 				7AAB55B11C9AB7580096B1C1 /* AppriseViewController.m in Sources */,
+				7ACD623D1CAA6D54000470D9 /* BmobRSSView.m in Sources */,
 				7AB3626B1C98F2B500C03E74 /* VOIndicatorAnimation.m in Sources */,
 				7AE793CE1C9C0324001E9231 /* PlaceView.m in Sources */,
 				7A0C78AF1C9E475A0048C4F3 /* CommentView.m in Sources */,

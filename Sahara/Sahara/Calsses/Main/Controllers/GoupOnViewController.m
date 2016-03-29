@@ -42,8 +42,7 @@
        
         if ([detail isEqualToString:@"agents-detail"]) {
             //公司
-            NSString *detailID = [arrayDetail[3] componentsSeparatedByString:@"="][1];
-            NSLog(@"asdfghjk");
+//            NSString *detailID = [arrayDetail[3] componentsSeparatedByString:@"="][1];
         }
         //地址
         NSArray *array = [urlStr componentsSeparatedByString:@"?"];
