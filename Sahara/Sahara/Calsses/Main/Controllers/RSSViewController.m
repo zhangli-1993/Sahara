@@ -25,6 +25,7 @@ static NSString *collection = @"collection";
 {
     NSInteger _pageCount;
     NSString *rssCellID;
+    NSString *bmobID;
 }
 
 @property(nonatomic, strong) PullingRefreshTableView *tableVIew;
@@ -36,6 +37,7 @@ static NSString *collection = @"collection";
 @property(nonatomic, strong) UILabel *rssLabel;
 @property(nonatomic, strong) UIButton *rssButton;
 @property(nonatomic, strong) BmobRSSView *bmobView;
+@property( nonatomic, strong) NSMutableArray *array;
 
 @end
 
@@ -74,17 +76,13 @@ static NSString *collection = @"collection";
     rightGesture.direction = UISwipeGestureRecognizerDirectionRight;
     [self.view addGestureRecognizer:rightGesture];
     
-    self.bmobView = [[BmobRSSView alloc] initWithFrame:CGRectMake(0, kWidth/4, kWidth, kHeight - kWidth/4)];
+    self.bmobView = [[BmobRSSView alloc] initWithFrame:CGRectMake(0, kWidth/4, kWidth, kHeight - kWidth/5)];
     self.bmobView.collectionView.delegate = self;
-    
 }
 
 - (void)rightGestureAction:(UISwipeGestureRecognizer *)right{
     self.VOsegment.selectedSegmentIndex = 1;
-    
     [self.view addSubview:self.bmobView];
-    
-    
 }
 
 - (void)leftGestureAction:(UISwipeGestureRecognizer *)left{
@@ -164,21 +162,23 @@ static NSString *collection = @"collection";
     //存储到服务器
     [object saveInBackgroundWithResultBlock:^(BOOL isSuccessful, NSError *error) {
         if (isSuccessful) {
-            NSLog(@"%@", object);
+
         }else if(error){
             NSLog(@"%@", error);
         }else{
             NSLog(@"我也不知道?");
         }
+
     }];
+
     }
     if (collectionView == self.bmobView.collectionView) {
         CarDetailViewController *detailVC = [[CarDetailViewController alloc] init];
         RSSModel *model = self.bmobView.allModelArray[indexPath.row];
         detailVC.title = model.carName;
         detailVC.artID = model.carRSSid;
-
         [self.navigationController pushViewController:detailVC animated:YES];
+
     }
     
 }
@@ -293,12 +293,15 @@ static NSString *collection = @"collection";
 - (void)segmentCtrlValuechange:(VOSegmentedControl *)segement{
     if (segement.selectedSegmentIndex == 1) {
         [self.view addSubview:self.bmobView];
+        [self.bmobView getCollectionViewCell];
+        
     }else{
         [self getRSSModelRequest];
         [self.view addSubview:self.rssLabel];
         [self.view addSubview:self.rssButton];
         [self.view addSubview:self.collectionVIew];
         [self.bmobView removeFromSuperview];
+        [self.tableVIew removeFromSuperview];
     }
     
 }
@@ -340,6 +343,8 @@ static NSString *collection = @"collection";
     }
     return _allTableArray;
 }
+
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

@@ -13,4 +13,5 @@
 @property(nonatomic, strong) UICollectionView *collectionView;
 @property(nonatomic, strong) NSMutableArray *allModelArray;
 
+- (void)getCollectionViewCell;
 @end

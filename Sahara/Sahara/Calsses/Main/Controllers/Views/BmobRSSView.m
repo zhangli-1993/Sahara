@@ -10,8 +10,10 @@
 #import <SDWebImage/UIImageView+WebCache.h>
 #import "RSSModel.h"
 #import <BmobSDK/BmobQuery.h>
+#import "ProgressHUD.h"
 static NSString *collection = @"collection";
-@interface BmobRSSView ()<UICollectionViewDelegate, UICollectionViewDataSource>
+@interface BmobRSSView ()<UICollectionViewDelegate, UICollectionViewDataSource, UIAlertViewDelegate>
+@property(nonatomic, strong) NSMutableArray *array;
 
 @end
 
@@ -26,11 +28,26 @@ static NSString *collection = @"collection";
     return self;
 }
 
-
 - (void)getCellConfigView{
     [self addSubview:self.collectionView];
+    [self getCollectionViewCell];
+
+    //长按手势删除
+    UILongPressGestureRecognizer *longPress = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(longPressAction:)];
+    longPress.minimumPressDuration = 1.0;
+    [self.collectionView addGestureRecognizer:longPress];
+
+}
+
+- (void)getCollectionViewCell{
+    if (self.allModelArray.count > 0 && self.array.count > 0) {
+        [self.allModelArray removeAllObjects];
+        [self.array removeAllObjects];
+        
+    }
     BmobQuery *query = [BmobQuery queryWithClassName:@"RSSName"];
     [query findObjectsInBackgroundWithBlock:^(NSArray *array, NSError *error) {
+      
         for (BmobObject *objUser in array) {
             NSString *playName = [objUser objectForKey:@"serialName"];
             NSString *playImage = [objUser objectForKey:@"image"];
@@ -42,11 +59,38 @@ static NSString *collection = @"collection";
             
             RSSModel *model = [[RSSModel alloc] initWithDictionary:dic];
             [self.allModelArray addObject:model];
+            [self.array addObject:[objUser objectId]];
             [self.collectionView reloadData];
 
         }
     }];
 }
+
+- (void)longPressAction:(UILongPressGestureRecognizer *)press{
+    CGPoint point = [press locationInView:self.collectionView];
+    if (press.state == UIGestureRecognizerStateBegan) {
+        
+        //获取点击的是哪个cell
+        NSIndexPath *path = [self.collectionView indexPathForItemAtPoint:point];
+        NSString *objectID = self.array[path.row];
+        BmobObject *object = [BmobObject objectWithoutDatatWithClassName:@"RSSName" objectId:objectID];
+        [object deleteInBackgroundWithBlock:^(BOOL isSuccessful, NSError *error) {
+            if (isSuccessful) {
+                
+                [ProgressHUD showSuccess:@"订阅删除成功"];
+                [self getCollectionViewCell];
+                [self.collectionView reloadData];
+
+                NSLog(@"successful");
+            }else if(error){
+                NSLog(@"删除失败");
+            }else{
+                NSLog(@"我就不知道了");
+            }
+        }];
+    }
+}
+
 
 #pragma mark ----------------- UICollectionView
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
@@ -55,24 +99,20 @@ static NSString *collection = @"collection";
     UIImageView *collectionImage = [[UIImageView alloc] initWithFrame:collectionCell.frame];
     UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(collectionCell.frame.size.width/3 - 10, collectionCell.frame.size.height*3/4 + 10, collectionCell.frame.size.width/3 + 30, 20)];
     RSSModel *model = self.allModelArray[indexPath.row];
- 
-    
+
     [collectionImage sd_setImageWithURL:[NSURL URLWithString:model.headImage] placeholderImage:nil];
     label.text =model.carName;
     
     [self.collectionView addSubview:collectionImage];
     label.textColor = [UIColor whiteColor];
     [collectionImage addSubview:label];
-    collectionCell.backgroundColor = [UIColor redColor];
+
     return collectionCell;
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
     return self.allModelArray.count;
 }
-
-
-//删除
 
 
 
@@ -99,6 +139,13 @@ static NSString *collection = @"collection";
         self.allModelArray = [NSMutableArray new];
     }
     return _allModelArray;
+}
+
+- (NSMutableArray *)array{
+    if (!_array) {
+        self.array = [NSMutableArray new];
+    }
+    return _array;
 }
 
 /*
