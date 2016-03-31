@@ -7,7 +7,7 @@
 //
 
 #import "LiveOtherViewController.h"
-
+#import "ProgressHUD.h"
 @interface LiveOtherViewController ()<UIWebViewDelegate>
 
 @property(nonatomic, strong) UIWebView *webView;
@@ -26,6 +26,10 @@
     self.tabBarController.tabBar.hidden = YES;
 }
 
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    [ProgressHUD dismiss];
+}
 - (void)viewWillDisappear:(BOOL)animated{
     [super viewWillDisappear:animated];
     self.tabBarController.tabBar.hidden = NO;
@@ -34,6 +38,7 @@
 #pragma mark ---------------- LazyLoading
 - (UIWebView *)webView{
     if (!_webView) {
+        [ProgressHUD showSuccess:@"加载完成"];
         self.webView = [[UIWebView alloc] initWithFrame:self.view.frame];
         self.webView.delegate = self;
         self.webView.scalesPageToFit = YES;

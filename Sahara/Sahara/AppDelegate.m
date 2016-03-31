@@ -88,7 +88,7 @@
     primeNav.tabBarItem.image = [UIImage imageNamed:@"choosen4"];
     UIImage *primeImage = [UIImage imageNamed:@"choosen4_night"];
     primeNav.tabBarItem.selectedImage = [primeImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    primeNav.title = @"优惠";
+    primeNav.title = @"附近";
     //我的
     MainViewController *mainVC = [[MainViewController alloc] init];
     self.mainNav = [[UINavigationController alloc] initWithRootViewController:mainVC];

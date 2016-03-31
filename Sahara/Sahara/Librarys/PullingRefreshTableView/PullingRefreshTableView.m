@@ -192,6 +192,7 @@
                 _arrow.hidden = YES;
                 _stateLabel.text = NSLocalizedString(@"没有了哦", @"");
             }
+            
         }
     }
 }
