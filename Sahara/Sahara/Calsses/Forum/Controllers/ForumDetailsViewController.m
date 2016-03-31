@@ -23,7 +23,8 @@
     
     self.title = @"详情";
     [self.view addSubview:self.webView];
-    [self backToPreviousPageWithImage];
+    //[self backToPreviousPageWithImage];
+    
     
 }
 

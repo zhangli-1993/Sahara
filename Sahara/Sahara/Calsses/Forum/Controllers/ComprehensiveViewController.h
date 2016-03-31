@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface ComprehensiveViewController : UIViewController
-
+@property(nonatomic, strong) NSString *comprehensiveDetailID;
 @end

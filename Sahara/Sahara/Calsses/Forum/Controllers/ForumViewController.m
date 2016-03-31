@@ -15,7 +15,10 @@
 #import "ForumDetailsViewController.h"
 #import <SDWebImage/UIImageView+WebCache.h>
 #import "ComprehensiveViewController.h"
-@interface ForumViewController ()<PullingRefreshTableViewDelegate, UITableViewDataSource, UITableViewDelegate, UIWebViewDelegate>
+#import "LateralSpreadsView.h"
+
+
+@interface ForumViewController ()<PullingRefreshTableViewDelegate, UITableViewDataSource, UITableViewDelegate, UICollectionViewDelegate, UICollectionViewDataSource,UICollectionViewDelegateFlowLayout,UIWebViewDelegate>
 {
     NSInteger _pageCount;
     NSString *cellID;
@@ -29,11 +32,20 @@
 @property(nonatomic, strong) NSMutableArray *allTitleArray;
 @property(nonatomic, strong) NSMutableArray *allCellArray;
 @property(nonatomic, strong) NSMutableArray *allImageArray;
-
+@property (nonatomic, strong) UICollectionView *collectView;
 
 @property (nonatomic, retain) NSArray *sectionTitleArray;       //分区标题的数组
 @property (nonatomic, retain) NSMutableArray *allCityArray;    //所有分区下城市个数总和的数组
 @property (nonatomic, strong) NSMutableArray *placeArray;
+
+
+@property (nonatomic, strong) LateralSpreadsView *lateralSpreadsView;
+
+
+
+@property (nonatomic, strong) NSMutableArray *titleArray;
+@property (nonatomic, strong) NSMutableArray *numArray;
+@property (nonatomic, strong) LateralSpreadsView *priceView;
 
 @end
 
@@ -52,15 +64,17 @@
     
     [self homePagePortRequest];
     
-   
     
     //注册cell
     [self.tableView registerNib:[UINib nibWithNibName:@"ForumOneTableViewCell" bundle:nil] forCellReuseIdentifier:@"cell"];
     [self.view addSubview:self.tableView];
     [self.view addSubview:self.VOsegment];
-    
+}
 
-    
+//视图会出现
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    self.tabBarController.tabBar.hidden = NO;
 }
 
 - (VOSegmentedControl *)VOsegment{
@@ -77,7 +91,7 @@
         [self.view addSubview:self.VOsegment];
        // 返回点击的是哪个按钮
         [self.VOsegment setIndexChangeBlock:^(NSInteger index) {
-            NSLog(@"1: block --> %ld", (long)(index));
+           // NSLog(@"1: block --> %ld", (long)(index));
         
             
         }];
@@ -86,7 +100,6 @@
     }
     return _VOsegment;
    }
-
 
 - (NSMutableArray *)allTitleArray{
     if (_allTitleArray==nil) {
@@ -114,7 +127,19 @@
     return _allCellArray;
 }
 
-
+//- (NSMutableArray *)titleArray{
+//    if (_titleArray == nil) {
+//        self.titleArray = [NSMutableArray new];
+//    }
+//    return _titleArray;
+//}
+//
+//- (NSMutableArray *)numArray{
+//    if (_numArray == nil) {
+//        self.numArray = [NSMutableArray new];
+//    }
+//    return _numArray;
+//}
 
 
 - (void)segmentCtrlchange:(UISegmentedControl *)segement{
@@ -161,12 +186,8 @@
         default:
             break;
     }
-    
- 
-    
-
 }
-
+//车系
 - (void)getCarData{
     
     AFHTTPSessionManager *messionmanger = [AFHTTPSessionManager manager];
@@ -213,7 +234,7 @@
     }];
     
 }
-
+//地区
 - (void)city{
 
     AFHTTPSessionManager *messionmanger = [AFHTTPSessionManager manager];
@@ -247,7 +268,7 @@
         NSLog(@"%@",error);
     }];
 }
-
+//综合
 - (void)comprehensive{
     
     AFHTTPSessionManager *messionmanger = [AFHTTPSessionManager manager];
@@ -295,7 +316,6 @@
     }];
     
 }
-
 
 
 #pragma mark ---------- UITableViewDataSource
@@ -393,16 +413,46 @@
 
 #pragma mark -------------------- UITableViewDelegate
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-  
-        ForumDetailsViewController *detailVC = [[ForumDetailsViewController alloc] init];
-        ForumModel *model = self.allTitleArray[indexPath.row];
-        detailVC.detailID = model.url;
-        [self.navigationController pushViewController:detailVC animated:YES];
-   
+    if (tableView == self.tableView) {
+        
+        if (self.VOsegment.selectedSegmentIndex == 0) {
+            ForumDetailsViewController *detailVC = [[ForumDetailsViewController alloc] init];
+            ForumModel *model = self.allTitleArray[indexPath.row];
+            detailVC.detailID = model.url;
+            [self.navigationController pushViewController:detailVC animated:YES];
+        }
+        if (self.VOsegment.selectedSegmentIndex == 1) {
+            self.lateralSpreadsView = [[LateralSpreadsView alloc] initWithFrame:CGRectMake(0, 50, kWidth, kHeight)];
+            self.lateralSpreadsView.tableView.delegate = self;
+//            [self.lateralSpreadsView requestModel];
+            [self.view addSubview:self.lateralSpreadsView];
+            
+        }
+        if (self.VOsegment.selectedSegmentIndex == 3) {
+            ComprehensiveViewController *comprehensivelVC = [[ComprehensiveViewController alloc] init];
+//            ForumModel *model = self.allTitleArray[indexPath.row];
+//            comprehensivelVC.comprehensiveDetailID = model.comprehensivelurl;
+            [self.navigationController pushViewController:comprehensivelVC animated:YES];
+            
+        }
+     
+// // //
+//    }else if (tableView == self.lateralSpreadsView.tableView){
+//        LateralSpreadsView *cVC = [[LateralSpreadsView alloc] init];
+//        if (self.priceView.segment.selectedSegmentIndex == 0) {
+////            LateralSpreadsModel *model = self.lateralSpreadsView.onArray[indexPath.section][indexPath.row];
+////            cVC.title = model.name;
+//            
+//        } else {
+////            LateralSpreadsModel *model = self.lateralSpreadsView.allArray[indexPath.section][indexPath.row];
+////            cVC.title = model.name;
+//                }
+//        [self.navigationController pushViewController:cVC animated:YES];
+ // //
+    }
 }
 
-
-
+//通过判断设置行高
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     
     
@@ -428,8 +478,24 @@
 
 - (void)pullingTableViewDidStartRefreshing:(PullingRefreshTableView *)tableView{
     _pageCount = 1;
-    self.refresh = NO;//刷新
+    self.refresh = YES;//刷新
     [self performSelector:@selector(homePagePortRequest) withObject:nil afterDelay:1.0];
+}
+
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+    
+    if (self.VOsegment.selectedSegmentIndex != 0){
+    
+        self.lateralSpreadsView = [[LateralSpreadsView alloc] initWithFrame:CGRectMake(0, 64, kWidth, kHeight - 104)];
+        self.lateralSpreadsView.backgroundColor = [UIColor colorWithRed:25 / 225.0f green:25 / 225.0f blue:25 / 225.0f alpha:0.3];
+        self.lateralSpreadsView.tableView.delegate = self;
+        
+        [self.view addSubview:self.priceView];
+
+    }
+    
+       
 }
 
 
@@ -475,6 +541,7 @@
     
 }
 
+//论坛首页效果
 - (PullingRefreshTableView *)tableView{
     
    
@@ -487,23 +554,10 @@
     return _tableView;
 }
 
-
-
-
-
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

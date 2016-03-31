@@ -25,7 +25,8 @@
 //车系
 
 
-//综合
+//综合网址
+@property (nonatomic, strong) NSString *comprehensivelurl;//网址
 
 //定义一个公开的方法把外部的字典传进来进行转化加工（字典转化成model）
 - (instancetype)initWithDictionary:(NSDictionary *)dict;

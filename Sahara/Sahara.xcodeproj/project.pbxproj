@@ -61,6 +61,8 @@
 		7A0C78B41C9E929A0048C4F3 /* CarForum.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A0C78B31C9E929A0048C4F3 /* CarForum.m */; };
 		7A0C78B71C9E9AF30048C4F3 /* CarForumModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A0C78B61C9E9AF30048C4F3 /* CarForumModel.m */; };
 		7A0D08311CA2C180003FDFFA /* Filef in Resources */ = {isa = PBXBuildFile; fileRef = 7A0D08301CA2C180003FDFFA /* Filef */; };
+		7A0D97AF1CACC61300661CA9 /* FourmTwoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A0D97AD1CACC61300661CA9 /* FourmTwoTableViewCell.m */; };
+		7A0D97B01CACC61300661CA9 /* FourmTwoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7A0D97AE1CACC61300661CA9 /* FourmTwoTableViewCell.xib */; };
 		7A1225751C9A90C000E16422 /* TomLiveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A1225741C9A90C000E16422 /* TomLiveViewController.m */; };
 		7A1225781C9A9C9500E16422 /* LiveOtherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A1225771C9A9C9500E16422 /* LiveOtherViewController.m */; };
 		7A1368101CA0D08300C401D7 /* privilegeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A13680E1CA0D08300C401D7 /* privilegeTableViewCell.m */; };
@@ -93,6 +95,8 @@
 		7A5C17341CA299B0003C15D8 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A5C17331CA299B0003C15D8 /* MapViewController.m */; };
 		7A6591331C9D329C00EA47BE /* CompeteModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A6591321C9D329C00EA47BE /* CompeteModel.m */; };
 		7A6C0BD71C995E7C00205D61 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A6C0BD61C995E7C00205D61 /* DetailViewController.m */; };
+		7A70B3301CA951AA00FD7770 /* LateralSpreadsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A70B32F1CA951A900FD7770 /* LateralSpreadsView.m */; };
+		7A70B3331CA951EB00FD7770 /* LateralSpreadsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A70B3321CA951EB00FD7770 /* LateralSpreadsModel.m */; };
 		7A7D3EFE1C9B93AD002B8008 /* for.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7A7D3EFD1C9B93AD002B8008 /* for.plist */; };
 		7A84D1A81C98FF38006EE2F1 /* blueArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A84D1A41C98FF38006EE2F1 /* blueArrow.png */; };
 		7A84D1A91C98FF38006EE2F1 /* blueArrowDown.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A84D1A51C98FF38006EE2F1 /* blueArrowDown.png */; };
@@ -233,6 +237,9 @@
 		7A0C78B51C9E9AF30048C4F3 /* CarForumModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarForumModel.h; sourceTree = "<group>"; };
 		7A0C78B61C9E9AF30048C4F3 /* CarForumModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CarForumModel.m; sourceTree = "<group>"; };
 		7A0D08301CA2C180003FDFFA /* Filef */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Filef; sourceTree = "<group>"; };
+		7A0D97AC1CACC61300661CA9 /* FourmTwoTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FourmTwoTableViewCell.h; path = Sahara/Calsses/Forum/View/FourmTwoTableViewCell.h; sourceTree = SOURCE_ROOT; };
+		7A0D97AD1CACC61300661CA9 /* FourmTwoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FourmTwoTableViewCell.m; path = Sahara/Calsses/Forum/View/FourmTwoTableViewCell.m; sourceTree = SOURCE_ROOT; };
+		7A0D97AE1CACC61300661CA9 /* FourmTwoTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = FourmTwoTableViewCell.xib; path = Sahara/Calsses/Forum/View/FourmTwoTableViewCell.xib; sourceTree = SOURCE_ROOT; };
 		7A1225731C9A90C000E16422 /* TomLiveViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TomLiveViewController.h; sourceTree = "<group>"; };
 		7A1225741C9A90C000E16422 /* TomLiveViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TomLiveViewController.m; sourceTree = "<group>"; };
 		7A1225761C9A9C9500E16422 /* LiveOtherViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LiveOtherViewController.h; sourceTree = "<group>"; };
@@ -291,6 +298,10 @@
 		7A6591321C9D329C00EA47BE /* CompeteModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CompeteModel.m; sourceTree = "<group>"; };
 		7A6C0BD51C995E7C00205D61 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		7A6C0BD61C995E7C00205D61 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		7A70B32E1CA951A900FD7770 /* LateralSpreadsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LateralSpreadsView.h; path = Sahara/Calsses/Forum/View/LateralSpreadsView.h; sourceTree = SOURCE_ROOT; };
+		7A70B32F1CA951A900FD7770 /* LateralSpreadsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LateralSpreadsView.m; path = Sahara/Calsses/Forum/View/LateralSpreadsView.m; sourceTree = SOURCE_ROOT; };
+		7A70B3311CA951EB00FD7770 /* LateralSpreadsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LateralSpreadsModel.h; sourceTree = "<group>"; };
+		7A70B3321CA951EB00FD7770 /* LateralSpreadsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LateralSpreadsModel.m; sourceTree = "<group>"; };
 		7A7D3EFD1C9B93AD002B8008 /* for.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = for.plist; sourceTree = "<group>"; };
 		7A84D1A41C98FF38006EE2F1 /* blueArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blueArrow.png; sourceTree = "<group>"; };
 		7A84D1A51C98FF38006EE2F1 /* blueArrowDown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blueArrowDown.png; sourceTree = "<group>"; };
@@ -507,6 +518,14 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		7A70B32D1CA94C0600FD7770 /* Custom */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Custom;
+			path = View/Custom;
+			sourceTree = "<group>";
+		};
 		7A84D1A31C98FF38006EE2F1 /* PullingRefreshTableView */ = {
 			isa = PBXGroup;
 			children = (
@@ -611,6 +630,7 @@
 		7AB362401C98E3F200C03E74 /* Forum */ = {
 			isa = PBXGroup;
 			children = (
+				7A70B32D1CA94C0600FD7770 /* Custom */,
 				7AF9C5B11C9AB03A00074B54 /* Controllers */,
 				7AF9C5B41C9AB03A00074B54 /* Model */,
 				7AF9C5B71C9AB03A00074B54 /* View */,
@@ -845,6 +865,8 @@
 				7AF9C5B61C9AB03A00074B54 /* ForumModel.m */,
 				7A0D08301CA2C180003FDFFA /* Filef */,
 				7A7D3EFD1C9B93AD002B8008 /* for.plist */,
+				7A70B3311CA951EB00FD7770 /* LateralSpreadsModel.h */,
+				7A70B3321CA951EB00FD7770 /* LateralSpreadsModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -855,8 +877,13 @@
 				7AF9C5B81C9AB03A00074B54 /* ForumOneTableViewCell.h */,
 				7AF9C5B91C9AB03A00074B54 /* ForumOneTableViewCell.m */,
 				7AF9C5BA1C9AB03A00074B54 /* ForumOneTableViewCell.xib */,
+				7A0D97AC1CACC61300661CA9 /* FourmTwoTableViewCell.h */,
+				7A0D97AD1CACC61300661CA9 /* FourmTwoTableViewCell.m */,
+				7A0D97AE1CACC61300661CA9 /* FourmTwoTableViewCell.xib */,
 				7AE793CC1C9C0324001E9231 /* PlaceView.h */,
 				7AE793CD1C9C0324001E9231 /* PlaceView.m */,
+				7A70B32E1CA951A900FD7770 /* LateralSpreadsView.h */,
+				7A70B32F1CA951A900FD7770 /* LateralSpreadsView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -987,6 +1014,7 @@
 				7AB3627A1C98F89800C03E74 /* MessageTwoTableViewCell.xib in Resources */,
 				7AE793A51C9BD534001E9231 /* Filefff in Resources */,
 				7A0C78A01C9E2C8A0048C4F3 /* Article in Resources */,
+				7A0D97B01CACC61300661CA9 /* FourmTwoTableViewCell.xib in Resources */,
 				7A0C78B11C9E4DC30048C4F3 /* comment in Resources */,
 				7AD7F7E71C9934CE00BF2460 /* hot in Resources */,
 				7A0ACB031CA0314500355E67 /* store in Resources */,
@@ -1094,6 +1122,7 @@
 				7A59D98F1CA2B15B00307189 /* CollectionModel.m in Sources */,
 				7ABB84781C9E986300621CC4 /* LoginViewController.m in Sources */,
 				7AFB2E441CA7F3E8009475EA /* GoupOnViewController.m in Sources */,
+				7A0D97AF1CACC61300661CA9 /* FourmTwoTableViewCell.m in Sources */,
 				7A08A8CB1C9AE4B900D036E7 /* HotTableViewCell.m in Sources */,
 				7AF9C5BC1C9AB03A00074B54 /* ForumModel.m in Sources */,
 				7A59D9921CA2B84C00307189 /* CollectionTableViewCell.m in Sources */,
@@ -1114,11 +1143,13 @@
 				7A0C78AC1C9E37600048C4F3 /* ActicleDetailViewController.m in Sources */,
 				7A339BB71CA1851500DCBC5D /* VideoViewController.m in Sources */,
 				7A1225781C9A9C9500E16422 /* LiveOtherViewController.m in Sources */,
+				7A70B3331CA951EB00FD7770 /* LateralSpreadsModel.m in Sources */,
 				7A0ACAF31C9FD4E700355E67 /* Tools.m in Sources */,
 				7AB362791C98F89800C03E74 /* MessageTwoTableViewCell.m in Sources */,
 				7A089ACF1C9BD83E00EF030E /* CarSumView.m in Sources */,
 				7A2E7AE61C984DDA0045F332 /* main.m in Sources */,
 				7A1767FB1CA4EF5300E5FAAD /* PriceWebViewController.m in Sources */,
+				7A70B3301CA951AA00FD7770 /* LateralSpreadsView.m in Sources */,
 				7A0C78A31C9E2CE50048C4F3 /* ArticleModel.m in Sources */,
 				7A1368691CA0EE9B00C401D7 /* CarPrivilegeView.m in Sources */,
 				7A08A8C81C9AE37900D036E7 /* HotModel.m in Sources */,
@@ -1242,7 +1273,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
-				GCC_PREFIX_HEADER = /Users/scjy/Desktop/Sahara/Sahara/Sahara/Librarys/Sahara.pch;
+				GCC_PREFIX_HEADER = /Users/1a/Desktop/Sahara/Sahara/Sahara/Librarys/Sahara.pch;
 				INFOPLIST_FILE = Sahara/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1303,7 +1334,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
-				GCC_PREFIX_HEADER = /Users/scjy/Desktop/Sahara/Sahara/Sahara/Librarys/Sahara.pch;
+				GCC_PREFIX_HEADER = /Users/1a/Desktop/Sahara/Sahara/Sahara/Librarys/Sahara.pch;
 				INFOPLIST_FILE = Sahara/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
