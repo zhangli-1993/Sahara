@@ -1308,7 +1308,7 @@
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/Sahara/Librarys",
 				);
-				GCC_PREFIX_HEADER = /Users/1a/Desktop/Sahara/Sahara/Sahara/Librarys/Sahara.pch;
+				GCC_PREFIX_HEADER = /Users/scjy/Desktop/Sahara/Sahara/Sahara/Librarys/Sahara.pch;
 				INFOPLIST_FILE = Sahara/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1372,7 +1372,7 @@
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/Sahara/Librarys",
 				);
-				GCC_PREFIX_HEADER = /Users/1a/Desktop/Sahara/Sahara/Sahara/Librarys/Sahara.pch;
+				GCC_PREFIX_HEADER = /Users/scjy/Desktop/Sahara/Sahara/Sahara/Librarys/Sahara.pch;
 				INFOPLIST_FILE = Sahara/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
