@@ -49,14 +49,9 @@
 
 #pragma mark -------------- Custom Method
 - (void)tableViewHeadView{
-    UIView *headView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, kWidth, kWidth*3/4)];
-    self.tableView.tableHeaderView = headView;
     UIView *loginView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, kWidth, kWidth/2)];
     loginView.backgroundColor = kMainColor;
-    [headView addSubview:loginView];
-    UIView *btnView = [[UIView alloc] initWithFrame:CGRectMake(0, kWidth/2, kWidth, kWidth/4)];
-    btnView.backgroundColor = [UIColor colorWithRed:230/255.0 green:230/255.0  blue:230/255.0  alpha:1.0];
-    [headView addSubview:btnView];
+    self.tableView.tableHeaderView = loginView;
     
     //点击登录
     [loginView addSubview:self.hitLoginBtn];
@@ -65,12 +60,11 @@
     lineLAbel.backgroundColor = [UIColor blueColor];
     [loginView addSubview:lineLAbel];
     
-    self.titleArray = @[@"我的帖子", @"我的订阅", @"我的评论", @"我的收藏", @"我的好友"];
-    self.btnArray = @[@"用车宝典", @"价格导购", @"评论回复", @"系统消息"];
+    self.titleArray = @[@"用车宝典",@"价格导购", @"我的订阅", @"我的收藏"];
     
-    for (int i = 0; i < 5; i++) {
+    for (int i = 0; i < 4; i++) {
         UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
-        button.frame = CGRectMake(kWidth/5 * i + 10, kWidth/3, kWidth/6, kWidth/6);
+        button.frame = CGRectMake(kWidth/4 * i + 10, kWidth/3, kWidth/6, kWidth/6);
         [button addTarget:self action:@selector(tableHeadButton:) forControlEvents:UIControlEventTouchUpInside];
         NSString *imageStr = [NSString stringWithFormat:@"pc_menu_%02d", i];
         button.imageEdgeInsets = UIEdgeInsetsMake(0, 15, 20, 0);
@@ -79,61 +73,53 @@
         button.titleLabel.font = [UIFont systemFontOfSize:12];
         button.tag = 10 + i;
         [button setImage:[UIImage imageNamed:imageStr] forState:UIControlStateNormal];
+        
         [loginView addSubview:button];
     }
     
-    //第二行
-    for (int i = 0; i < 4; i++) {
-        UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
-        button.frame = CGRectMake(10 + kWidth/4 * i, 10, kWidth/6, kWidth/6);
-        [button setTitle:self.btnArray[i] forState:UIControlStateNormal];
-        [button addTarget:self action:@selector(btnArrayAction:) forControlEvents:UIControlEventTouchUpInside];
-        button.tag = 110 + i;
-        [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-        button.titleLabel.numberOfLines = 0;
-        button.layer.cornerRadius = kWidth/12;
-        button.clipsToBounds = YES;
-        button.backgroundColor = [UIColor whiteColor];
-        UILabel *lineLabel = [[UILabel alloc] initWithFrame:CGRectMake(kWidth/5 * i + kWidth/5, kWidth/3, 1, kWidth/6)];
+    //button分割线
+    for (int i = 0; i < 3; i++) {
+       UILabel *lineLabel = [[UILabel alloc] initWithFrame:CGRectMake(kWidth/4 * i + kWidth/4, kWidth/3, 1, kWidth/6)];
         lineLabel.backgroundColor = [UIColor blueColor];
         [loginView addSubview:lineLabel];
-        [btnView addSubview:button];
     }
     
     
     
 }
 
-//第一行
+//button点击方法
 - (void)tableHeadButton:(UIButton *)btn{
-    if (btn.tag == 13) {
-        CollectionViewController *collectionVC = [[CollectionViewController alloc] init];
-        [self.navigationController pushViewController:collectionVC animated:YES];
-    }else if (btn.tag == 11){
-        RSSViewController *rssVC = [[RSSViewController alloc] init];
-        [self.navigationController pushViewController:rssVC animated:YES];
-    }
-    
-}
-//第二行
-- (void)btnArrayAction:(UIButton *)btn{
     switch (btn.tag) {
-        case 110:
+        case 10:
         {
             UseCarViewController *useCarVC = [[UseCarViewController alloc] init];
             [self.navigationController pushViewController:useCarVC animated:YES];
         }
             break;
-            case 111:
+            case 11:
         {
             PriceViewController *priceVC = [[PriceViewController alloc] init];
             [self.navigationController pushViewController:priceVC animated:YES];
+        }
+            break;
+            case 12:
+        {
+            RSSViewController *rssVC = [[RSSViewController alloc] init];
+            [self.navigationController pushViewController:rssVC animated:YES];
+        }
+            break;
+            case 13:
+        {
+            CollectionViewController *collectionVC = [[CollectionViewController alloc] init];
+            [self.navigationController pushViewController:collectionVC animated:YES];
         }
             break;
             
         default:
             break;
     }
+    
 }
 
 #pragma mark --------------- UITableVIewDelegate
@@ -190,6 +176,14 @@
         [yeSwitch addTarget:self action:@selector(blackAction:) forControlEvents:UIControlEventTouchUpInside];
         [tableCell addSubview:yeSwitch];
         
+    }
+    
+    NSUserDefaults *user = [NSUserDefaults standardUserDefaults];
+    NSString *userName = [user objectForKey:@"userName"];
+    if (userName) {
+        if (indexPath.row == 7) {
+            tableCell.textLabel.textColor = [UIColor redColor];
+        }
     }
     
     tableCell.selectionStyle = UITableViewCellSelectionStyleNone;
@@ -302,9 +296,7 @@
         [user removeObjectForKey:@"image"];
 
         [self.hitLoginBtn setImage:[UIImage imageNamed:@" "] forState:UIControlStateNormal];
-        
         self.titleLabel.text = @"点击登录/注册";
-
         
     }];
     [alertC addAction:cencel];
