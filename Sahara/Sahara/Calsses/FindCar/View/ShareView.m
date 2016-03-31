@@ -34,10 +34,10 @@
     
     //微博
     UIButton *weiboBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    weiboBtn.frame = CGRectMake(40, 15, 80, 120);
-    UIImageView *image = [[UIImageView alloc]initWithFrame:CGRectMake(20, 20, 60, 60)];
+    weiboBtn.frame = CGRectMake((kWidth  * 0.25 - 60), 15, 80, 120);
+    UIImageView *image = [[UIImageView alloc]initWithFrame:CGRectMake((kWidth  * 0.25 - 60), 20, 60, 60)];
     image.image = [UIImage imageNamed:@"weibo"];
-    UILabel *label1 = [[UILabel alloc]initWithFrame:CGRectMake(20, 80, 80, 20)];
+    UILabel *label1 = [[UILabel alloc]initWithFrame:CGRectMake((kWidth  * 0.25 - 60), 80, 80, 20)];
     label1.text = @"分享到微博";
     label1.font = [UIFont systemFontOfSize:12];
     
@@ -47,10 +47,10 @@
     [self.shareView addSubview:weiboBtn];
     //朋友
     UIButton *friendBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    friendBtn.frame = CGRectMake(140, 15, 80, 120);
-    UIImageView *image1 = [[UIImageView alloc]initWithFrame:CGRectMake(120, 20, 60, 60)];
+    friendBtn.frame = CGRectMake(kWidth * 0.5 - 40, 15, 80, 120);
+    UIImageView *image1 = [[UIImageView alloc]initWithFrame:CGRectMake(kWidth * 0.5 - 40, 20, 60, 60)];
     image1.image = [UIImage imageNamed:@"weixin"];
-    UILabel *label2 = [[UILabel alloc]initWithFrame:CGRectMake(120, 80, 80, 20)];
+    UILabel *label2 = [[UILabel alloc]initWithFrame:CGRectMake(kWidth * 0.5 - 40, 80, 80, 20)];
     label2.text = @"分享给好友";
     [weiboBtn addSubview:image1];
     [weiboBtn addSubview:label2];
@@ -62,10 +62,10 @@
     
     //朋友圈
     UIButton *circleBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    circleBtn.frame = CGRectMake(240, 15, 80, 120);
-    UIImageView *image2 = [[UIImageView alloc]initWithFrame:CGRectMake(220, 20, 60, 60)];
+    circleBtn.frame = CGRectMake(kWidth * 0.75 + 140, 15, 80, 120);
+    UIImageView *image2 = [[UIImageView alloc]initWithFrame:CGRectMake(kWidth * 0.75 + 140, 20, 60, 60)];
     image2.image = [UIImage imageNamed:@"friend"];
-    UILabel *label3 = [[UILabel alloc]initWithFrame:CGRectMake(220, 80, 80, 20)];
+    UILabel *label3 = [[UILabel alloc]initWithFrame:CGRectMake(kWidth - kWidth * 0.75 + 140, 80, 80, 20)];
     label3.text = @"分享到朋友圈";
     label3.font = [UIFont systemFontOfSize:12];
     [weiboBtn addSubview:image2];
@@ -104,14 +104,18 @@
     request.scope = @"all";
     request.userInfo = @{@"SSO_From":@"MineViewController", @"Other_Info_1": [NSNumber numberWithInt:123], @"Other_Info_2": @[@"obj1", @"obj2"], @"Other_Info_3":@{@"key1":@"obj1",@"key2":@"obj2"}};
     WBSendMessageToWeiboRequest *request1 = [WBSendMessageToWeiboRequest requestWithMessage:[self messageToShare]authInfo:request access_token:myDelegate.wbtoken];
-    request1.userInfo = @{@"ShareMessageFrom":@"MineViewController", @"Other_Info_1": [NSNumber numberWithInt:123], @"Other_Info_2": @[@"obj1", @"obj2"], @"Other_Info_3":@{@"key1":@"obj1",@"key2":@"obj2"}};
-    [WeiboSDK sendRequest:request1];
+              request1.userInfo = @{@"ShareMessageFrom":@"MineViewController", @"Other_Info_1": [NSNumber numberWithInt:123], @"Other_Info_2": @[@"obj1", @"obj2"], @"Other_Info_3":@{@"key1":@"obj1",@"key2":@"obj2"}};
+ 
+        [WeiboSDK sendRequest:request1];
+
+    
+    
     
 }
 - (WBMessageObject *)messageToShare{
     WBMessageObject *message = [WBMessageObject message];
-    message.text = @"这里是爱看汽车";
-//    WBImageObject *image = [WBImageObject object];
+     message.text = NSLocalizedString(@"这里是爱看车网!", nil);
+    //    WBImageObject *image = [WBImageObject object];
 //    image.imageData = [NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"11" ofType:@".png"]];
 //    message.imageObject = image;
     

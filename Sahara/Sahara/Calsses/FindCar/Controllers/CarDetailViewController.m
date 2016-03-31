@@ -27,6 +27,7 @@
 #import "StoreDetailViewController.h"
 #import "MapViewController.h"
 #import "Tools.h"
+#import "AskPriceViewController.h"
 @interface CarDetailViewController ()<UITableViewDelegate, UIWebViewDelegate>
 
 
@@ -347,15 +348,25 @@
             }
             if ([str isEqualToString:@"auto-ask-price"]) {
                 NSUserDefaults *user = [NSUserDefaults standardUserDefaults];
-                NSLog(@"%@", self.AreaDic);
                 NSString *city = [user valueForKey:@"city"];
+                NSLog(@"cccc%@", city);
                 NSArray *arr = [city componentsSeparatedByString:@"市"];
                 self.AreaDic = [user valueForKey:@"cityID"];
-                NSLog(@"%@", self.AreaDic);
-//                NSString *areaID = [self.AreaDic valueForKey:arr.firstObject];
-                NSString *areaID = [self.AreaDic valueForKey:@"洛阳"];
+                NSString *areaID = [self.AreaDic valueForKey:arr.firstObject];
+
                 NSString *cityUTF = [arr.firstObject stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-                NSLog(@"++%@, %@, %@", areaID, arr.firstObject, cityUTF);
+                 NSString *requeStr = [requestString stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+                      
+                      NSArray *allArr = [requeStr componentsSeparatedByString:@"&"];
+                      NSString *sss = allArr[0];
+                      NSArray *ssArr = [sss componentsSeparatedByString:@"?"];
+                      NSString *serial = ssArr.lastObject;
+                      NSString *info = [NSString stringWithFormat:@"%@&%@&%@&areaId=%@&areaName=%@", allArr.lastObject, serial, allArr[2],areaID, cityUTF];
+                      AskPriceViewController *ask = [[AskPriceViewController alloc] init];
+                      ask.requstStr = info;
+                      [self.navigationController pushViewController:ask animated:YES];
+                      
+
             }
         }
     }

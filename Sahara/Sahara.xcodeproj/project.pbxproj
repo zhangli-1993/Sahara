@@ -36,6 +36,10 @@
 		7A08A8C51C9ADF8100D036E7 /* hotCar in Resources */ = {isa = PBXBuildFile; fileRef = 7A08A8C41C9ADF8100D036E7 /* hotCar */; };
 		7A08A8C81C9AE37900D036E7 /* HotModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A08A8C71C9AE37900D036E7 /* HotModel.m */; };
 		7A08A8CB1C9AE4B900D036E7 /* HotTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A08A8CA1C9AE4B900D036E7 /* HotTableViewCell.m */; };
+		7A09E0061CAA513300923952 /* PushConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7A09E0051CAA513300923952 /* PushConfig.plist */; };
+		7A09E0081CAA51E800923952 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A09E0071CAA51E800923952 /* CFNetwork.framework */; };
+		7A09E00A1CAA520200923952 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A09E0091CAA520200923952 /* CoreFoundation.framework */; };
+		7A09E00E1CAA53C900923952 /* jpush-ios-2.1.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A09E00C1CAA53C900923952 /* jpush-ios-2.1.0.a */; };
 		7A0A4AA81CA3D57A00AE3C94 /* StoreDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A0A4AA71CA3D57A00AE3C94 /* StoreDetailViewController.m */; };
 		7A0A4AAA1CA4056100AE3C94 /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A0A4AA91CA4056100AE3C94 /* libWeChatSDK.a */; };
 		7A0A919C1C999D020007192D /* CarPriceModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A0A919B1C999D020007192D /* CarPriceModel.m */; };
@@ -195,6 +199,11 @@
 		7A08A8C71C9AE37900D036E7 /* HotModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HotModel.m; sourceTree = "<group>"; };
 		7A08A8C91C9AE4B900D036E7 /* HotTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HotTableViewCell.h; sourceTree = "<group>"; };
 		7A08A8CA1C9AE4B900D036E7 /* HotTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HotTableViewCell.m; sourceTree = "<group>"; };
+		7A09E0051CAA513300923952 /* PushConfig.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = PushConfig.plist; sourceTree = "<group>"; };
+		7A09E0071CAA51E800923952 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		7A09E0091CAA520200923952 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		7A09E00C1CAA53C900923952 /* jpush-ios-2.1.0.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "jpush-ios-2.1.0.a"; sourceTree = "<group>"; };
+		7A09E00D1CAA53C900923952 /* JPUSHService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPUSHService.h; sourceTree = "<group>"; };
 		7A0A4AA61CA3D57A00AE3C94 /* StoreDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoreDetailViewController.h; sourceTree = "<group>"; };
 		7A0A4AA71CA3D57A00AE3C94 /* StoreDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoreDetailViewController.m; sourceTree = "<group>"; };
 		7A0A4AA91CA4056100AE3C94 /* libWeChatSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libWeChatSDK.a; sourceTree = "<group>"; };
@@ -379,10 +388,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A09E00A1CAA520200923952 /* CoreFoundation.framework in Frameworks */,
+				7A09E0081CAA51E800923952 /* CFNetwork.framework in Frameworks */,
 				7AE3363D1CA9631E00C30F4C /* libiconv.tbd in Frameworks */,
 				7A0ACAFE1CA024C900355E67 /* libstdc++.6.0.9.tbd in Frameworks */,
 				7A0ACAFC1CA024A000355E67 /* CoreLocation.framework in Frameworks */,
 				7A0ACAF81CA023AA00355E67 /* MAMapKit.framework in Frameworks */,
+				7A09E00E1CAA53C900923952 /* jpush-ios-2.1.0.a in Frameworks */,
 				7A089AFE1C9BF51100EF030E /* libc++.tbd in Frameworks */,
 				7A089AFC1C9BF50300EF030E /* libsqlite3.0.tbd in Frameworks */,
 				7A089AF21C9BE35B00EF030E /* libsqlite3.tbd in Frameworks */,
@@ -446,6 +458,15 @@
 			path = SDKExport;
 			sourceTree = "<group>";
 		};
+		7A09E00B1CAA53C900923952 /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				7A09E00C1CAA53C900923952 /* jpush-ios-2.1.0.a */,
+				7A09E00D1CAA53C900923952 /* JPUSHService.h */,
+			);
+			path = lib;
+			sourceTree = "<group>";
+		};
 		7A168CA61CA78E4E00BDD397 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -499,6 +520,7 @@
 				7A2E7AEA1C984DDA0045F332 /* Assets.xcassets */,
 				7A2E7AEC1C984DDA0045F332 /* LaunchScreen.storyboard */,
 				7A2E7AEF1C984DDA0045F332 /* Info.plist */,
+				7A09E0051CAA513300923952 /* PushConfig.plist */,
 				7A2E7AE41C984DDA0045F332 /* Supporting Files */,
 			);
 			path = Sahara;
@@ -733,6 +755,7 @@
 		7AB3624C1C98E3FB00C03E74 /* Librarys */ = {
 			isa = PBXGroup;
 			children = (
+				7A09E00B1CAA53C900923952 /* lib */,
 				7A089AF61C9BF37900EF030E /* SDKExport */,
 				7A089AD01C9BE21F00EF030E /* libWeiboSDK */,
 				7AB3625C1C98E4AF00C03E74 /* Sahara.pch */,
@@ -875,6 +898,8 @@
 		FA7FD3E0088FFB46FCCE72F1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7A09E0091CAA520200923952 /* CoreFoundation.framework */,
+				7A09E0071CAA51E800923952 /* CFNetwork.framework */,
 				7AE3363C1CA9631E00C30F4C /* libiconv.tbd */,
 				7A0ACAFD1CA024C900355E67 /* libstdc++.6.0.9.tbd */,
 				7A0ACAFB1CA024A000355E67 /* CoreLocation.framework */,
@@ -931,7 +956,7 @@
 				TargetAttributes = {
 					7A2E7AE01C984DDA0045F332 = {
 						CreatedOnToolsVersion = 7.2.1;
-						DevelopmentTeam = 4JS35T698G;
+						DevelopmentTeam = CCQ5LLLX4L;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 1;
@@ -995,6 +1020,7 @@
 				7A0ACB031CA0314500355E67 /* store in Resources */,
 				7A59D9891CA2880100307189 /* bendi.png in Resources */,
 				7A07E69F1C9F82DD003D0843 /* ProgressHUD.bundle in Resources */,
+				7A09E0061CAA513300923952 /* PushConfig.plist in Resources */,
 				7AB362751C98F85500C03E74 /* MessageOneTableViewCell.xib in Resources */,
 				7A0ACAF01C9FA47900355E67 /* carForum in Resources */,
 				7A089B081C9C277100EF030E /* Config in Resources */,
@@ -1254,10 +1280,11 @@
 					"$(PROJECT_DIR)/Sahara/Librarys/libWeiboSDK",
 					"$(PROJECT_DIR)/Sahara/Librarys/SDKExport",
 					"$(PROJECT_DIR)/Sahara/Librarys/UMessage_Sdk_1.2.6",
+					"$(PROJECT_DIR)/Sahara/Librarys/lib",
 				);
 				OTHER_LDFLAGS = (
 					"$(inherited)",
-					"-ObjC",
+					"-all_load",
 					"-l\"AFNetworking\"",
 					"-l\"SDCycleScrollView\"",
 					"-l\"SDWebImage\"",
@@ -1288,7 +1315,7 @@
 					"\"SystemConfiguration\"",
 					"-fobjc-arc",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = Auroralizi.Sahara;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Auroralizi.Sahara;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				VALID_ARCHS = "arm64 armv7 linker command failed with exit code 1 (use -v to see invocation) armv7s";
@@ -1317,10 +1344,11 @@
 					"$(PROJECT_DIR)/Sahara/Librarys/libWeiboSDK",
 					"$(PROJECT_DIR)/Sahara/Librarys/SDKExport",
 					"$(PROJECT_DIR)/Sahara/Librarys/UMessage_Sdk_1.2.6",
+					"$(PROJECT_DIR)/Sahara/Librarys/lib",
 				);
 				OTHER_LDFLAGS = (
 					"$(inherited)",
-					"-ObjC",
+					"-all_load",
 					"-l\"AFNetworking\"",
 					"-l\"SDCycleScrollView\"",
 					"-l\"SDWebImage\"",
@@ -1351,7 +1379,7 @@
 					"\"SystemConfiguration\"",
 					"-fobjc-arc",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = Auroralizi.Sahara;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Auroralizi.Sahara;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				VALID_ARCHS = "arm64 armv7 linker command failed with exit code 1 (use -v to see invocation) armv7s";
