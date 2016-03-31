@@ -15,18 +15,20 @@
 #import "WeiboSDK.h"
 #import "WXApi.h"
 #import <BmobSDK/Bmob.h>
-#import <CoreLocation/CoreLocation.h>
 #import <AFHTTPSessionManager.h>
 #import <TencentOpenAPI/TencentOAuth.h>
+#import "JPUSHService.h"
+#import <CoreLocation/CoreLocation.h>
+
 @interface AppDelegate ()<WeiboSDKDelegate, WXApiDelegate, CLLocationManagerDelegate>
 {
     CLLocationManager *_locationManager;
     CLGeocoder *_geocoder;
 }
-
 @property(nonatomic, strong) UITabBarController *tabBarVC;
 @property(nonatomic, strong) UINavigationController *mainNav;
 @property(nonatomic, assign) BOOL isLogin;
+
 
 @end
 
@@ -40,10 +42,6 @@
     [WeiboSDK registerApp:kWBAppKey];
     [WXApi registerApp:kWXAppKey];
     [Bmob registerWithAppKey:kBmobKey];
-    //qq
-        
-    
-    NSLog(@"%@", [NSBundle mainBundle].bundleIdentifier);
     _locationManager = [[CLLocationManager alloc] init];
     _geocoder = [[CLGeocoder alloc] init];
     if (![CLLocationManager locationServicesEnabled]) {
@@ -58,7 +56,17 @@
         _locationManager.distanceFilter = distance;
         [_locationManager startUpdatingLocation];
     }
-    NSLog(@"233333333");
+    
+
+    //qq
+    [JPUSHService registerForRemoteNotificationTypes:(UIUserNotificationTypeBadge |
+                                                      UIUserNotificationTypeSound |
+                                                      UIUserNotificationTypeAlert) categories:nil];
+    [JPUSHService setupWithOption:launchOptions appKey:kJPush
+                          channel:channel apsForProduction:isProduction];
+    
+    NSLog(@"%@", [NSBundle mainBundle].bundleIdentifier);
+   
     self.tabBarVC = [[UITabBarController alloc] init];
     //资讯
     MessageViewController *messageVC = [[MessageViewController alloc] init];
@@ -107,7 +115,7 @@
     return YES;
 }
 - (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray<CLLocation *> *)locations{
-    CLLocation *location = [locations firstObject];
+    CLLocation *location = [locations lastObject];
     CLLocationCoordinate2D coordinate = location.coordinate;
     NSLog(@"///%f, ///%f, %f, %f, %f", coordinate.longitude, coordinate.latitude, location.altitude, location.course, location.speed);
     //
@@ -119,9 +127,7 @@
         CLPlacemark *placeMark = [placemarks firstObject];
         [[NSUserDefaults standardUserDefaults] setValue:placeMark.addressDictionary[@"City"] forKey:@"city"];
         [userDef synchronize];
-//        NSLog(@"111%@",placeMark.addressDictionary[@"City"]);
-//        NSLog(@"++++error%@", error);
-//        NSLog(@"++++%@", placeMark.addressDictionary);
+        NSLog(@"++++++%@", placeMark.addressDictionary);
     }];
     [_locationManager stopUpdatingLocation];
     
@@ -151,6 +157,23 @@
     
     
 }
+#pragma mark -------------PushMessage
+- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken{
+    [JPUSHService registerDeviceToken:deviceToken];
+    
+}
+- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo{
+    NSLog(@"111%@", userInfo);
+      [JPUSHService handleRemoteNotification:userInfo];
+    
+}
+- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler{
+    [JPUSHService handleRemoteNotification:userInfo];
+    completionHandler(UIBackgroundFetchResultNewData);
+}
+- (void)application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *)error{
+    NSLog(@"error = %@", error);
+}
 
 - (void)didReceiveWeiboResponse:(WBBaseResponse *)response{
         WBAuthorizeResponse *authorize = (WBAuthorizeResponse *)response;
@@ -161,6 +184,7 @@
 //            NSLog(@"%@", uid);
 //            NSLog(@"%@", date);
         NSDictionary *dict = @{@"access_token":token, @"uid":uid, @"expirationDate":date};
+    
         AFHTTPSessionManager *httpManger = [AFHTTPSessionManager manager];
         httpManger.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", nil];
         
@@ -184,14 +208,14 @@
                     self.isLogin = YES;
                     MainViewController *setVC = [[MainViewController alloc] init];
                     [self.mainNav pushViewController:setVC animated:YES];
-                    
+                
                 }
             }];
             
         } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
             NSLog(@"error = %@", error);
         }];
-        
+    
 
     
 }
@@ -203,10 +227,14 @@
 - (void)applicationDidEnterBackground:(UIApplication *)application {
     // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+     [[UIApplication sharedApplication] setApplicationIconBadgeNumber:0];
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application {
     // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
+    [application setApplicationIconBadgeNumber:0];
+    [application cancelAllLocalNotifications];
+
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
