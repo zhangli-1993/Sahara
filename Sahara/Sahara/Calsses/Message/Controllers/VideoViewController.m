@@ -8,6 +8,7 @@
 
 #import "VideoViewController.h"
 #import <AFHTTPSessionManager.h>
+#import "ProgressHUD.h"
 @interface VideoViewController ()<UITableViewDataSource, UITableViewDelegate>
 @property(nonatomic, strong) UIView *blackView;
 @property(nonatomic, strong) NSMutableArray *allTitleArray;
@@ -24,7 +25,8 @@
     [self.view addSubview:self.tableView];
     [self getVideoRequest];
     [self.view addSubview:self.blackView];
-    
+    self.view.backgroundColor = [UIColor whiteColor];
+    self.title = @"视频分类";
 //    手势
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handAction:)];
     [self.blackView addGestureRecognizer:tap];
@@ -92,6 +94,7 @@
 #pragma mark ----------------LazyLoading
 - (UITableView *)tableView{
     if (!_tableView) {
+        [ProgressHUD showSuccess:@"加载完成"];
         self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(kWidth/4, kWidth/6-5, kWidth*3/4, kHeight - kWidth/6 + 5) style:UITableViewStylePlain];
         self.tableView.delegate = self;
         self.tableView.dataSource = self;

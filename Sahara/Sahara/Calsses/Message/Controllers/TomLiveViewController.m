@@ -10,6 +10,7 @@
 #import "AppriseViewController.h"
 #import <AFHTTPSessionManager.h>
 #import "ShareView.h"
+#import "ProgressHUD.h"
 @interface TomLiveViewController ()<UIWebViewDelegate>
 
 @property(nonatomic, strong) UIWebView *webView;
@@ -25,6 +26,7 @@
     [self.view addSubview:self.webView];
     [self backToPreviousPageWithImage];
     [self appriseRequestTopy];
+    self.webView.backgroundColor = [UIColor whiteColor];
     self.view.backgroundColor = [UIColor whiteColor];
     self.tabBarController.tabBar.hidden = YES;
     
@@ -35,9 +37,6 @@
     [shareBtn addTarget:self action:@selector(shareFriend) forControlEvents:UIControlEventTouchUpInside];
     UIBarButtonItem *shareBar = [[UIBarButtonItem alloc] initWithCustomView:shareBtn];
     self.navigationItem.rightBarButtonItem = shareBar;
-    
-    //文章正序倒叙
-    
     
     
     //标题和直播时间
@@ -52,8 +51,11 @@
     
     //查看评论
     UIButton *appriseBtn = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    appriseBtn.frame = CGRectMake(10, kWidth/3+10, kWidth/4, 30);
+    appriseBtn.frame = CGRectMake(0, kWidth/3, kWidth, 40);
+    
     [appriseBtn setTitle:@"网友评论" forState:UIControlStateNormal];
+    appriseBtn.titleLabel.font = [UIFont systemFontOfSize:20];
+    [appriseBtn setBackgroundColor:[UIColor whiteColor]];
     [appriseBtn addTarget:self action:@selector(checkAllApprise) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:appriseBtn];
     
@@ -72,6 +74,10 @@
     
 }
 
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    [ProgressHUD dismiss];
+}
 - (void)appriseRequestTopy{
     AFHTTPSessionManager *manger = [AFHTTPSessionManager manager];
     manger.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"text/html",@"text/plain", nil];
@@ -98,7 +104,8 @@
 #pragma mark ------------- LazyLoading
 - (UIWebView *)webView{
     if (!_webView) {
-        self.webView = [[UIWebView alloc] initWithFrame:CGRectMake(0, kWidth/3+kWidth/9, kWidth, kHeight-kWidth/9)];
+        [ProgressHUD showSuccess:@"加载完成"];
+        self.webView = [[UIWebView alloc] initWithFrame:CGRectMake(0, kWidth/3 , kWidth, kHeight-kWidth/9)];
         self.webView.scalesPageToFit = YES;
         self.webView.delegate = self;
         NSString *tomStr = [NSString stringWithFormat:@"%@&broadcastId=%@", kTomLive, self.liveModel.tomLiveID];

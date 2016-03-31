@@ -16,4 +16,11 @@
 @property(nonatomic, copy) NSString *title;
 @property(nonatomic, copy) NSString *pubDate;
 
+//订阅
+@property(nonatomic, copy) NSString *letter;
+@property(nonatomic, copy) NSString *myID;
+@property(nonatomic, copy) NSString *myName;
+
+- (instancetype)initWithDictionary:(NSDictionary *)dict;
+
 @end

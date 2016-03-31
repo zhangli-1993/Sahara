@@ -12,6 +12,8 @@
 #define kRedirectURL @"https://api.weibo.com/oauth2/default.html"
 #define kWXAppKey @"wx2beb0c528b7fe7d0"
 #define kMapKey @"ab84ece8092b73db9355fb53da0603c5"
+#define kJPush @"a2295c447034525980e7bc70"
+
 //首页segement
 
 #define kSegementort @"http://mrobot.pcauto.com.cn/configs/pcauto_v4_cms_android_channel_tree"
@@ -33,6 +35,7 @@
 #define kPrivilege @"http://mrobot.pcauto.com.cn/v3/price/promotionList?areaId=268&pageNo=1&pageSize=20&orderBy=discountRange&serialId="
 #define kStoreDetail @"http://mrobot.pcauto.com.cn/v3/price/dealersDetailv45?"
 #define kAreaID @"http://mrobot.pcauto.com.cn/v2/cms/area_tree?order=alpha"
+#define kAskPrice @"http://mrobot.pcauto.com.cn/v3/price/askpricev45/?&"
 
 //首页cell
 #define kHomePagePort @"http://mrobot.pcauto.com.cn/v2/cms/channels/"
@@ -58,5 +61,10 @@
 
 //推送
 #define kPushAppKey @"56f3a900e0f55acbec002437"
+
+//qq
+#define kQQAppID @"1105289678"
+#define kQQAppKey @"d3sH8Za23apcsjQ5"
+
 
 #endif /* PortDefine_h */

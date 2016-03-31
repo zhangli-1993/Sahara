@@ -18,6 +18,7 @@
 #import "LiveOtherViewController.h"
 #import "VideoViewController.h"
 #import "Tools.h"
+#import "ProgressHUD.h"
 @interface MessageViewController ()<PullingRefreshTableViewDelegate, UITableViewDataSource, UITableViewDelegate, viewCellVideoDelegate>
 {
     NSInteger _pageCount;
@@ -31,7 +32,6 @@
 @property(nonatomic, strong) PullingRefreshTableView *tableView;
 @property(nonatomic, assign) BOOL refresh;
 @property(nonatomic, strong) NSMutableArray *allCellArray;
-//@property(nonatomic, strong) ViedoView *viedoView;
 @property(nonatomic, strong) NSMutableArray *viedoArray;
 @property(nonatomic, strong) NSMutableArray *safetyArray;
 @property(nonatomic, copy) NSString *cellName;
@@ -58,30 +58,16 @@
     
 }
 
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    [ProgressHUD dismiss];
+}
+
 - (void)getVideoID:(NSString *)videoID withName:(NSString *)name{
     videoid = videoID;
     self.cellName = name;
-    [self chooseRequest];
-}
-
-- (void)chooseRequest{
-    [self.tableView launchRefreshing];
-    if (index == 3) {
-        [self getVideoRequest];
-    }else{
-        [self homePagePortRequest];
-    }
-}
-
-- (void)showRequest{
-    if (self.refresh) {
-        if (self.allTitleArray.count > 0) {
-            [self.allTitleArray removeAllObjects];
-        }
-    }
-    if (index == 3) {
-         self.allTitleArray = self.viedoArray;
-    }
+    [self getVideoRequest];
+    self.allTitleArray = self.viedoArray;
     [self.tableView reloadData];
 }
 
@@ -111,11 +97,13 @@
 }
 
 - (void)homePagePortRequest{
+    [ProgressHUD show:@"正在加载中"];
     AFHTTPSessionManager *httpManager = [AFHTTPSessionManager manager];
     httpManager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"text/html", nil];
     [httpManager GET:[NSString stringWithFormat:@"%@%@?pageSize=20&v=4.0.0&pageNo=%lu", kHomePagePort, cellID,(long)_pageCount] parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        [ProgressHUD showSuccess:@"加载完成"];
         NSDictionary *successDic = responseObject;
         NSArray *dataArray = successDic[@"data"];
         if (self.refresh) {
@@ -132,6 +120,7 @@
         [self.tableView tableViewDidFinishedLoading];
         self.tableView.reachedTheEnd = NO;
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        [ProgressHUD showError:@"加载失败"];
         NSLog(@"%@", error);
     }];
 }
@@ -204,6 +193,9 @@
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         NSDictionary *rootDic = responseObject;
         NSArray *dataArray = rootDic[@"data"];
+        if (self.viedoArray.count > 0) {
+            [self.viedoArray removeAllObjects];
+        }
         if (self.refresh) {
             if (self.viedoArray.count > 0) {
                 [self.viedoArray removeAllObjects];
@@ -333,9 +325,6 @@
 //    NSLog(@"cellid = %@", self.allCellArray[index]);
 
        [self homePagePortRequest];
-    
-
-    [self chooseRequest];
     
 }
 

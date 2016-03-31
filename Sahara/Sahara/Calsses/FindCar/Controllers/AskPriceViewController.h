@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface AskPriceViewController : UIViewController
+@property (nonatomic, strong) NSString *requstStr;
 
 @end

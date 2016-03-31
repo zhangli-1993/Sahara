@@ -29,6 +29,15 @@
             self.tomLiveID = dict[@"zbId"];
 
         }
+        NSInteger type = [dict[@"type"] integerValue];
+        if (type == 9) {
+            self.image = dict[@"image"];
+            self.title = dict[@"title"];
+            self.ups = dict[@"viewCount"];
+            self.pubDate = dict[@"pubDate"];
+            self.messageID = dict[@"id"];
+            self.url = dict[@"url"];
+        }
     }
     return self;
 }

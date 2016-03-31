@@ -11,6 +11,7 @@
 #import "AppriseTableViewCell.h"
 #import <AFNetworking/AFHTTPSessionManager.h>
 #import "Tools.h"
+#import "ProgressHUD.h"
 @interface AppriseViewController ()<UITableViewDataSource, UITableViewDelegate, PullingRefreshTableViewDelegate, dianzanWithCommentDelegate>
 {
     NSInteger _pageCount;
@@ -42,11 +43,13 @@
 
 #pragma mark ------------- CustomMethod
 - (void)appriseRequestModel{
+    [ProgressHUD show:@"正在加载中"];
     AFHTTPSessionManager *manger = [AFHTTPSessionManager manager];
-    manger.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", nil];
+    manger.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/plain", nil];
     [manger GET:[NSString stringWithFormat:@"%@&pageNo=%lu&topicId=%@", kApprisePort, (long)_pageCount, self.appriseID] parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        [ProgressHUD showSuccess:@"加载完成"];
         NSDictionary *appriseDic = responseObject;
         NSArray *oneArray = appriseDic[@"comments"];
         
@@ -60,8 +63,10 @@
                 NSDictionary *oneDic = dict[@"1"];
                 NSDictionary *twoDic = dict[@"2"];
                 AppriseModel *model = [[AppriseModel alloc] init];
+                AppriseModel *appModel = [[AppriseModel alloc] init];
                 [model setValuesForKeysWithDictionary:oneDic];
-                [model setValuesForKeysWithDictionary:twoDic];
+                [appModel setValuesForKeysWithDictionary:twoDic];
+                [self.allAppriseArray addObject:appModel];
                 [self.allAppriseArray addObject:model];
                 
             }else{
@@ -76,55 +81,34 @@
         self.tableView.reachedTheEnd = NO;
         [self.tableView reloadData];
         
-        
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        [ProgressHUD showError:@"暂无数据更新"];
         NSLog(@"%@", error);
     }];
 }
 
-- (void)getButtonRequest{
-    AFHTTPSessionManager *httpManger = [AFHTTPSessionManager manager];
-    httpManger.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"text/html", nil];
-    NSLog(@"%@", [NSString stringWithFormat:@"http://cmt.pcauto.com.cn/action/comment/support_json.jsp?cid=%@&sp=1", self.commentID]);
-    [httpManger GET:[NSString stringWithFormat:@"http://cmt.pcauto.com.cn/action/comment/support_json.jsp?cid=%@&sp=1", self.commentID] parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
-        
-    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        NSLog(@"%@", responseObject);
-
-        NSDictionary *rootDic = responseObject;
-        NSInteger status = [rootDic[@"status"] integerValue];
-        if (status == 0) {
-            self.zanCount += 1;
-        }else{
-            NSLog(@"已投票，不可重复");
-        }
-       
-        
-    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        NSLog(@"error = %@", error);
-    }];
-    
-    
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    [ProgressHUD dismiss];
 }
+
+
 
 - (void)buttonTarget:(UIButton *)btn{
     AppriseTableViewCell *cell = (AppriseTableViewCell *)[[btn superview] superview];
     NSIndexPath *path = [self.tableView indexPathForCell:cell];
     AppriseModel *model = self.allAppriseArray[path.row];
     self.commentID = model.commentID;
+ 
     if (btn.tag == 10) {
         //点赞
-        [self getButtonRequest];
-        [self.tableView reloadData];
-
-        [btn setTitle:[NSString stringWithFormat:@"%lu", (long)self.zanCount] forState:UIControlStateNormal];
         
-        
-    
-        
-        
-        
-        
+        NSString *apprise = [NSString stringWithFormat:@"%ld", [model.client integerValue] + 1];
+        NSUserDefaults *user = [NSUserDefaults standardUserDefaults];
+        [user setValue:apprise forKey:self.commentID];
+        [user synchronize];
+        [btn setTitle:apprise forState:UIControlStateNormal];
+        [btn setImage:[UIImage imageNamed:@"button-prise"] forState:UIControlStateNormal];
     }else{
         //评论
         

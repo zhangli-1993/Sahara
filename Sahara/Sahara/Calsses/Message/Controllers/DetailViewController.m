@@ -16,6 +16,7 @@
 @interface DetailViewController ()<UIWebViewDelegate>
 {
     NSInteger _dianzanCount;
+    
 }
 
 @property(nonatomic, strong) UIWebView *webView;
@@ -43,13 +44,7 @@
     [commentBtn addTarget:self action:@selector(checkComment) forControlEvents:UIControlEventTouchUpInside];
     UIBarButtonItem *commentBar = [[UIBarButtonItem alloc] initWithCustomView:commentBtn];
     
-    //点赞
-    self.zanBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    self.zanBtn.frame = CGRectMake(kWidth/2, 0, kWidth/6, kWidth/8);
-    [self.zanBtn setImage:[UIImage imageNamed:@"btn_list_praise"] forState:UIControlStateNormal];
-    [self.zanBtn addTarget:self action:@selector(dianZan:) forControlEvents:UIControlEventTouchUpInside];
-    UIBarButtonItem *zanBar = [[UIBarButtonItem alloc] initWithCustomView:self.zanBtn];
-    
+    //收藏
     self.collectBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     _collectBtn.frame = CGRectMake(kWidth/3 + kWidth/8, 0, kWidth/6, kWidth/8);
     
@@ -72,7 +67,7 @@
     }
     [_collectBtn addTarget:self action:@selector(collectEassy:) forControlEvents:UIControlEventTouchUpInside];
     UIBarButtonItem *collectBar = [[UIBarButtonItem alloc] initWithCustomView:_collectBtn];
-    self.navigationItem.rightBarButtonItems= @[commentBar, zanBar, collectBar];
+    self.navigationItem.rightBarButtonItems= @[commentBar, collectBar];
 
     
 }
@@ -83,22 +78,6 @@
     appVC.appriseID = self.topicID;
     [self.navigationController pushViewController:appVC animated:YES];
 }
-- (void)dianZan:(UIButton *)btn{
-    _dianzanCount += 1;
-    
-    if (_dianzanCount %2 == 0) {
-        _dianzanCount -=1;
-    }
-    [self.zanBtn setTitle:[NSString stringWithFormat:@"%lu", (long)_dianzanCount] forState:UIControlStateNormal];
-    
-    
-    
-    
-    
-    
-    
-}
-
 - (void)collectEassy:(UIButton *)btn{
     SqlitDataBase *dataBase = [SqlitDataBase dataBaseManger];
     if (btn.tag == 10) {
@@ -155,7 +134,10 @@
     }
 
 }
-
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    [ProgressHUD dismiss];
+}
 - (void)viewWillDisappear:(BOOL)animated{
     [super viewWillDisappear:animated];
     self.tabBarController.tabBar.hidden = NO;
@@ -163,7 +145,7 @@
 - (void)getCommentTopicIDRequest{
     AFHTTPSessionManager *httpManger = [AFHTTPSessionManager manager];
     httpManger.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"text/html",@"text/plain", nil];
-
+    NSLog(@"%@", [NSString stringWithFormat:@"%@url=%@", kCommentPort, self.detailURL]);
     [httpManger GET:[NSString stringWithFormat:@"%@url=%@", kCommentPort, self.detailURL] parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
@@ -181,12 +163,23 @@
 #pragma mark ----------- LazyLoading
 - (UIWebView *)webView{
     if (!_webView) {
+        [ProgressHUD showSuccess:@"加载完成"];
         self.webView = [[UIWebView alloc] initWithFrame:CGRectMake(0, 0, kWidth, kHeight + 64)];
         self.webView.delegate = self;
-        NSString *urlStr = [NSString stringWithFormat:@"%@%@?%@", kDetailFront, self.detailID, kDetailPort];
-        NSURL *url = [[NSURL alloc] initWithString:urlStr];
         self.webView.scalesPageToFit = YES;
-        [self.webView loadRequest:[NSURLRequest requestWithURL:url]];
+        NSString *detailID = [NSString stringWithFormat:@"%@", self.detailID];
+        if (detailID.length > 6) {
+            NSString *urlStr = [NSString stringWithFormat:@"%@%@?%@", kDetailFront, self.detailID, kDetailPort];
+            NSURL *url = [[NSURL alloc] initWithString:urlStr];
+            [self.webView loadRequest:[NSURLRequest requestWithURL:url]];
+            
+        }else{
+           
+            NSString *urlStr = [NSString stringWithFormat:@"http://mrobot.pcauto.com.cn/xsp/s/auto/info/v4.8/videoDetail.xsp?vid=%@", self.detailID];
+            NSURL *url = [[NSURL alloc] initWithString:urlStr];
+            [self.webView loadRequest:[NSURLRequest requestWithURL:url]];
+        }
+        
     }
     return _webView;
 }

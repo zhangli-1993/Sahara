@@ -43,11 +43,10 @@
     self.timeLabel.font = [UIFont systemFontOfSize:15.0];
     self.timeLabel.textColor = [UIColor grayColor];
     [self.contentView addSubview:self.timeLabel];
-    self.zanBtn = [UIButton buttonWithType:UIButtonTypeSystem];
+    self.zanBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     [self.zanBtn addTarget:self action:@selector(appriseAction:) forControlEvents:UIControlEventTouchUpInside];
     self.zanBtn.tag = 10;
-    [self.zanBtn setImage:[UIImage imageNamed:@"btn_list_praise"] forState:UIControlStateNormal];
-    self.zanBtn.tintColor = [UIColor grayColor];
+    [self.zanBtn setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
     [self.contentView addSubview:self.zanBtn];
     self.appriseBtn = [UIButton buttonWithType:UIButtonTypeSystem];
     [self.appriseBtn addTarget:self action:@selector(appriseAction:) forControlEvents:UIControlEventTouchUpInside];
@@ -70,7 +69,6 @@
         self.tag = btn.tag;
         [self.delegate buttonTarget:btn];
     }
-    
 
 }
 
@@ -93,7 +91,18 @@
     [self.zanBtn setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
     self.appriseBtn.frame = CGRectMake(kWidth*3/4+15, contentH, kWidth/6, 30);
     [self.appriseBtn setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
+
+    NSUserDefaults *user = [NSUserDefaults standardUserDefaults];
+    NSString *userID = [user objectForKey:appModel.commentID];
+    if (userID != nil) {
+         [self.zanBtn setTitle:userID forState:UIControlStateNormal];
+        [self.zanBtn setImage:[UIImage imageNamed:@"button-prise"] forState:UIControlStateNormal];
+    }else{
+    
     [self.zanBtn setTitle:[NSString stringWithFormat:@"%@", appModel.client] forState:UIControlStateNormal];
+    [self.zanBtn setImage:[UIImage imageNamed:@"btn_list_praise"] forState:UIControlStateNormal];
+
+    }
     self.lineLabel.frame = CGRectMake(0, contentH+35, kWidth, 2);
     
 }

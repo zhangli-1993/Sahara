@@ -7,6 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+static NSString *channel = @"Publish channel";
+static BOOL isProduction = YES;
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
