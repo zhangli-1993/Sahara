@@ -66,13 +66,12 @@
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
-    
     UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"config" forIndexPath:indexPath];
-    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, (kWidth - 41 ) / 2, 40)];
+    UILabel *label = [[UILabel alloc] initWithFrame:cell.frame];
     label.textAlignment = NSTextAlignmentCenter;
     label.text = self.allArray[indexPath.section][indexPath.row];
     label.font = [UIFont systemFontOfSize:14.0];
-    [cell addSubview:label];
+    [self.collectView addSubview:label];
     return cell;
 }
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{

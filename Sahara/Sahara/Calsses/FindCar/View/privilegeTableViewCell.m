@@ -15,7 +15,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *cutLabel;
 @property (weak, nonatomic) IBOutlet UILabel *placeLabel;
 
-@property (weak, nonatomic) IBOutlet UIButton *wantButton;
+
+
 
 @end
 @implementation privilegeTableViewCell
@@ -28,7 +29,7 @@
     return self;
 }
 - (void)configView{
-    [self.callButton addTarget:self action:@selector(callAction) forControlEvents:UIControlEventTouchUpInside];
+ 
     
 }
 - (void)setModel:(PrivilegeModel *)model{
@@ -37,13 +38,6 @@
     self.preiceLabel.text = [NSString stringWithFormat:@"￥%@万", model.modelPrice];
     self.cutLabel.text = [NSString stringWithFormat:@"减￥%@元", model.discount];
 }
-- (void)callAction{
-    NSMutableString * str=[[NSMutableString alloc] initWithFormat:@"tel:%@",self.model.phone];
-    UIWebView * callWebview = [[UIWebView alloc] init];
-    [callWebview loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:str]]];
-
-}
-
 
 
 - (void)awakeFromNib {

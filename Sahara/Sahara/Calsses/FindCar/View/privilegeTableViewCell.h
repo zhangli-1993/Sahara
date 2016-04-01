@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "PrivilegeModel.h"
 @interface privilegeTableViewCell : UITableViewCell
-@property (weak, nonatomic) IBOutlet UIButton *callButton;
+
+
 @property (nonatomic, strong) PrivilegeModel *model;
 @end

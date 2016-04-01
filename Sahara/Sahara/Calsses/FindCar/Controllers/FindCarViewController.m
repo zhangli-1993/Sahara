@@ -65,13 +65,12 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     if (tableView == self.tableView) {
         AllBrandsModel *model = self.numArray[indexPath.section][indexPath.row];
-        self.priceView = [[CarPriceView alloc] initWithFrame:CGRectMake(0, 64, kWidth, kHeight - 104)];
+        self.priceView = [[CarPriceView alloc] initWithFrame:CGRectMake(0, 64, kWidth, kHeight - 64)];
         self.priceView.backgroundColor = [UIColor colorWithRed:25 / 225.0f green:25 / 225.0f blue:25 / 225.0f alpha:0.3];
         self.priceView.idStr = model.idStr;
         self.priceView.tableView.delegate = self;
         [self.priceView requestModel];
-        [self.view addSubview:self.priceView];
-        
+        [self addAnimation];
 
     } else if (tableView == self.priceView.tableView){
           CarDetailViewController *cVC = [[CarDetailViewController alloc] init];
@@ -123,14 +122,25 @@
     self.priceView.tableView.delegate = self;
     self.priceView.idStr = self.hotIDArray[indexPath.row];
     [self.priceView requestModel];
-     
-   
-    
-    [self.view addSubview:self.priceView];
-
+    [self addAnimation];
 }
 
 #pragma mark---自定义
+- (void)addAnimation{
+    CATransition *trans = [CATransition animation];
+    //动画时间
+    trans.duration = 0.5;
+    trans.timingFunction = UIViewAnimationCurveEaseInOut;
+    trans.type = @"moveIn";
+    trans.endProgress = 1.0;
+    trans.fillMode = kCAFillModeForwards;
+    trans.removedOnCompletion = NO;
+    trans.subtype = kCATransitionFromRight;
+    [self.priceView.layer addAnimation:trans forKey:@"transition"];
+    [self.view addSubview:self.priceView];
+
+
+}
 - (void)requestModel{
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     manager.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"application/json"];

@@ -245,6 +245,7 @@
         cVC.htmlStr = model.html;
         [self.navigationController pushViewController:cVC animated:YES];
     }
+ 
 
 }
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
