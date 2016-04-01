@@ -24,10 +24,9 @@
     
     UIWebView *webView = [[UIWebView alloc] initWithFrame:CGRectMake(0, 0, kWidth, kHeight + kWidth/6)];
     webView.delegate = self;
+    webView.scalesPageToFit = YES;
     NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://mrobot.pcauto.com.cn/v3/price/promotionDetailv45/%@?type=1", self.groupID]];
     [webView loadRequest:[NSURLRequest requestWithURL:url]];
-    webView.scalesPageToFit = YES;
-
     [self.view addSubview:webView];
     
 }

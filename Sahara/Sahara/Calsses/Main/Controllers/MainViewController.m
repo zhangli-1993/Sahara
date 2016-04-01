@@ -43,7 +43,7 @@
     UIButton *setBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     setBtn.frame = CGRectMake(kWidth - kWidth/9, 0, kWidth/9, 40);
     [self tableViewHeadView];
-    self.allCellArray = [NSMutableArray arrayWithObjects: @"违章查询", @"夜间模式", @"给我评分", @"帮助与反馈",@"清理缓存", @"推送设置", @"常见问题", @"退出登录",nil];
+    self.allCellArray = [NSMutableArray arrayWithObjects: @"违章查询", @"夜间模式", @"给我评分", @"帮助与反馈",@"清理缓存", @"常见问题", @"退出登录",nil];
     
 }
 
@@ -145,14 +145,10 @@
             [self clearImage];
             break;
         case 5:
-            //推送
-            
-            break;
-        case 6:
             //常见问题
             [self getquestion];
             break;
-        case 7:
+        case 6:
             [self loginOut];
             break;
             

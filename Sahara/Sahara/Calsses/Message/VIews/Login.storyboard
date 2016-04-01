@@ -90,38 +90,15 @@
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g89-gz-Dbh">
-                                <rect key="frame" x="20" y="398" width="61" height="51"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="51" id="KX5-VY-bPQ"/>
-                                </constraints>
-                                <state key="normal" backgroundImage="weibo"/>
-                                <connections>
-                                    <action selector="weiboLogin:" destination="EiN-p0-XhW" eventType="touchUpInside" id="rtt-0k-U7Y"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cv3-bC-N2v">
-                                <rect key="frame" x="146" y="398" width="61" height="51"/>
+                                <rect key="frame" x="209" y="398" width="61" height="51"/>
                                 <state key="normal" backgroundImage="icon_qq"/>
                                 <connections>
                                     <action selector="QQlogin:" destination="EiN-p0-XhW" eventType="touchUpInside" id="7gq-Pj-k4x"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GVK-MY-SrS">
-                                <rect key="frame" x="288" y="398" width="61" height="51"/>
-                                <state key="normal" backgroundImage="weixin"/>
-                                <connections>
-                                    <action selector="weixinLogin:" destination="EiN-p0-XhW" eventType="touchUpInside" id="kBC-3K-YlL"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" misplaced="YES" text="QQ" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zcc-8P-daX">
-                                <rect key="frame" x="142" y="444" width="68" height="40"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="微信" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yl5-8f-5UH">
-                                <rect key="frame" x="281" y="451" width="68" height="26"/>
+                                <rect key="frame" x="209" y="444" width="68" height="40"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -148,38 +125,50 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="新浪微博" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l2F-30-Vl7">
-                                <rect key="frame" x="20" y="451" width="80" height="26"/>
+                                <rect key="frame" x="83" y="451" width="80" height="26"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="26" id="e5y-Rt-xMz"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="e5y-Rt-xMz"/>
+                                    </mask>
+                                </variation>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g89-gz-Dbh">
+                                <rect key="frame" x="83" y="398" width="61" height="51"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="51" id="KX5-VY-bPQ"/>
+                                    <constraint firstAttribute="height" constant="51" id="iku-z9-fMF"/>
+                                    <constraint firstAttribute="width" constant="61" id="xKj-SQ-lvR"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="weibo"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="KX5-VY-bPQ"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="weiboLogin:" destination="EiN-p0-XhW" eventType="touchUpInside" id="rtt-0k-U7Y"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="a5N-ga-FWk" firstAttribute="trailing" secondItem="lcJ-ob-a4W" secondAttribute="trailing" id="0og-jL-fnH"/>
-                            <constraint firstItem="Zcc-8P-daX" firstAttribute="leading" secondItem="l2F-30-Vl7" secondAttribute="trailing" constant="40" id="2L1-LD-V1e"/>
                             <constraint firstItem="7tZ-TE-273" firstAttribute="firstBaseline" secondItem="dG6-qp-5u1" secondAttribute="firstBaseline" id="2tp-jr-KpA"/>
                             <constraint firstItem="7tZ-TE-273" firstAttribute="trailing" secondItem="coZ-rj-UJQ" secondAttribute="trailing" id="2zI-ze-9TP"/>
-                            <constraint firstItem="Zcc-8P-daX" firstAttribute="centerY" secondItem="l2F-30-Vl7" secondAttribute="centerY" id="3O8-EB-ic4"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="GVK-MY-SrS" secondAttribute="trailing" constant="6" id="40e-0m-vsm"/>
+                            <constraint firstItem="Cv3-bC-N2v" firstAttribute="leading" secondItem="g89-gz-Dbh" secondAttribute="trailing" constant="65" id="37c-Wv-lJu"/>
                             <constraint firstItem="tKH-HI-Vqw" firstAttribute="leading" secondItem="eag-i3-zjO" secondAttribute="leadingMargin" constant="5" id="4NF-Bg-ds5"/>
-                            <constraint firstItem="GVK-MY-SrS" firstAttribute="leading" secondItem="Cv3-bC-N2v" secondAttribute="trailing" constant="81" id="5ZR-Qb-Io3"/>
                             <constraint firstAttribute="trailingMargin" secondItem="dG6-qp-5u1" secondAttribute="trailing" constant="60" id="5kY-vv-KR2"/>
                             <constraint firstItem="7tZ-TE-273" firstAttribute="leading" secondItem="coZ-rj-UJQ" secondAttribute="leading" id="6GN-mw-4Km"/>
-                            <constraint firstItem="Cv3-bC-N2v" firstAttribute="top" secondItem="dG6-qp-5u1" secondAttribute="bottom" constant="20" id="7Cf-9v-RuF"/>
-                            <constraint firstItem="GVK-MY-SrS" firstAttribute="firstBaseline" secondItem="Cv3-bC-N2v" secondAttribute="firstBaseline" id="8AT-sj-3RC"/>
-                            <constraint firstItem="g89-gz-Dbh" firstAttribute="firstBaseline" secondItem="Cv3-bC-N2v" secondAttribute="firstBaseline" id="8Vi-8F-Q3k"/>
-                            <constraint firstItem="l2F-30-Vl7" firstAttribute="top" secondItem="g89-gz-Dbh" secondAttribute="bottom" constant="2" id="BfW-Ac-lCd"/>
-                            <constraint firstItem="GVK-MY-SrS" firstAttribute="baseline" secondItem="g89-gz-Dbh" secondAttribute="baseline" id="CUR-6L-Zjb"/>
-                            <constraint firstAttribute="leadingMargin" secondItem="g89-gz-Dbh" secondAttribute="leading" id="CbT-Ko-wr2"/>
                             <constraint firstItem="Nlq-CF-z9E" firstAttribute="height" secondItem="tKH-HI-Vqw" secondAttribute="height" id="CzJ-9M-i6j"/>
                             <constraint firstItem="Nlq-CF-z9E" firstAttribute="leading" secondItem="tKH-HI-Vqw" secondAttribute="leading" id="D1J-fK-FE6"/>
-                            <constraint firstItem="g89-gz-Dbh" firstAttribute="baseline" secondItem="Cv3-bC-N2v" secondAttribute="baseline" id="Ikw-vB-SPL"/>
-                            <constraint firstItem="Cv3-bC-N2v" firstAttribute="centerX" secondItem="Zcc-8P-daX" secondAttribute="centerX" id="J5C-Jv-U1e"/>
-                            <constraint firstItem="GVK-MY-SrS" firstAttribute="width" secondItem="Cv3-bC-N2v" secondAttribute="width" id="JEp-AR-c4I"/>
+                            <constraint firstItem="l2F-30-Vl7" firstAttribute="top" secondItem="g89-gz-Dbh" secondAttribute="bottom" constant="2" id="Eo5-e8-vZR"/>
+                            <constraint firstItem="Cv3-bC-N2v" firstAttribute="width" secondItem="g89-gz-Dbh" secondAttribute="width" id="GQf-Kn-KnK"/>
                             <constraint firstItem="dG6-qp-5u1" firstAttribute="top" secondItem="WN2-gL-aaH" secondAttribute="bottom" constant="41" id="K3H-Pi-5NF"/>
                             <constraint firstItem="7tZ-TE-273" firstAttribute="leading" secondItem="oUU-7A-AHv" secondAttribute="leading" id="K5G-Eg-Nnq"/>
                             <constraint firstItem="lcJ-ob-a4W" firstAttribute="height" secondItem="uKB-tv-uBa" secondAttribute="height" id="LbB-sc-vXS"/>
@@ -188,36 +177,36 @@
                             <constraint firstItem="WN2-gL-aaH" firstAttribute="leading" secondItem="eag-i3-zjO" secondAttribute="leadingMargin" constant="41" id="QCG-8E-e0F"/>
                             <constraint firstItem="Nlq-CF-z9E" firstAttribute="top" secondItem="tKH-HI-Vqw" secondAttribute="bottom" constant="13" id="QT0-xo-ypP"/>
                             <constraint firstItem="WN2-gL-aaH" firstAttribute="top" secondItem="a5N-ga-FWk" secondAttribute="bottom" constant="17" id="RvT-0a-fwx"/>
-                            <constraint firstItem="Cv3-bC-N2v" firstAttribute="width" secondItem="g89-gz-Dbh" secondAttribute="width" id="Rvx-cN-Ftx"/>
                             <constraint firstItem="Nlq-CF-z9E" firstAttribute="width" secondItem="tKH-HI-Vqw" secondAttribute="width" id="SOK-Dl-fJP"/>
                             <constraint firstItem="dG6-qp-5u1" firstAttribute="leading" secondItem="eag-i3-zjO" secondAttribute="leadingMargin" constant="90" id="T5W-Wn-6Hl"/>
                             <constraint firstItem="7tZ-TE-273" firstAttribute="centerX" secondItem="dG6-qp-5u1" secondAttribute="centerX" id="TSL-KE-ILf"/>
                             <constraint firstItem="coZ-rj-UJQ" firstAttribute="top" secondItem="uKB-tv-uBa" secondAttribute="bottom" constant="6" id="U5W-JJ-u0f"/>
+                            <constraint firstItem="g89-gz-Dbh" firstAttribute="top" secondItem="dG6-qp-5u1" secondAttribute="bottom" constant="20" id="Usi-69-oUr"/>
+                            <constraint firstItem="Zcc-8P-daX" firstAttribute="centerY" secondItem="l2F-30-Vl7" secondAttribute="centerY" id="Xv0-v6-1xa"/>
+                            <constraint firstItem="Cv3-bC-N2v" firstAttribute="height" secondItem="g89-gz-Dbh" secondAttribute="height" id="Y9c-EH-lBT"/>
+                            <constraint firstItem="l2F-30-Vl7" firstAttribute="leading" secondItem="g89-gz-Dbh" secondAttribute="leading" id="ak1-tn-M9A"/>
                             <constraint firstAttribute="trailingMargin" secondItem="WN2-gL-aaH" secondAttribute="trailing" constant="42" id="at7-9F-Y6K"/>
-                            <constraint firstItem="yl5-8f-5UH" firstAttribute="centerY" secondItem="Zcc-8P-daX" secondAttribute="centerY" id="c1W-K8-eWF"/>
-                            <constraint firstItem="Zcc-8P-daX" firstAttribute="height" secondItem="l2F-30-Vl7" secondAttribute="height" id="cMT-mm-6KB"/>
-                            <constraint firstItem="l2F-30-Vl7" firstAttribute="leading" secondItem="g89-gz-Dbh" secondAttribute="leading" id="cod-dM-YSQ"/>
                             <constraint firstItem="uKB-tv-uBa" firstAttribute="leading" secondItem="tKH-HI-Vqw" secondAttribute="trailing" constant="8" id="dJc-CZ-fi6"/>
                             <constraint firstItem="7tZ-TE-273" firstAttribute="trailing" secondItem="oUU-7A-AHv" secondAttribute="trailing" id="dKS-v9-pHS"/>
-                            <constraint firstItem="GVK-MY-SrS" firstAttribute="centerY" secondItem="Cv3-bC-N2v" secondAttribute="centerY" id="eKU-bj-STn"/>
-                            <constraint firstItem="yl5-8f-5UH" firstAttribute="height" secondItem="Zcc-8P-daX" secondAttribute="height" id="fPr-8N-pqz"/>
+                            <constraint firstItem="Zcc-8P-daX" firstAttribute="width" secondItem="l2F-30-Vl7" secondAttribute="width" id="eTV-O0-1FC"/>
                             <constraint firstAttribute="trailingMargin" secondItem="uKB-tv-uBa" secondAttribute="trailing" constant="10" id="fnr-Ol-6NR"/>
-                            <constraint firstItem="g89-gz-Dbh" firstAttribute="firstBaseline" secondItem="GVK-MY-SrS" secondAttribute="firstBaseline" id="g2W-dk-vCL"/>
-                            <constraint firstItem="Cv3-bC-N2v" firstAttribute="centerY" secondItem="g89-gz-Dbh" secondAttribute="centerY" id="geJ-YL-nfL"/>
-                            <constraint firstItem="Cv3-bC-N2v" firstAttribute="height" secondItem="g89-gz-Dbh" secondAttribute="height" id="hG9-xA-epH"/>
-                            <constraint firstItem="Cv3-bC-N2v" firstAttribute="leading" secondItem="g89-gz-Dbh" secondAttribute="trailing" constant="65" id="hRk-J8-Wtd"/>
+                            <constraint firstItem="g89-gz-Dbh" firstAttribute="leading" secondItem="eag-i3-zjO" secondAttribute="leadingMargin" constant="63" id="g7k-nl-DgM"/>
+                            <constraint firstItem="Zcc-8P-daX" firstAttribute="leading" secondItem="l2F-30-Vl7" secondAttribute="trailing" constant="65" id="jwr-ge-LYY"/>
+                            <constraint firstItem="Cv3-bC-N2v" firstAttribute="centerY" secondItem="g89-gz-Dbh" secondAttribute="centerY" id="k3J-Wk-UZo"/>
                             <constraint firstItem="tKH-HI-Vqw" firstAttribute="top" secondItem="XNn-GY-VTr" secondAttribute="bottom" constant="24" id="mHk-cq-rtl"/>
-                            <constraint firstItem="GVK-MY-SrS" firstAttribute="baseline" secondItem="Cv3-bC-N2v" secondAttribute="baseline" id="nTY-Ai-Rzh"/>
-                            <constraint firstItem="yl5-8f-5UH" firstAttribute="leading" secondItem="Zcc-8P-daX" secondAttribute="trailing" constant="71" id="pbN-SD-alc"/>
-                            <constraint firstItem="yl5-8f-5UH" firstAttribute="width" secondItem="Zcc-8P-daX" secondAttribute="width" id="pje-d5-3ws"/>
+                            <constraint firstItem="Zcc-8P-daX" firstAttribute="centerX" secondItem="Cv3-bC-N2v" secondAttribute="centerX" id="o8V-ft-2Ig"/>
+                            <constraint firstItem="Zcc-8P-daX" firstAttribute="height" secondItem="l2F-30-Vl7" secondAttribute="height" id="pUI-zs-UOw"/>
                             <constraint firstItem="lcJ-ob-a4W" firstAttribute="leading" secondItem="Nlq-CF-z9E" secondAttribute="trailing" constant="8" id="qZe-6u-6xf"/>
-                            <constraint firstItem="yl5-8f-5UH" firstAttribute="trailing" secondItem="GVK-MY-SrS" secondAttribute="trailing" id="twF-Ol-zTD"/>
                             <constraint firstItem="oUU-7A-AHv" firstAttribute="top" secondItem="Nlq-CF-z9E" secondAttribute="bottom" constant="8" symbolic="YES" id="ure-RR-QSS"/>
                             <constraint firstItem="lcJ-ob-a4W" firstAttribute="top" secondItem="uKB-tv-uBa" secondAttribute="bottom" constant="13" id="vx9-IZ-Chn"/>
                             <constraint firstItem="7tZ-TE-273" firstAttribute="leading" secondItem="eag-i3-zjO" secondAttribute="leading" id="y09-SH-nGw"/>
                             <constraint firstItem="uKB-tv-uBa" firstAttribute="centerY" secondItem="tKH-HI-Vqw" secondAttribute="centerY" id="zUC-Ih-5FX"/>
-                            <constraint firstItem="GVK-MY-SrS" firstAttribute="height" secondItem="Cv3-bC-N2v" secondAttribute="height" id="zh4-n1-63Y"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="o8V-ft-2Ig"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" title="账号登陆" id="jPT-5p-daG"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
@@ -676,6 +665,5 @@
         <image name="login_password" width="44" height="44"/>
         <image name="login_user" width="30" height="30"/>
         <image name="weibo" width="78" height="76"/>
-        <image name="weixin" width="78" height="76"/>
     </resources>
 </document>

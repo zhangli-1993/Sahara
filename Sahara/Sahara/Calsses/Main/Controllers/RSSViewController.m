@@ -129,7 +129,7 @@ static NSString *collection = @"collection";
 
         RSSModel *RSSmodel = self.allCellArray[indexPath.row];
         UIImageView *collectionImage = [[UIImageView alloc] initWithFrame:collectionCell.frame];
-        UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(collectionCell.frame.size.width/3 - 10, collectionCell.frame.size.height*3/4 + 10, collectionCell.frame.size.width/3 + 30, 20)];
+        UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(collectionCell.frame.size.width/3 - 10, collectionCell.frame.size.height*3/4 + 10, collectionCell.frame.size.width/3 + kWidth/9, 20)];
         
         [collectionImage sd_setImageWithURL:[NSURL URLWithString:RSSmodel.image] placeholderImage:nil];
         label.text = RSSmodel.serialName;
@@ -216,7 +216,7 @@ static NSString *collection = @"collection";
 - (void)getRSSModelRequest{
     AFHTTPSessionManager *httpManger = [AFHTTPSessionManager manager];
     httpManger.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"text/html",@"application/json", nil];
-    [httpManger GET:[NSString stringWithFormat:@"http://mrobot.pcauto.com.cn/v2/cms/subscribeNews?pageNo=%lu&pageSize=20&areaId=268&ids1=%@&ids2=%@&ids3=%@", _pageCount, rssCellID, rssCellID, rssCellID] parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
+    [httpManger GET:[NSString stringWithFormat:@"http://mrobot.pcauto.com.cn/v2/cms/subscribeNews?pageNo=%lu&pageSize=20&areaId=268&ids1=%@&ids2=%@&ids3=%@", (long)_pageCount, rssCellID, rssCellID, rssCellID] parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         NSDictionary *rootDic = responseObject;

@@ -13,6 +13,10 @@
 #import "ProgressHUD.h"
 static NSString *collection = @"collection";
 @interface BmobRSSView ()<UICollectionViewDelegate, UICollectionViewDataSource, UIAlertViewDelegate>
+{
+    UIImageView *collectionImage;
+    NSInteger page;
+}
 @property(nonatomic, strong) NSMutableArray *array;
 
 @end
@@ -56,7 +60,6 @@ static NSString *collection = @"collection";
             [dic setValue:playName forKey:@"serialName"];
             [dic setValue:playImage forKey:@"image"];
             [dic setValue:playID forKey:@"id"];
-            
             RSSModel *model = [[RSSModel alloc] initWithDictionary:dic];
             [self.allModelArray addObject:model];
             [self.array addObject:[objUser objectId]];
@@ -73,14 +76,15 @@ static NSString *collection = @"collection";
         //获取点击的是哪个cell
         NSIndexPath *path = [self.collectionView indexPathForItemAtPoint:point];
         NSString *objectID = self.array[path.row];
+        NSLog(@"*********%@", objectID);
         BmobObject *object = [BmobObject objectWithoutDatatWithClassName:@"RSSName" objectId:objectID];
         [object deleteInBackgroundWithBlock:^(BOOL isSuccessful, NSError *error) {
             if (isSuccessful) {
-                
                 [ProgressHUD showSuccess:@"订阅删除成功"];
                 [self getCollectionViewCell];
-                [self.collectionView reloadData];
-
+                [collectionImage removeFromSuperview];
+                
+                
                 NSLog(@"successful");
             }else if(error){
                 NSLog(@"删除失败");
@@ -88,17 +92,19 @@ static NSString *collection = @"collection";
                 NSLog(@"我就不知道了");
             }
         }];
+        
     }
-}
 
+}
 
 #pragma mark ----------------- UICollectionView
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     UICollectionViewCell *collectionCell = [collectionView dequeueReusableCellWithReuseIdentifier:collection forIndexPath:indexPath];
     
-    UIImageView *collectionImage = [[UIImageView alloc] initWithFrame:collectionCell.frame];
-    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(collectionCell.frame.size.width/3 - 10, collectionCell.frame.size.height*3/4 + 10, collectionCell.frame.size.width/3 + 30, 20)];
+    collectionImage = [[UIImageView alloc] initWithFrame:collectionCell.frame];
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(collectionCell.frame.size.width/3 - 10, collectionCell.frame.size.height*3/4 + 10, collectionCell.frame.size.width/3 + kWidth/9, 20)];
     RSSModel *model = self.allModelArray[indexPath.row];
+    if (indexPath.item < self.allModelArray.count) {
 
     [collectionImage sd_setImageWithURL:[NSURL URLWithString:model.headImage] placeholderImage:nil];
     label.text =model.carName;
@@ -107,6 +113,7 @@ static NSString *collection = @"collection";
     label.textColor = [UIColor whiteColor];
     [collectionImage addSubview:label];
 
+    }
     return collectionCell;
 }
 
