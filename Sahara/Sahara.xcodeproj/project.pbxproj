@@ -88,6 +88,8 @@
 		7A1954241CA409A600B84B03 /* File in Resources */ = {isa = PBXBuildFile; fileRef = 7A1954231CA409A600B84B03 /* File */; };
 		7A1EC5541CA53DF1008A14BB /* ComprehensiveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A1EC5521CA53DF1008A14BB /* ComprehensiveViewController.m */; };
 		7A1EC5551CA53DF1008A14BB /* ComprehensiveViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7A1EC5531CA53DF1008A14BB /* ComprehensiveViewController.xib */; };
+		7A27934F1CAE680600436F00 /* CarCollectModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A27934E1CAE680600436F00 /* CarCollectModel.m */; };
+		7A2793521CAE688200436F00 /* CarCollectTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A2793511CAE688200436F00 /* CarCollectTableViewCell.m */; };
 		7A2E7AE61C984DDA0045F332 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A2E7AE51C984DDA0045F332 /* main.m */; };
 		7A2E7AE91C984DDA0045F332 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A2E7AE81C984DDA0045F332 /* AppDelegate.m */; };
 		7A2E7AEB1C984DDA0045F332 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A2E7AEA1C984DDA0045F332 /* Assets.xcassets */; };
@@ -289,6 +291,10 @@
 		7A1EC5511CA53DF1008A14BB /* ComprehensiveViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComprehensiveViewController.h; sourceTree = "<group>"; };
 		7A1EC5521CA53DF1008A14BB /* ComprehensiveViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ComprehensiveViewController.m; sourceTree = "<group>"; };
 		7A1EC5531CA53DF1008A14BB /* ComprehensiveViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ComprehensiveViewController.xib; sourceTree = "<group>"; };
+		7A27934D1CAE680600436F00 /* CarCollectModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarCollectModel.h; sourceTree = "<group>"; };
+		7A27934E1CAE680600436F00 /* CarCollectModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CarCollectModel.m; sourceTree = "<group>"; };
+		7A2793501CAE688200436F00 /* CarCollectTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarCollectTableViewCell.h; sourceTree = "<group>"; };
+		7A2793511CAE688200436F00 /* CarCollectTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CarCollectTableViewCell.m; sourceTree = "<group>"; };
 		7A2E7AE11C984DDA0045F332 /* Sahara.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sahara.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A2E7AE51C984DDA0045F332 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7A2E7AE71C984DDA0045F332 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -774,6 +780,8 @@
 				7A59D9841CA27D5500307189 /* SqlitDataBase.m */,
 				7A59D98D1CA2B15B00307189 /* CollectionModel.h */,
 				7A59D98E1CA2B15B00307189 /* CollectionModel.m */,
+				7A27934D1CAE680600436F00 /* CarCollectModel.h */,
+				7A27934E1CAE680600436F00 /* CarCollectModel.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -789,6 +797,8 @@
 				7AB362781C98F89800C03E74 /* MessageTwoTableViewCell.xib */,
 				7AAB55B21C9AC5E70096B1C1 /* AppriseTableViewCell.h */,
 				7AAB55B31C9AC5E70096B1C1 /* AppriseTableViewCell.m */,
+				7A2793501CAE688200436F00 /* CarCollectTableViewCell.h */,
+				7A2793511CAE688200436F00 /* CarCollectTableViewCell.m */,
 				7A59D9881CA2880100307189 /* bendi.png */,
 			);
 			path = VIews;
@@ -1155,6 +1165,7 @@
 				7AB3626A1C98F2B500C03E74 /* VOContentLayer.m in Sources */,
 				7AAB55B41C9AC5E70096B1C1 /* AppriseTableViewCell.m in Sources */,
 				7A1768001CA518CC00E5FAAD /* RSSViewController.m in Sources */,
+				7A27934F1CAE680600436F00 /* CarCollectModel.m in Sources */,
 				7A1767F51CA4DD9000E5FAAD /* PriceViewController.m in Sources */,
 				7ABB846C1C9E45CE00621CC4 /* CheckViewController.m in Sources */,
 				7AB362521C98E42B00C03E74 /* FindCarViewController.m in Sources */,
@@ -1198,6 +1209,7 @@
 				7A0C78AC1C9E37600048C4F3 /* ActicleDetailViewController.m in Sources */,
 				7A339BB71CA1851500DCBC5D /* VideoViewController.m in Sources */,
 				7A1225781C9A9C9500E16422 /* LiveOtherViewController.m in Sources */,
+				7A2793521CAE688200436F00 /* CarCollectTableViewCell.m in Sources */,
 				7A70B3331CA951EB00FD7770 /* LateralSpreadsModel.m in Sources */,
 				7A0ACAF31C9FD4E700355E67 /* Tools.m in Sources */,
 				7AB362791C98F89800C03E74 /* MessageTwoTableViewCell.m in Sources */,

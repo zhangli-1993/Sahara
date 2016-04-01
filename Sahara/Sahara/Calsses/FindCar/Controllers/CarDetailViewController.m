@@ -28,6 +28,7 @@
 #import "MapViewController.h"
 #import "Tools.h"
 #import "AskPriceViewController.h"
+#import "SqlitDataBase.h"
 @interface CarDetailViewController ()<UITableViewDelegate, UIWebViewDelegate>
 
 
@@ -42,6 +43,8 @@
 @property (nonatomic, strong) CarPrivilegeView *privilegeView;
 @property (nonatomic, strong) CarConfigView *configView;
 @property (nonatomic, strong) NSMutableDictionary *AreaDic;
+@property (nonatomic, strong) UIButton *collectBtn;
+
 @end
 
 @implementation CarDetailViewController
@@ -57,6 +60,20 @@
     [shareBtn addTarget:self action:@selector(shareAction) forControlEvents:UIControlEventTouchUpInside];
     UIBarButtonItem *right = [[UIBarButtonItem alloc] initWithCustomView:shareBtn];
     self.navigationItem.rightBarButtonItem = right;
+    SqlitDataBase *manager = [SqlitDataBase dataBaseManger];
+    NSMutableArray *array = [manager selectAllCollectWithNum:[self.artID integerValue]];
+    if (array.count > 0) {
+        [self.collectBtn setImage:[UIImage imageNamed:@"pc_menu_collect_normal_ic"] forState:UIControlStateNormal];
+        self.collectBtn.tag = 110;
+    } else {
+        [self.collectBtn setImage:[UIImage imageNamed:@"pc_menu_03"] forState:UIControlStateNormal];
+        self.collectBtn.tag = 111;
+    }
+    
+    
+    [self.navigationController.navigationBar addSubview:self.collectBtn];
+    
+
     [self.view addSubview:self.segment];
     [self addOneView];
     [Tools requestData];
@@ -70,6 +87,27 @@
     MapViewController *map = [[MapViewController alloc]init];
     [self.navigationController pushViewController:map animated:YES];
 }
+- (void)collectCar:(UIButton *)btn{
+    NSUserDefaults *user = [NSUserDefaults standardUserDefaults];
+    NSString *name = [user objectForKey:@"userName"];    if (name == nil) {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"温馨提示" message:@"要登录才可以收藏哦" delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+        [alert show];
+    } else {
+        SqlitDataBase *manager = [SqlitDataBase dataBaseManger];
+        if (btn.tag == 111) {
+            [manager insertIntoCollect:self.dataDic withNumber:[self.artID integerValue]];
+            [self.collectBtn setImage:[UIImage imageNamed:@"pc_menu_collect_normal_ic"] forState:UIControlStateNormal];
+            btn.tag = 110;
+        } else {
+            [manager deleteWithNum:[self.artID integerValue]];
+            
+            [self.collectBtn setImage:[UIImage imageNamed:@"pc_menu_03"] forState:UIControlStateNormal];
+            btn.tag = 111;
+        }
+        
+    }
+}
+
 - (void)segmentValueChange:(VOSegmentedControl *)seg{
     switch (seg.selectedSegmentIndex) {
         case 0:

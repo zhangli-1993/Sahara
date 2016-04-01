@@ -33,7 +33,7 @@
 }
 
 - (void)setHeadView{
-    UIView *headView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, kWidth, kWidth * 2 / 3 + 110)];
+    UIView *headView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, kWidth, kWidth * 2 / 3 + 70)];
     self.tableView.tableHeaderView = headView;
     UIImageView *imageview = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, kWidth, kWidth * 2 / 3)];
     [imageview sd_setImageWithURL:[NSURL URLWithString:self.imageview]];
@@ -46,12 +46,6 @@
     scoreLabel.text = [NSString stringWithFormat:@"综合评分%@分", self.scoreLabel];
     scoreLabel.font = [UIFont systemFontOfSize:15.0];
         [headView addSubview:scoreLabel];
-    UIButton *priceBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    priceBtn.frame = CGRectMake(10, kWidth * 2 / 3 + 60, kWidth - 20, 40);
-    [priceBtn setTitle:@"询底价" forState:UIControlStateNormal];
-    priceBtn.backgroundColor = kMainColor;
-    [priceBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-    [headView addSubview:priceBtn];
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     static NSString *str = @"carsum";
@@ -213,7 +207,7 @@
 
 - (UITableView *)tableView{
     if (_tableView == nil) {
-        self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 50, kWidth, kHeight - 100) style:UITableViewStylePlain];
+        self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, kWidth, kHeight - 100) style:UITableViewStylePlain];
         self.tableView.delegate = self;
         self.tableView.dataSource = self;
     }

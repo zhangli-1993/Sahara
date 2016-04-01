@@ -111,7 +111,7 @@
         //section的边距
         layout.sectionInset = UIEdgeInsetsMake(0, 20, 5, 20);
         //通过一个layout布局来创建一个collectView
-        self.collectView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 85, kWidth, kHeight - 140) collectionViewLayout:layout];
+        self.collectView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, kWidth, kHeight - 140) collectionViewLayout:layout];
         //设置代理
         self.collectView.dataSource = self;
         self.collectView.delegate = self;
