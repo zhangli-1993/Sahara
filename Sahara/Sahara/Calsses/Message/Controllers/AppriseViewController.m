@@ -59,23 +59,11 @@
             }
         }
         for (NSDictionary *dict in oneArray) {
-            if (dict.count > 1) {
-                NSDictionary *oneDic = dict[@"1"];
-                NSDictionary *twoDic = dict[@"2"];
-                AppriseModel *model = [[AppriseModel alloc] init];
-                AppriseModel *appModel = [[AppriseModel alloc] init];
-                [model setValuesForKeysWithDictionary:oneDic];
-                [appModel setValuesForKeysWithDictionary:twoDic];
-                [self.allAppriseArray addObject:appModel];
-                [self.allAppriseArray addObject:model];
-                
-            }else{
-                NSDictionary *oneDic = dict[@"1"];
-                AppriseModel *model = [[AppriseModel alloc] init];
-                [model setValuesForKeysWithDictionary:oneDic];
-                [self.allAppriseArray addObject:model];
-                
-            }
+            NSDictionary *oneDic = dict[@"1"];
+            AppriseModel *model = [[AppriseModel alloc] init];
+            [model setValuesForKeysWithDictionary:oneDic];
+            [self.allAppriseArray addObject:model];
+            
         }
         [self.tableView tableViewDidFinishedLoading];
         self.tableView.reachedTheEnd = NO;
@@ -102,17 +90,14 @@
  
     if (btn.tag == 10) {
         //点赞
-        
         NSString *apprise = [NSString stringWithFormat:@"%ld", [model.client integerValue] + 1];
         NSUserDefaults *user = [NSUserDefaults standardUserDefaults];
         [user setValue:apprise forKey:self.commentID];
         [user synchronize];
+
         [btn setTitle:apprise forState:UIControlStateNormal];
         [btn setImage:[UIImage imageNamed:@"button-prise"] forState:UIControlStateNormal];
     }else{
-        //评论
-        
-        
         
         
         
