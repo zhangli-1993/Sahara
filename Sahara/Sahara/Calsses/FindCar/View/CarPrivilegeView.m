@@ -73,7 +73,7 @@
 
 - (UITableView *)tableView{
     if (_tableView == nil) {
-        self.tableView  = [[UITableView alloc] initWithFrame:CGRectMake(0, 54, kWidth, kHeight - 90) style:UITableViewStylePlain];
+        self.tableView  = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, kWidth, kHeight - 90) style:UITableViewStylePlain];
         self.tableView.delegate = self;
         self.tableView.dataSource = self;
         [self.tableView registerNib:[UINib nibWithNibName:@"privilegeTableViewCell" bundle:nil] forCellReuseIdentifier:@"privilege"];

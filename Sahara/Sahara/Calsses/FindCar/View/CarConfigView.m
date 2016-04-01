@@ -66,13 +66,12 @@
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
-    
     UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"config" forIndexPath:indexPath];
-    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, (kWidth - 41 ) / 2, 40)];
+    UILabel *label = [[UILabel alloc] initWithFrame:cell.frame];
     label.textAlignment = NSTextAlignmentCenter;
     label.text = self.allArray[indexPath.section][indexPath.row];
     label.font = [UIFont systemFontOfSize:14.0];
-    [cell addSubview:label];
+    [self.collectView addSubview:label];
     return cell;
 }
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
@@ -112,7 +111,7 @@
         //section的边距
         layout.sectionInset = UIEdgeInsetsMake(0, 20, 5, 20);
         //通过一个layout布局来创建一个collectView
-        self.collectView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 85, kWidth, kHeight - 140) collectionViewLayout:layout];
+        self.collectView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, kWidth, kHeight - 140) collectionViewLayout:layout];
         //设置代理
         self.collectView.dataSource = self;
         self.collectView.delegate = self;
