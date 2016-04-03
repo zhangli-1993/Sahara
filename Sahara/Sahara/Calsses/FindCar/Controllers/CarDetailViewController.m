@@ -80,6 +80,14 @@
 
     
 }
+- (void)viewWillDisappear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    self.collectBtn.hidden = YES;
+}
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    self.collectBtn.hidden = NO;
+}
 - (void)shareAction{
     self.shareView = [[ShareView alloc] init];
 }
@@ -291,19 +299,25 @@
     headview.backgroundColor = [UIColor whiteColor];
     if (tableView == self.carView.tableView) {
        if (section == 0) {
-        self.carView.segment = [[UISegmentedControl alloc] initWithFrame:CGRectMake(10, 0, kWidth * 3 / 8, 20)];
-        self.carView.segment.tintColor = kMainColor;
-        [self.carView.segment insertSegmentWithTitle:@"在售" atIndex:0 animated:NO];
+        self.carView.segment = [[VOSegmentedControl alloc] initWithSegments:@[@{VOSegmentText: @"在售"}]];
+           self.carView.segment.tintColor = kMainColor;
         if (self.carView.stopArray.count > 0) {
-            [self.carView.segment insertSegmentWithTitle:@"停售" atIndex:1 animated:NO];
+       self.carView.segment = [[VOSegmentedControl alloc] initWithSegments:@[@{VOSegmentText: @"在售"}, @{VOSegmentText: @"停售"}]];
         }
-        self.carView.segment.selectedSegmentIndex = 0;
+           self.carView.segment.contentStyle = VOContentStyleTextAlone;
+           self.carView.segment.indicatorStyle = VOSegCtrlIndicatorStyleBottomLine;
+           self.carView.segment.backgroundColor = [UIColor groupTableViewBackgroundColor];
+           self.carView.segment.selectedBackgroundColor = self.segment.backgroundColor;
+           self.carView.segment.allowNoSelection = NO;
+           self.carView.segment.selectedSegmentIndex = 0;
+           self.carView.segment.frame = CGRectMake(0, 0, kWidth, 40);
+           self.carView.segment.indicatorThickness = 4;
         [self.carView.segment addTarget:self action:@selector(segmentindexChange:) forControlEvents:UIControlEventValueChanged];
         [headview addSubview:self.carView.segment];
     } else {
-        UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(10, 0, kWidth * 3 / 8, 20)];
+        UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(10, 0, kWidth * 3 / 8, 40)];
         label.text = @"竞争车系";
-        label.font = [UIFont systemFontOfSize:14.0];
+        label.font = [UIFont systemFontOfSize:15.0];
         label.backgroundColor = kMainColor;
         label.textColor = [UIColor whiteColor];
         label.layer.cornerRadius = 5;
@@ -320,7 +334,7 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
     
-    return 30.0;
+    return 50.0;
 }
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
     return 2;
@@ -341,6 +355,9 @@
         if (self.carForum.imageArray.count == 0) {
             return 80 + self.carForum.titleH;
         }
+    }
+    if (tableView == self.privilegeView.tableView) {
+        return 80;
     }
     return 140 + self.carForum.titleH;
 }
@@ -432,6 +449,14 @@
         self.AreaDic = [NSMutableDictionary new];
     }
     return _AreaDic;
+}
+- (UIButton *)collectBtn{
+    if (_collectBtn == nil) {
+        self.collectBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+        self.collectBtn.frame = CGRectMake(kWidth - 100, 0, 40, 40);
+        [self.collectBtn addTarget:self action:@selector(collectCar:) forControlEvents:UIControlEventTouchUpInside];
+    }
+    return _collectBtn;
 }
 
 - (void)didReceiveMemoryWarning {

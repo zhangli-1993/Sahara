@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "VOSegmentedControl.h"
 
 @interface CarSumView : UIView
 @property (nonatomic, strong) NSString *idStr;
@@ -14,7 +15,7 @@
 @property (nonatomic, strong) NSMutableArray *saleArray;
 @property (nonatomic, strong) NSMutableArray *competeArray;
 @property (nonatomic, strong) NSMutableArray *stopArray;
-@property (nonatomic, strong) UISegmentedControl *segment;
+@property (nonatomic, strong) VOSegmentedControl *segment;
 
 - (void)requestModel;
 @end

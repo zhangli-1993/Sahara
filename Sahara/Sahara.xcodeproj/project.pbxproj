@@ -90,6 +90,7 @@
 		7A1EC5551CA53DF1008A14BB /* ComprehensiveViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7A1EC5531CA53DF1008A14BB /* ComprehensiveViewController.xib */; };
 		7A27934F1CAE680600436F00 /* CarCollectModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A27934E1CAE680600436F00 /* CarCollectModel.m */; };
 		7A2793521CAE688200436F00 /* CarCollectTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A2793511CAE688200436F00 /* CarCollectTableViewCell.m */; };
+		7A27939A1CB0C41C00436F00 /* CollectionReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A2793991CB0C41C00436F00 /* CollectionReusableView.m */; };
 		7A2E7AE61C984DDA0045F332 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A2E7AE51C984DDA0045F332 /* main.m */; };
 		7A2E7AE91C984DDA0045F332 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A2E7AE81C984DDA0045F332 /* AppDelegate.m */; };
 		7A2E7AEB1C984DDA0045F332 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A2E7AEA1C984DDA0045F332 /* Assets.xcassets */; };
@@ -295,6 +296,8 @@
 		7A27934E1CAE680600436F00 /* CarCollectModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CarCollectModel.m; sourceTree = "<group>"; };
 		7A2793501CAE688200436F00 /* CarCollectTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarCollectTableViewCell.h; sourceTree = "<group>"; };
 		7A2793511CAE688200436F00 /* CarCollectTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CarCollectTableViewCell.m; sourceTree = "<group>"; };
+		7A2793981CB0C41B00436F00 /* CollectionReusableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionReusableView.h; sourceTree = "<group>"; };
+		7A2793991CB0C41C00436F00 /* CollectionReusableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionReusableView.m; sourceTree = "<group>"; };
 		7A2E7AE11C984DDA0045F332 /* Sahara.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sahara.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A2E7AE51C984DDA0045F332 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7A2E7AE71C984DDA0045F332 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -890,6 +893,8 @@
 				7A0ACB001CA026C800355E67 /* StoreView.m */,
 				7A13686C1CA16AA000C401D7 /* CarConfigView.h */,
 				7A13686D1CA16AA000C401D7 /* CarConfigView.m */,
+				7A2793981CB0C41B00436F00 /* CollectionReusableView.h */,
+				7A2793991CB0C41C00436F00 /* CollectionReusableView.m */,
 				7A1368671CA0EE9B00C401D7 /* CarPrivilegeView.h */,
 				7A1368681CA0EE9B00C401D7 /* CarPrivilegeView.m */,
 				7A13680D1CA0D08300C401D7 /* privilegeTableViewCell.h */,
@@ -1192,6 +1197,7 @@
 				7A08A8CB1C9AE4B900D036E7 /* HotTableViewCell.m in Sources */,
 				7AF9C5BC1C9AB03A00074B54 /* ForumModel.m in Sources */,
 				7A59D9921CA2B84C00307189 /* CollectionTableViewCell.m in Sources */,
+				7A27939A1CB0C41C00436F00 /* CollectionReusableView.m in Sources */,
 				7A168CAB1CA78E4E00BDD397 /* PriceModel.m in Sources */,
 				7AB3624F1C98E41800C03E74 /* PrimeViewController.m in Sources */,
 				7AAB55B11C9AB7580096B1C1 /* AppriseViewController.m in Sources */,

@@ -11,7 +11,6 @@
 #import <AFNetworking/AFHTTPSessionManager.h>
 #import <SDWebImage/UIImageView+WebCache.h>
 #import "CompeteModel.h"
-#import "VOSegmentedControl.h"
 @interface CarSumView ()<UITableViewDataSource, UITableViewDelegate>
 @property (nonatomic, strong) NSMutableArray *allArray;
 
