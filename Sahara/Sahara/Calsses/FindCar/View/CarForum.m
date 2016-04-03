@@ -127,7 +127,7 @@
 - (void)requestModel{
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"text/html", @"text/plain",nil];
-    [manager GET:[NSString stringWithFormat:@"%@%@?idType=serial&pageNo=%@&pageSize=20&orderby=replyat&needImage=true", kCarForum, self.idStr, [NSString stringWithFormat:@"%ld", _pageNo]] parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
+    [manager GET:[NSString stringWithFormat:@"%@%@?idType=serial&pageNo=%@&pageSize=20&orderby=replyat&needImage=true", kCarForum, self.idStr, [NSString stringWithFormat:@"%ld", (long)_pageNo]] parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         NSDictionary *dic = responseObject;

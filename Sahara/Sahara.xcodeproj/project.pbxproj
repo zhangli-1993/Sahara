@@ -1355,7 +1355,6 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Sahara/Librarys/libWeiboSDK",
 					"$(PROJECT_DIR)/Sahara/Librarys/SDKExport",
-					"$(PROJECT_DIR)/Sahara/Librarys/UMessage_Sdk_1.2.6",
 					"$(PROJECT_DIR)/Sahara/Librarys/lib",
 					"$(SRCROOT)",
 				);
@@ -1421,7 +1420,6 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Sahara/Librarys/libWeiboSDK",
 					"$(PROJECT_DIR)/Sahara/Librarys/SDKExport",
-					"$(PROJECT_DIR)/Sahara/Librarys/UMessage_Sdk_1.2.6",
 					"$(PROJECT_DIR)/Sahara/Librarys/lib",
 					"$(SRCROOT)",
 				);
