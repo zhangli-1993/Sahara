@@ -183,6 +183,7 @@
 //            NSLog(@"%@", token);
 //            NSLog(@"%@", uid);
 //            NSLog(@"%@", date);
+    if (token != nil) {
         NSDictionary *dict = @{@"access_token":token, @"uid":uid, @"expirationDate":date};
     
         AFHTTPSessionManager *httpManger = [AFHTTPSessionManager manager];
@@ -215,6 +216,10 @@
         } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
             NSLog(@"error = %@", error);
         }];
+    }else{
+        
+    
+    }
     
 
     

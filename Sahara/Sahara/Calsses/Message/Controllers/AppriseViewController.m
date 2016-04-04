@@ -90,7 +90,7 @@
  
     if (btn.tag == 10) {
         //点赞
-        NSString *apprise = [NSString stringWithFormat:@"%ld", [model.client integerValue] + 1];
+        NSString *apprise = [NSString stringWithFormat:@"%d", [model.client integerValue] + 1];
         NSUserDefaults *user = [NSUserDefaults standardUserDefaults];
         [user setValue:apprise forKey:self.commentID];
         [user synchronize];

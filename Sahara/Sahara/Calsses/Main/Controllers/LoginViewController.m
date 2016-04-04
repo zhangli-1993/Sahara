@@ -126,9 +126,6 @@
     NSString *userName = reqDic[@"nickname"];
     NSString *userImage = reqDic[@"figureurl_qq_2"];
     MainViewController  *mainVC = [[MainViewController alloc] init];
-//    mainVC.name = userName;
-//    mainVC.headImage = userImage;
-//    mainVC.userName = userName;
     [self.navigationController pushViewController:mainVC animated:YES];
     NSUserDefaults *defaultUser = [NSUserDefaults standardUserDefaults];
     [defaultUser setValue:userName forKey:@"userName"];
@@ -137,9 +134,6 @@
     
     
     NSLog(@"++++++++++%@", response.jsonResponse);
-}
-
-- (IBAction)weixinLogin:(id)sender {
 }
 
 - (void)goToRegister{

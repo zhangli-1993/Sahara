@@ -10,6 +10,8 @@
 
 @interface PriceWebViewController ()<UIWebViewDelegate>
 
+@property(nonatomic, strong)  UIWebView *webView;
+
 @end
 
 @implementation PriceWebViewController
@@ -21,15 +23,19 @@
     self.view.backgroundColor = [UIColor whiteColor];
     [self backToPreviousPageWithImage];
     self.tabBarController.tabBar.hidden = YES;
-    
-    
-    UIWebView *webView = [[UIWebView alloc] initWithFrame:CGRectMake(0, 0, kWidth, kHeight + 64)];
-    webView.delegate = self;
-    webView.scalesPageToFit = YES;
-    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://mrobot.pcauto.com.cn/v3/cms/articles/%@?articleTemplate=4.8.0&size=18&app=pcautobrowser&picRule=2&template=(null)&channelId=0", self.priceWebID]];
-    [webView loadRequest:[NSURLRequest requestWithURL:url]];
+    [self.view addSubview:self.webView];
+}
 
-    [self.view addSubview:webView];
+- (UIWebView *)webView{
+    if (!_webView) {
+        self.webView = [[UIWebView alloc] initWithFrame:CGRectMake(0, 0, kWidth, kHeight + 64)];
+        self.webView.delegate = self;
+        self.webView.scalesPageToFit = YES;
+        NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://mrobot.pcauto.com.cn/v3/cms/articles/%@?articleTemplate=4.8.0&size=18&app=pcautobrowser&picRule=2&template=(null)&channelId=0", self.priceWebID]];
+        [self.webView loadRequest:[NSURLRequest requestWithURL:url]];
+
+    }
+    return _webView;
 }
 
 - (void)didReceiveMemoryWarning {

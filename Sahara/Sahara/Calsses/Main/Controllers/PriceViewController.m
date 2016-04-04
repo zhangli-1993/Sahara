@@ -45,11 +45,6 @@
     [self.view addSubview:self.tableView];
 }
 
-- (void)viewWillDisappear:(BOOL)animated{
-    [super viewWillDisappear:animated];
-    self.tabBarController.tabBar.hidden = NO;
-}
-
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     MessageOneTableViewCell *messageCell = [self.tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
     if (indexPath.row < self.allCellArray.count) {
@@ -68,6 +63,11 @@
     PriceWebViewController *priceVC = [[PriceWebViewController alloc] init];
     priceVC.priceWebID = model.priceID;
     [self.navigationController pushViewController:priceVC animated:YES];
+}
+
+- (void)viewWillDisappear:(BOOL)animated{
+    [super viewWillDisappear:animated];
+    self.tabBarController.tabBar.hidden = NO;
 }
 
 - (void)getCellIDRequest{
@@ -90,7 +90,7 @@
 - (void)getCellRequest{
     AFHTTPSessionManager *httpManger = [AFHTTPSessionManager manager];
     httpManger.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"text/html", nil];
-    [httpManger GET:[NSString stringWithFormat:@"http://mrobot.pcauto.com.cn/v2/cms/getArticlesByTagId/%@?pageNo=%lu&pageSize=20", cellID, _pageCount]parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
+    [httpManger GET:[NSString stringWithFormat:@"http://mrobot.pcauto.com.cn/v2/cms/getArticlesByTagId/%@?pageNo=%lu&pageSize=20", cellID, (long)_pageCount]parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         NSDictionary *rootDic = responseObject;
@@ -136,7 +136,7 @@
 
 - (PullingRefreshTableView *)tableView{
     if (!_tableView) {
-        self.tableView = [[PullingRefreshTableView alloc] initWithFrame:CGRectMake(0, 100, kWidth, kHeight - kWidth/4) pullingDelegate:self];
+        self.tableView = [[PullingRefreshTableView alloc] initWithFrame:CGRectMake(0, kWidth/3, kWidth, kHeight - kWidth/4) pullingDelegate:self];
         self.tableView.delegate = self;
         self.tableView.dataSource = self;
         self.tableView.rowHeight = 110;
@@ -163,8 +163,7 @@
         self.VOsegment.backgroundColor = [UIColor groupTableViewBackgroundColor];
         self.VOsegment.selectedBackgroundColor = self.VOsegment.backgroundColor;
         self.VOsegment.allowNoSelection = NO;
-        self.VOsegment.frame = CGRectMake(0, kWidth/6, kWidth, 40);
-//        self.VOsegment.selectedSegmentIndex = 0;
+        self.VOsegment.frame = CGRectMake(0, kWidth/6 + 10, kWidth, 40);
         self.VOsegment.indicatorThickness = 4;
         [self.view addSubview:self.VOsegment];
         //返回点击的是哪个按钮

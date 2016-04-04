@@ -101,6 +101,8 @@
 		7A6C0BD71C995E7C00205D61 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A6C0BD61C995E7C00205D61 /* DetailViewController.m */; };
 		7A70B3301CA951AA00FD7770 /* LateralSpreadsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A70B32F1CA951A900FD7770 /* LateralSpreadsView.m */; };
 		7A70B3331CA951EB00FD7770 /* LateralSpreadsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A70B3321CA951EB00FD7770 /* LateralSpreadsModel.m */; };
+		7A726FBD1CB10B74000BB5F7 /* RSSCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A726FBB1CB10B74000BB5F7 /* RSSCollectionViewCell.m */; };
+		7A726FBE1CB10B74000BB5F7 /* RSSCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7A726FBC1CB10B74000BB5F7 /* RSSCollectionViewCell.xib */; };
 		7A7D3EFE1C9B93AD002B8008 /* for.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7A7D3EFD1C9B93AD002B8008 /* for.plist */; };
 		7A84D1A81C98FF38006EE2F1 /* blueArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A84D1A41C98FF38006EE2F1 /* blueArrow.png */; };
 		7A84D1A91C98FF38006EE2F1 /* blueArrowDown.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A84D1A51C98FF38006EE2F1 /* blueArrowDown.png */; };
@@ -313,6 +315,9 @@
 		7A70B32F1CA951A900FD7770 /* LateralSpreadsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LateralSpreadsView.m; path = Sahara/Calsses/Forum/View/LateralSpreadsView.m; sourceTree = SOURCE_ROOT; };
 		7A70B3311CA951EB00FD7770 /* LateralSpreadsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LateralSpreadsModel.h; sourceTree = "<group>"; };
 		7A70B3321CA951EB00FD7770 /* LateralSpreadsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LateralSpreadsModel.m; sourceTree = "<group>"; };
+		7A726FBA1CB10B74000BB5F7 /* RSSCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSSCollectionViewCell.h; sourceTree = "<group>"; };
+		7A726FBB1CB10B74000BB5F7 /* RSSCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSSCollectionViewCell.m; sourceTree = "<group>"; };
+		7A726FBC1CB10B74000BB5F7 /* RSSCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RSSCollectionViewCell.xib; sourceTree = "<group>"; };
 		7A7D3EFD1C9B93AD002B8008 /* for.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = for.plist; sourceTree = "<group>"; };
 		7A84D1A41C98FF38006EE2F1 /* blueArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blueArrow.png; sourceTree = "<group>"; };
 		7A84D1A51C98FF38006EE2F1 /* blueArrowDown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blueArrowDown.png; sourceTree = "<group>"; };
@@ -502,6 +507,9 @@
 				7AE3361E1CA91A1F00C30F4C /* RSSView.m */,
 				7ACD623B1CAA6D54000470D9 /* BmobRSSView.h */,
 				7ACD623C1CAA6D54000470D9 /* BmobRSSView.m */,
+				7A726FBA1CB10B74000BB5F7 /* RSSCollectionViewCell.h */,
+				7A726FBB1CB10B74000BB5F7 /* RSSCollectionViewCell.m */,
+				7A726FBC1CB10B74000BB5F7 /* RSSCollectionViewCell.xib */,
 			);
 			name = Views;
 			path = Controllers/Views;
@@ -1049,6 +1057,7 @@
 				7A0C78A01C9E2C8A0048C4F3 /* Article in Resources */,
 				7A0D97B01CACC61300661CA9 /* FourmTwoTableViewCell.xib in Resources */,
 				7A0C78B11C9E4DC30048C4F3 /* comment in Resources */,
+				7A726FBE1CB10B74000BB5F7 /* RSSCollectionViewCell.xib in Resources */,
 				7AD7F7E71C9934CE00BF2460 /* hot in Resources */,
 				7A0ACB031CA0314500355E67 /* store in Resources */,
 				7A59D9891CA2880100307189 /* bendi.png in Resources */,
@@ -1196,6 +1205,7 @@
 				7A13686E1CA16AA000C401D7 /* CarConfigView.m in Sources */,
 				7A089AF51C9BE67E00EF030E /* ShareView.m in Sources */,
 				7A1368101CA0D08300C401D7 /* privilegeTableViewCell.m in Sources */,
+				7A726FBD1CB10B74000BB5F7 /* RSSCollectionViewCell.m in Sources */,
 				7AB362701C98F7A200C03E74 /* MessageModel.m in Sources */,
 				7ABB84721C9E4D9C00621CC4 /* QuestionViewController.m in Sources */,
 			);
@@ -1316,7 +1326,6 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Sahara/Librarys/libWeiboSDK",
 					"$(PROJECT_DIR)/Sahara/Librarys/SDKExport",
-					"$(PROJECT_DIR)/Sahara/Librarys/UMessage_Sdk_1.2.6",
 					"$(PROJECT_DIR)/Sahara/Librarys/lib",
 				);
 				OTHER_LDFLAGS = (
@@ -1380,7 +1389,6 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Sahara/Librarys/libWeiboSDK",
 					"$(PROJECT_DIR)/Sahara/Librarys/SDKExport",
-					"$(PROJECT_DIR)/Sahara/Librarys/UMessage_Sdk_1.2.6",
 					"$(PROJECT_DIR)/Sahara/Librarys/lib",
 				);
 				OTHER_LDFLAGS = (
