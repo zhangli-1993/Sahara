@@ -130,7 +130,6 @@ static NSString *collection = @"collection";
     if (indexPath.row < self.allCellArray.count) {
 
         RSSModel *RSSmodel = self.allCellArray[indexPath.row];
-
         collectionCell.model = RSSmodel;
         
         }
@@ -258,7 +257,7 @@ static NSString *collection = @"collection";
 
 - (PullingRefreshTableView *)tableVIew{
     if (!_tableVIew) {
-        self.tableVIew = [[PullingRefreshTableView alloc] initWithFrame:CGRectMake(0, kWidth/4 + 15, kWidth, kHeight - 140) pullingDelegate:self];
+        self.tableVIew = [[PullingRefreshTableView alloc] initWithFrame:CGRectMake(0, kWidth/4 + 20, kWidth, kHeight - kWidth/4 - 20) pullingDelegate:self];
         self.tableVIew.delegate = self;
         self.tableVIew.dataSource = self;
         self.tableVIew.rowHeight = 110;

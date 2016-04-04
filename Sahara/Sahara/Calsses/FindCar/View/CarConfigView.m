@@ -8,6 +8,7 @@
 
 #import "CarConfigView.h"
 #import <AFNetworking/AFHTTPSessionManager.h>
+#import "CollectionReusableView.h"
 @interface CarConfigView()<UICollectionViewDataSource, UICollectionViewDelegate>
 @property (nonatomic, strong) NSMutableArray *titleArray;
 @property (nonatomic, strong) NSMutableArray *allArray;
@@ -66,24 +67,27 @@
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
-    
     UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"config" forIndexPath:indexPath];
-    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, (kWidth - 41 ) / 2, 40)];
+    UILabel *label = [[UILabel alloc] initWithFrame:cell.frame];
     label.textAlignment = NSTextAlignmentCenter;
     label.text = self.allArray[indexPath.section][indexPath.row];
     label.font = [UIFont systemFontOfSize:14.0];
-    [cell addSubview:label];
+    [self.collectView addSubview:label];
     return cell;
 }
-- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
-    
-}
 - (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath{
-    UICollectionReusableView *view1 = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"HeaderView" forIndexPath:indexPath];
-    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(40, 0, kWidth - 40, 30)];
-    label.textColor = kMainColor;
-    label.text = self.titleArray[indexPath.section];
-    [view1 addSubview:label];
+    CollectionReusableView *view1 = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"HeaderView" forIndexPath:indexPath];
+    if (view1 == nil) {
+         view1 = [[CollectionReusableView alloc] initWithFrame:CGRectMake(0, 0, kWidth, 40)];
+    }
+    view1.label.text = self.titleArray[indexPath.section];
+//    CGRect frame = collectionView[indexPath.section].HeaderView.frame;
+   
+    
+//    label.textColor = kMainColor;
+//    label.text = self.titleArray[indexPath.section];
+//    [self.collectView addSubview:label];
+////    [view1 addSubview:label];
     return view1;
 }
 #pragma mark---UICollectionViewDelegateFlowLayout
@@ -112,13 +116,13 @@
         //section的边距
         layout.sectionInset = UIEdgeInsetsMake(0, 20, 5, 20);
         //通过一个layout布局来创建一个collectView
-        self.collectView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 85, kWidth, kHeight - 140) collectionViewLayout:layout];
+        self.collectView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, kWidth, kHeight - 140) collectionViewLayout:layout];
         //设置代理
         self.collectView.dataSource = self;
         self.collectView.delegate = self;
         
         [self.collectView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"config"];
-        [self.collectView registerClass:[UICollectionReusableView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"HeaderView"];
+        [self.collectView registerClass:[CollectionReusableView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"HeaderView"];
         self.collectView.backgroundColor = [UIColor whiteColor];
         
 

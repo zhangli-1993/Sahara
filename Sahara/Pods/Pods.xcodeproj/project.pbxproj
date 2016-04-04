@@ -845,24 +845,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		023C8369F913CB44E048F703341FE273 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = CC47BCA8826885C1E269A29DADCDDA2E /* SDWebImage.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/SDWebImage/SDWebImage-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
 		052A17875CB827423D627183396CEB60 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -897,10 +879,11 @@
 			};
 			name = Release;
 		};
-		091BD870B3409E4829D142DE97F177F8 /* Release */ = {
+		09ED6496A64D4037CC0C4363774FF329 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = CC47BCA8826885C1E269A29DADCDDA2E /* SDWebImage.xcconfig */;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_PREFIX_HEADER = "Target Support Files/SDWebImage/SDWebImage-prefix.pch";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
@@ -915,10 +898,11 @@
 			};
 			name = Release;
 		};
-		17224E02F0E8CE2AC8EF6DDD7B535094 /* Debug */ = {
+		4CD115F3B0F53DC238605077D1621BBA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 0091220AFDD0C8889CC9AE8831897551 /* AFNetworking.xcconfig */;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_PREFIX_HEADER = "Target Support Files/AFNetworking/AFNetworking-prefix.pch";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
@@ -933,10 +917,29 @@
 			};
 			name = Debug;
 		};
-		3BA0F7248AA1AB1A9822B18B026F1556 /* Debug */ = {
+		87890364BA0E9B46EC93734615486C1F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 98C98CDFB3F20F2925F6CD1F141BB14F /* Pods.release.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		8B3260361EE7E6F5025BBF584C3F4CA9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = FB6E28BAED448D3494DA158CEABD0C8C /* SDCycleScrollView.xcconfig */;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_PREFIX_HEADER = "Target Support Files/SDCycleScrollView/SDCycleScrollView-prefix.pch";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
@@ -951,14 +954,34 @@
 			};
 			name = Debug;
 		};
-		748406C4390BE6DA6D6B39AA204D0250 /* Release */ = {
+		948F58908A2FF56994494161939103AD /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 98C98CDFB3F20F2925F6CD1F141BB14F /* Pods.release.xcconfig */;
+			baseConfigurationReference = CC47BCA8826885C1E269A29DADCDDA2E /* SDWebImage.xcconfig */;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SDWebImage/SDWebImage-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		9D007FF7BADD48625EEB2D38A180E698 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4E762F23EC34ED4A6FF3312D84E33A40 /* Pods.debug.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MACH_O_TYPE = staticlib;
-				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_ENABLE_DEBUG_INFO = YES;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
@@ -966,7 +989,7 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 			};
-			name = Release;
+			name = Debug;
 		};
 		B37F0F91F85060E28F1DAAB522DC7EC1 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -1007,10 +1030,11 @@
 			};
 			name = Debug;
 		};
-		C1721BDB8081E5AB9156A8F3175E2EBF /* Release */ = {
+		BBFB5AB3D3357105763D015F8452A089 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = FB6E28BAED448D3494DA158CEABD0C8C /* SDCycleScrollView.xcconfig */;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_PREFIX_HEADER = "Target Support Files/SDCycleScrollView/SDCycleScrollView-prefix.pch";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
@@ -1025,10 +1049,11 @@
 			};
 			name = Release;
 		};
-		CF42542529F689B52406696B5784E1F9 /* Release */ = {
+		D77A578A277BBC5C282C2F7F82156F0A /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 0091220AFDD0C8889CC9AE8831897551 /* AFNetworking.xcconfig */;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_PREFIX_HEADER = "Target Support Files/AFNetworking/AFNetworking-prefix.pch";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
@@ -1042,23 +1067,6 @@
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
-		};
-		E4C1D0B864AADE910F53D8B61662DAA0 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4E762F23EC34ED4A6FF3312D84E33A40 /* Pods.debug.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				MACH_O_TYPE = staticlib;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
 		};
 /* End XCBuildConfiguration section */
 
@@ -1075,8 +1083,8 @@
 		414BC68B13B2EF62FD653D474E9D664F /* Build configuration list for PBXNativeTarget "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				E4C1D0B864AADE910F53D8B61662DAA0 /* Debug */,
-				748406C4390BE6DA6D6B39AA204D0250 /* Release */,
+				9D007FF7BADD48625EEB2D38A180E698 /* Debug */,
+				87890364BA0E9B46EC93734615486C1F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1084,8 +1092,8 @@
 		453C8F44F82FCF8CECF7175B1B12F37D /* Build configuration list for PBXNativeTarget "SDCycleScrollView" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				3BA0F7248AA1AB1A9822B18B026F1556 /* Debug */,
-				C1721BDB8081E5AB9156A8F3175E2EBF /* Release */,
+				8B3260361EE7E6F5025BBF584C3F4CA9 /* Debug */,
+				BBFB5AB3D3357105763D015F8452A089 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1093,8 +1101,8 @@
 		5390B2974840B11AC83A8CF19F999B56 /* Build configuration list for PBXNativeTarget "SDWebImage" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				023C8369F913CB44E048F703341FE273 /* Debug */,
-				091BD870B3409E4829D142DE97F177F8 /* Release */,
+				948F58908A2FF56994494161939103AD /* Debug */,
+				09ED6496A64D4037CC0C4363774FF329 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1102,8 +1110,8 @@
 		77CF2A7107BC61A2E90025871305961D /* Build configuration list for PBXNativeTarget "AFNetworking" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				17224E02F0E8CE2AC8EF6DDD7B535094 /* Debug */,
-				CF42542529F689B52406696B5784E1F9 /* Release */,
+				4CD115F3B0F53DC238605077D1621BBA /* Debug */,
+				D77A578A277BBC5C282C2F7F82156F0A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

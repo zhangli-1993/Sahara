@@ -8,6 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		525A52B034E3688F1D9B5A41 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A31DF689C6CF0A0F3FD738CB /* libPods.a */; };
+		7A06BCD81CACF961004863DB /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A06BCD71CACF961004863DB /* AudioToolbox.framework */; };
+		7A06BCDA1CACF976004863DB /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A06BCD91CACF976004863DB /* AVFoundation.framework */; };
+		7A06BCDC1CACF984004863DB /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A06BCDB1CACF984004863DB /* AddressBook.framework */; };
+		7A06BCF71CAD10F8004863DB /* AMap.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 7A06BCF51CAD10F8004863DB /* AMap.bundle */; };
+		7A06BCF81CAD10F8004863DB /* AMapNavi.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 7A06BCF61CAD10F8004863DB /* AMapNavi.bundle */; };
+		7A06BCFE1CAD158E004863DB /* AMapSearchKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A06BCFD1CAD158E004863DB /* AMapSearchKit.framework */; };
+		7A06BD001CAD1594004863DB /* MAMapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A06BCFF1CAD1594004863DB /* MAMapKit.framework */; };
 		7A07E69F1C9F82DD003D0843 /* ProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 7A07E69C1C9F82DD003D0843 /* ProgressHUD.bundle */; };
 		7A07E6A01C9F82DD003D0843 /* ProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A07E69E1C9F82DD003D0843 /* ProgressHUD.m */; };
 		7A089AC91C9BD71900EF030E /* sum in Resources */ = {isa = PBXBuildFile; fileRef = 7A089AC81C9BD71900EF030E /* sum */; };
@@ -49,8 +56,6 @@
 		7A0ACAF01C9FA47900355E67 /* carForum in Resources */ = {isa = PBXBuildFile; fileRef = 7A0ACAEF1C9FA47900355E67 /* carForum */; };
 		7A0ACAF31C9FD4E700355E67 /* Tools.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A0ACAF21C9FD4E700355E67 /* Tools.m */; };
 		7A0ACAF61C9FF28C00355E67 /* CarForumViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A0ACAF51C9FF28C00355E67 /* CarForumViewController.m */; };
-		7A0ACAF81CA023AA00355E67 /* MAMapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A0ACAF71CA023AA00355E67 /* MAMapKit.framework */; };
-		7A0ACAFA1CA0244B00355E67 /* AMap.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 7A0ACAF91CA0244B00355E67 /* AMap.bundle */; };
 		7A0ACAFC1CA024A000355E67 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A0ACAFB1CA024A000355E67 /* CoreLocation.framework */; };
 		7A0ACAFE1CA024C900355E67 /* libstdc++.6.0.9.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A0ACAFD1CA024C900355E67 /* libstdc++.6.0.9.tbd */; };
 		7A0ACB011CA026C800355E67 /* StoreView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A0ACB001CA026C800355E67 /* StoreView.m */; };
@@ -83,6 +88,9 @@
 		7A1954241CA409A600B84B03 /* File in Resources */ = {isa = PBXBuildFile; fileRef = 7A1954231CA409A600B84B03 /* File */; };
 		7A1EC5541CA53DF1008A14BB /* ComprehensiveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A1EC5521CA53DF1008A14BB /* ComprehensiveViewController.m */; };
 		7A1EC5551CA53DF1008A14BB /* ComprehensiveViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7A1EC5531CA53DF1008A14BB /* ComprehensiveViewController.xib */; };
+		7A27934F1CAE680600436F00 /* CarCollectModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A27934E1CAE680600436F00 /* CarCollectModel.m */; };
+		7A2793521CAE688200436F00 /* CarCollectTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A2793511CAE688200436F00 /* CarCollectTableViewCell.m */; };
+		7A27939A1CB0C41C00436F00 /* CollectionReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A2793991CB0C41C00436F00 /* CollectionReusableView.m */; };
 		7A2E7AE61C984DDA0045F332 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A2E7AE51C984DDA0045F332 /* main.m */; };
 		7A2E7AE91C984DDA0045F332 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A2E7AE81C984DDA0045F332 /* AppDelegate.m */; };
 		7A2E7AEB1C984DDA0045F332 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A2E7AEA1C984DDA0045F332 /* Assets.xcassets */; };
@@ -157,6 +165,13 @@
 /* Begin PBXFileReference section */
 		3E5768CE4E443399640C3666 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		4483BA8AABB15E4CA5CAE736 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		7A06BCD71CACF961004863DB /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		7A06BCD91CACF976004863DB /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		7A06BCDB1CACF984004863DB /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
+		7A06BCF51CAD10F8004863DB /* AMap.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = AMap.bundle; sourceTree = "<group>"; };
+		7A06BCF61CAD10F8004863DB /* AMapNavi.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = AMapNavi.bundle; sourceTree = "<group>"; };
+		7A06BCFD1CAD158E004863DB /* AMapSearchKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AMapSearchKit.framework; sourceTree = "<group>"; };
+		7A06BCFF1CAD1594004863DB /* MAMapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MAMapKit.framework; sourceTree = "<group>"; };
 		7A07E69B1C9F82DD003D0843 /* JokeDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JokeDefine.h; sourceTree = "<group>"; };
 		7A07E69C1C9F82DD003D0843 /* ProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ProgressHUD.bundle; sourceTree = "<group>"; };
 		7A07E69D1C9F82DD003D0843 /* ProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgressHUD.h; sourceTree = "<group>"; };
@@ -227,8 +242,6 @@
 		7A0ACAF21C9FD4E700355E67 /* Tools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tools.m; sourceTree = "<group>"; };
 		7A0ACAF41C9FF28C00355E67 /* CarForumViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarForumViewController.h; sourceTree = "<group>"; };
 		7A0ACAF51C9FF28C00355E67 /* CarForumViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CarForumViewController.m; sourceTree = "<group>"; };
-		7A0ACAF71CA023AA00355E67 /* MAMapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MAMapKit.framework; sourceTree = "<group>"; };
-		7A0ACAF91CA0244B00355E67 /* AMap.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = AMap.bundle; path = MAMapKit.framework/AMap.bundle; sourceTree = "<group>"; };
 		7A0ACAFB1CA024A000355E67 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		7A0ACAFD1CA024C900355E67 /* libstdc++.6.0.9.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.0.9.tbd"; path = "usr/lib/libstdc++.6.0.9.tbd"; sourceTree = SDKROOT; };
 		7A0ACAFF1CA026C800355E67 /* StoreView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoreView.h; sourceTree = "<group>"; };
@@ -281,6 +294,12 @@
 		7A1EC5511CA53DF1008A14BB /* ComprehensiveViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComprehensiveViewController.h; sourceTree = "<group>"; };
 		7A1EC5521CA53DF1008A14BB /* ComprehensiveViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ComprehensiveViewController.m; sourceTree = "<group>"; };
 		7A1EC5531CA53DF1008A14BB /* ComprehensiveViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ComprehensiveViewController.xib; sourceTree = "<group>"; };
+		7A27934D1CAE680600436F00 /* CarCollectModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarCollectModel.h; sourceTree = "<group>"; };
+		7A27934E1CAE680600436F00 /* CarCollectModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CarCollectModel.m; sourceTree = "<group>"; };
+		7A2793501CAE688200436F00 /* CarCollectTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarCollectTableViewCell.h; sourceTree = "<group>"; };
+		7A2793511CAE688200436F00 /* CarCollectTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CarCollectTableViewCell.m; sourceTree = "<group>"; };
+		7A2793981CB0C41B00436F00 /* CollectionReusableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionReusableView.h; sourceTree = "<group>"; };
+		7A2793991CB0C41C00436F00 /* CollectionReusableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionReusableView.m; sourceTree = "<group>"; };
 		7A2E7AE11C984DDA0045F332 /* Sahara.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sahara.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A2E7AE51C984DDA0045F332 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7A2E7AE71C984DDA0045F332 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -407,12 +426,16 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A06BCDC1CACF984004863DB /* AddressBook.framework in Frameworks */,
+				7A06BCDA1CACF976004863DB /* AVFoundation.framework in Frameworks */,
+				7A06BCD81CACF961004863DB /* AudioToolbox.framework in Frameworks */,
+				7A06BD001CAD1594004863DB /* MAMapKit.framework in Frameworks */,
 				7A09E00A1CAA520200923952 /* CoreFoundation.framework in Frameworks */,
 				7A09E0081CAA51E800923952 /* CFNetwork.framework in Frameworks */,
 				7AE3363D1CA9631E00C30F4C /* libiconv.tbd in Frameworks */,
 				7A0ACAFE1CA024C900355E67 /* libstdc++.6.0.9.tbd in Frameworks */,
 				7A0ACAFC1CA024A000355E67 /* CoreLocation.framework in Frameworks */,
-				7A0ACAF81CA023AA00355E67 /* MAMapKit.framework in Frameworks */,
+				7A06BCFE1CAD158E004863DB /* AMapSearchKit.framework in Frameworks */,
 				7A09E00E1CAA53C900923952 /* jpush-ios-2.1.0.a in Frameworks */,
 				7A089AFE1C9BF51100EF030E /* libc++.tbd in Frameworks */,
 				7A089AFC1C9BF50300EF030E /* libsqlite3.0.tbd in Frameworks */,
@@ -518,7 +541,10 @@
 		7A2E7AD81C984DDA0045F332 = {
 			isa = PBXGroup;
 			children = (
-				7A0ACAF91CA0244B00355E67 /* AMap.bundle */,
+				7A06BCFF1CAD1594004863DB /* MAMapKit.framework */,
+				7A06BCFD1CAD158E004863DB /* AMapSearchKit.framework */,
+				7A06BCF51CAD10F8004863DB /* AMap.bundle */,
+				7A06BCF61CAD10F8004863DB /* AMapNavi.bundle */,
 				7A2E7AE31C984DDA0045F332 /* Sahara */,
 				7A2E7AE21C984DDA0045F332 /* Products */,
 				9CEF5E36737CE835774D009D /* Pods */,
@@ -765,6 +791,8 @@
 				7A59D9841CA27D5500307189 /* SqlitDataBase.m */,
 				7A59D98D1CA2B15B00307189 /* CollectionModel.h */,
 				7A59D98E1CA2B15B00307189 /* CollectionModel.m */,
+				7A27934D1CAE680600436F00 /* CarCollectModel.h */,
+				7A27934E1CAE680600436F00 /* CarCollectModel.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -780,6 +808,8 @@
 				7AB362781C98F89800C03E74 /* MessageTwoTableViewCell.xib */,
 				7AAB55B21C9AC5E70096B1C1 /* AppriseTableViewCell.h */,
 				7AAB55B31C9AC5E70096B1C1 /* AppriseTableViewCell.m */,
+				7A2793501CAE688200436F00 /* CarCollectTableViewCell.h */,
+				7A2793511CAE688200436F00 /* CarCollectTableViewCell.m */,
 				7A59D9881CA2880100307189 /* bendi.png */,
 			);
 			path = VIews;
@@ -871,6 +901,8 @@
 				7A0ACB001CA026C800355E67 /* StoreView.m */,
 				7A13686C1CA16AA000C401D7 /* CarConfigView.h */,
 				7A13686D1CA16AA000C401D7 /* CarConfigView.m */,
+				7A2793981CB0C41B00436F00 /* CollectionReusableView.h */,
+				7A2793991CB0C41C00436F00 /* CollectionReusableView.m */,
 				7A1368671CA0EE9B00C401D7 /* CarPrivilegeView.h */,
 				7A1368681CA0EE9B00C401D7 /* CarPrivilegeView.m */,
 				7A13680D1CA0D08300C401D7 /* privilegeTableViewCell.h */,
@@ -938,12 +970,14 @@
 		FA7FD3E0088FFB46FCCE72F1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7A06BCDB1CACF984004863DB /* AddressBook.framework */,
+				7A06BCD91CACF976004863DB /* AVFoundation.framework */,
+				7A06BCD71CACF961004863DB /* AudioToolbox.framework */,
 				7A09E0091CAA520200923952 /* CoreFoundation.framework */,
 				7A09E0071CAA51E800923952 /* CFNetwork.framework */,
 				7AE3363C1CA9631E00C30F4C /* libiconv.tbd */,
 				7A0ACAFD1CA024C900355E67 /* libstdc++.6.0.9.tbd */,
 				7A0ACAFB1CA024A000355E67 /* CoreLocation.framework */,
-				7A0ACAF71CA023AA00355E67 /* MAMapKit.framework */,
 				7A089AFD1C9BF51100EF030E /* libc++.tbd */,
 				7A089AFB1C9BF50300EF030E /* libsqlite3.0.tbd */,
 				7A089AF11C9BE35B00EF030E /* libsqlite3.tbd */,
@@ -996,7 +1030,7 @@
 				TargetAttributes = {
 					7A2E7AE01C984DDA0045F332 = {
 						CreatedOnToolsVersion = 7.2.1;
-						DevelopmentTeam = CCQ5LLLX4L;
+						DevelopmentTeam = JR35LYBT79;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 1;
@@ -1028,6 +1062,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A06BCF71CAD10F8004863DB /* AMap.bundle in Resources */,
+				7A06BCF81CAD10F8004863DB /* AMapNavi.bundle in Resources */,
 				7AE336031CA8B6F200C30F4C /* libWeiboSDK.a in Resources */,
 				7AE336021CA8B68A00C30F4C /* libWeChatSDK.a in Resources */,
 				7A0B3A911CA4DE2400620755 /* areaID in Resources */,
@@ -1048,7 +1084,6 @@
 				7ABB84821C9E98F300621CC4 /* Login.storyboard in Resources */,
 				7A84D1A81C98FF38006EE2F1 /* blueArrow.png in Resources */,
 				7A08A8C51C9ADF8100D036E7 /* hotCar in Resources */,
-				7A0ACAFA1CA0244B00355E67 /* AMap.bundle in Resources */,
 				7AD7F7E91C9943A700BF2460 /* allBrands in Resources */,
 				7A089AC91C9BD71900EF030E /* sum in Resources */,
 				7AB3627A1C98F89800C03E74 /* MessageTwoTableViewCell.xib in Resources */,
@@ -1144,6 +1179,7 @@
 				7AB3626A1C98F2B500C03E74 /* VOContentLayer.m in Sources */,
 				7AAB55B41C9AC5E70096B1C1 /* AppriseTableViewCell.m in Sources */,
 				7A1768001CA518CC00E5FAAD /* RSSViewController.m in Sources */,
+				7A27934F1CAE680600436F00 /* CarCollectModel.m in Sources */,
 				7A1767F51CA4DD9000E5FAAD /* PriceViewController.m in Sources */,
 				7ABB846C1C9E45CE00621CC4 /* CheckViewController.m in Sources */,
 				7AB362521C98E42B00C03E74 /* FindCarViewController.m in Sources */,
@@ -1170,6 +1206,7 @@
 				7A08A8CB1C9AE4B900D036E7 /* HotTableViewCell.m in Sources */,
 				7AF9C5BC1C9AB03A00074B54 /* ForumModel.m in Sources */,
 				7A59D9921CA2B84C00307189 /* CollectionTableViewCell.m in Sources */,
+				7A27939A1CB0C41C00436F00 /* CollectionReusableView.m in Sources */,
 				7A168CAB1CA78E4E00BDD397 /* PriceModel.m in Sources */,
 				7AB3624F1C98E41800C03E74 /* PrimeViewController.m in Sources */,
 				7AAB55B11C9AB7580096B1C1 /* AppriseViewController.m in Sources */,
@@ -1187,6 +1224,7 @@
 				7A0C78AC1C9E37600048C4F3 /* ActicleDetailViewController.m in Sources */,
 				7A339BB71CA1851500DCBC5D /* VideoViewController.m in Sources */,
 				7A1225781C9A9C9500E16422 /* LiveOtherViewController.m in Sources */,
+				7A2793521CAE688200436F00 /* CarCollectTableViewCell.m in Sources */,
 				7A70B3331CA951EB00FD7770 /* LateralSpreadsModel.m in Sources */,
 				7A0ACAF31C9FD4E700355E67 /* Tools.m in Sources */,
 				7AB362791C98F89800C03E74 /* MessageTwoTableViewCell.m in Sources */,
@@ -1309,6 +1347,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3E5768CE4E443399640C3666 /* Pods.debug.xcconfig */;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -1318,7 +1357,7 @@
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/Sahara/Librarys",
 				);
-				GCC_PREFIX_HEADER = /Users/scjy/Desktop/Sahara/Sahara/Sahara/Librarys/Sahara.pch;
+				GCC_PREFIX_HEADER = "$(SCROOT)Sahara/Librarys/Sahara.pch";
 				INFOPLIST_FILE = Sahara/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1327,10 +1366,11 @@
 					"$(PROJECT_DIR)/Sahara/Librarys/libWeiboSDK",
 					"$(PROJECT_DIR)/Sahara/Librarys/SDKExport",
 					"$(PROJECT_DIR)/Sahara/Librarys/lib",
+					"$(SRCROOT)",
 				);
 				OTHER_LDFLAGS = (
 					"$(inherited)",
-					"-all_load",
+					"-ObjC",
 					"-l\"AFNetworking\"",
 					"-l\"SDCycleScrollView\"",
 					"-l\"SDWebImage\"",
@@ -1363,7 +1403,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.Auroralizi.Sahara;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "a088f344-d51c-4830-ae53-2bcc875db9ea";
 				VALID_ARCHS = "arm64 armv7 linker command failed with exit code 1 (use -v to see invocation) armv7s";
 			};
 			name = Debug;
@@ -1372,6 +1412,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4483BA8AABB15E4CA5CAE736 /* Pods.release.xcconfig */;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -1381,7 +1422,7 @@
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/Sahara/Librarys",
 				);
-				GCC_PREFIX_HEADER = /Users/scjy/Desktop/Sahara/Sahara/Sahara/Librarys/Sahara.pch;
+				GCC_PREFIX_HEADER = "$(SCROOT)Sahara/Librarys/Sahara.pch";
 				INFOPLIST_FILE = Sahara/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1390,10 +1431,11 @@
 					"$(PROJECT_DIR)/Sahara/Librarys/libWeiboSDK",
 					"$(PROJECT_DIR)/Sahara/Librarys/SDKExport",
 					"$(PROJECT_DIR)/Sahara/Librarys/lib",
+					"$(SRCROOT)",
 				);
 				OTHER_LDFLAGS = (
 					"$(inherited)",
-					"-all_load",
+					"-ObjC",
 					"-l\"AFNetworking\"",
 					"-l\"SDCycleScrollView\"",
 					"-l\"SDWebImage\"",
@@ -1426,7 +1468,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.Auroralizi.Sahara;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "a088f344-d51c-4830-ae53-2bcc875db9ea";
 				VALID_ARCHS = "arm64 armv7 linker command failed with exit code 1 (use -v to see invocation) armv7s";
 			};
 			name = Release;

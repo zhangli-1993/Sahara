@@ -14,6 +14,10 @@
 #import "RSSCollectionViewCell.h"
 static NSString *collection = @"collection";
 @interface BmobRSSView ()<UICollectionViewDelegate, UICollectionViewDataSource, UIAlertViewDelegate>
+{
+    UIImageView *collectionImage;
+    NSInteger page;
+}
 @property(nonatomic, strong) NSMutableArray *array;
 
 @end
@@ -82,7 +86,6 @@ static NSString *collection = @"collection";
             if (isSuccessful) {
                 [ProgressHUD showSuccess:@"订阅删除成功"];
                 [self getCollectionViewCell];
-                
                 NSLog(@"successful");
             }else if(error){
                 NSLog(@"删除失败");
@@ -99,11 +102,13 @@ static NSString *collection = @"collection";
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     RSSCollectionViewCell *collectionCell = [collectionView dequeueReusableCellWithReuseIdentifier:collection forIndexPath:indexPath];
     
+
     RSSModel *model = self.allModelArray[indexPath.row];
-    
+
     if (indexPath.item < self.allModelArray.count) {
 
     collectionCell.rssModel = model;
+
     }
     return collectionCell;
 }

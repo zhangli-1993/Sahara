@@ -10,4 +10,6 @@
 
 @interface CarDetailViewController : UIViewController
 @property (nonatomic, strong) NSString *artID;
+@property (nonatomic, strong) NSDictionary *dataDic;
+
 @end

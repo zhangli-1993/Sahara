@@ -20,5 +20,9 @@
 - (void)insertDataIntoDataBase:(CollectionModel *)Cmodel;
 - (NSMutableArray *)selectDataDic;
 - (void)deleteData:(NSString *)title;
+- (void)insertIntoCollect:(NSDictionary *)dic withNumber:(NSInteger)num;
+- (void)deleteWithNum:(NSInteger)num;
+- (NSMutableArray *)selectAllCollect;
+- (NSMutableArray *)selectAllCollectWithNum:(NSInteger)num;
 
 @end
