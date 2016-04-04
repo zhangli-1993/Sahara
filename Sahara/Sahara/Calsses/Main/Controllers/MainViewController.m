@@ -43,7 +43,7 @@
     UIButton *setBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     setBtn.frame = CGRectMake(kWidth - kWidth/9, 0, kWidth/9, 40);
     [self tableViewHeadView];
-    self.allCellArray = [NSMutableArray arrayWithObjects: @"违章查询", @"夜间模式", @"给我评分", @"帮助与反馈",@"清理缓存", @"常见问题", @"退出登录",nil];
+    self.allCellArray = [NSMutableArray arrayWithObjects: @"违章查询", @"夜间模式", @"帮助与反馈",@"清理缓存", @"常见问题", @"退出登录",nil];
     
 }
 
@@ -129,26 +129,20 @@
             //违章查询
             [self violationofTrafficRegulation];
             break;
-            case 2:
-        {
-            NSString *str = [NSString stringWithFormat:@"itms-apps://itunes.apple.com/app"];
-            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:str]];
-        }
-            break;
-           
-        case 3:
+
+        case 2:
             //帮助
             [self helpYouToAll];
             break;
-        case 4:
+        case 3:
             //清理缓存
             [self clearImage];
             break;
-        case 5:
+        case 4:
             //常见问题
             [self getquestion];
             break;
-        case 6:
+        case 5:
             [self loginOut];
             break;
             
@@ -303,12 +297,13 @@
 
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
+    self.tabBarController.tabBar.hidden = NO;
     
 //    //计算图片缓存
     SDImageCache *cacheImage = [SDImageCache sharedImageCache];
     NSInteger cacheSize = [cacheImage getSize];
     NSString *cacheStr = [NSString stringWithFormat:@"清除缓存(%.02fM)", (float)cacheSize/1024/1024];
-    [self.allCellArray replaceObjectAtIndex:4 withObject:cacheStr];
+    [self.allCellArray replaceObjectAtIndex:3 withObject:cacheStr];
 //    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:5 inSection:0];
 //    [self.tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
 }
@@ -321,8 +316,8 @@
     UIAlertAction *sure = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         SDImageCache *imageCache = [SDImageCache sharedImageCache];
         [imageCache clearDisk];
-        [self.allCellArray replaceObjectAtIndex:4 withObject:@"清理缓存"];
-        NSIndexPath *path = [NSIndexPath indexPathForRow:4 inSection:0];
+        [self.allCellArray replaceObjectAtIndex:3 withObject:@"清理缓存"];
+        NSIndexPath *path = [NSIndexPath indexPathForRow:3 inSection:0];
         [self.tableView reloadRowsAtIndexPaths:@[path] withRowAnimation:UITableViewRowAnimationAutomatic];
         
         

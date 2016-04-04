@@ -12,9 +12,7 @@
 
 @property(nonatomic, strong) UICollectionView *collectionView;
 @property(nonatomic, strong) NSMutableArray *allModelArray;
-@property(nonatomic, strong) UIImageView *headImage;
-@property(nonatomic, strong) UILabel *label;
-- (void)getCollectionViewCell;
 
+- (void)getCollectionViewCell;
 
 @end

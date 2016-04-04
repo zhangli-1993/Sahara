@@ -14,10 +14,6 @@
 #import "RSSCollectionViewCell.h"
 static NSString *collection = @"collection";
 @interface BmobRSSView ()<UICollectionViewDelegate, UICollectionViewDataSource, UIAlertViewDelegate>
-{
-    UIImageView *collectionImage;
-    NSInteger page;
-}
 @property(nonatomic, strong) NSMutableArray *array;
 
 @end
@@ -35,8 +31,6 @@ static NSString *collection = @"collection";
 
 - (void)getCellConfigView{
     [self addSubview:self.collectionView];
-    [self.collectionView addSubview:self.headImage];
-    [self.headImage addSubview:self.label];
     //长按手势删除
     UILongPressGestureRecognizer *longPress = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(longPressAction:)];
     longPress.minimumPressDuration = 1.0;
@@ -67,7 +61,7 @@ static NSString *collection = @"collection";
             
         }
         [self.collectionView reloadData];
-        NSLog(@"---------%lu", self.allModelArray.count);
+//        NSLog(@"---------%lu", self.allModelArray.count);
     }];
     
     
@@ -148,21 +142,6 @@ static NSString *collection = @"collection";
         self.array = [NSMutableArray new];
     }
     return _array;
-}
-
-- (UIImageView *)headImage{
-    if (!_headImage) {
-        self.headImage = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, kWidth/2-30, kWidth/4)];
-    }
-    return _headImage;
-}
-
-- (UILabel *)label{
-    if (!_label) {
-    
-        self.label = [[UILabel alloc] initWithFrame:CGRectMake(kWidth/8, kWidth/8, kWidth / 2 - kWidth/9, 30)];
-    }
-    return _label;
 }
 
 /*

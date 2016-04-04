@@ -63,14 +63,12 @@
 
 -(void) handleTap:(UITapGestureRecognizer*) recognizer
 {
-//  [UIView animateWithDuration:0.75 delay:0.01 options:UIViewAnimationTransitionCurlUp animations:^{
-//      [self removeFromSuperview];
-//  } completion:nil];
-    [UIView animateWithDuration:0.75 animations:^{
-        
-    } completion:^(BOOL finished) {
-        [self removeFromSuperview];
-    }];
+    [UIView animateWithDuration:0.75
+                          delay:0.01
+                        options:UIViewAnimationTransitionCurlUp animations:^(void){
+                            self.center = CGPointMake(kWidth * 3 / 2,
+                                                      kHeight / 2);
+                        }completion:nil];
     
 }
 
