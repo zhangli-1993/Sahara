@@ -81,13 +81,7 @@
          view1 = [[CollectionReusableView alloc] initWithFrame:CGRectMake(0, 0, kWidth, 40)];
     }
     view1.label.text = self.titleArray[indexPath.section];
-//    CGRect frame = collectionView[indexPath.section].HeaderView.frame;
-   
-    
-//    label.textColor = kMainColor;
-//    label.text = self.titleArray[indexPath.section];
-//    [self.collectView addSubview:label];
-////    [view1 addSubview:label];
+
     return view1;
 }
 #pragma mark---UICollectionViewDelegateFlowLayout

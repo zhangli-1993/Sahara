@@ -219,9 +219,8 @@ static sqlite3 *dataBase = nil;
     }
     sqlite3_finalize(stmt);
     return array;
-    
-    
 }
+
 - (NSMutableArray *)selectAllCollectWithNum:(NSInteger)num{
     [self openDataBase];
     NSUserDefaults *user = [NSUserDefaults standardUserDefaults];
@@ -238,7 +237,8 @@ static sqlite3 *dataBase = nil;
             int bytes = sqlite3_column_bytes(stmt, 1);
             NSData *data = [NSData dataWithBytes:value length:bytes];
             NSDictionary *dic = [NSKeyedUnarchiver unarchiveObjectWithData:data];
-            [array addObject:dic];
+            CarCollectModel *model = [[CarCollectModel alloc]initWithDic:dic withNum:num];
+            [array addObject:model];
         }
     }
     else{

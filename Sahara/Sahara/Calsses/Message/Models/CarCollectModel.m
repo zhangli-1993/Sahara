@@ -14,6 +14,7 @@
     if (self) {
         self.dic = dic;
         self.num = num;
+        NSLog(@"++%@", self.dic);
     }
     return self;
 }

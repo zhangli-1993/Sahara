@@ -9,6 +9,7 @@
 #import "CarImageView.h"
 #import <AFNetworking/AFHTTPSessionManager.h>
 #import <SDWebImage/UIImageView+WebCache.h>
+#import "CollectionReusableView.h"
 @interface CarImageView ()<UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
 @property (nonatomic, strong) NSMutableArray *imageArray;
 @property (nonatomic, strong) NSMutableArray *titleArray;
@@ -48,10 +49,12 @@
     
 }
 - (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath{
-    UICollectionReusableView *view1 = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"HeaderView" forIndexPath:indexPath];
-    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(20, 0, kWidth - 40, 30)];
-    label.text = self.titleArray[indexPath.section];
-    [view1 addSubview:label];
+    CollectionReusableView *view1 = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"iage" forIndexPath:indexPath];
+    if (view1 == nil) {
+        view1 = [[CollectionReusableView alloc] initWithFrame:CGRectMake(0, 0, kWidth, 40)];
+    }
+    view1.label.text = self.titleArray[indexPath.section];
+    
     return view1;
 }
 #pragma mark---UICollectionViewDelegateFlowLayout
@@ -91,6 +94,7 @@
         NSLog(@"%@", error);
     }];
 }
+
 #pragma mark---懒加载
 - (UICollectionView *)collectView{
     if (_collectView == nil) {
@@ -109,7 +113,7 @@
         self.collectView.dataSource = self;
         self.collectView.delegate = self;
         [self.collectView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"image"];
-        [self.collectView registerClass:[UICollectionReusableView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"HeaderView"];
+        [self.collectView registerClass:[CollectionReusableView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"iage"];
         self.collectView.backgroundColor = [UIColor whiteColor];
         
     }

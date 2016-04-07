@@ -28,6 +28,7 @@
 }
 - (void)setModel:(CarCollectModel *)model{
     [self.imageview sd_setImageWithURL:[NSURL URLWithString:model.dic[@"image"]]];
+    
     self.name.text = model.dic[@"name"];
     self.price.text = model.dic[@"price"];
     
@@ -48,7 +49,7 @@
 }
 - (UILabel *)price{
     if (_price == nil) {
-        self.price = [[UILabel alloc] initWithFrame:CGRectMake(110, 30, kWidth * 3 / 4 - 90, 30)];
+        self.price = [[UILabel alloc] initWithFrame:CGRectMake(110, 40, kWidth * 3 / 4 - 90, 30)];
         self.price.textColor = [UIColor redColor];
         self.price.font = [UIFont systemFontOfSize:14.0];
         
