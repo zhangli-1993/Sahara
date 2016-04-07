@@ -98,6 +98,7 @@
 		7A2E7AEE1C984DDA0045F332 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A2E7AEC1C984DDA0045F332 /* LaunchScreen.storyboard */; };
 		7A339BB71CA1851500DCBC5D /* VideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A339BB61CA1851500DCBC5D /* VideoViewController.m */; };
 		7A33F8D71CA614360063C022 /* AskPriceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A33F8D61CA614360063C022 /* AskPriceViewController.m */; };
+		7A4B25E81CB688D1005D904E /* BmobSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A4B25E71CB688D1005D904E /* BmobSDK.framework */; };
 		7A59D97C1CA2290F00307189 /* UseCarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A59D97B1CA2290F00307189 /* UseCarViewController.m */; };
 		7A59D9821CA26B3900307189 /* CarWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A59D9811CA26B3900307189 /* CarWebViewController.m */; };
 		7A59D9851CA27D5500307189 /* SqlitDataBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A59D9841CA27D5500307189 /* SqlitDataBase.m */; };
@@ -313,6 +314,7 @@
 		7A339BB61CA1851500DCBC5D /* VideoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoViewController.m; sourceTree = "<group>"; };
 		7A33F8D51CA614360063C022 /* AskPriceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AskPriceViewController.h; sourceTree = "<group>"; };
 		7A33F8D61CA614360063C022 /* AskPriceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AskPriceViewController.m; sourceTree = "<group>"; };
+		7A4B25E71CB688D1005D904E /* BmobSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BmobSDK.framework; path = libWeiboSDK/BmobSDK.framework; sourceTree = "<group>"; };
 		7A59D97A1CA2290F00307189 /* UseCarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UseCarViewController.h; sourceTree = "<group>"; };
 		7A59D97B1CA2290F00307189 /* UseCarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UseCarViewController.m; sourceTree = "<group>"; };
 		7A59D9801CA26B3900307189 /* CarWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarWebViewController.h; sourceTree = "<group>"; };
@@ -448,6 +450,7 @@
 				7A089AEA1C9BE32200EF030E /* UIKit.framework in Frameworks */,
 				7A089AE81C9BE31800EF030E /* CoreText.framework in Frameworks */,
 				7A089AE61C9BE30700EF030E /* CoreTelephony.framework in Frameworks */,
+				7A4B25E81CB688D1005D904E /* BmobSDK.framework in Frameworks */,
 				7A0A4AAA1CA4056100AE3C94 /* libWeChatSDK.a in Frameworks */,
 				7A089AE41C9BE2F800EF030E /* Security.framework in Frameworks */,
 				7A089AE21C9BE2EE00EF030E /* SystemConfiguration.framework in Frameworks */,
@@ -821,6 +824,7 @@
 		7AB3624C1C98E3FB00C03E74 /* Librarys */ = {
 			isa = PBXGroup;
 			children = (
+				7A4B25E71CB688D1005D904E /* BmobSDK.framework */,
 				7A09E00B1CAA53C900923952 /* lib */,
 				7A089AF61C9BF37900EF030E /* SDKExport */,
 				7A089AD01C9BE21F00EF030E /* libWeiboSDK */,
@@ -1354,13 +1358,14 @@
 				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Beijing Lamco Sinyo education technology co., LTD (CCQ5LLLX4L)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Beijing Lamco Sinyo education technology co., LTD (CCQ5LLLX4L)";
 				ENABLE_BITCODE = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/Sahara/Librarys",
+					"$(PROJECT_DIR)/Sahara/Librarys/libWeiboSDK",
 				);
 				GCC_PREFIX_HEADER = "$(SCROOT)Sahara/Librarys/Sahara.pch";
 				INFOPLIST_FILE = Sahara/Info.plist;
@@ -1408,7 +1413,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.Auroralizi.Sahara;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "a088f344-d51c-4830-ae53-2bcc875db9ea";
+				PROVISIONING_PROFILE = "abc31e4e-fef7-4316-9433-6cdfea73326b";
 				VALID_ARCHS = "arm64 armv7 linker command failed with exit code 1 (use -v to see invocation) armv7s";
 			};
 			name = Debug;
@@ -1420,13 +1425,14 @@
 				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Beijing Lamco Sinyo education technology co., LTD (CCQ5LLLX4L)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Beijing Lamco Sinyo education technology co., LTD (CCQ5LLLX4L)";
 				ENABLE_BITCODE = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/Sahara/Librarys",
+					"$(PROJECT_DIR)/Sahara/Librarys/libWeiboSDK",
 				);
 				GCC_PREFIX_HEADER = "$(SCROOT)Sahara/Librarys/Sahara.pch";
 				INFOPLIST_FILE = Sahara/Info.plist;
@@ -1474,7 +1480,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.Auroralizi.Sahara;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "a088f344-d51c-4830-ae53-2bcc875db9ea";
+				PROVISIONING_PROFILE = "abc31e4e-fef7-4316-9433-6cdfea73326b";
 				VALID_ARCHS = "arm64 armv7 linker command failed with exit code 1 (use -v to see invocation) armv7s";
 			};
 			name = Release;

@@ -26,7 +26,7 @@
 - (void)setModel:(MessageModel *)model{
     [self.headImage sd_setImageWithURL:[NSURL URLWithString:model.image] placeholderImage:nil];
     self.titleLabel.text = model.title;
-    self.appriseLabel.text = [NSString stringWithFormat:@"%@", model.ups];
+    self.appriseLabel.text = [NSString stringWithFormat:@"评价：%@", model.ups];
     self.timeLabel.text = [NSString stringWithFormat:@"%@", model.pubDate];
       self.endLabel.text = @"已结束";
     
