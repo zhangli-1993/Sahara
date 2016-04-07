@@ -63,9 +63,12 @@
 
 -(void) handleTap:(UITapGestureRecognizer*) recognizer
 {
-  [UIView animateWithDuration:0.75 delay:0.01 options:UIViewAnimationTransitionCurlUp animations:^{
-      [self removeFromSuperview];
-  } completion:nil];
+    [UIView animateWithDuration:0.75
+                          delay:0.01
+                        options:UIViewAnimationTransitionCurlUp animations:^(void){
+                            self.center = CGPointMake(kWidth * 3 / 2,
+                                                      kHeight / 2);
+                        }completion:nil];
     
 }
 
@@ -95,7 +98,7 @@
 #pragma mark---懒加载
 - (UITableView *)tableView{
     if (_tableView == nil) {
-        self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(kWidth / 4, 0, kWidth * 3 / 4, kHeight - kWidth/6) style:UITableViewStylePlain];
+        self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(kWidth / 4, 10, kWidth * 3 / 4, kHeight - kWidth/6) style:UITableViewStylePlain];
         self.tableView.delegate = self;
         self.tableView.dataSource = self;
     }

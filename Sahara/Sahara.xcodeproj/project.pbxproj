@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		525A52B034E3688F1D9B5A41 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A31DF689C6CF0A0F3FD738CB /* libPods.a */; };
+		7A0135EE1CB538A00003E0E6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A0135ED1CB538A00003E0E6 /* Images.xcassets */; };
 		7A06BCD81CACF961004863DB /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A06BCD71CACF961004863DB /* AudioToolbox.framework */; };
 		7A06BCDA1CACF976004863DB /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A06BCD91CACF976004863DB /* AVFoundation.framework */; };
 		7A06BCDC1CACF984004863DB /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A06BCDB1CACF984004863DB /* AddressBook.framework */; };
@@ -109,6 +110,8 @@
 		7A6C0BD71C995E7C00205D61 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A6C0BD61C995E7C00205D61 /* DetailViewController.m */; };
 		7A70B3301CA951AA00FD7770 /* LateralSpreadsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A70B32F1CA951A900FD7770 /* LateralSpreadsView.m */; };
 		7A70B3331CA951EB00FD7770 /* LateralSpreadsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A70B3321CA951EB00FD7770 /* LateralSpreadsModel.m */; };
+		7A726FBD1CB10B74000BB5F7 /* RSSCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A726FBB1CB10B74000BB5F7 /* RSSCollectionViewCell.m */; };
+		7A726FBE1CB10B74000BB5F7 /* RSSCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7A726FBC1CB10B74000BB5F7 /* RSSCollectionViewCell.xib */; };
 		7A7D3EFE1C9B93AD002B8008 /* for.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7A7D3EFD1C9B93AD002B8008 /* for.plist */; };
 		7A84D1A81C98FF38006EE2F1 /* blueArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A84D1A41C98FF38006EE2F1 /* blueArrow.png */; };
 		7A84D1A91C98FF38006EE2F1 /* blueArrowDown.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A84D1A51C98FF38006EE2F1 /* blueArrowDown.png */; };
@@ -163,6 +166,7 @@
 /* Begin PBXFileReference section */
 		3E5768CE4E443399640C3666 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		4483BA8AABB15E4CA5CAE736 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		7A0135ED1CB538A00003E0E6 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		7A06BCD71CACF961004863DB /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		7A06BCD91CACF976004863DB /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		7A06BCDB1CACF984004863DB /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
@@ -332,6 +336,9 @@
 		7A70B32F1CA951A900FD7770 /* LateralSpreadsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LateralSpreadsView.m; path = Sahara/Calsses/Forum/View/LateralSpreadsView.m; sourceTree = SOURCE_ROOT; };
 		7A70B3311CA951EB00FD7770 /* LateralSpreadsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LateralSpreadsModel.h; sourceTree = "<group>"; };
 		7A70B3321CA951EB00FD7770 /* LateralSpreadsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LateralSpreadsModel.m; sourceTree = "<group>"; };
+		7A726FBA1CB10B74000BB5F7 /* RSSCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSSCollectionViewCell.h; sourceTree = "<group>"; };
+		7A726FBB1CB10B74000BB5F7 /* RSSCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSSCollectionViewCell.m; sourceTree = "<group>"; };
+		7A726FBC1CB10B74000BB5F7 /* RSSCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RSSCollectionViewCell.xib; sourceTree = "<group>"; };
 		7A7D3EFD1C9B93AD002B8008 /* for.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = for.plist; sourceTree = "<group>"; };
 		7A84D1A41C98FF38006EE2F1 /* blueArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blueArrow.png; sourceTree = "<group>"; };
 		7A84D1A51C98FF38006EE2F1 /* blueArrowDown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blueArrowDown.png; sourceTree = "<group>"; };
@@ -525,6 +532,9 @@
 				7AE3361E1CA91A1F00C30F4C /* RSSView.m */,
 				7ACD623B1CAA6D54000470D9 /* BmobRSSView.h */,
 				7ACD623C1CAA6D54000470D9 /* BmobRSSView.m */,
+				7A726FBA1CB10B74000BB5F7 /* RSSCollectionViewCell.h */,
+				7A726FBB1CB10B74000BB5F7 /* RSSCollectionViewCell.m */,
+				7A726FBC1CB10B74000BB5F7 /* RSSCollectionViewCell.xib */,
 			);
 			name = Views;
 			path = Controllers/Views;
@@ -563,6 +573,7 @@
 				7A2E7AEC1C984DDA0045F332 /* LaunchScreen.storyboard */,
 				7A2E7AEF1C984DDA0045F332 /* Info.plist */,
 				7A09E0051CAA513300923952 /* PushConfig.plist */,
+				7A0135ED1CB538A00003E0E6 /* Images.xcassets */,
 				7A2E7AE41C984DDA0045F332 /* Supporting Files */,
 			);
 			path = Sahara;
@@ -1084,8 +1095,10 @@
 				7A0C78A01C9E2C8A0048C4F3 /* Article in Resources */,
 				7A0D97B01CACC61300661CA9 /* FourmTwoTableViewCell.xib in Resources */,
 				7A0C78B11C9E4DC30048C4F3 /* comment in Resources */,
+				7A726FBE1CB10B74000BB5F7 /* RSSCollectionViewCell.xib in Resources */,
 				7AD7F7E71C9934CE00BF2460 /* hot in Resources */,
 				7A0ACB031CA0314500355E67 /* store in Resources */,
+				7A0135EE1CB538A00003E0E6 /* Images.xcassets in Resources */,
 				7A59D9891CA2880100307189 /* bendi.png in Resources */,
 				7A07E69F1C9F82DD003D0843 /* ProgressHUD.bundle in Resources */,
 				7A09E0061CAA513300923952 /* PushConfig.plist in Resources */,
@@ -1234,6 +1247,7 @@
 				7A13686E1CA16AA000C401D7 /* CarConfigView.m in Sources */,
 				7A089AF51C9BE67E00EF030E /* ShareView.m in Sources */,
 				7A1368101CA0D08300C401D7 /* privilegeTableViewCell.m in Sources */,
+				7A726FBD1CB10B74000BB5F7 /* RSSCollectionViewCell.m in Sources */,
 				7AB362701C98F7A200C03E74 /* MessageModel.m in Sources */,
 				7ABB84721C9E4D9C00621CC4 /* QuestionViewController.m in Sources */,
 			);
@@ -1339,6 +1353,7 @@
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				ENABLE_BITCODE = YES;
@@ -1404,6 +1419,7 @@
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				ENABLE_BITCODE = YES;

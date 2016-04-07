@@ -11,12 +11,9 @@
 #import "RSSModel.h"
 #import <BmobSDK/BmobQuery.h>
 #import "ProgressHUD.h"
+#import "RSSCollectionViewCell.h"
 static NSString *collection = @"collection";
 @interface BmobRSSView ()<UICollectionViewDelegate, UICollectionViewDataSource, UIAlertViewDelegate>
-{
-    UIImageView *collectionImage;
-    NSInteger page;
-}
 @property(nonatomic, strong) NSMutableArray *array;
 
 @end
@@ -34,8 +31,6 @@ static NSString *collection = @"collection";
 
 - (void)getCellConfigView{
     [self addSubview:self.collectionView];
-    [self getCollectionViewCell];
-
     //长按手势删除
     UILongPressGestureRecognizer *longPress = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(longPressAction:)];
     longPress.minimumPressDuration = 1.0;
@@ -43,15 +38,15 @@ static NSString *collection = @"collection";
 
 }
 
+//收藏数据
 - (void)getCollectionViewCell{
-    if (self.allModelArray.count > 0 && self.array.count > 0) {
+    if (self.allModelArray.count > 0) {
         [self.allModelArray removeAllObjects];
         [self.array removeAllObjects];
         
     }
     BmobQuery *query = [BmobQuery queryWithClassName:@"RSSName"];
     [query findObjectsInBackgroundWithBlock:^(NSArray *array, NSError *error) {
-      
         for (BmobObject *objUser in array) {
             NSString *playName = [objUser objectForKey:@"serialName"];
             NSString *playImage = [objUser objectForKey:@"image"];
@@ -63,16 +58,19 @@ static NSString *collection = @"collection";
             RSSModel *model = [[RSSModel alloc] initWithDictionary:dic];
             [self.allModelArray addObject:model];
             [self.array addObject:[objUser objectId]];
-            [self.collectionView reloadData];
-
+            
         }
+        [self.collectionView reloadData];
+//        NSLog(@"---------%lu", self.allModelArray.count);
     }];
+    
+    
 }
 
 - (void)longPressAction:(UILongPressGestureRecognizer *)press{
     CGPoint point = [press locationInView:self.collectionView];
     if (press.state == UIGestureRecognizerStateBegan) {
-        
+    
         //获取点击的是哪个cell
         NSIndexPath *path = [self.collectionView indexPathForItemAtPoint:point];
         NSString *objectID = self.array[path.row];
@@ -82,9 +80,6 @@ static NSString *collection = @"collection";
             if (isSuccessful) {
                 [ProgressHUD showSuccess:@"订阅删除成功"];
                 [self getCollectionViewCell];
-                [collectionImage removeFromSuperview];
-                
-                
                 NSLog(@"successful");
             }else if(error){
                 NSLog(@"删除失败");
@@ -99,19 +94,14 @@ static NSString *collection = @"collection";
 
 #pragma mark ----------------- UICollectionView
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
-    UICollectionViewCell *collectionCell = [collectionView dequeueReusableCellWithReuseIdentifier:collection forIndexPath:indexPath];
+    RSSCollectionViewCell *collectionCell = [collectionView dequeueReusableCellWithReuseIdentifier:collection forIndexPath:indexPath];
     
-    collectionImage = [[UIImageView alloc] initWithFrame:collectionCell.frame];
-    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(collectionCell.frame.size.width/3 - 10, collectionCell.frame.size.height*3/4 + 10, collectionCell.frame.size.width/3 + kWidth/9, 20)];
+
     RSSModel *model = self.allModelArray[indexPath.row];
+
     if (indexPath.item < self.allModelArray.count) {
 
-    [collectionImage sd_setImageWithURL:[NSURL URLWithString:model.headImage] placeholderImage:nil];
-    label.text =model.carName;
-    
-    [self.collectionView addSubview:collectionImage];
-    label.textColor = [UIColor whiteColor];
-    [collectionImage addSubview:label];
+    collectionCell.rssModel = model;
 
     }
     return collectionCell;
@@ -121,8 +111,6 @@ static NSString *collection = @"collection";
     return self.allModelArray.count;
 }
 
-
-
 - (UICollectionView *)collectionView{
     if (!_collectionView) {
         UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
@@ -130,10 +118,11 @@ static NSString *collection = @"collection";
         flowLayout.minimumLineSpacing = 10;
         flowLayout.sectionInset = UIEdgeInsetsMake(5, 5, 5, 10);
         flowLayout.minimumInteritemSpacing = 1;
-        self.collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 10, kWidth, kHeight - kWidth/6 - 10) collectionViewLayout:flowLayout];
+        self.collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 15, kWidth, kHeight - kWidth/6 - 10) collectionViewLayout:flowLayout];
         self.collectionView.delegate = self;
         self.collectionView.dataSource = self;
-        [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:collection];
+        [self.collectionView registerClass:[RSSCollectionViewCell class] forCellWithReuseIdentifier:collection];
+        [self.collectionView registerNib:[UINib nibWithNibName:@"RSSCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:collection];
         self.collectionView.backgroundColor = [UIColor colorWithRed:230/255.0 green:230/255.0 blue:230/255.0 alpha:1.0];
         self.collectionView.showsVerticalScrollIndicator = NO;
         

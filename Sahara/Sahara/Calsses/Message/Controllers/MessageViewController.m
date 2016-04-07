@@ -188,7 +188,7 @@
 - (void)getVideoRequest{
     AFHTTPSessionManager *httpManger = [AFHTTPSessionManager manager];
     httpManger.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"text/html",@"application/json", nil];
-    [httpManger GET:[NSString stringWithFormat:@"%@&cid=%@&pageNo=%lu", kVideoKind, videoid, _pageCount] parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
+    [httpManger GET:[NSString stringWithFormat:@"%@&cid=%@&pageNo=%lu", kVideoKind, videoid, (long)_pageCount] parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         NSDictionary *rootDic = responseObject;

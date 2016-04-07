@@ -19,6 +19,7 @@
 #import <BmobSDK/BmobQuery.h>
 #import "BmobRSSView.h"
 #import "CarDetailViewController.h"
+#import "RSSCollectionViewCell.h"
 static NSString *collection = @"collection";
 
 @interface RSSViewController ()<UITableViewDataSource, UITableViewDelegate, PullingRefreshTableViewDelegate, UICollectionViewDataSource, UICollectionViewDelegate, UIScrollViewDelegate>
@@ -54,14 +55,14 @@ static NSString *collection = @"collection";
     [self.tableVIew registerNib:[UINib nibWithNibName:@"MessageOneTableViewCell" bundle:nil] forCellReuseIdentifier:@"cell"];
     [self getRequest];
     
-    self.rssLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, kWidth/4 + 5, kWidth/2, 30)];
+    self.rssLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, kWidth/4 + 15, kWidth/2, kWidth/10)];
     self.rssLabel.text = @"点击图片立即订阅哦";
     self.rssLabel.textColor = [UIColor grayColor];
     [self.view addSubview:self.rssLabel];
     
     self.rssButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     [self.rssButton setTitle:@"自己选择订阅" forState:UIControlStateNormal];
-    self.rssButton.frame = CGRectMake(kWidth / 2 + 20, kWidth/4+5, kWidth/3, 30);
+    self.rssButton.frame = CGRectMake(kWidth / 2 + 20, kWidth/4+15, kWidth/3, 30);
     [self.rssButton addTarget:self action:@selector(rssButtonAction) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:self.rssButton];
     
@@ -76,13 +77,15 @@ static NSString *collection = @"collection";
     rightGesture.direction = UISwipeGestureRecognizerDirectionRight;
     [self.view addGestureRecognizer:rightGesture];
     
-    self.bmobView = [[BmobRSSView alloc] initWithFrame:CGRectMake(0, kWidth/4, kWidth, kHeight - kWidth/5)];
+    self.bmobView = [[BmobRSSView alloc] initWithFrame:CGRectMake(0, kWidth/4 + 5, kWidth, kHeight - kWidth/5)];
     self.bmobView.collectionView.delegate = self;
 }
 
 - (void)rightGestureAction:(UISwipeGestureRecognizer *)right{
     self.VOsegment.selectedSegmentIndex = 1;
     [self.view addSubview:self.bmobView];
+    [self.collectionVIew removeFromSuperview];
+    [self.rssLabel removeFromSuperview];
 }
 
 - (void)leftGestureAction:(UISwipeGestureRecognizer *)left{
@@ -114,30 +117,22 @@ static NSString *collection = @"collection";
             RSSModel *model = [[RSSModel alloc] init];
             [model setValuesForKeysWithDictionary:dic];
             [self.allCellArray addObject:model];
-            
         }
-        
         [self.collectionVIew reloadData];
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         NSLog(@"%@", error);
     }];
 }
+
 #pragma mark ----------------- UICollectionView
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
-    UICollectionViewCell *collectionCell = [collectionView dequeueReusableCellWithReuseIdentifier:collection forIndexPath:indexPath];
+    RSSCollectionViewCell *collectionCell = [collectionView dequeueReusableCellWithReuseIdentifier:collection forIndexPath:indexPath];
     if (indexPath.row < self.allCellArray.count) {
 
         RSSModel *RSSmodel = self.allCellArray[indexPath.row];
-        UIImageView *collectionImage = [[UIImageView alloc] initWithFrame:collectionCell.frame];
-        UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(collectionCell.frame.size.width/3 - 10, collectionCell.frame.size.height*3/4 + 10, collectionCell.frame.size.width/3 + kWidth/9, 20)];
+        collectionCell.model = RSSmodel;
         
-        [collectionImage sd_setImageWithURL:[NSURL URLWithString:RSSmodel.image] placeholderImage:nil];
-        label.text = RSSmodel.serialName;
-
-        [self.collectionVIew addSubview:collectionImage];
-        label.textColor = [UIColor whiteColor];
-        [collectionImage addSubview:label];
-          }
+        }
     return collectionCell;
 }
 
@@ -153,25 +148,26 @@ static NSString *collection = @"collection";
     [self.collectionVIew removeFromSuperview];
     [self.tableVIew launchRefreshing];
     [self.view addSubview:self.tableVIew];
-    
-    //收藏
-    BmobObject *object = [BmobObject objectWithClassName:@"RSSName"];
-    [object setObject:model.image forKey:@"image"];
-    [object setObject:model.serialName forKey:@"serialName"];
-    [object setObject:model.serialId forKey:@"id"];
-    //存储到服务器
-    [object saveInBackgroundWithResultBlock:^(BOOL isSuccessful, NSError *error) {
-        if (isSuccessful) {
+        //收藏
+        BmobObject *object = [BmobObject objectWithClassName:@"RSSName"];
+        [object setObject:model.image forKey:@"image"];
+        [object setObject:model.serialName forKey:@"serialName"];
+        [object setObject:model.serialId forKey:@"id"];
+        //存储到服务器
+        [object saveInBackgroundWithResultBlock:^(BOOL isSuccessful, NSError *error) {
+            if (isSuccessful) {
+                
+            }else if(error){
+                NSLog(@"%@", error);
+            }else{
+                NSLog(@"我也不知道?");
+            }
+            
+        }];
+        
 
-        }else if(error){
-            NSLog(@"%@", error);
-        }else{
-            NSLog(@"我也不知道?");
-        }
-
-    }];
-
-    }
+        
+       }
     if (collectionView == self.bmobView.collectionView) {
         CarDetailViewController *detailVC = [[CarDetailViewController alloc] init];
         RSSModel *model = self.bmobView.allModelArray[indexPath.row];
@@ -262,7 +258,7 @@ static NSString *collection = @"collection";
 
 - (PullingRefreshTableView *)tableVIew{
     if (!_tableVIew) {
-        self.tableVIew = [[PullingRefreshTableView alloc] initWithFrame:CGRectMake(0, kWidth/4 + 10, kWidth, kHeight - 140) pullingDelegate:self];
+        self.tableVIew = [[PullingRefreshTableView alloc] initWithFrame:CGRectMake(0, kWidth/4 + 20, kWidth, kHeight - kWidth/4 - 20) pullingDelegate:self];
         self.tableVIew.delegate = self;
         self.tableVIew.dataSource = self;
         self.tableVIew.rowHeight = 110;
@@ -278,7 +274,7 @@ static NSString *collection = @"collection";
         self.VOsegment.backgroundColor = [UIColor groupTableViewBackgroundColor];
         self.VOsegment.selectedBackgroundColor = self.VOsegment.backgroundColor;
         self.VOsegment.allowNoSelection = NO;
-        self.VOsegment.frame = CGRectMake(0, kWidth/6, kWidth, 40);
+        self.VOsegment.frame = CGRectMake(0, kWidth/6 + 5, kWidth, 40);
         self.VOsegment.indicatorThickness = 4;
         [self.view addSubview:self.VOsegment];
         //返回点击的是哪个按钮
@@ -294,7 +290,6 @@ static NSString *collection = @"collection";
     if (segement.selectedSegmentIndex == 1) {
         [self.view addSubview:self.bmobView];
         [self.bmobView getCollectionViewCell];
-        
     }else{
         [self getRSSModelRequest];
         [self.view addSubview:self.rssLabel];
@@ -319,10 +314,11 @@ static NSString *collection = @"collection";
         flowLayout.minimumLineSpacing = 10;
         flowLayout.sectionInset = UIEdgeInsetsMake(5, 5, 5, 10);
         flowLayout.minimumInteritemSpacing = 1;
-        self.collectionVIew = [[UICollectionView alloc] initWithFrame:CGRectMake(0, kWidth/3, kWidth, kHeight - kWidth/3 - 10) collectionViewLayout:flowLayout];
+        self.collectionVIew = [[UICollectionView alloc] initWithFrame:CGRectMake(0, kWidth/3 + 20, kWidth, kHeight - kWidth/3 - 20) collectionViewLayout:flowLayout];
         self.collectionVIew.delegate = self;
         self.collectionVIew.dataSource = self;
-        [self.collectionVIew registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:collection];
+        [self.collectionVIew registerClass:[RSSCollectionViewCell class] forCellWithReuseIdentifier:collection];
+        [self.collectionVIew registerNib:[UINib nibWithNibName:@"RSSCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:collection];
         self.collectionVIew.backgroundColor = [UIColor colorWithRed:230/255.0 green:230/255.0 blue:230/255.0 alpha:1.0];
         self.collectionVIew.showsVerticalScrollIndicator = NO;
 
