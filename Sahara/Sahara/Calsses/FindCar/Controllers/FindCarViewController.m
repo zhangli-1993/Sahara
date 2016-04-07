@@ -78,12 +78,17 @@
             CarPriceModel *model = self.priceView.onArray[indexPath.section][indexPath.row];
             cVC.title = model.name;
             cVC.artID = model.idStr;
+            cVC.dataDic = [NSDictionary new];
+            cVC.dataDic = @{@"image":model.image, @"price":model.price, @"name": model.name};
+            
         } else {
             CarPriceModel *model = self.priceView.allArray[indexPath.section][indexPath.row];
             cVC.title = model.name;
             cVC.artID = model.idStr;
+            cVC.dataDic = [NSDictionary new];
+            cVC.dataDic = @{@"image":model.image, @"price":model.price, @"name":model.name};
         }
-      
+        NSLog(@"dataDic = %@", cVC.dataDic);
             [self.navigationController pushViewController:cVC animated:YES];
     }
     

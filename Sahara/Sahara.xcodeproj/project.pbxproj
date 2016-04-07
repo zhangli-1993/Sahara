@@ -1033,7 +1033,7 @@
 				TargetAttributes = {
 					7A2E7AE01C984DDA0045F332 = {
 						CreatedOnToolsVersion = 7.2.1;
-						DevelopmentTeam = JR35LYBT79;
+						DevelopmentTeam = 4JS35T698G;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 1;
@@ -1371,7 +1371,7 @@
 					"$(PROJECT_DIR)/Sahara/Librarys/libWeiboSDK",
 					"$(PROJECT_DIR)/Sahara/Librarys/SDKExport",
 					"$(PROJECT_DIR)/Sahara/Librarys/lib",
-					"$(SRCROOT)",
+					"\"$(SRCROOT)Pods/BmobSDK/BmobSDK.framework/BmobSDK\"",
 				);
 				OTHER_LDFLAGS = (
 					"$(inherited)",
@@ -1437,7 +1437,7 @@
 					"$(PROJECT_DIR)/Sahara/Librarys/libWeiboSDK",
 					"$(PROJECT_DIR)/Sahara/Librarys/SDKExport",
 					"$(PROJECT_DIR)/Sahara/Librarys/lib",
-					"$(SRCROOT)",
+					"\"$(SRCROOT)Pods/BmobSDK/BmobSDK.framework/BmobSDK\"",
 				);
 				OTHER_LDFLAGS = (
 					"$(inherited)",

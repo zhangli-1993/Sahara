@@ -42,7 +42,9 @@
         }
         NSDictionary *dic = responseObject;
         NSArray *array = dic[@"detailArray"];
-        NSDictionary *dic1 = array[0];
+//        NSDictionary *dic1 = array[0];
+        NSDictionary *dic1 = array.firstObject;
+
         NSArray *array1 = dic1[@"detail"];
         for (NSDictionary *dict1 in array1) {
             [self.titleArray addObject:dict1[@"groupName"]];
@@ -81,13 +83,7 @@
          view1 = [[CollectionReusableView alloc] initWithFrame:CGRectMake(0, 0, kWidth, 40)];
     }
     view1.label.text = self.titleArray[indexPath.section];
-//    CGRect frame = collectionView[indexPath.section].HeaderView.frame;
-   
-    
-//    label.textColor = kMainColor;
-//    label.text = self.titleArray[indexPath.section];
-//    [self.collectView addSubview:label];
-////    [view1 addSubview:label];
+
     return view1;
 }
 #pragma mark---UICollectionViewDelegateFlowLayout
