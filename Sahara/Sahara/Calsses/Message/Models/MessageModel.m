@@ -12,15 +12,8 @@
 - (instancetype)initWithDictionary:(NSDictionary *)dict{
     self = [super init];
     if (self) {
-        self.ariticieType = dict[@"articleType"];
-        if ([self.ariticieType isEqualToString:@"n"]) {
-        self.image = dict[@"image"];
-        self.title = dict[@"title"];
-        self.ups = dict[@"ups"];
-        self.pubDate = dict[@"pubDate"];
-        self.url = dict[@"url"];
-        self.messageID = dict[@"id"];
-        }else{
+        NSInteger typeZB = [dict[@"zbState"] integerValue];
+        if (typeZB == 0) {
             self.image = dict[@"banner"];
             self.title = dict[@"titile"];
             self.ups = dict[@"count"];
@@ -28,6 +21,16 @@
             self.url = dict[@"zbUrl"];
             self.tomLiveID = dict[@"zbId"];
 
+        }
+        NSString *articleType = dict[@"articleType"];
+        if ([articleType isEqualToString:@"n"] || [articleType isEqualToString:@"y"]) {
+        
+            self.image = dict[@"image"];
+            self.title = dict[@"title"];
+            self.ups = dict[@"ups"];
+            self.pubDate = dict[@"pubDate"];
+            self.url = dict[@"url"];
+            self.messageID = dict[@"id"];
         }
         NSInteger type = [dict[@"type"] integerValue];
         if (type == 9) {

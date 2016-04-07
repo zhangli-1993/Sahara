@@ -46,7 +46,7 @@
     self.navigationItem.title = @"撒哈拉汽车网";
     self.navigationController.navigationBar.barTintColor = kMainColor;
     _pageCount = 1;
-    cellID = @"16";
+    cellID = @"1";
     [self.tableView launchRefreshing];
     //注册cell
     [self.tableView registerNib:[UINib nibWithNibName:@"MessageOneTableViewCell" bundle:nil] forCellReuseIdentifier:@"cell"];
@@ -84,10 +84,10 @@
             
             [self.allCellArray addObject:model.itemID];
             if ([model.itemID isEqualToString:@"55555"]) {
-                [self.allCellArray removeObjectAtIndex:6];
+                [self.allCellArray removeObject:@"55555"];
             }
+            
         }
-        
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         NSLog(@"%@", error);
@@ -100,6 +100,7 @@
     [ProgressHUD show:@"正在加载中"];
     AFHTTPSessionManager *httpManager = [AFHTTPSessionManager manager];
     httpManager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"text/html", nil];
+//    NSLog(@"%@", [NSString stringWithFormat:@"%@%@?pageSize=20&v=4.0.0&pageNo=%lu", kHomePagePort, cellID,(long)_pageCount]);
     [httpManager GET:[NSString stringWithFormat:@"%@%@?pageSize=20&v=4.0.0&pageNo=%lu", kHomePagePort, cellID,(long)_pageCount] parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
@@ -127,7 +128,7 @@
 
 #pragma mark ------------------ UITableViewDataSource
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    if (index == 12) {
+    if (index == 4) {
         MessageTwoTableViewCell *twoCell = [self.tableView dequeueReusableCellWithIdentifier:@"zbCell" forIndexPath:indexPath];
         if (indexPath.row < self.allTitleArray.count) {
             MessageModel *model = self.allTitleArray[indexPath.row];
@@ -151,7 +152,7 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    if (index == 12) {
+    if (index == 4) {
         return 240;
     }
     return 110;
@@ -163,7 +164,7 @@
     LiveOtherViewController *liveVC = [[LiveOtherViewController alloc] init];
     MessageModel *model = self.allTitleArray[indexPath.row];
     
-    if (index == 12) {
+    if (index == 4) {
         if (model.tomLiveID.length > 5) {
             liveVC.loveOtherID = model.tomLiveID;
             [self.navigationController pushViewController:liveVC animated:YES];
@@ -278,7 +279,7 @@
 #pragma mark -------------- LazyLoading
 - (VOSegmentedControl *)VOsegment{
     if (!_VOsegment) {
-        self.VOsegment = [[VOSegmentedControl alloc] initWithSegments:@[@{VOSegmentText:@"首页"}, @{VOSegmentText:@"新车"}, @{VOSegmentText:@"评测"}, @{VOSegmentText:@"视频"}, @{VOSegmentText:@"自媒体"}, @{VOSegmentText:@"导购"}, @{VOSegmentText:@"用车"}, @{VOSegmentText:@"技术"}, @{VOSegmentText:@"游记"}, @{VOSegmentText:@"文化"}, @{VOSegmentText:@"行业"}, @{VOSegmentText:@"赛事"}, @{VOSegmentText:@"直播"}]];
+        self.VOsegment = [[VOSegmentedControl alloc] initWithSegments:@[@{VOSegmentText:@"首页"}, @{VOSegmentText:@"新车"}, @{VOSegmentText:@"评测"}, @{VOSegmentText:@"视频"}, @{VOSegmentText:@"直播"}, @{VOSegmentText:@"导购"}, @{VOSegmentText:@"用车"}, @{VOSegmentText:@"技术"}, @{VOSegmentText:@"游记"}, @{VOSegmentText:@"文化"}, @{VOSegmentText:@"行业"}, @{VOSegmentText:@"赛事"}, @{VOSegmentText:@"自媒体"}]];
         self.VOsegment.contentStyle = VOContentStyleTextAlone;
         self.VOsegment.indicatorStyle = VOSegCtrlIndicatorStyleBottomLine;
         self.VOsegment.backgroundColor = [UIColor groupTableViewBackgroundColor];
@@ -321,10 +322,8 @@
 
 - (void)segmentCtrlValuechange:(UISegmentedControl *)segement{
     index = segement.selectedSegmentIndex;
-        cellID = self.allCellArray[index];
-//    NSLog(@"cellid = %@", self.allCellArray[index]);
-
-       [self homePagePortRequest];
+    cellID = self.allCellArray[index];
+    [self homePagePortRequest];
     
 }
 
