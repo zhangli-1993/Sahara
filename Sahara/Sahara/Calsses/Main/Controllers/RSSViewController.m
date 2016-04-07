@@ -148,25 +148,26 @@ static NSString *collection = @"collection";
     [self.collectionVIew removeFromSuperview];
     [self.tableVIew launchRefreshing];
     [self.view addSubview:self.tableVIew];
-    
-    //收藏
-    BmobObject *object = [BmobObject objectWithClassName:@"RSSName"];
-    [object setObject:model.image forKey:@"image"];
-    [object setObject:model.serialName forKey:@"serialName"];
-    [object setObject:model.serialId forKey:@"id"];
-    //存储到服务器
-    [object saveInBackgroundWithResultBlock:^(BOOL isSuccessful, NSError *error) {
-        if (isSuccessful) {
+        //收藏
+        BmobObject *object = [BmobObject objectWithClassName:@"RSSName"];
+        [object setObject:model.image forKey:@"image"];
+        [object setObject:model.serialName forKey:@"serialName"];
+        [object setObject:model.serialId forKey:@"id"];
+        //存储到服务器
+        [object saveInBackgroundWithResultBlock:^(BOOL isSuccessful, NSError *error) {
+            if (isSuccessful) {
+                
+            }else if(error){
+                NSLog(@"%@", error);
+            }else{
+                NSLog(@"我也不知道?");
+            }
+            
+        }];
+        
 
-        }else if(error){
-            NSLog(@"%@", error);
-        }else{
-            NSLog(@"我也不知道?");
-        }
-
-    }];
-
-    }
+        
+       }
     if (collectionView == self.bmobView.collectionView) {
         CarDetailViewController *detailVC = [[CarDetailViewController alloc] init];
         RSSModel *model = self.bmobView.allModelArray[indexPath.row];
