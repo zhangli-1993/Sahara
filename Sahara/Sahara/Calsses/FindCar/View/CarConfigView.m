@@ -42,7 +42,9 @@
         }
         NSDictionary *dic = responseObject;
         NSArray *array = dic[@"detailArray"];
-        NSDictionary *dic1 = array[0];
+//        NSDictionary *dic1 = array[0];
+        NSDictionary *dic1 = array.firstObject;
+
         NSArray *array1 = dic1[@"detail"];
         for (NSDictionary *dict1 in array1) {
             [self.titleArray addObject:dict1[@"groupName"]];
